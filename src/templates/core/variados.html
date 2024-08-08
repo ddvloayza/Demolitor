@@ -1,0 +1,79 @@
+{% load static %}
+
+<section class="bg-[#ECECEC] p-8 h-max">
+        <h2 class="text-3xl font-bold text-black text-center">Nuestros productos variados</h2>
+          <div class="container mx-auto py-8">
+            <div class="flex justify-center items-center text-black">
+                <h2 class="text-3xl font-light px-8 variety-effect">CREATINAS</h2>
+                <h2 class="text-3xl font-light px-8 variety-effect">BLACK MACA</h2>
+                <h2 class="text-3xl font-light px-8 variety-effect">COLAGENOS</h2>
+                <h2 class="text-3xl font-light px-8 variety-effect">LINEA SPORT</h2>
+                <h2 class="text-3xl font-light px-8 variety-effect">SNACKS</h2>
+              </div>
+            </div>
+          </div>
+          <!-- Swiper -->
+        <div class="swiper-container two">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="slider-image">
+                        <img src="{% static 'img/products/collagen3.png'%}" alt="slide 1">
+                        <div class="text-center py-4">
+                            <div class="py-4">
+                                Proteína ISO | 1.76lb
+                            </div>
+                            <div class="flex items-center justify-center ">
+                                <div class="grid grid-cols-2 gap-4 text-center">
+                                    <p class="text-gray-400 line-through">S/199</p>
+                                    <p class="text-xl">S/99.50</p>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slider-image">
+                        <img src="{% static 'img/products/collagen3.png'%}" alt="slide 2">
+                        <div class="text-center py-4">
+                            <div class="py-4">
+                                Proteína ISO | 1.76lb
+                            </div>
+                            <div class="flex items-center justify-center ">
+                                <div class="grid grid-cols-2 gap-4 text-center">
+                                    <p class="text-gray-400 line-through">S/199</p>
+                                    <p class="text-xl">S/99.50</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slider-image">
+                        <img src="{% static 'img/products/collagen3.png'%}" alt="slide 3">
+                        <div class="text-center py-4">
+                            <div class="text-init">
+                                50%
+                            </div>
+
+                            <div class="py-4">
+                                Proteína ISO | 1.76lb
+                            </div>
+                            <div class="flex items-center justify-center ">
+                                <div class="grid grid-cols-2 gap-4 text-center">
+                                    <p class="text-gray-400 line-through">S/199</p>
+                                    <p class="text-xl">S/99.50</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex items-center justify-center">
+            <button class="m-auto bg-red-600 px-4 py-2 rounded mt-4 hover:bg-red-700">Ver todos los productos</button>
+        </div>
+</section>

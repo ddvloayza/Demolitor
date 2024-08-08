@@ -1,0 +1,79 @@
+version: '3'
+services:
+  db:
+    image: "postgres:13-alpine"
+    restart: unless-stopped
+    env_file:
+      - ./.env
+    ports:
+      - "5434:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  nginx-proxy:
+    image: jwilder/nginx-proxy
+    restart: always
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+      - certs:/etc/nginx/certs:ro
+      - vhostd:/etc/nginx/vhost.d
+      - html:/usr/share/nginx/html
+    labels:
+      - com.github.jrcs.letsencrypt_nginx_proxy_companion.nginx_proxy
+
+  letsencrypt:
+    image: jrcs/letsencrypt-nginx-proxy-companion:2.2.2
+    restart: always
+    environment:
+      - NGINX_PROXY_CONTAINER=nginx-proxy
+    volumes:
+      - certs:/etc/nginx/certs:rw
+      - vhostd:/etc/nginx/vhost.d
+      - html:/usr/share/nginx/html
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+
+  nginx:
+    image: nginx:1.15
+    container_name: nginx01
+    expose:
+      - "80"
+    volumes:
+      - ./webapp/nginx:/etc/nginx/conf.d
+      - static:/www/static
+      - media:/www/media
+    environment:
+      - VIRTUAL_HOST=samiex.com.pe,www.samiex.com.pe
+      - LETSENCRYPT_HOST=samiex.com.pe,www.samiex.com.pe
+      - LETSENCRYPT_EMAIL=ddvloayza@gmail.com
+    depends_on:
+      - web
+      - nginx-proxy
+      - letsencrypt
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile-prod
+      args:
+        - DJANGO_ENV=production
+    env_file:
+      - .env
+    command: sh -c "gunicorn --env DJANGO_SETTINGS_MODULE=src.settings.prod src.wsgi -b 0.0.0.0:8080 && python manage.py collectstatic --noinput"
+    depends_on:
+      - db
+    volumes:
+      - ./src:/src
+      - static:/www/static
+      - media:/www/media
+    ports:
+      - "8080:8080"
+volumes:
+  postgres_data:
+    external: true
+  media:
+  static:
+  certs:
+  vhostd:
+  html:

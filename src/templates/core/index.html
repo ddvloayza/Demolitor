@@ -1,0 +1,40 @@
+{% extends "web/base.html" %}
+{% load static %}
+{% block social_facebook %}
+  <meta property="og:url"           content="" />
+  <meta property="og:type"          content="article" />
+  <meta property="og:title"         content="" />
+  <meta property="og:description"   content="" />
+  <meta property="og:image"         content="" />
+  <meta property="og:image:width"   content="1920"/>
+  <meta property="og:image:height"   content="1079" />
+
+{% endblock social_facebook %}
+
+{% block css %}
+<style>
+
+
+</style>
+
+{% endblock css %}
+{% block content %}
+
+  <!-- Hero Section Begin -->
+<main>
+    {% include 'core/first_slider.html' %}
+    {% include 'core/novedades.html' %}
+    {% include 'core/objetivos.html' %}
+    {% include 'core/explosividad.html' %}
+    {% include 'core/variados.html' %}
+    {% include 'core/encontrarnos.html' %}
+</main>
+
+
+
+
+{% endblock content %}
+{% block js %}
+
+
+{% endblock js %}

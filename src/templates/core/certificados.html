@@ -1,0 +1,100 @@
+{% extends "web/base.html" %}
+{% load static %}
+{% block social_facebook %}
+  <meta property="og:url"           content="" />
+  <meta property="og:type"          content="article" />
+  <meta property="og:title"         content="" />
+  <meta property="og:description"   content="" />
+  <meta property="og:image"         content="" />
+  <meta property="og:image:width"   content="1920"/>
+  <meta property="og:image:height"   content="1079" />
+
+{% endblock social_facebook %}
+
+{% block css %}
+<style>
+.w_mid_i{
+    width: 40% !important;
+}
+.rayita:after {
+    position: absolute;
+    right: 0;
+    top: 14px;
+    height: 20px;
+    width: 1px;
+    background: #000000;
+    opacity: 0.1;
+    content: "";
+}
+</style>
+
+{% endblock css %}
+{% block content %}
+
+<!-- Contact Form Begin -->
+<div class="contact-form spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="contact__form__title">
+                    <h2 class="section_title">Buscador de Certificados</h2>
+                </div>
+                <div class="hero__search">
+                    <div class="hero__search__form w-full">
+                      <div id="searchForm" >
+                            <input id="search-product" class="w_mid_i rayita" type="text" name="search" placeholder="Colocar código"  onkeyup='SearchCertificados()'>
+                            <input id="search-lote" class="w_mid_i" type="text" name="search" placeholder="Colocar lote"  onkeyup='SearchCertificados()'>
+                            <button type="submit" class="site-btn" >BUSCAR</button>
+                      </div>
+                        
+                    </div>
+                    
+                    <div id="search-results" class="hero__results__form w-full"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- Contact Form End -->
+
+{% endblock content %}
+{% block js %}
+<script>
+    function SearchCertificados() {
+        
+    $('#searchForm').on('keyup', function(event) {
+        event.preventDefault();
+        var product = $('#search-product').val();
+        var lote = $('#search-lote').val();
+        $.ajax({
+            type: 'GET',
+            url: '{% url "core:search_certificates" %}',
+            data: {
+                'lote': lote,
+                'product': product,
+                'csrfmiddlewaretoken': '{{ csrf_token }}'
+            },
+            dataType: 'json',
+            
+            success: function(data) {
+                console.log("data", data)
+                var resultsContainer = $('#search-results');
+                resultsContainer.empty();
+                
+                if (data.length > 0) {
+                for (var i = 0; i < data.length; i++) {
+                    var product = data[i];
+                    console.log("product", product)
+                    var html = '<p class="p__text_results flex"><a class="w-9/12 m-auto" href="products/'+ product.uuid+'">' + product.name + '</a><a href='+product.certificate+' class="primary-btn bg-black" target="_blank">Descargar Certificado</a></p>';
+                    resultsContainer.append(html);
+                }
+                } else {
+                resultsContainer.append('<p>No se encontraron productos.</p>');
+                }
+            }
+        });
+    });
+    };
+</script>
+{% endblock js %}

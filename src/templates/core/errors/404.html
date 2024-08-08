@@ -1,0 +1,34 @@
+{% extends "web/base.html" %}
+{% load static %}
+{% block social_facebook %}
+  <meta property="og:url"           content="" />
+  <meta property="og:type"          content="article" />
+  <meta property="og:title"         content="" />
+  <meta property="og:description"   content="" />
+  <meta property="og:image"         content="" />
+  <meta property="og:image:width"   content="1920"/>
+  <meta property="og:image:height"   content="1079" />
+
+{% endblock social_facebook %}
+
+{% block css %}
+<style>
+
+
+</style>
+
+{% endblock css %}
+{% block content %}
+                <!-- ================== 404 ================== -->
+                <section id="home" class="section">
+                  <div class="container-wrap">
+                      <h1 class="entry-title" data-jarallax-element="0 30">ERROR<br><span>404</span></h1>
+                      <img class="main-photo block-right" data-jarallax-element="0 -30" src="{% static 'images/404.gif' %}" alt="">
+                      <a href="#services" class="main-btn slow-scroll"><img src="{% static 'images/scroll-icon.svg' %}" alt=""></a>
+                  </div>
+              </section>
+              <!-- ================== 404 ================== -->
+{% endblock content %}
+{% block js %}
+
+{% endblock js %}

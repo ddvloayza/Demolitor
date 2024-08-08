@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d909a866-9aed-4c03-ba3b-68a2a6b56495" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Demolitor.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Demolitor.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/demolitor_templatessss/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/images/BLACKMACA.png" beforeDir="false" afterPath="$PROJECT_DIR$/demolitor_templatessss/images/BLACKMACA.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/images/Fitness.png" beforeDir="false" afterPath="$PROJECT_DIR$/demolitor_templatessss/images/Fitness.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/images/Fondo 1.png" beforeDir="false" afterPath="$PROJECT_DIR$/demolitor_templatessss/images/Fondo 1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/images/Musculo.png" beforeDir="false" afterPath="$PROJECT_DIR$/demolitor_templatessss/images/Musculo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/images/Salud.png" beforeDir="false" afterPath="$PROJECT_DIR$/demolitor_templatessss/images/Salud.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/images/Sport.png" beforeDir="false" afterPath="$PROJECT_DIR$/demolitor_templatessss/images/Sport.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/images/home_slider.png" beforeDir="false" afterPath="$PROJECT_DIR$/demolitor_templatessss/images/home_slider.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/images/products/collagen1.png" beforeDir="false" afterPath="$PROJECT_DIR$/demolitor_templatessss/images/products/collagen1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/images/products/collagen2.png" beforeDir="false" afterPath="$PROJECT_DIR$/demolitor_templatessss/images/products/collagen2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/images/products/collagen3.png" beforeDir="false" afterPath="$PROJECT_DIR$/demolitor_templatessss/images/products/collagen3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/images/proteina_iso.png" beforeDir="false" afterPath="$PROJECT_DIR$/demolitor_templatessss/images/proteina_iso.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/demolitor_templatessss/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/demolitor_templatessss/js/main.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2iIf9LY6X14LA0oshpCb0TpbYtB" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="openDirectoriesWithSingleClick" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/diegodelavega/Diego/Demolitor/src/apps",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.intellij.python.pro.templateLanguages.PyTemplateLanguageModulesConfigurable",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/apps" />
+      <recent name="$PROJECT_DIR$/src/apps/core/static/img/products" />
+      <recent name="$PROJECT_DIR$/src/templates/core" />
+      <recent name="$PROJECT_DIR$/src/apps/core/static/img" />
+      <recent name="$PROJECT_DIR$/src/apps/core/static" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/templates/core" />
+      <recent name="$PROJECT_DIR$/template/images/partners" />
+      <recent name="$PROJECT_DIR$/template/images" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-PY-241.14494.241" />
+        <option value="bundled-python-sdk-0509580d9d50-28c9f5db9ffe-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.14494.241" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d909a866-9aed-4c03-ba3b-68a2a6b56495" name="Changes" comment="" />
+      <created>1719182859964</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1719182859964</updated>
+      <workItem from="1719182860994" duration="39913000" />
+      <workItem from="1719438946367" duration="612000" />
+      <workItem from="1719589226049" duration="9950000" />
+      <workItem from="1720018829180" duration="599000" />
+      <workItem from="1720023698786" duration="3961000" />
+      <workItem from="1720073892753" duration="599000" />
+      <workItem from="1720116564020" duration="599000" />
+      <workItem from="1720157114550" duration="598000" />
+      <workItem from="1720195925942" duration="604000" />
+      <workItem from="1720201711027" duration="598000" />
+      <workItem from="1720308217435" duration="598000" />
+      <workItem from="1720310329509" duration="599000" />
+      <workItem from="1720342660393" duration="16718000" />
+      <workItem from="1720767957849" duration="610000" />
+      <workItem from="1721008094183" duration="3937000" />
+      <workItem from="1721055327402" duration="598000" />
+      <workItem from="1721074395754" duration="599000" />
+      <workItem from="1721075193942" duration="113000" />
+      <workItem from="1721075314501" duration="2000" />
+      <workItem from="1721626892296" duration="2057000" />
+      <workItem from="1721628959745" duration="17239000" />
+      <workItem from="1722326314465" duration="13027000" />
+      <workItem from="1722487689491" duration="6628000" />
+      <workItem from="1722580571096" duration="5175000" />
+      <workItem from="1722929542462" duration="17015000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

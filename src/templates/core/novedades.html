@@ -1,0 +1,111 @@
+{% load static %}
+
+
+<section class="bg-black p-8 h-max">
+  <div class="container mx-auto py-8">
+    <div class="flex justify-center items-center">
+      <h2 class="text-3xl font-bold px-8  cursor-pointer text-shadow-effect"
+          onclick="ToggleWithDataAttr(event, 'data-oferta')">
+          OFERTAS
+      </h2>
+
+        <h2 class="text-3xl font-bold  px-8 text-shadow-effect cursor-pointer"
+            onclick="ToggleWithDataAttr(event, 'data-novedad')">
+            NOVEDADES
+        </h2>
+        <h2 class="text-3xl font-bold  px-8 text-shadow-effect cursor-pointer"
+            onclick="ToggleWithDataAttr(event, 'data-packs')">
+            PACKS
+        </h2>
+      </div>
+    </div>
+    <!-- Swiper -->
+    <div class="swiper-container two">
+        <div class="swiper-wrapper hidden" data-oferta swiper>
+            {% for product_oferta in ofertas %}
+                <div class="swiper-slide">
+                <div class="slider-image">
+                    <img src="{{ product_oferta.image.url }}" alt="slide 1">
+                    <div class="text-center py-4">
+                        <div class="py-4">
+                            {{ product_oferta.name }}
+                        </div>
+                        <div class="flex items-center justify-center ">
+                            <div class="grid grid-cols-2 gap-4 text-center">
+                                <p class="text-gray-400 line-through">S/. {{ product_oferta.price }}</p>
+                                <p class="text-xl">S/. {{ product_oferta.price }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="swiper-wrapper" data-novedad swiper>
+            {% for product_novedad in novedades %}
+                <div class="swiper-slide">
+                <div class="slider-image">
+                    <img src="{{ product_novedad.image.url }}" alt="slide 1">
+                    <div class="text-center py-4">
+                        <div class="py-4">
+                            {{ product_novedad.name }}
+                        </div>
+                        <div class="flex items-center justify-center ">
+                            <div class="grid grid-cols-2 gap-4 text-center">
+                                <p class="text-gray-400 line-through">S/. {{ product_novedad.price }}</p>
+                                <p class="text-xl">S/. {{ product_novedad.price }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="swiper-wrapper hidden" data-packs swiper>
+            {% for product_packs in packs %}
+                <div class="swiper-slide">
+                <div class="slider-image">
+                    <img src="{{ product_packs.image.url }}" alt="slide 1">
+                    <div class="text-center py-4">
+                        <div class="py-4">
+                            {{ product_packs.name }}
+                        </div>
+                        <div class="flex items-center justify-center ">
+                            <div class="grid grid-cols-2 gap-4 text-center">
+                                <p class="text-gray-400 line-through">S/. {{ product_packs.price }}</p>
+                                <p class="text-xl">S/. {{ product_packs.price }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+    </div>
+</section>
+{% block js %}
+    <script>
+        function ToggleWithDataAttr(event, dataAttr) {
+            // Encuentra el div con el atributo data-novedad
+            var eventTarget = event.target
+            var div = document.querySelector(`[${dataAttr}]`);
+            var div_hidden = document.querySelectorAll(`[swiper]`);
+            var nav = document.querySelectorAll('.text-shadow-effect');
+            if (div) {
+                // Aquí puedes realizar la acción que desees con el div encontrado
+                // Ejemplo: Cambiar el contenido o clase del div
+
+                div_hidden.forEach(function(element) {
+                    element.classList.add('hidden');
+                });
+                nav.forEach(function(element) {
+                    element.classList.remove('text-shadow-effect-active');
+                });
+                eventTarget.classList.toggle('text-shadow-effect-active')
+                div.classList.toggle('hidden');
+
+            }
+        }
+    </script>
+{% endblock js %}

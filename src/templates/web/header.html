@@ -1,0 +1,25 @@
+{% load static %}
+    <!-- Header Section Begin -->
+    <header class="bg-black">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <img src="{{ dynamic_data.image.url}}" alt="Demolitor Logo" class="h-10">
+      <nav class="flex space-x-32">
+        <a href="#" class="text-white hover:text-gray-400">Nosotros</a>
+        <a href="#" class="text-white hover:text-gray-400">Productos</a>
+        <a href="#" class="text-white hover:text-gray-400">Contacto</a>
+        <a href="#" class="text-white hover:text-gray-400">Blog</a>
+      </nav>
+      <div class="flex items-center space-x-4">
+        <input type="text" placeholder="Buscar" class="p-2 rounded bg-gray-800 text-white">
+        <button class="bg-red-600 px-4 py-2 rounded hover:bg-red-700">Contáctanos</button>
+      </div>
+    </div>
+
+    <div class="bg-[#EDEDED] py-8 flex space-x-4 justify-center text-sm">
+        {% for category in dynamic_data.category_company.all %}
+            <a href="#" class="bg-gray-300 text-black px-24 py-2 rounded-full hover:bg-gray-400">{{ category.name}}</a>
+        {% endfor %}
+    </div>
+
+  </header>
+  <!-- Header Section End -->

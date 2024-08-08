@@ -1,0 +1,33 @@
+{% load static %}
+{% block social_facebook %}
+  <meta property="og:url"           content="" />
+  <meta property="og:type"          content="article" />
+  <meta property="og:title"         content="" />
+  <meta property="og:description"   content="" />
+  <meta property="og:image"         content="" />
+  <meta property="og:image:width"   content="1920"/>
+  <meta property="og:image:height"   content="1079" />
+
+{% endblock social_facebook %}
+
+  <!-- Categories Section Begin -->
+  <section class="categories">
+    <div class="container">
+        <div class="row">
+            <div class="categories__slider owl-carousel">
+                {% for category in categories %}
+                <div class="col-lg-3">
+                    {% if category.image.url %}
+                    <div class="categories__item set-bg" data-setbg={{category.image.url}}>
+                    {% else %}
+                    <div class="categories__item set-bg" data-setbg=""></div>
+                    {% endif %}
+                        <h5><a href="{% url 'core:category_detail' pk=category.pk %}">{{category.name}}</a></h5>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Categories Section End -->

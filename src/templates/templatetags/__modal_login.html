@@ -1,0 +1,201 @@
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background: #12c2e9;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #f64f59, #c471ed, #12c2e9);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #f64f59, #c471ed, #12c2e9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    min-width: 350px;
+    max-width: 500px;
+    min-height: 400px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  border: none;
+  color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+  padding: 2px 16px;
+
+  color: white;
+}
+
+
+
+.login-form,
+.login-form input[type="text"],
+.login-form input[type="password"],
+.login-form input[type="submit"]{
+    font-weight:bold;
+    font-size:12px;
+    font-family:"Tahoma", sans-serif;
+    text-transform:uppercase;
+}
+.login-form input[type="checkbox"]{
+    vertical-align:middle;
+    margin-right:5px;
+}
+.login-form {
+
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px 40px 30px;
+}
+.login-form input[type="text"],
+.login-form input[type="password"],
+.login-form input[type="submit"] {
+    display: block;
+    border: 2px solid black;
+    padding: 10px 15px;
+    padding-right: 40px;
+}
+h1 {
+    margin: 0 0 15px 0;
+    font-size: 20px;
+}
+.login-form input[type="text"] {
+    background: #f9f6f3 url("https://htmlacademy.ru/assets/ifmo/icon-user.png") no-repeat 270px 10px;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+    width: 100%;
+}
+.login-form input[type="password"] {
+    background: #f9f6f3 url("https://htmlacademy.ru/assets/ifmo/icon-lock.png") no-repeat 270px 10px;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+    width: 100%;
+}
+.login-form input[type="submit"] {
+    background:black;
+    color:white;
+    border:none;
+    margin-top:15px;
+    padding:15px;
+    width: 100%;
+}
+.login-form a {
+    color: black;
+    float: right;
+}
+.login-form h1 {
+    text-align: center;
+}
+</style>
+
+
+<!-- Trigger/Open The Modal -->
+
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+
+
+      <span class="close">&times;</span>
+    </div>
+    <div class="modal-body">
+        <form class="login-form" id="form_login" method="post">
+          {% csrf_token %}
+            <h1>Login Form</h1>
+            {{form.username}}
+            {{form.password}}
+            <label>
+                <input type="checkbox">Recuerdame </label>
+            <a href="#">Crear una cuenta</a>
+            <input type="submit">
+        </form>
+    </div>
+  </div>
+
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+
+
+</script>

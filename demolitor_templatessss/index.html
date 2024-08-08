@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demolitor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+<!--    <script>-->
+<!--      tailwind.config = {-->
+<!--        theme: {-->
+<!--          extend: {-->
+<!--            colors: {-->
+<!--              clifford: '#da373d',-->
+<!--            }-->
+<!--          }-->
+<!--        }-->
+<!--      }-->
+<!--    </script>-->
+<!--    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>-->
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/css/swiper.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+
+</head>
+<body class="bg-black text-white">
+  <header class="bg-black">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <img src="images/logo_demolitor.png" alt="Demolitor Logo" class="h-10">
+      <nav class="flex space-x-32">
+        <a href="#" class="text-white hover:text-gray-400">Nosotros</a>
+        <a href="#" class="text-white hover:text-gray-400">Productos</a>
+        <a href="#" class="text-white hover:text-gray-400">Contacto</a>
+        <a href="#" class="text-white hover:text-gray-400">Blog</a>
+      </nav>
+      <div class="flex items-center space-x-4">
+        <input type="text" placeholder="Buscar" class="p-2 rounded bg-gray-800 text-white">
+        <button class="bg-red-600 px-4 py-2 rounded hover:bg-red-700">Contáctanos</button>
+      </div>
+    </div>
+
+    <div class="bg-[#EDEDED] py-8 flex space-x-4 justify-center text-sm">
+      <a href="#" class="bg-gray-300 text-black px-24 py-2 rounded-full hover:bg-gray-400">Proteínas</a>
+      <a href="#" class="bg-gray-300 text-black px-24 py-2 rounded-full hover:bg-gray-400">Creatinas</a>
+      <a href="#" class="bg-gray-300 text-black px-24 py-2 rounded-full hover:bg-gray-400">Black Maca</a>
+      <a href="#" class="bg-gray-300 text-black px-24 py-2 rounded-full hover:bg-gray-400">Colágenos</a>
+      <a href="#" class="bg-gray-300 text-black px-24 py-2 rounded-full hover:bg-gray-400">Línea Sport</a>
+      <a href="#" class="bg-gray-300 text-black px-24 py-2 rounded-full hover:bg-gray-400">Snacks</a>
+    </div>
+
+  </header>
+
+  <main>
+    <section class="relative">
+        <div id="default-carousel" class="relative w-full" data-carousel="slide">
+          <!-- Carousel wrapper -->
+          <div class="relative h-56 overflow-hidden rounded-lg md:h-[80vh]">
+               <!-- Item 1 -->
+              <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                  <img src="images/home_slider.png" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+              </div>
+              <!-- Item 2 -->
+              <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                  <img src="images/home_slider.png" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+              </div>
+              <!-- Item 3 -->
+              <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                  <img src="images/home_slider.png" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+              </div>
+              <!-- Item 4 -->
+              <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                  <img src="images/home_slider.png" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+              </div>
+              <!-- Item 5 -->
+              <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                  <img src="images/home_slider.png" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+              </div>
+          </div>
+          <!-- Slider indicators -->
+          <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+              <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+              <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+              <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+              <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
+              <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
+          </div>
+          <!-- Slider controls -->
+          <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+              <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                  <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+                  </svg>
+                  <span class="sr-only">Previous</span>
+              </span>
+          </button>
+          <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+              <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                  <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                  </svg>
+                  <span class="sr-only">Next</span>
+              </span>
+          </button>
+      </div>
+    </section>
+      <section class="bg-black p-8">
+          <div class="container mx-auto py-8">
+            <div class="flex justify-center items-center">
+              <h2 class="text-3xl font-bold  px-8 hover:text-5xl">OFERTAS</h2>
+
+                <h2 class="text-3xl font-bold  px-8 hover:text-5xl">NOVEDADES</h2>
+                <h2 class="text-3xl font-bold  px-8 hover:text-5xl">PACKS</h2>
+              </div>
+            </div>
+          </div>
+          <!-- Swiper -->
+        <div class="swiper-container two">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="slider-image">
+                        <img src="images/proteina_iso.png" alt="slide 1">
+                        <div class="text-center py-4">
+                            <div class="py-4">
+                                Proteína ISO | 1.76lb
+                            </div>
+                            <div class="flex items-center justify-center ">
+                                <div class="grid grid-cols-2 gap-4 text-center">
+                                    <p class="text-gray-400 line-through">S/199</p>
+                                    <p class="text-xl">S/99.50</p>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slider-image">
+                        <img src="images/proteina_iso.png" alt="slide 2">
+                        <div class="text-center py-4">
+                            <div class="py-4">
+                                Proteína ISO | 1.76lb
+                            </div>
+                            <div class="flex items-center justify-center ">
+                                <div class="grid grid-cols-2 gap-4 text-center">
+                                    <p class="text-gray-400 line-through">S/199</p>
+                                    <p class="text-xl">S/99.50</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slider-image">
+                        <img src="images/proteina_iso.png" alt="slide 3">
+                        <div class="text-center py-4">
+                            <div class="text-init">
+                                50%
+                            </div>
+                            <div class="py-4">
+                                Proteína ISO | 1.76lb
+                            </div>
+                            <div class="flex items-center justify-center ">
+                                <div class="grid grid-cols-2 gap-4 text-center">
+                                    <p class="text-gray-400 line-through">S/199</p>
+                                    <p class="text-xl">S/99.50</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Add Pagination -->
+<!--            <div class="swiper-pagination"></div>-->
+        </div>
+      </section>
+
+    <section class="bg-gray-100 p-8">
+      <div class="container mx-auto text-center">
+        <h2 class="text-2xl font-bold text-black">Elige según tu objetivos</h2>
+        <div class="grid grid-cols-4 gap-8 mt-8">
+          <div class="p-4 rounded-lg">
+            <img src="images/Musculo.png" alt="Músculo" class="w-full h-32 object-cover rounded-lg">
+          </div>
+          <div class="p-4 rounded-lg">
+            <img src="images/Fitness.png" alt="Fitness" class="w-full h-32 object-cover rounded-lg">
+          </div>
+          <div class="p-4 rounded-lg">
+            <img src="images/Salud.png" alt="Salud" class="w-full h-32 object-cover rounded-lg">
+          </div>
+          <div class=" p-4 rounded-lg ">
+            <img src="images/Sport.png" alt="Sport" class="w-full h-32 object-cover rounded-lg ">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid place-items-center h-screen  relative  bg-black text-white p-8 bg-cover bg-center bg-no-repeat" style="background-image: url('images/fondo_black_maca.png');">
+        <div class="container mx-auto  items-center justify-center rounded-lg p-8 w-8/12">
+            <h2 class="text-7xl font-bold">Maximiza tu explosividad y rendimiento</h2>
+            <div class=" container mx-auto flex items-center justify-center rounded-lg p-8">
+                <div class="w-full relative">
+
+                </div>
+                <div class="w-full text-center">
+                    <p class="mt-4">Nuestra Black Maca llevará tus entrenamientos al siguiente nivel, siente la potencia en cada uno de tus entrenamientos</p>
+                    <p>¿Estás listo para probarlo?</p>
+                    <button class="bg-red-600 px-4 py-2 rounded mt-4 hover:bg-red-700">Ver más detalle</button>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section class="bg-[#ECECEC] p-8">
+        <h2 class="text-2xl font-bold text-black text-center">Nuestros productos variados</h2>
+          <div class="container mx-auto py-8">
+            <div class="flex justify-center items-center text-black">
+                <h2 class="text-3xl font-light px-8">CREATINAS</h2>
+                <h2 class="text-3xl font-light px-8">BLACK MACA</h2>
+                <h2 class="text-3xl font-light px-8">COLAGENOS</h2>
+                <h2 class="text-3xl font-light px-8">LINEA SPORT</h2>
+                <h2 class="text-3xl font-light px-8">SNACKS</h2>
+              </div>
+            </div>
+          </div>
+          <!-- Swiper -->
+        <div class="swiper-container two">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="slider-image">
+                        <img src="images/products/collagen1.png" alt="slide 1">
+                        <div class="text-center py-4">
+                            <div class="py-4">
+                                Proteína ISO | 1.76lb
+                            </div>
+                            <div class="flex items-center justify-center ">
+                                <div class="grid grid-cols-2 gap-4 text-center">
+                                    <p class="text-gray-400 line-through">S/199</p>
+                                    <p class="text-xl">S/99.50</p>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slider-image">
+                        <img src="images/products/collagen1.png" alt="slide 2">
+                        <div class="text-center py-4">
+                            <div class="py-4">
+                                Proteína ISO | 1.76lb
+                            </div>
+                            <div class="flex items-center justify-center ">
+                                <div class="grid grid-cols-2 gap-4 text-center">
+                                    <p class="text-gray-400 line-through">S/199</p>
+                                    <p class="text-xl">S/99.50</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slider-image">
+                        <img src="images/products/collagen1.png" alt="slide 3">
+                        <div class="text-center py-4">
+                            <div class="text-init">
+                                50%
+                            </div>
+
+                            <div class="py-4">
+                                Proteína ISO | 1.76lb
+                            </div>
+                            <div class="flex items-center justify-center ">
+                                <div class="grid grid-cols-2 gap-4 text-center">
+                                    <p class="text-gray-400 line-through">S/199</p>
+                                    <p class="text-xl">S/99.50</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex items-center justify-center">
+            <button class="m-auto bg-red-600 px-4 py-2 rounded mt-4 hover:bg-red-700">Ver más detalle</button>
+        </div>
+      </section>
+<!--    <section class="bg-white p-8">-->
+<!--      <div class="container mx-auto text-center">-->
+<!--        <h2 class="text-2xl font-bold text-black">Nuestros productos variados</h2>-->
+<!--        <div class="grid grid-cols-5 gap-8 mt-8">-->
+<!--          <div class="bg-gray-100 p-4 rounded-lg">-->
+<!--            <img src="creatina.png" alt="Creatinas" class="w-full h-32 object-cover rounded-lg">-->
+<!--            <h3 class="text-xl font-bold mt-4 text-black">CREATINAS</h3>-->
+<!--          </div>-->
+<!--          <div class="bg-gray-100 p-4 rounded-lg">-->
+<!--            <img src="black-maca.png" alt="Black Maca" class="w-full h-32 object-cover rounded-lg">-->
+<!--            <h3 class="text-xl font-bold mt-4 text-black">BLACK MACA</h3>-->
+<!--          </div>-->
+<!--          <div class="bg-gray-100 p-4 rounded-lg">-->
+<!--            <img src="colageno.png" alt="Colágenos" class="w-full h-32 object-cover rounded-lg">-->
+<!--            <h3 class="text-xl font-bold mt-4 text-black">COLÁGENOS</h3>-->
+<!--          </div>-->
+<!--          <div class="bg-gray-100 p-4 rounded-lg">-->
+<!--            <img src="linea-sport.png" alt="Línea Sport" class="w-full h-32 object-cover rounded-lg">-->
+<!--            <h3 class="text-xl font-bold mt-4 text-black">LÍNEA SPORT</h3>-->
+<!--          </div>-->
+<!--          <div class="bg-gray-100 p-4 rounded-lg">-->
+<!--            <img src="snacks.png" alt="Snacks" class="w-full h-32 object-cover rounded-lg">-->
+<!--            <h3 class="text-xl font-bold mt-4 text-black">SNACKS</h3>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        <button class="bg-red-600 px-4 py-2 rounded mt-4 hover:bg-red-700">Ver todos los productos</button>-->
+<!--      </div>-->
+<!--    </section>-->
+
+    <section class="bg-gray-100 p-8">
+      <div class="container mx-auto text-center">
+        <h2 class="text-2xl font-bold text-black">También puedes encontrarnos en</h2>
+        <div class="flex justify-center space-x-40 mt-8">
+          <img src="images/partners/falabella.png" alt="Falabella" class="h-24">
+          <img src="images/partners/mifarma.png" alt="Mifarma" class="h-24">
+          <img src="images/partners/inkafarma.png" alt="Inkafarma" class="h-24">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-[#F8F8F8] text-gray-400 p-8">
+    <div class="container mx-auto grid grid-cols-3 gap-8">
+      <div>
+        <h3 class="text-xl font-bold text-black">Productos</h3>
+        <ul class="mt-4 space-y-2">
+          <li><a href="#" class="hover:text-white">Proteína Whey</a></li>
+          <li><a href="#" class="hover:text-white">Proteína ISO</a></li>
+          <li><a href="#" class="hover:text-white">Creatinas</a></li>
+          <li><a href="#" class="hover:text-white">Colágenos Hidrolizados</a></li>
+          <li><a href="#" class="hover:text-white">Black Maca</a></li>
+          <li><a href="#" class="hover:text-white">Línea Sport</a></li>
+          <li><a href="#" class="hover:text-white">Proteína Svelt</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-xl font-bold text-black">Contenido</h3>
+        <ul class="mt-4 space-y-2">
+          <li><a href="#" class="hover:text-white">Home</a></li>
+          <li><a href="#" class="hover:text-white">Nosotros</a></li>
+          <li><a href="#" class="hover:text-white">Contacto</a></li>
+          <li><a href="#" class="hover:text-white">Blog</a></li>
+          <li><a href="#" class="hover:text-white">Sé un embajador</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-xl font-bold text-black">Servicio al cliente</h3>
+        <ul class="mt-4 space-y-2">
+          <li><a href="#" class="hover:text-white">Consulta un pedido</a></li>
+          <li><a href="#" class="hover:text-white">Distribuidor</a></li>
+          <li><a href="#" class="hover:text-white">Distribuidor Internacional</a></li>
+          <li><a href="#" class="hover:text-white">Política de cambio</a></li>
+          <li><a href="#" class="hover:text-white">Libro de reclamaciones</a></li>
+          <li><a href="#" class="hover:text-white">Promociones vigentes</a></li>
+          <li><a href="#" class="hover:text-white">Términos y condiciones</a></li>
+          <li><a href="#" class="hover:text-white">Políticas de privacidad</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container mx-auto flex justify-between items-center mt-8">
+      <div class="flex space-x-4">
+        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-tiktok"></i></a>
+      </div>
+      <p>&copy; 2024 Demolitor</p>
+    </div>
+  </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.min.js"></script>
+    <script rel="stylesheet" src="js/main.js"></script>
+</body>
+</html>
