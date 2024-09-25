@@ -16,8 +16,7 @@ ALLOWED_HOSTS = ["*"]
 STATIC_ROOT = os.path.join(PROJECT_ROOT, "static")
 STATIC_URL = os.environ.setdefault("STATIC_URL", "/static/")
 
-INSTALLED_APPS.append("raven.contrib.django.raven_compat")
-# SESSIONS
+
 
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 
