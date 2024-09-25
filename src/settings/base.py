@@ -1,11 +1,12 @@
 import os
 from datetime import timedelta
 
-PROJECT_NAME = "Samiex"
+SITE_URL = "https://demo.demolitorprotein.com"
+PROJECT_NAME = "Demolitor"
 PROJECT_ROOT = os.path.dirname(
     os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 )
-SITE_ID = 1
+
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 
@@ -61,7 +62,7 @@ THIRD_PART_APPS = [
 
 INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS + THIRD_PART_APPS
 
-CSRF_TRUSTED_ORIGINS = ["https://*.samiex.com.pe", "https://*.127.0.0.1"]
+CSRF_TRUSTED_ORIGINS = ["https://*.demolitorprotein.com", "https://*.127.0.0.1"]
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
