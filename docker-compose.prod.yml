@@ -45,8 +45,8 @@ services:
       - static:/www/static
       - media:/www/media
     environment:
-      - VIRTUAL_HOST=demo.demolitor.com
-      - LETSENCRYPT_HOST=demo.demolitor.com
+      - VIRTUAL_HOST=demo.demolitorprotein.com
+      - LETSENCRYPT_HOST=demo.demolitorprotein.com
       - LETSENCRYPT_EMAIL=ddvloayza@gmail.com
     depends_on:
       - web
