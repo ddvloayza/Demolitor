@@ -19,7 +19,7 @@ app_name = "core"
 
 urlpatterns = [
     path("", HomeView.as_view(), name="home"),
-    path('products/<uuid:pk>/', ProductDetailView.as_view(), name='product_detail'),
+    path('product/<uuid:pk>/', ProductDetailView.as_view(), name='product_detail'),
     path('products/', ProductListView.as_view(), name='product_list'),
     path('category/<uuid:pk>/', CategoryDetailView.as_view(), name='category_detail'),
     path('categories/', CategoryListView.as_view(), name='category_list'),

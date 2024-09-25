@@ -45,8 +45,8 @@ services:
       - static:/www/static
       - media:/www/media
     environment:
-      - VIRTUAL_HOST=samiex.com.pe,www.samiex.com.pe
-      - LETSENCRYPT_HOST=samiex.com.pe,www.samiex.com.pe
+      - VIRTUAL_HOST=demo.demolitor.com
+      - LETSENCRYPT_HOST=demo.demolitor.com
       - LETSENCRYPT_EMAIL=ddvloayza@gmail.com
     depends_on:
       - web

@@ -1,5 +1,5 @@
 asgiref>=3.5.2
-django==5.0
+django==5.1.1
 pytz==2022.6
 sqlparse==0.4.1
 Pillow>=8.2.0
@@ -11,4 +11,5 @@ django-filter==2.4.0
 sentry-sdk==0.15.1
 django-ubigeo-peru==0.5.0
 python-slugify==4.0.1
+graphene-django
 reportlab

@@ -29,6 +29,7 @@ DJANGO_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "ubigeos",
+    "graphene_django",
 
 ]
 
@@ -42,6 +43,13 @@ LOCAL_APPS = [
     "apps.contact",
     "apps.tag",
 ]
+
+GRAPHENE = {
+    "SCHEMA": "apps.core.api.schema.finniu_scheme",
+    "MIDDLEWARE": [
+        "graphene_django.debug.DjangoDebugMiddleware",
+    ],
+}
 
 
 ADMIN_URL = "admin-django"
@@ -227,3 +235,4 @@ TINYMCE_DEFAULT_CONFIG = {
     "statusbar": True,
 }
 
+CORS_ORIGIN_ALLOW_ALL = True

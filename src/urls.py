@@ -16,14 +16,25 @@ Including another URLconf
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
-from django.urls import include, path
+from django.urls import include, path, re_path
+from django.views.decorators.csrf import csrf_exempt
 
+from apps.core.api.schema import demolitor_scheme
+from apps.core.api.views import PrivateApiGraphQLView, ApiGraphQLView
 from apps.core.views import Error404View
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", include("apps.core.urls")),
     path("product/", include("apps.product.urls")),
+    re_path(
+        r"^api/v1/graph/demolitor$",
+            csrf_exempt(
+                ApiGraphQLView.as_view(
+                    schema=demolitor_scheme,
+            )
+        ),
+    ),
 ]
 
 handler404 = Error404View.as_view()

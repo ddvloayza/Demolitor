@@ -751,3 +751,40 @@ button.swiper-pagination-bullet {
 	font-weight: bold;
 	color: #DE3704; /* Color similar al de la imagen */
 }
+
+
+/*animation*/
+.scroll-container {
+	/*scroll-snap-type: y mandatory; !* Activa el scroll snap en el eje Y *!*/
+    overflow-y: auto; /* Permite el scroll vertical */
+    height: 100vh;
+	position: relative; /* Asegura que las secciones estén contenidas */
+}
+.scroll-section {
+    scroll-snap-align: start; /* Asegura que cada sección se alinee al inicio */
+    width: 100%;
+    height: 80%; /* Cada sección ocupa el 100% de la ventana */
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+	flex-direction: column;
+}
+.scroll-section img {
+    width: 15%;
+	object-fit: contain;
+}
+
+.scroll-section.active {
+    opacity: 1;
+}
+.chapa {
+	width: 12% !important;
+}
+.spacer {
+	height: 20vh; /* Agrega una altura extra para el espacio */
+}
+.last-img {
+	width: 45% !important;
+}

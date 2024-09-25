@@ -12,206 +12,277 @@
 {% endblock social_facebook %}
 {% block css %}
 <style>
-
+    body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow: hidden; /* Evita el scroll en el cuerpo */
+        background-color: #000;
+    }
 
 </style>
 
 {% endblock css %}
+
 {% block content %}
     <!-- Product Details Section Begin -->
-    <section class="product-details spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-md-6">
-                    <div class="product__details__pic">
-                        <div class="product__details__pic__item">
-                            {% if object.get_absolute_image_url %}
-                                <img class="product__details__pic__item--large"
-                                    src="{{object.image.url}}" alt="">
-                            {% else %}
-                                <img class="product__details__pic__item--large"
-                                    src="" alt="">
-                            {% endif %}
-                        </div>
-                        <div class="product__details__pic__slider owl-carousel">
-                            <img data-imgbigurl="img/product/details/product-details-2.jpg"
-                                src="img/product/details/thumb-1.jpg" alt="">
-                            <img data-imgbigurl="img/product/details/product-details-3.jpg"
-                                src="img/product/details/thumb-2.jpg" alt="">
-                            <img data-imgbigurl="img/product/details/product-details-5.jpg"
-                                src="img/product/details/thumb-3.jpg" alt="">
-                            <img data-imgbigurl="img/product/details/product-details-4.jpg"
-                                src="img/product/details/thumb-4.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6">
-                    <div class="product__details__text">
-                        <h3>{{object.name}}</h3>
-                        <div class="product__details__rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star-half-o"></i>
-                            <span>(18 reviews)</span>
-                        </div>
-                        <!-- <div class="product__details__price">$50.00</div> -->
-                        <p>{{object.description|safe}}</p>
-                        <div class="product__details__quantity">
-                            <div class="quantity">
-                                <div class="pro-qty">
-                                    <input type="text" value="1">
-                                </div>
-                            </div>
-                        </div>
-                        <a href="#" class="primary-btn">Cotizar</a>
-                        <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a>
-                        <ul>
-                            <li><b>Disponibilidad</b> <span>En Stock</span></li>
-                            <!-- <li><b>Shipping</b> <span>01 day shipping. <samp>Free pickup today</samp></span></li> -->
-                            {% if object.certificado %}
-                                <li><a href="{{ object.certificado.url }}" class="primary-btn" target="_blank">Descargar Certificado</a></li>
-                            {% endif %}
-                            
-                            <li><b>Compartir</b>
-                                <div class="share">
-                                    <a href="https://api.whatsapp.com/send?text=Mira%20el%20producto%20{{object.name}}%20en%20{{object.get_absolute_url_product}}" target="_blank"><i class="fa fa-whatsapp"></i></a>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-12">
-                    <div class="product__details__tab">
-                        <ul class="nav nav-tabs" role="tablist">
-                            <li class="nav-item">
-                                <a class="nav-link active" data-toggle="tab" href="#tabs-1" role="tab"
-                                    aria-selected="true">Información para pedido</a>
-                            </li>
-                            <!-- <li class="nav-item">
-                                <a class="nav-link" data-toggle="tab" href="#tabs-2" role="tab"
-                                    aria-selected="false">Information</a>
-                            </li> -->
-                            <!-- <li class="nav-item">
-                                <a class="nav-link" data-toggle="tab" href="#tabs-3" role="tab"
-                                    aria-selected="false">Reviews <span>(1)</span></a>
-                            </li> -->
-                        </ul>
-                        <div class="tab-content">
-                            <div class="tab-pane active" id="tabs-1" role="tabpanel">
-                                <div class="product__details__tab__desc">
-                                    
-                                    {{object.content|safe}}
-                                </div>
-                            </div>
-                            <!-- <div class="tab-pane" id="tabs-2" role="tabpanel">
-                                <div class="product__details__tab__desc">
-                                    <h6>Informacion del Producto</h6>
-                                    {{object.content|safe}}
-                                </div>
-                            </div> -->
-                            <!-- <div class="tab-pane" id="tabs-3" role="tabpanel">
-                                <div class="product__details__tab__desc">
-                                    <h6>Products Infomation</h6>
-                                    <p>Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.
-                                        Pellentesque in ipsum id orci porta dapibus. Proin eget tortor risus.
-                                        Vivamus suscipit tortor eget felis porttitor volutpat. Vestibulum ac diam
-                                        sit amet quam vehicula elementum sed sit amet dui. Donec rutrum congue leo
-                                        eget malesuada. Vivamus suscipit tortor eget felis porttitor volutpat.
-                                        Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Praesent
-                                        sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ac
-                                        diam sit amet quam vehicula elementum sed sit amet dui. Vestibulum ante
-                                        ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
-                                        Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.
-                                        Proin eget tortor risus.</p>
-                                </div>
-                            </div> -->
-                        </div>
-                    </div>
+    <section class="scroll-container">
+    <div class="max-w  bg-white">
+        <div class="max-w-6xl mx-auto py-10 flex flex-col lg:flex-row gap-10 items-center ">
+        <!-- Imagen del Producto -->
+            <div class="w-full lg:w-1/2 flex justify-center">
+                <div class="">
+                    <img class="w-1/2" src="{% static 'img/products/product_transition/whey-completo.png' %}" alt="Producto">
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- Product Details Section End -->
 
-    <!-- Related Product Section Begin -->
-    <!-- <section class="related-product">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-title related__product__title">
-                        <h2>Related Product</h2>
+            <!-- Información del Producto -->
+            <div class="w-full lg:w-1/2">
+                <!-- Etiqueta de Más Comprados -->
+                <span class="bg-yellow-200 text-yellow-700 px-2 py-1 rounded-full text-sm mb-2 inline-block">Más comprados</span>
+
+                <!-- Título del Producto -->
+                <h1 class="text-4xl font-bold text-gray-800 mb-4">Proteína Whey</h1>
+
+                <!-- Selector de Sabor -->
+                <div class="mb-6">
+                    <label class="block text-lg font-semibold mb-2">Sabor</label>
+                    <div class="flex space-x-4">
+                        <button class="px-4 py-2 border rounded-full text-gray-700 bg-gray-100 focus:bg-gray-200 focus:outline-none">Vainilla</button>
+                        <button class="px-4 py-2 border rounded-full text-gray-700 bg-gray-100 focus:bg-gray-200 focus:outline-none">Chocolate</button>
                     </div>
                 </div>
+
+                <!-- Control de Cantidad -->
+                <div class="mb-6">
+                    <label class="block text-lg font-semibold mb-2">Cantidad</label>
+                    <div class="flex items-center space-x-4">
+                        <button class="px-4 py-2 border rounded-full text-gray-700 bg-gray-100 focus:bg-gray-200 focus:outline-none">-</button>
+                        <span class="text-xl font-semibold">1</span>
+                        <button class="px-4 py-2 border rounded-full text-gray-700 bg-gray-100 focus:bg-gray-200 focus:outline-none">+</button>
+                    </div>
+                </div>
+
+                <!-- Selector de Presentación -->
+                <div class="mb-6">
+                    <label class="block text-lg font-semibold mb-2">Presentación</label>
+                    <div class="flex space-x-6">
+                        <label class="flex items-center">
+                            <input type="radio" name="servicios" class="form-radio h-5 w-5 text-orange-500">
+                            <span class="ml-2 text-gray-700">35 Servicios</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="radio" name="servicios" class="form-radio h-5 w-5 text-orange-500">
+                            <span class="ml-2 text-gray-700">67 Servicios</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Precio y Descuento -->
+                <div class="flex items-center space-x-4 mb-6">
+                    <span class="text-3xl font-bold text-gray-800">S/ 169.00</span>
+                    <input type="text" placeholder="Código de dscto" class="px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500">
+                </div>
+
+                <!-- Botón de Comprar -->
+                <button class="w-full bg-orange-500 hover:bg-orange-600 text-white py-3 rounded-lg text-lg font-semibold focus:outline-none focus:ring-2 focus:ring-orange-500">Comprar</button>
+
+                <!-- Descripción del Producto -->
+                <p class="mt-6 text-gray-600 text-sm">
+                    Demolitor Whey Protein sabor chocolate es un excelente suplemento proteico formulado con alto contenido de aminoácidos esenciales para reconstruir rápida y eficazmente las fibras musculares después del entrenamiento.
+                </p>
             </div>
-            <div class="row">
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="img/product/product-1.jpg">
-                            <ul class="product__item__pic__hover">
-                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">Crab Pool Security</a></h6>
-                            <h5>$30.00</h5>
-                        </div>
-                    </div>
+        </div>
+    </div>
+        <div class="max-w-6xl mx-auto py-10 flex flex-col text-white text-center">
+            DELIVERY GRATIS A LIMA METROPOLITANA
+        </div>
+        <div class="bg-white w-full">
+            <div class="max-w-6xl mx-auto py-10 flex flex-col lg:flex-row items-center gap-10">
+        <!-- Lista de Características -->
+        <div class="w-full lg:w-1/2">
+            <ul class="space-y-2 mb-6">
+                <li class="flex items-center text-gray-700">
+                    <svg class="w-5 h-5 text-orange-500 mr-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                        <path d="M9 16.172l-5.414-5.414 1.414-1.414L9 13.344l7.586-7.586 1.414 1.414z"/>
+                    </svg>
+                    CREA MÚSCULOS
+                </li>
+                <li class="flex items-center text-gray-700">
+                    <svg class="w-5 h-5 text-orange-500 mr-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                        <path d="M9 16.172l-5.414-5.414 1.414-1.414L9 13.344l7.586-7.586 1.414 1.414z"/>
+                    </svg>
+                    MEJORA LA RECUPERACIÓN
+                </li>
+                <li class="flex items-center text-gray-700">
+                    <svg class="w-5 h-5 text-orange-500 mr-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                        <path d="M9 16.172l-5.414-5.414 1.414-1.414L9 13.344l7.586-7.586 1.414 1.414z"/>
+                    </svg>
+                    AUMENTA LA FUERZA
+                </li>
+                <li class="flex items-center text-gray-700">
+                    <svg class="w-5 h-5 text-orange-500 mr-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                        <path d="M9 16.172l-5.414-5.414 1.414-1.414L9 13.344l7.586-7.586 1.414 1.414z"/>
+                    </svg>
+                    CERO AZÚCAR AÑADIDA
+                </li>
+                <li class="flex items-center text-gray-700">
+                    <svg class="w-5 h-5 text-orange-500 mr-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                        <path d="M9 16.172l-5.414-5.414 1.414-1.414L9 13.344l7.586-7.586 1.414 1.414z"/>
+                    </svg>
+                    ENDULZADO CON STEVIA
+                </li>
+                <li class="flex items-center text-gray-700">
+                    <svg class="w-5 h-5 text-orange-500 mr-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                        <path d="M9 16.172l-5.414-5.414 1.414-1.414L9 13.344l7.586-7.586 1.414 1.414z"/>
+                    </svg>
+                    CERO COLESTEROL
+                </li>
+            </ul>
+
+            <!-- Características Clave -->
+            <div class="flex space-x-8 text-center">
+                <div>
+                    <span class="text-4xl font-bold text-gray-800">25</span><span class="text-xl font-bold">g</span>
+                    <p class="text-gray-600">Proteína</p>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="img/product/product-2.jpg">
-                            <ul class="product__item__pic__hover">
-                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">Crab Pool Security</a></h6>
-                            <h5>$30.00</h5>
-                        </div>
-                    </div>
+                <div>
+                    <span class="text-4xl font-bold text-gray-800">5.6</span><span class="text-xl font-bold">g</span>
+                    <p class="text-gray-600">BCAAs</p>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="img/product/product-3.jpg">
-                            <ul class="product__item__pic__hover">
-                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">Crab Pool Security</a></h6>
-                            <h5>$30.00</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="img/product/product-7.jpg">
-                            <ul class="product__item__pic__hover">
-                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">Crab Pool Security</a></h6>
-                            <h5>$30.00</h5>
-                        </div>
-                    </div>
+                <div>
+                    <span class="text-4xl font-bold text-gray-800">139</span><span class="text-xl font-bold">kcal</span>
+                    <p class="text-gray-600">Calorías por servicio</p>
                 </div>
             </div>
         </div>
-    </section> -->
-    <!-- Related Product Section End -->
+
+        <!-- Imagen del Producto con Slider -->
+        <div id="default-carousel" class="relative w-full lg:w-1/2" data-carousel="slide">
+          <!-- Carousel wrapper -->
+          <div class="relative h-56 overflow-hidden rounded-lg md:h-[80vh]">
+               <!-- Item 1 -->
+              <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                  <img src="{% static 'img/home_slider.png'%}" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+              </div>
+              <!-- Item 2 -->
+              <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                  <img src="{% static 'img/home_slider.png'%}" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+              </div>
+              <!-- Item 3 -->
+              <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                  <img src="{% static 'img/home_slider.png'%}" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+              </div>
+              <!-- Item 4 -->
+              <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                  <img src="{% static 'img/home_slider.png'%}" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+              </div>
+              <!-- Item 5 -->
+              <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                  <img src="{% static 'img/home_slider.png'%}" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+              </div>
+          </div>
+          <!-- Slider indicators -->
+          <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+              <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+              <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+              <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+              <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
+              <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
+          </div>
+          <!-- Slider controls -->
+          <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+              <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                  <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+                  </svg>
+                  <span class="sr-only">Previous</span>
+              </span>
+          </button>
+          <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+              <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                  <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                  </svg>
+                  <span class="sr-only">Next</span>
+              </span>
+          </button>
+      </div>
+    </div>
+        </div>
+
+
+        <div class="scroll-section active" >
+            <img src="{% static 'img/products/product_transition/whey-completo.png' %}"  alt="Producto">
+        </div>
+
+        <div class="scroll-section">
+            <img src="{% static 'img/products/product_transition/Chapa 22.png' %}" class="chapa" alt="Producto">
+            <div class="max-w-[40%] space-y-4">
+                <h2 class="text-white text-center text-5xl font-thin">
+                    Demolitor®
+                </h2>
+                <h1 class="text-white text-center text-6xl">
+                    WHEY PROTEIN
+                </h1>
+                <p class="text-white text-center">
+                    Suplemento protéico formulado con gran contenido de aminoácidos esenciales para reconstruir rápida y eficazmente las fibras musculares después del entrenamiento. Posee uno de los mejores porcentajes de digestibilidad y absorción de nutrientes dado el alto grado de pureza y perfil protéico.
+                </p>
+            </div>
+            <img src="{% static 'img/products/product_transition/whey-frontal.png' %}" class="" alt="Producto">
+        </div>
+        <div class="scroll-section">
+            <img src="{% static 'img/products/product_transition/Chapa 22.png' %}" class="chapa" alt="Producto">
+            <img src="{% static 'img/products/product_transition/whey-lateral-derecho.png' %}" alt="Producto">
+        </div>
+        <div class="scroll-section">
+            <img src="{% static 'img/products/product_transition/Chapa 22.png' %}" class="chapa" alt="Producto">
+            <img src="{% static 'img/products/product_transition/whey-posterior-derecho.png' %}" alt="Producto">
+        </div>
+        <div class="scroll-section">
+            <img src="{% static 'img/products/product_transition/Chapa 22.png' %}"  class="chapa" alt="Producto">
+            <img src="{% static 'img/products/product_transition/whey-posterior-izquierdo.png' %}" alt="Producto">
+        </div>
+        <div class="scroll-section">
+            <img src="{% static 'img/products/product_transition/Chapa 22.png' %}" class="chapa" alt="Producto">
+            <img src="{% static 'img/products/product_transition/whey-lateral-izquierdo.png' %}" alt="Producto">
+        </div>
+        <div class="scroll-section">
+            <img src="{% static 'img/products/product_transition/whey-completo.png' %}" alt="Producto">
+        </div>
+        <div class="scroll-section">
+            <img src="{% static 'img/products/product_transition/last_transition.png' %}"  class="last-img" alt="Producto">
+        </div>
+        <div class="spacer"></div>
+    </section>
+
 
     {% endblock content %}
     {% block js %}
-    
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const sections = document.querySelectorAll('.scroll-section');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            entry.target.classList.add('active');
+                        }, 100); // Añade un pequeño retraso de 100ms
+                    } else {
+                        setTimeout(() => {
+                            entry.target.classList.remove('active');
+                        }, 100); // Añade un pequeño retraso de 100ms
+                    }
+                });
+            }, {
+                threshold: 0.7 // Se activa cuando el 30% de la sección es visible
+            });
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+
+    </script>
     {% endblock js %}

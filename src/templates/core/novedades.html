@@ -4,16 +4,16 @@
 <section class="bg-black p-8 h-max">
   <div class="container mx-auto py-8">
     <div class="flex justify-center items-center">
-      <h2 class="text-3xl font-bold px-8  cursor-pointer text-shadow-effect"
+      <h2 class="text-3xl font-normal px-8 text-white cursor-pointer text-shadow-effect"
           onclick="ToggleWithDataAttr(event, 'data-oferta')">
           OFERTAS
       </h2>
 
-        <h2 class="text-3xl font-bold  px-8 text-shadow-effect cursor-pointer"
+        <h2 class="text-3xl font-normal text-white px-8 text-shadow-effect cursor-pointer"
             onclick="ToggleWithDataAttr(event, 'data-novedad')">
             NOVEDADES
         </h2>
-        <h2 class="text-3xl font-bold  px-8 text-shadow-effect cursor-pointer"
+        <h2 class="text-3xl font-normal text-white px-8 text-shadow-effect cursor-pointer"
             onclick="ToggleWithDataAttr(event, 'data-packs')">
             PACKS
         </h2>
@@ -26,14 +26,14 @@
                 <div class="swiper-slide">
                 <div class="slider-image">
                     <img src="{{ product_oferta.image.url }}" alt="slide 1">
-                    <div class="text-center py-4">
-                        <div class="py-4">
+                    <div class="text-center py-4 text-white">
+                        <div class="py-4 text-white text-2xl">
                             {{ product_oferta.name }}
                         </div>
                         <div class="flex items-center justify-center ">
                             <div class="grid grid-cols-2 gap-4 text-center">
-                                <p class="text-gray-400 line-through">S/. {{ product_oferta.price }}</p>
-                                <p class="text-xl">S/. {{ product_oferta.price }}</p>
+                                <p class="text-2xl text-white line-through">S/. {{ product_oferta.price }}</p>
+                                <p class="text-2xl">S/. {{ product_oferta.price }}</p>
                             </div>
                         </div>
                     </div>
@@ -47,13 +47,13 @@
                 <div class="slider-image">
                     <img src="{{ product_novedad.image.url }}" alt="slide 1">
                     <div class="text-center py-4">
-                        <div class="py-4">
+                        <div class="py-4 text-white text-2xl">
                             {{ product_novedad.name }}
                         </div>
                         <div class="flex items-center justify-center ">
                             <div class="grid grid-cols-2 gap-4 text-center">
-                                <p class="text-gray-400 line-through">S/. {{ product_novedad.price }}</p>
-                                <p class="text-xl">S/. {{ product_novedad.price }}</p>
+                                <p class="text-white text-2xl line-through">S/. {{ product_novedad.price }}</p>
+                                <p class="text-white text-2xl ">S/. {{ product_novedad.price }}</p>
                             </div>
                         </div>
                     </div>
@@ -67,13 +67,13 @@
                 <div class="slider-image">
                     <img src="{{ product_packs.image.url }}" alt="slide 1">
                     <div class="text-center py-4">
-                        <div class="py-4">
+                        <div class="py-4 text-white text-2xl">
                             {{ product_packs.name }}
                         </div>
                         <div class="flex items-center justify-center ">
                             <div class="grid grid-cols-2 gap-4 text-center">
-                                <p class="text-gray-400 line-through">S/. {{ product_packs.price }}</p>
-                                <p class="text-xl">S/. {{ product_packs.price }}</p>
+                                <p class="text-white text-2xl line-through">S/. {{ product_packs.price }}</p>
+                                <p class="text-white text-2xl">S/. {{ product_packs.price }}</p>
                             </div>
                         </div>
                     </div>

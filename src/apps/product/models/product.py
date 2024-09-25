@@ -97,12 +97,6 @@ class Product(BaseModelMixin, SEOMixin):
         verbose_name="price",
     )
 
-    certificado = models.FileField(
-        verbose_name=_("certificado"),
-        upload_to='certificados/',
-        blank=True,
-        null=True,)
-
     tag = models.ManyToManyField("tag.Tag", verbose_name=_("Tags"), blank=True, related_name="product_tags")
     
     @property
