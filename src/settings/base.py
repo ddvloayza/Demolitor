@@ -8,7 +8,7 @@ PROJECT_ROOT = os.path.dirname(
 )
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-
+SITE_ID = 1
 
 SECRET_KEY = os.getenv("SECRET_KEY")
 
@@ -62,7 +62,7 @@ THIRD_PART_APPS = [
 
 INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS + THIRD_PART_APPS
 
-CSRF_TRUSTED_ORIGINS = ["https://*.demolitorprotein.com", "https://*.127.0.0.1"]
+CSRF_TRUSTED_ORIGINS = ["https://*.demolitorprotein.com", "https://*.127.0.0.1", "http://localhost:8000"]
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",

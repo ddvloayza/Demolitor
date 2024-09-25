@@ -2399,3 +2399,2660 @@ INFO [2024-09-23 12:12:02,322] basehttp "GET /static/img/products/product_transi
 INFO [2024-09-23 12:12:02,323] basehttp "GET /static/img/products/product_transition/whey-lateral-derecho.png HTTP/1.1" 200 634078
 INFO [2024-09-23 12:12:02,323] basehttp "GET /static/img/products/product_transition/whey-posterior-izquierdo.png HTTP/1.1" 200 705991
 INFO [2024-09-23 12:12:02,331] basehttp "GET /static/img/products/product_transition/last_transition.png HTTP/1.1" 200 615165
+INFO [2024-09-25 14:49:51,911] autoreload Watching for file changes with StatReloader
+INFO [2024-09-25 14:49:53,617] basehttp "GET / HTTP/1.1" 200 23040
+INFO [2024-09-25 14:49:53,671] basehttp "GET /media/finniu/images/company/f043e14e/7367a8a7.png HTTP/1.1" 200 7698
+INFO [2024-09-25 14:49:53,677] basehttp "GET /static/css/style.css HTTP/1.1" 200 20559
+INFO [2024-09-25 14:49:53,685] basehttp "GET /static/img/home_slider.png HTTP/1.1" 200 752247
+INFO [2024-09-25 14:49:53,803] basehttp "GET /media/finniu/images/product/cf7b6a8f/creatina-sport.png HTTP/1.1" 200 2743302
+INFO [2024-09-25 14:49:53,812] basehttp "GET /media/finniu/images/product/900e4c89/proteina-iso.png HTTP/1.1" 200 95786
+INFO [2024-09-25 14:49:53,823] basehttp "GET /media/finniu/images/product/7c897460/black-maca.png HTTP/1.1" 200 382222
+INFO [2024-09-25 14:49:53,829] basehttp "GET /static/img/Musculo.png HTTP/1.1" 200 110610
+INFO [2024-09-25 14:49:53,835] basehttp "GET /static/img/Fitness.png HTTP/1.1" 200 113624
+INFO [2024-09-25 14:49:53,839] basehttp "GET /static/img/Salud.png HTTP/1.1" 200 112967
+INFO [2024-09-25 14:49:53,844] basehttp "GET /static/img/Sport.png HTTP/1.1" 200 115449
+INFO [2024-09-25 14:49:53,849] basehttp "GET /static/img/products/collagen3.png HTTP/1.1" 200 73303
+INFO [2024-09-25 14:49:53,855] basehttp "GET /static/img/partners/falabella.png HTTP/1.1" 200 3395
+INFO [2024-09-25 14:49:53,858] basehttp "GET /static/img/partners/mifarma.png HTTP/1.1" 200 4643
+INFO [2024-09-25 14:49:53,860] basehttp "GET /static/img/partners/inkafarma.png HTTP/1.1" 200 3848
+INFO [2024-09-25 14:49:54,515] basehttp "GET /static/img/fondo_black_maca.png HTTP/1.1" 200 1701221
+INFO [2024-09-25 14:50:16,263] basehttp "GET /admin HTTP/1.1" 301 0
+INFO [2024-09-25 14:50:16,315] basehttp "GET /admin/ HTTP/1.1" 302 0
+ERROR [2024-09-25 14:50:16,378] log Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 39, in _get_site_by_request
+    SITE_CACHE[host] = self.get(domain__iexact=host)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 440, in login
+    return LoginView.as_view(**defaults)(request)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/debug.py", line 141, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 88, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/edit.py", line 142, in get
+    return self.render_to_response(self.get_context_data())
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 112, in get_context_data
+    current_site = get_current_site(self.request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/shortcuts.py", line 16, in get_current_site
+    return Site.objects.get_current(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 61, in get_current
+    return self._get_site_by_request(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 45, in _get_site_by_request
+    SITE_CACHE[domain] = self.get(domain__iexact=domain)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+ERROR [2024-09-25 14:50:16,380] basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 500 174288
+ERROR [2024-09-25 14:50:20,848] log Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 39, in _get_site_by_request
+    SITE_CACHE[host] = self.get(domain__iexact=host)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 440, in login
+    return LoginView.as_view(**defaults)(request)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/debug.py", line 141, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 88, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/edit.py", line 142, in get
+    return self.render_to_response(self.get_context_data())
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 112, in get_context_data
+    current_site = get_current_site(self.request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/shortcuts.py", line 16, in get_current_site
+    return Site.objects.get_current(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 61, in get_current
+    return self._get_site_by_request(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 45, in _get_site_by_request
+    SITE_CACHE[domain] = self.get(domain__iexact=domain)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+ERROR [2024-09-25 14:50:20,849] basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 500 174553
+WARNING [2024-09-25 14:50:20,902] log Not Found: /favicon.ico
+WARNING [2024-09-25 14:50:20,903] basehttp "GET /favicon.ico HTTP/1.1" 404 4557
+ERROR [2024-09-25 14:50:21,360] log Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 39, in _get_site_by_request
+    SITE_CACHE[host] = self.get(domain__iexact=host)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 440, in login
+    return LoginView.as_view(**defaults)(request)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/debug.py", line 141, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 88, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/edit.py", line 142, in get
+    return self.render_to_response(self.get_context_data())
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 112, in get_context_data
+    current_site = get_current_site(self.request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/shortcuts.py", line 16, in get_current_site
+    return Site.objects.get_current(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 61, in get_current
+    return self._get_site_by_request(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 45, in _get_site_by_request
+    SITE_CACHE[domain] = self.get(domain__iexact=domain)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+ERROR [2024-09-25 14:50:21,361] basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 500 174553
+WARNING [2024-09-25 14:50:21,420] log Not Found: /favicon.ico
+WARNING [2024-09-25 14:50:21,420] basehttp "GET /favicon.ico HTTP/1.1" 404 4557
+ERROR [2024-09-25 14:50:21,554] log Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 39, in _get_site_by_request
+    SITE_CACHE[host] = self.get(domain__iexact=host)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 440, in login
+    return LoginView.as_view(**defaults)(request)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/debug.py", line 141, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 88, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/edit.py", line 142, in get
+    return self.render_to_response(self.get_context_data())
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 112, in get_context_data
+    current_site = get_current_site(self.request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/shortcuts.py", line 16, in get_current_site
+    return Site.objects.get_current(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 61, in get_current
+    return self._get_site_by_request(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 45, in _get_site_by_request
+    SITE_CACHE[domain] = self.get(domain__iexact=domain)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+ERROR [2024-09-25 14:50:21,555] basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 500 174553
+WARNING [2024-09-25 14:50:21,609] log Not Found: /favicon.ico
+WARNING [2024-09-25 14:50:21,609] basehttp "GET /favicon.ico HTTP/1.1" 404 4557
+ERROR [2024-09-25 14:50:21,737] log Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 39, in _get_site_by_request
+    SITE_CACHE[host] = self.get(domain__iexact=host)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 440, in login
+    return LoginView.as_view(**defaults)(request)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/debug.py", line 141, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 88, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/edit.py", line 142, in get
+    return self.render_to_response(self.get_context_data())
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 112, in get_context_data
+    current_site = get_current_site(self.request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/shortcuts.py", line 16, in get_current_site
+    return Site.objects.get_current(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 61, in get_current
+    return self._get_site_by_request(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 45, in _get_site_by_request
+    SITE_CACHE[domain] = self.get(domain__iexact=domain)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+ERROR [2024-09-25 14:50:21,738] basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 500 174553
+WARNING [2024-09-25 14:50:21,802] log Not Found: /favicon.ico
+WARNING [2024-09-25 14:50:21,802] basehttp "GET /favicon.ico HTTP/1.1" 404 4557
+ERROR [2024-09-25 14:50:21,854] log Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 39, in _get_site_by_request
+    SITE_CACHE[host] = self.get(domain__iexact=host)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 440, in login
+    return LoginView.as_view(**defaults)(request)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/debug.py", line 141, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 88, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/edit.py", line 142, in get
+    return self.render_to_response(self.get_context_data())
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 112, in get_context_data
+    current_site = get_current_site(self.request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/shortcuts.py", line 16, in get_current_site
+    return Site.objects.get_current(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 61, in get_current
+    return self._get_site_by_request(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 45, in _get_site_by_request
+    SITE_CACHE[domain] = self.get(domain__iexact=domain)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+ERROR [2024-09-25 14:50:21,855] basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 500 174553
+WARNING [2024-09-25 14:50:21,909] log Not Found: /favicon.ico
+WARNING [2024-09-25 14:50:21,909] basehttp "GET /favicon.ico HTTP/1.1" 404 4557
+ERROR [2024-09-25 14:50:22,006] log Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 39, in _get_site_by_request
+    SITE_CACHE[host] = self.get(domain__iexact=host)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 440, in login
+    return LoginView.as_view(**defaults)(request)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/debug.py", line 141, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 88, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/edit.py", line 142, in get
+    return self.render_to_response(self.get_context_data())
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 112, in get_context_data
+    current_site = get_current_site(self.request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/shortcuts.py", line 16, in get_current_site
+    return Site.objects.get_current(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 61, in get_current
+    return self._get_site_by_request(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 45, in _get_site_by_request
+    SITE_CACHE[domain] = self.get(domain__iexact=domain)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+ERROR [2024-09-25 14:50:22,007] basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 500 174553
+WARNING [2024-09-25 14:50:22,060] log Not Found: /favicon.ico
+WARNING [2024-09-25 14:50:22,060] basehttp "GET /favicon.ico HTTP/1.1" 404 4557
+ERROR [2024-09-25 14:50:22,147] log Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 39, in _get_site_by_request
+    SITE_CACHE[host] = self.get(domain__iexact=host)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 440, in login
+    return LoginView.as_view(**defaults)(request)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/debug.py", line 141, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 88, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/edit.py", line 142, in get
+    return self.render_to_response(self.get_context_data())
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 112, in get_context_data
+    current_site = get_current_site(self.request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/shortcuts.py", line 16, in get_current_site
+    return Site.objects.get_current(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 61, in get_current
+    return self._get_site_by_request(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 45, in _get_site_by_request
+    SITE_CACHE[domain] = self.get(domain__iexact=domain)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+ERROR [2024-09-25 14:50:22,147] basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 500 174553
+WARNING [2024-09-25 14:50:22,200] log Not Found: /favicon.ico
+WARNING [2024-09-25 14:50:22,201] basehttp "GET /favicon.ico HTTP/1.1" 404 4557
+ERROR [2024-09-25 14:50:22,318] log Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 39, in _get_site_by_request
+    SITE_CACHE[host] = self.get(domain__iexact=host)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 440, in login
+    return LoginView.as_view(**defaults)(request)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/debug.py", line 141, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 88, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/edit.py", line 142, in get
+    return self.render_to_response(self.get_context_data())
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 112, in get_context_data
+    current_site = get_current_site(self.request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/shortcuts.py", line 16, in get_current_site
+    return Site.objects.get_current(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 61, in get_current
+    return self._get_site_by_request(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 45, in _get_site_by_request
+    SITE_CACHE[domain] = self.get(domain__iexact=domain)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+ERROR [2024-09-25 14:50:22,319] basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 500 174553
+WARNING [2024-09-25 14:50:22,370] log Not Found: /favicon.ico
+WARNING [2024-09-25 14:50:22,371] basehttp "GET /favicon.ico HTTP/1.1" 404 4557
+ERROR [2024-09-25 14:50:22,442] log Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 39, in _get_site_by_request
+    SITE_CACHE[host] = self.get(domain__iexact=host)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 440, in login
+    return LoginView.as_view(**defaults)(request)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/debug.py", line 141, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 88, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/edit.py", line 142, in get
+    return self.render_to_response(self.get_context_data())
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 112, in get_context_data
+    current_site = get_current_site(self.request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/shortcuts.py", line 16, in get_current_site
+    return Site.objects.get_current(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 61, in get_current
+    return self._get_site_by_request(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 45, in _get_site_by_request
+    SITE_CACHE[domain] = self.get(domain__iexact=domain)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+ERROR [2024-09-25 14:50:22,443] basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 500 174553
+WARNING [2024-09-25 14:50:22,495] log Not Found: /favicon.ico
+WARNING [2024-09-25 14:50:22,500] basehttp "GET /favicon.ico HTTP/1.1" 404 4557
+ERROR [2024-09-25 14:50:22,591] log Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 39, in _get_site_by_request
+    SITE_CACHE[host] = self.get(domain__iexact=host)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 440, in login
+    return LoginView.as_view(**defaults)(request)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/debug.py", line 141, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 88, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/edit.py", line 142, in get
+    return self.render_to_response(self.get_context_data())
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 112, in get_context_data
+    current_site = get_current_site(self.request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/shortcuts.py", line 16, in get_current_site
+    return Site.objects.get_current(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 61, in get_current
+    return self._get_site_by_request(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 45, in _get_site_by_request
+    SITE_CACHE[domain] = self.get(domain__iexact=domain)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+ERROR [2024-09-25 14:50:22,592] basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 500 174553
+WARNING [2024-09-25 14:50:22,644] log Not Found: /favicon.ico
+WARNING [2024-09-25 14:50:22,645] basehttp "GET /favicon.ico HTTP/1.1" 404 4557
+ERROR [2024-09-25 14:50:22,711] log Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 39, in _get_site_by_request
+    SITE_CACHE[host] = self.get(domain__iexact=host)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 440, in login
+    return LoginView.as_view(**defaults)(request)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/debug.py", line 141, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 88, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/edit.py", line 142, in get
+    return self.render_to_response(self.get_context_data())
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 112, in get_context_data
+    current_site = get_current_site(self.request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/shortcuts.py", line 16, in get_current_site
+    return Site.objects.get_current(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 61, in get_current
+    return self._get_site_by_request(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 45, in _get_site_by_request
+    SITE_CACHE[domain] = self.get(domain__iexact=domain)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+ERROR [2024-09-25 14:50:22,712] basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 500 174553
+WARNING [2024-09-25 14:50:22,764] log Not Found: /favicon.ico
+WARNING [2024-09-25 14:50:22,765] basehttp "GET /favicon.ico HTTP/1.1" 404 4557
+ERROR [2024-09-25 14:50:23,679] log Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 39, in _get_site_by_request
+    SITE_CACHE[host] = self.get(domain__iexact=host)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 440, in login
+    return LoginView.as_view(**defaults)(request)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/debug.py", line 141, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 88, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/edit.py", line 142, in get
+    return self.render_to_response(self.get_context_data())
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 112, in get_context_data
+    current_site = get_current_site(self.request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/shortcuts.py", line 16, in get_current_site
+    return Site.objects.get_current(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 61, in get_current
+    return self._get_site_by_request(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 45, in _get_site_by_request
+    SITE_CACHE[domain] = self.get(domain__iexact=domain)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+ERROR [2024-09-25 14:50:23,680] basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 500 174553
+WARNING [2024-09-25 14:50:23,736] log Not Found: /favicon.ico
+WARNING [2024-09-25 14:50:23,737] basehttp "GET /favicon.ico HTTP/1.1" 404 4557
+ERROR [2024-09-25 14:50:23,840] log Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 39, in _get_site_by_request
+    SITE_CACHE[host] = self.get(domain__iexact=host)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 440, in login
+    return LoginView.as_view(**defaults)(request)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/debug.py", line 141, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 88, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/edit.py", line 142, in get
+    return self.render_to_response(self.get_context_data())
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 112, in get_context_data
+    current_site = get_current_site(self.request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/shortcuts.py", line 16, in get_current_site
+    return Site.objects.get_current(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 61, in get_current
+    return self._get_site_by_request(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 45, in _get_site_by_request
+    SITE_CACHE[domain] = self.get(domain__iexact=domain)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+ERROR [2024-09-25 14:50:23,840] basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 500 174553
+WARNING [2024-09-25 14:50:23,893] log Not Found: /favicon.ico
+WARNING [2024-09-25 14:50:23,894] basehttp "GET /favicon.ico HTTP/1.1" 404 4557
+ERROR [2024-09-25 14:50:24,008] log Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 39, in _get_site_by_request
+    SITE_CACHE[host] = self.get(domain__iexact=host)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 440, in login
+    return LoginView.as_view(**defaults)(request)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/debug.py", line 141, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 88, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/edit.py", line 142, in get
+    return self.render_to_response(self.get_context_data())
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 112, in get_context_data
+    current_site = get_current_site(self.request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/shortcuts.py", line 16, in get_current_site
+    return Site.objects.get_current(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 61, in get_current
+    return self._get_site_by_request(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 45, in _get_site_by_request
+    SITE_CACHE[domain] = self.get(domain__iexact=domain)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+ERROR [2024-09-25 14:50:24,010] basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 500 174553
+WARNING [2024-09-25 14:50:24,060] log Not Found: /favicon.ico
+WARNING [2024-09-25 14:50:24,060] basehttp "GET /favicon.ico HTTP/1.1" 404 4557
+ERROR [2024-09-25 14:50:24,155] log Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 39, in _get_site_by_request
+    SITE_CACHE[host] = self.get(domain__iexact=host)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 440, in login
+    return LoginView.as_view(**defaults)(request)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/debug.py", line 141, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 88, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/edit.py", line 142, in get
+    return self.render_to_response(self.get_context_data())
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 112, in get_context_data
+    current_site = get_current_site(self.request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/shortcuts.py", line 16, in get_current_site
+    return Site.objects.get_current(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 61, in get_current
+    return self._get_site_by_request(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 45, in _get_site_by_request
+    SITE_CACHE[domain] = self.get(domain__iexact=domain)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+ERROR [2024-09-25 14:50:24,156] basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 500 174553
+WARNING [2024-09-25 14:50:24,209] log Not Found: /favicon.ico
+WARNING [2024-09-25 14:50:24,209] basehttp "GET /favicon.ico HTTP/1.1" 404 4557
+ERROR [2024-09-25 14:50:24,346] log Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 39, in _get_site_by_request
+    SITE_CACHE[host] = self.get(domain__iexact=host)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 440, in login
+    return LoginView.as_view(**defaults)(request)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/debug.py", line 141, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 88, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/edit.py", line 142, in get
+    return self.render_to_response(self.get_context_data())
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 112, in get_context_data
+    current_site = get_current_site(self.request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/shortcuts.py", line 16, in get_current_site
+    return Site.objects.get_current(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 61, in get_current
+    return self._get_site_by_request(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 45, in _get_site_by_request
+    SITE_CACHE[domain] = self.get(domain__iexact=domain)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+ERROR [2024-09-25 14:50:24,347] basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 500 174553
+WARNING [2024-09-25 14:50:24,398] log Not Found: /favicon.ico
+WARNING [2024-09-25 14:50:24,398] basehttp "GET /favicon.ico HTTP/1.1" 404 4557
+ERROR [2024-09-25 14:50:24,490] log Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 39, in _get_site_by_request
+    SITE_CACHE[host] = self.get(domain__iexact=host)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 440, in login
+    return LoginView.as_view(**defaults)(request)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/debug.py", line 141, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 88, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/edit.py", line 142, in get
+    return self.render_to_response(self.get_context_data())
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 112, in get_context_data
+    current_site = get_current_site(self.request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/shortcuts.py", line 16, in get_current_site
+    return Site.objects.get_current(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 61, in get_current
+    return self._get_site_by_request(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 45, in _get_site_by_request
+    SITE_CACHE[domain] = self.get(domain__iexact=domain)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+ERROR [2024-09-25 14:50:24,491] basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 500 174553
+WARNING [2024-09-25 14:50:24,543] log Not Found: /favicon.ico
+WARNING [2024-09-25 14:50:24,544] basehttp "GET /favicon.ico HTTP/1.1" 404 4557
+ERROR [2024-09-25 14:50:25,016] log Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 39, in _get_site_by_request
+    SITE_CACHE[host] = self.get(domain__iexact=host)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 440, in login
+    return LoginView.as_view(**defaults)(request)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/debug.py", line 141, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 88, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/edit.py", line 142, in get
+    return self.render_to_response(self.get_context_data())
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 112, in get_context_data
+    current_site = get_current_site(self.request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/shortcuts.py", line 16, in get_current_site
+    return Site.objects.get_current(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 61, in get_current
+    return self._get_site_by_request(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 45, in _get_site_by_request
+    SITE_CACHE[domain] = self.get(domain__iexact=domain)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+ERROR [2024-09-25 14:50:25,017] basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 500 174553
+WARNING [2024-09-25 14:50:25,075] log Not Found: /favicon.ico
+WARNING [2024-09-25 14:50:25,075] basehttp "GET /favicon.ico HTTP/1.1" 404 4557
+ERROR [2024-09-25 14:50:25,319] log Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 39, in _get_site_by_request
+    SITE_CACHE[host] = self.get(domain__iexact=host)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 440, in login
+    return LoginView.as_view(**defaults)(request)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/debug.py", line 141, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 88, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/edit.py", line 142, in get
+    return self.render_to_response(self.get_context_data())
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 112, in get_context_data
+    current_site = get_current_site(self.request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/shortcuts.py", line 16, in get_current_site
+    return Site.objects.get_current(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 61, in get_current
+    return self._get_site_by_request(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 45, in _get_site_by_request
+    SITE_CACHE[domain] = self.get(domain__iexact=domain)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+ERROR [2024-09-25 14:50:25,320] basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 500 174553
+WARNING [2024-09-25 14:50:25,377] log Not Found: /favicon.ico
+WARNING [2024-09-25 14:50:25,378] basehttp "GET /favicon.ico HTTP/1.1" 404 4557
+ERROR [2024-09-25 14:50:25,628] log Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 39, in _get_site_by_request
+    SITE_CACHE[host] = self.get(domain__iexact=host)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 440, in login
+    return LoginView.as_view(**defaults)(request)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/debug.py", line 141, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 88, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/edit.py", line 142, in get
+    return self.render_to_response(self.get_context_data())
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 112, in get_context_data
+    current_site = get_current_site(self.request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/shortcuts.py", line 16, in get_current_site
+    return Site.objects.get_current(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 61, in get_current
+    return self._get_site_by_request(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 45, in _get_site_by_request
+    SITE_CACHE[domain] = self.get(domain__iexact=domain)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+ERROR [2024-09-25 14:50:25,629] basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 500 174553
+WARNING [2024-09-25 14:50:25,683] log Not Found: /favicon.ico
+WARNING [2024-09-25 14:50:25,684] basehttp "GET /favicon.ico HTTP/1.1" 404 4557
+ERROR [2024-09-25 14:50:25,927] log Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 39, in _get_site_by_request
+    SITE_CACHE[host] = self.get(domain__iexact=host)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 440, in login
+    return LoginView.as_view(**defaults)(request)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/debug.py", line 141, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 88, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/edit.py", line 142, in get
+    return self.render_to_response(self.get_context_data())
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 112, in get_context_data
+    current_site = get_current_site(self.request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/shortcuts.py", line 16, in get_current_site
+    return Site.objects.get_current(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 61, in get_current
+    return self._get_site_by_request(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 45, in _get_site_by_request
+    SITE_CACHE[domain] = self.get(domain__iexact=domain)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+ERROR [2024-09-25 14:50:25,928] basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 500 174553
+WARNING [2024-09-25 14:50:25,985] log Not Found: /favicon.ico
+WARNING [2024-09-25 14:50:25,986] basehttp "GET /favicon.ico HTTP/1.1" 404 4557
+ERROR [2024-09-25 14:50:26,270] log Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 39, in _get_site_by_request
+    SITE_CACHE[host] = self.get(domain__iexact=host)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 440, in login
+    return LoginView.as_view(**defaults)(request)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/debug.py", line 141, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 88, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/edit.py", line 142, in get
+    return self.render_to_response(self.get_context_data())
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 112, in get_context_data
+    current_site = get_current_site(self.request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/shortcuts.py", line 16, in get_current_site
+    return Site.objects.get_current(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 61, in get_current
+    return self._get_site_by_request(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 45, in _get_site_by_request
+    SITE_CACHE[domain] = self.get(domain__iexact=domain)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+ERROR [2024-09-25 14:50:26,271] basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 500 174553
+WARNING [2024-09-25 14:50:26,323] log Not Found: /favicon.ico
+WARNING [2024-09-25 14:50:26,323] basehttp "GET /favicon.ico HTTP/1.1" 404 4557
+ERROR [2024-09-25 14:50:26,578] log Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 39, in _get_site_by_request
+    SITE_CACHE[host] = self.get(domain__iexact=host)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 440, in login
+    return LoginView.as_view(**defaults)(request)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/debug.py", line 141, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 88, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/edit.py", line 142, in get
+    return self.render_to_response(self.get_context_data())
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 112, in get_context_data
+    current_site = get_current_site(self.request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/shortcuts.py", line 16, in get_current_site
+    return Site.objects.get_current(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 61, in get_current
+    return self._get_site_by_request(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 45, in _get_site_by_request
+    SITE_CACHE[domain] = self.get(domain__iexact=domain)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+ERROR [2024-09-25 14:50:26,579] basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 500 174553
+WARNING [2024-09-25 14:50:26,634] log Not Found: /favicon.ico
+WARNING [2024-09-25 14:50:26,634] basehttp "GET /favicon.ico HTTP/1.1" 404 4557
+ERROR [2024-09-25 14:50:26,889] log Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 39, in _get_site_by_request
+    SITE_CACHE[host] = self.get(domain__iexact=host)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 440, in login
+    return LoginView.as_view(**defaults)(request)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/debug.py", line 141, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 88, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/edit.py", line 142, in get
+    return self.render_to_response(self.get_context_data())
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 112, in get_context_data
+    current_site = get_current_site(self.request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/shortcuts.py", line 16, in get_current_site
+    return Site.objects.get_current(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 61, in get_current
+    return self._get_site_by_request(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 45, in _get_site_by_request
+    SITE_CACHE[domain] = self.get(domain__iexact=domain)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+ERROR [2024-09-25 14:50:26,890] basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 500 174553
+WARNING [2024-09-25 14:50:26,952] log Not Found: /favicon.ico
+WARNING [2024-09-25 14:50:26,952] basehttp "GET /favicon.ico HTTP/1.1" 404 4557
+ERROR [2024-09-25 14:50:27,271] log Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 39, in _get_site_by_request
+    SITE_CACHE[host] = self.get(domain__iexact=host)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 440, in login
+    return LoginView.as_view(**defaults)(request)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/debug.py", line 141, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 88, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/edit.py", line 142, in get
+    return self.render_to_response(self.get_context_data())
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 112, in get_context_data
+    current_site = get_current_site(self.request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/shortcuts.py", line 16, in get_current_site
+    return Site.objects.get_current(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 61, in get_current
+    return self._get_site_by_request(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 45, in _get_site_by_request
+    SITE_CACHE[domain] = self.get(domain__iexact=domain)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+ERROR [2024-09-25 14:50:27,272] basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 500 174553
+WARNING [2024-09-25 14:50:27,329] log Not Found: /favicon.ico
+WARNING [2024-09-25 14:50:27,329] basehttp "GET /favicon.ico HTTP/1.1" 404 4557
+ERROR [2024-09-25 14:50:27,581] log Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 39, in _get_site_by_request
+    SITE_CACHE[host] = self.get(domain__iexact=host)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 440, in login
+    return LoginView.as_view(**defaults)(request)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/debug.py", line 141, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 88, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/edit.py", line 142, in get
+    return self.render_to_response(self.get_context_data())
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 112, in get_context_data
+    current_site = get_current_site(self.request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/shortcuts.py", line 16, in get_current_site
+    return Site.objects.get_current(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 61, in get_current
+    return self._get_site_by_request(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 45, in _get_site_by_request
+    SITE_CACHE[domain] = self.get(domain__iexact=domain)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+ERROR [2024-09-25 14:50:27,582] basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 500 174553
+WARNING [2024-09-25 14:50:27,636] log Not Found: /favicon.ico
+WARNING [2024-09-25 14:50:27,636] basehttp "GET /favicon.ico HTTP/1.1" 404 4557
+ERROR [2024-09-25 14:50:27,881] log Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 39, in _get_site_by_request
+    SITE_CACHE[host] = self.get(domain__iexact=host)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 440, in login
+    return LoginView.as_view(**defaults)(request)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/debug.py", line 141, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 88, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/edit.py", line 142, in get
+    return self.render_to_response(self.get_context_data())
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 112, in get_context_data
+    current_site = get_current_site(self.request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/shortcuts.py", line 16, in get_current_site
+    return Site.objects.get_current(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 61, in get_current
+    return self._get_site_by_request(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 45, in _get_site_by_request
+    SITE_CACHE[domain] = self.get(domain__iexact=domain)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+ERROR [2024-09-25 14:50:27,881] basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 500 174553
+WARNING [2024-09-25 14:50:27,942] log Not Found: /favicon.ico
+WARNING [2024-09-25 14:50:27,943] basehttp "GET /favicon.ico HTTP/1.1" 404 4557
+INFO [2024-09-25 14:50:33,641] basehttp "GET / HTTP/1.1" 200 23040
+WARNING [2024-09-25 14:50:33,913] basehttp "GET /static/images/favicon.ico HTTP/1.1" 404 1912
+INFO [2024-09-25 14:50:38,274] basehttp "GET /admin/ HTTP/1.1" 302 0
+ERROR [2024-09-25 14:50:38,323] log Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 39, in _get_site_by_request
+    SITE_CACHE[host] = self.get(domain__iexact=host)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 440, in login
+    return LoginView.as_view(**defaults)(request)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/debug.py", line 141, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 88, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/edit.py", line 142, in get
+    return self.render_to_response(self.get_context_data())
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 112, in get_context_data
+    current_site = get_current_site(self.request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/shortcuts.py", line 16, in get_current_site
+    return Site.objects.get_current(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 61, in get_current
+    return self._get_site_by_request(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 45, in _get_site_by_request
+    SITE_CACHE[domain] = self.get(domain__iexact=domain)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+ERROR [2024-09-25 14:50:38,324] basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 500 174288
+ERROR [2024-09-25 14:50:43,709] log Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 39, in _get_site_by_request
+    SITE_CACHE[host] = self.get(domain__iexact=host)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 440, in login
+    return LoginView.as_view(**defaults)(request)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/debug.py", line 141, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 88, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/edit.py", line 142, in get
+    return self.render_to_response(self.get_context_data())
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 112, in get_context_data
+    current_site = get_current_site(self.request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/shortcuts.py", line 16, in get_current_site
+    return Site.objects.get_current(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 61, in get_current
+    return self._get_site_by_request(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 45, in _get_site_by_request
+    SITE_CACHE[domain] = self.get(domain__iexact=domain)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+ERROR [2024-09-25 14:50:43,711] basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 500 174553
+WARNING [2024-09-25 14:50:43,779] log Not Found: /favicon.ico
+WARNING [2024-09-25 14:50:43,780] basehttp "GET /favicon.ico HTTP/1.1" 404 4557
+INFO [2024-09-25 14:51:24,580] autoreload /www/src/settings/base.py changed, reloading.
+INFO [2024-09-25 14:51:25,314] autoreload Watching for file changes with StatReloader
+ERROR [2024-09-25 14:51:33,159] log Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 39, in _get_site_by_request
+    SITE_CACHE[host] = self.get(domain__iexact=host)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 440, in login
+    return LoginView.as_view(**defaults)(request)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/debug.py", line 141, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 88, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/edit.py", line 142, in get
+    return self.render_to_response(self.get_context_data())
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 112, in get_context_data
+    current_site = get_current_site(self.request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/shortcuts.py", line 16, in get_current_site
+    return Site.objects.get_current(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 61, in get_current
+    return self._get_site_by_request(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 45, in _get_site_by_request
+    SITE_CACHE[domain] = self.get(domain__iexact=domain)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+ERROR [2024-09-25 14:51:33,162] basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 500 174458
+ERROR [2024-09-25 14:51:34,174] log Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 39, in _get_site_by_request
+    SITE_CACHE[host] = self.get(domain__iexact=host)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 440, in login
+    return LoginView.as_view(**defaults)(request)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/debug.py", line 141, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 88, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/edit.py", line 142, in get
+    return self.render_to_response(self.get_context_data())
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 112, in get_context_data
+    current_site = get_current_site(self.request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/shortcuts.py", line 16, in get_current_site
+    return Site.objects.get_current(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 61, in get_current
+    return self._get_site_by_request(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 45, in _get_site_by_request
+    SITE_CACHE[domain] = self.get(domain__iexact=domain)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+ERROR [2024-09-25 14:51:34,175] basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 500 174586
+WARNING [2024-09-25 14:51:34,231] log Not Found: /favicon.ico
+WARNING [2024-09-25 14:51:34,231] basehttp "GET /favicon.ico HTTP/1.1" 404 4557
+ERROR [2024-09-25 14:51:34,646] log Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 39, in _get_site_by_request
+    SITE_CACHE[host] = self.get(domain__iexact=host)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 440, in login
+    return LoginView.as_view(**defaults)(request)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/debug.py", line 141, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 88, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/edit.py", line 142, in get
+    return self.render_to_response(self.get_context_data())
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 112, in get_context_data
+    current_site = get_current_site(self.request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/shortcuts.py", line 16, in get_current_site
+    return Site.objects.get_current(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 61, in get_current
+    return self._get_site_by_request(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 45, in _get_site_by_request
+    SITE_CACHE[domain] = self.get(domain__iexact=domain)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+ERROR [2024-09-25 14:51:34,647] basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 500 174586
+WARNING [2024-09-25 14:51:34,707] log Not Found: /favicon.ico
+WARNING [2024-09-25 14:51:34,708] basehttp "GET /favicon.ico HTTP/1.1" 404 4557
+ERROR [2024-09-25 14:51:35,157] log Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 39, in _get_site_by_request
+    SITE_CACHE[host] = self.get(domain__iexact=host)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 440, in login
+    return LoginView.as_view(**defaults)(request)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/debug.py", line 141, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 88, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/edit.py", line 142, in get
+    return self.render_to_response(self.get_context_data())
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 112, in get_context_data
+    current_site = get_current_site(self.request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/shortcuts.py", line 16, in get_current_site
+    return Site.objects.get_current(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 61, in get_current
+    return self._get_site_by_request(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 45, in _get_site_by_request
+    SITE_CACHE[domain] = self.get(domain__iexact=domain)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+ERROR [2024-09-25 14:51:35,158] basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 500 174586
+WARNING [2024-09-25 14:51:35,216] log Not Found: /favicon.ico
+WARNING [2024-09-25 14:51:35,216] basehttp "GET /favicon.ico HTTP/1.1" 404 4557
+ERROR [2024-09-25 14:51:35,514] log Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 39, in _get_site_by_request
+    SITE_CACHE[host] = self.get(domain__iexact=host)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 440, in login
+    return LoginView.as_view(**defaults)(request)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/debug.py", line 141, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 88, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/edit.py", line 142, in get
+    return self.render_to_response(self.get_context_data())
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 112, in get_context_data
+    current_site = get_current_site(self.request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/shortcuts.py", line 16, in get_current_site
+    return Site.objects.get_current(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 61, in get_current
+    return self._get_site_by_request(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 45, in _get_site_by_request
+    SITE_CACHE[domain] = self.get(domain__iexact=domain)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+ERROR [2024-09-25 14:51:35,515] basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 500 174586
+WARNING [2024-09-25 14:51:35,570] log Not Found: /favicon.ico
+WARNING [2024-09-25 14:51:35,571] basehttp "GET /favicon.ico HTTP/1.1" 404 4557
+ERROR [2024-09-25 14:51:35,857] log Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 39, in _get_site_by_request
+    SITE_CACHE[host] = self.get(domain__iexact=host)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 440, in login
+    return LoginView.as_view(**defaults)(request)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/debug.py", line 141, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 88, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/edit.py", line 142, in get
+    return self.render_to_response(self.get_context_data())
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 112, in get_context_data
+    current_site = get_current_site(self.request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/shortcuts.py", line 16, in get_current_site
+    return Site.objects.get_current(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 61, in get_current
+    return self._get_site_by_request(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 45, in _get_site_by_request
+    SITE_CACHE[domain] = self.get(domain__iexact=domain)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+ERROR [2024-09-25 14:51:35,858] basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 500 174586
+WARNING [2024-09-25 14:51:35,912] log Not Found: /favicon.ico
+WARNING [2024-09-25 14:51:35,913] basehttp "GET /favicon.ico HTTP/1.1" 404 4557
+ERROR [2024-09-25 14:51:35,977] log Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 39, in _get_site_by_request
+    SITE_CACHE[host] = self.get(domain__iexact=host)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 440, in login
+    return LoginView.as_view(**defaults)(request)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/debug.py", line 141, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 88, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/edit.py", line 142, in get
+    return self.render_to_response(self.get_context_data())
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 112, in get_context_data
+    current_site = get_current_site(self.request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/shortcuts.py", line 16, in get_current_site
+    return Site.objects.get_current(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 61, in get_current
+    return self._get_site_by_request(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 45, in _get_site_by_request
+    SITE_CACHE[domain] = self.get(domain__iexact=domain)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+ERROR [2024-09-25 14:51:35,978] basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 500 174586
+WARNING [2024-09-25 14:51:36,036] log Not Found: /favicon.ico
+WARNING [2024-09-25 14:51:36,036] basehttp "GET /favicon.ico HTTP/1.1" 404 4557
+ERROR [2024-09-25 14:51:36,333] log Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 39, in _get_site_by_request
+    SITE_CACHE[host] = self.get(domain__iexact=host)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 440, in login
+    return LoginView.as_view(**defaults)(request)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/debug.py", line 141, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 88, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/edit.py", line 142, in get
+    return self.render_to_response(self.get_context_data())
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 112, in get_context_data
+    current_site = get_current_site(self.request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/shortcuts.py", line 16, in get_current_site
+    return Site.objects.get_current(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 61, in get_current
+    return self._get_site_by_request(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 45, in _get_site_by_request
+    SITE_CACHE[domain] = self.get(domain__iexact=domain)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+ERROR [2024-09-25 14:51:36,334] basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 500 174586
+WARNING [2024-09-25 14:51:36,387] log Not Found: /favicon.ico
+WARNING [2024-09-25 14:51:36,388] basehttp "GET /favicon.ico HTTP/1.1" 404 4557
+ERROR [2024-09-25 14:55:57,235] log Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 39, in _get_site_by_request
+    SITE_CACHE[host] = self.get(domain__iexact=host)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 440, in login
+    return LoginView.as_view(**defaults)(request)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/debug.py", line 141, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 88, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/edit.py", line 142, in get
+    return self.render_to_response(self.get_context_data())
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 112, in get_context_data
+    current_site = get_current_site(self.request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/shortcuts.py", line 16, in get_current_site
+    return Site.objects.get_current(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 61, in get_current
+    return self._get_site_by_request(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 45, in _get_site_by_request
+    SITE_CACHE[domain] = self.get(domain__iexact=domain)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+ERROR [2024-09-25 14:55:57,239] basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 500 174458
+ERROR [2024-09-25 14:55:57,367] log Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 39, in _get_site_by_request
+    SITE_CACHE[host] = self.get(domain__iexact=host)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 440, in login
+    return LoginView.as_view(**defaults)(request)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/debug.py", line 141, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 88, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/edit.py", line 142, in get
+    return self.render_to_response(self.get_context_data())
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 112, in get_context_data
+    current_site = get_current_site(self.request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/shortcuts.py", line 16, in get_current_site
+    return Site.objects.get_current(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 61, in get_current
+    return self._get_site_by_request(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 45, in _get_site_by_request
+    SITE_CACHE[domain] = self.get(domain__iexact=domain)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 647, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+ERROR [2024-09-25 14:55:57,368] basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 500 174458
+INFO [2024-09-25 14:56:36,675] autoreload /www/src/settings/base.py changed, reloading.
+INFO [2024-09-25 14:56:37,532] autoreload Watching for file changes with StatReloader
+INFO [2024-09-25 15:00:16,668] autoreload Watching for file changes with StatReloader
+ERROR [2024-09-25 15:06:01,974] log Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 39, in _get_site_by_request
+    SITE_CACHE[host] = self.get(domain__iexact=host)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 649, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 444, in login
+    return LoginView.as_view(**defaults)(request)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/debug.py", line 143, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 89, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/edit.py", line 142, in get
+    return self.render_to_response(self.get_context_data())
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 113, in get_context_data
+    current_site = get_current_site(self.request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/shortcuts.py", line 16, in get_current_site
+    return Site.objects.get_current(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 61, in get_current
+    return self._get_site_by_request(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 45, in _get_site_by_request
+    SITE_CACHE[domain] = self.get(domain__iexact=domain)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 649, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+ERROR [2024-09-25 15:06:01,978] basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 500 179640
+ERROR [2024-09-25 15:06:03,725] log Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 39, in _get_site_by_request
+    SITE_CACHE[host] = self.get(domain__iexact=host)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 649, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 444, in login
+    return LoginView.as_view(**defaults)(request)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/debug.py", line 143, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 89, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/edit.py", line 142, in get
+    return self.render_to_response(self.get_context_data())
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 113, in get_context_data
+    current_site = get_current_site(self.request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/shortcuts.py", line 16, in get_current_site
+    return Site.objects.get_current(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 61, in get_current
+    return self._get_site_by_request(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 45, in _get_site_by_request
+    SITE_CACHE[domain] = self.get(domain__iexact=domain)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 649, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+ERROR [2024-09-25 15:06:03,726] basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 500 179640
+WARNING [2024-09-25 15:06:18,759] log Not Found: /django-admin
+WARNING [2024-09-25 15:06:18,760] basehttp "GET /django-admin HTTP/1.1" 404 5776
+INFO [2024-09-25 15:06:26,928] basehttp "GET /admin/ HTTP/1.1" 302 0
+ERROR [2024-09-25 15:06:27,000] log Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 39, in _get_site_by_request
+    SITE_CACHE[host] = self.get(domain__iexact=host)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 649, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 444, in login
+    return LoginView.as_view(**defaults)(request)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/debug.py", line 143, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 89, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/generic/edit.py", line 142, in get
+    return self.render_to_response(self.get_context_data())
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/auth/views.py", line 113, in get_context_data
+    current_site = get_current_site(self.request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/shortcuts.py", line 16, in get_current_site
+    return Site.objects.get_current(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 61, in get_current
+    return self._get_site_by_request(request)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/sites/models.py", line 45, in _get_site_by_request
+    SITE_CACHE[domain] = self.get(domain__iexact=domain)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 649, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+ERROR [2024-09-25 15:06:27,001] basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 500 179503
+INFO [2024-09-25 15:07:19,288] autoreload /www/src/settings/base.py changed, reloading.
+INFO [2024-09-25 15:07:20,396] autoreload Watching for file changes with StatReloader
+INFO [2024-09-25 15:08:54,409] autoreload Watching for file changes with StatReloader
+INFO [2024-09-25 15:08:55,455] basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4211
+INFO [2024-09-25 15:09:06,286] basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO [2024-09-25 15:09:06,314] basehttp "GET /admin/ HTTP/1.1" 200 18995
+INFO [2024-09-25 15:09:09,110] basehttp "GET /admin/customuser/customwebpage/ HTTP/1.1" 200 14261
+INFO [2024-09-25 15:09:09,154] basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+INFO [2024-09-25 15:09:11,999] basehttp "GET /admin/company/company/ HTTP/1.1" 200 16158
+INFO [2024-09-25 15:09:12,035] basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+INFO [2024-09-25 15:09:13,115] basehttp "GET /admin/company/company/8c917bf8-8257-46a9-8761-420b3788f594/change/ HTTP/1.1" 200 36052
+INFO [2024-09-25 15:09:13,154] basehttp "GET /static/admin/js/inlines.js HTTP/1.1" 200 15526
+INFO [2024-09-25 15:09:13,184] basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+INFO [2024-09-25 15:09:13,216] basehttp "GET /static/admin/img/inline-delete.svg HTTP/1.1" 200 560
