@@ -6,23 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d909a866-9aed-4c03-ba3b-68a2a6b56495" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/apps/core/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/apps/core/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/apps/core/static/fonts/ElegantIcons.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/apps/core/static/fonts/ElegantIcons.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/apps/core/static/fonts/ElegantIcons.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/apps/core/static/fonts/ElegantIcons.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/apps/core/static/fonts/FontAwesome.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/apps/core/static/fonts/fontawesome-webfont.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/apps/core/static/fonts/fontawesome-webfont.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/apps/core/static/fonts/fontawesome-webfont.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/apps/core/static/fonts/fontawesome-webfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/apps/core/static/fonts/fontawesome-webfont.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/apps/core/static/js/product/product.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/apps/core/static/js/product/product.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/settings/django.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/settings/django.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/core/encontrarnos.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/core/encontrarnos.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/products/product_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/products/product_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/web/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/web/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/web/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/web/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/core/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/core/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,7 +107,7 @@
       <workItem from="1726588513594" duration="599000" />
       <workItem from="1726620697717" duration="598000" />
       <workItem from="1726975855534" duration="22867000" />
-      <workItem from="1727800817157" duration="12319000" />
+      <workItem from="1727800817157" duration="14084000" />
     </task>
     <servers />
   </component>
