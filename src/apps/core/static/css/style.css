@@ -1,3 +1,14 @@
+@font-face {
+    font-family: 'Avenir-Roman';
+    src: url('../fonts/AvenirLTStd-Roman.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body{
+	font-family: 'Avenir-Roman';
+}
 .swiper-pagination-bullet {
 	border: 1px solid #1da1f2;
 }
@@ -753,38 +764,38 @@ button.swiper-pagination-bullet {
 }
 
 
-/*animation*/
-.scroll-container {
-	/*scroll-snap-type: y mandatory; !* Activa el scroll snap en el eje Y *!*/
-    overflow-y: auto; /* Permite el scroll vertical */
-    height: 100vh;
-	position: relative; /* Asegura que las secciones estén contenidas */
-}
-.scroll-section {
-    scroll-snap-align: start; /* Asegura que cada sección se alinee al inicio */
-    width: 100%;
-    height: 80%; /* Cada sección ocupa el 100% de la ventana */
-	display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-	flex-direction: column;
-}
-.scroll-section img {
-    width: 15%;
-	object-fit: contain;
-}
+/*!*animation*!*/
+/*.scroll-container {*/
+/*	!*scroll-snap-type: y mandatory; !* Activa el scroll snap en el eje Y *!*!*/
+/*    overflow-y: auto; !* Permite el scroll vertical *!*/
+/*    height: 100vh;*/
+/*	position: relative; !* Asegura que las secciones estén contenidas *!*/
+/*}*/
+/*.scroll-section {*/
+/*    scroll-snap-align: start; !* Asegura que cada sección se alinee al inicio *!*/
+/*    width: 100%;*/
+/*    height: 80%; !* Cada sección ocupa el 100% de la ventana *!*/
+/*	display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    opacity: 0;*/
+/*    transition: opacity 1s ease-in-out;*/
+/*	flex-direction: column;*/
+/*}*/
+/*.scroll-section img {*/
+/*    width: 15%;*/
+/*	object-fit: contain;*/
+/*}*/
 
-.scroll-section.active {
-    opacity: 1;
-}
-.chapa {
-	width: 12% !important;
-}
-.spacer {
-	height: 20vh; /* Agrega una altura extra para el espacio */
-}
-.last-img {
-	width: 45% !important;
-}
+/*.scroll-section.active {*/
+/*    opacity: 1;*/
+/*}*/
+/*.chapa {*/
+/*	width: 12% !important;*/
+/*}*/
+/*.spacer {*/
+/*	height: 20vh; !* Agrega una altura extra para el espacio *!*/
+/*}*/
+/*.last-img {*/
+/*	width: 45% !important;*/
+/*}*/

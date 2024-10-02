@@ -44,8 +44,8 @@ function fetchProducts(categoryUuid = null) {
                         <h3 class="text-black text-center text-lg font-bold">${product.name}</h3>
                         <p class=" text-gray-600">S/${product.price}</p>
                         <button class="mt-4 bg-orange-600 text-white w-full py-3 rounded hover:bg-orange-700">
-                            Añadir al carrito
-                            <i class="fa fa-shopping-cart"></i>
+                            Ver más
+                            
                         </button>
                     </a>
                 </div>`;
