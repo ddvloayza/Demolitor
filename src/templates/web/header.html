@@ -11,11 +11,22 @@
         <a href="#" class="text-white hover:text-gray-400">Contacto</a>
         <a href="#" class="text-white hover:text-gray-400">Blog</a>
       </nav>
-      <div class="flex items-center space-x-4">
-        <input type="text" placeholder="Buscar" class="p-2 rounded bg-gray-800 text-white">
-        <button class="bg-red-600 px-4 py-2 rounded hover:bg-red-700">Contáctanos</button>
-      </div>
-    </div>
+
+        <div class="flex items-center space-x-4">
+            <!-- Ícono de lupa -->
+            <button id="search-icon" class="text-white p-2 rounded-full">
+                <!-- Aquí puedes agregar el ícono de la lupa, por ejemplo, de Font Awesome -->
+                <i class="fas fa-search"></i>
+            </button>
+
+            <!-- Campo de entrada oculto que se muestra al hacer clic en el ícono de lupa -->
+            <input id="search-input" type="text" placeholder="Buscar" class="bg-black hidden border-b-2  p-2 focus:outline-none text-white">
+
+        </div>
+        <div class="flex items-center space-x-4">
+            <button class="text-white bg-[rgb(222,55,5)] px-4 py-2 rounded hover:bg-red-700">Contáctanos</button>
+        </div>
+        </div>
 
     <div class="bg-[#EDEDED] py-8 flex space-x-4 justify-center text-sm">
         {% for category in dynamic_data.category_company.all %}
@@ -25,3 +36,14 @@
 
   </header>
   <!-- Header Section End -->
+<script>
+    document.getElementById('search-icon').addEventListener('click', function() {
+        const searchInput = document.getElementById('search-input');
+        // Mostrar el input si está oculto y ocultar si ya está visible
+        if (searchInput.classList.contains('hidden')) {
+            searchInput.classList.remove('hidden');
+        } else {
+            searchInput.classList.add('hidden');
+        }
+    });
+</script>

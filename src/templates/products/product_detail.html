@@ -90,11 +90,10 @@
                 <span class="bg-yellow-200 text-yellow-700 px-2 py-1 rounded-full text-sm mb-2 inline-block">Más comprados</span>
 
                 <!-- Título del Producto -->
-                <h1 class="text-4xl font-bold text-gray-800 mb-4">Proteína Whey</h1>
+                <h1 class="text-4xl font-bold text-gray-800 mb-4 delivery">Proteína Whey</h1>
 
                 <!-- Selector de Sabor -->
                 <div class="mb-6">
-                    <label class="block text-lg font-semibold mb-2">Sabor</label>
                     <div class="flex space-x-4">
                         <button class="px-4 py-2 border rounded-full text-gray-700 bg-gray-100 focus:bg-gray-200 focus:outline-none">Vainilla</button>
                         <button class="px-4 py-2 border rounded-full text-gray-700 bg-gray-100 focus:bg-gray-200 focus:outline-none">Chocolate</button>
@@ -116,11 +115,11 @@
                     <label class="block text-lg font-semibold mb-2">Presentación</label>
                     <div class="flex space-x-6">
                         <label class="flex items-center">
-                            <input type="radio" name="servicios" class="form-radio h-5 w-5 text-orange-500">
+                            <input type="radio" name="servicios" class="form-radio h-5 w-5 text-orange-500" id="option1">
                             <span class="ml-2 text-gray-700">1.17 lbs</span>
                         </label>
                         <label class="flex items-center">
-                            <input type="radio" name="servicios" class="form-radio h-5 w-5 text-orange-500">
+                            <input type="radio" name="servicios" class="form-radio h-5 w-5 text-orange-500" id="option2">
                             <span class="ml-2 text-gray-700">2.25 lbs</span>
                         </label>
                     </div>
@@ -148,7 +147,7 @@
     </section>
 
     <section>
-        <div class="max-w-6xl mx-auto py-10 flex flex-col text-white text-center">
+        <div class="max-w-6xl mx-auto py-10 flex flex-col text-white text-center font-bold delivery">
             DELIVERY GRATIS A LIMA METROPOLITANA
         </div>
     </section>
@@ -159,44 +158,61 @@
         <div class="w-full lg:w-1/2">
             <ul class="space-y-2 mb-6">
                 <li class="flex items-center text-gray-700">
-                    <svg class="w-5 h-5 text-orange-500 mr-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                        <path d="M9 16.172l-5.414-5.414 1.414-1.414L9 13.344l7.586-7.586 1.414 1.414z"/>
-                    </svg>
-                    CREA MÚSCULOS
+                    <div class="flex items-center justify-center w-7 h-7 bg-[rgb(222,55,5)] rounded-full">
+                        <svg class="w-5 h-5 text-white" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                            <path d="M9 16.172l-5.414-5.414 1.414-1.414L9 13.344l7.586-7.586 1.414 1.414z"/>
+                        </svg>
+                    </div>
+                    <span class="ml-2">CREA MÚSCULOS</span>
                 </li>
+
                 <li class="flex items-center text-gray-700">
-                    <svg class="w-5 h-5 text-orange-500 mr-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                        <path d="M9 16.172l-5.414-5.414 1.414-1.414L9 13.344l7.586-7.586 1.414 1.414z"/>
-                    </svg>
-                    MEJORA LA RECUPERACIÓN
+                    <div class="flex items-center justify-center w-7 h-7 bg-[rgb(222,55,5)] rounded-full">
+                        <svg class="w-5 h-5 text-white" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                            <path d="M9 16.172l-5.414-5.414 1.414-1.414L9 13.344l7.586-7.586 1.414 1.414z"/>
+                        </svg>
+                    </div>
+                    <span class="ml-2">MEJORA LA RECUPERACIÓN</span>
                 </li>
+
                 <li class="flex items-center text-gray-700">
-                    <svg class="w-5 h-5 text-orange-500 mr-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                        <path d="M9 16.172l-5.414-5.414 1.414-1.414L9 13.344l7.586-7.586 1.414 1.414z"/>
-                    </svg>
-                    AUMENTA LA FUERZA
+                    <div class="flex items-center justify-center w-7 h-7 bg-[rgb(222,55,5)] rounded-full">
+                        <svg class="w-5 h-5 text-white" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                            <path d="M9 16.172l-5.414-5.414 1.414-1.414L9 13.344l7.586-7.586 1.414 1.414z"/>
+                        </svg>
+                    </div>
+                    <span class="ml-2">AUMENTA LA FUERZA</span>
                 </li>
+
                 <li class="flex items-center text-gray-700">
-                    <svg class="w-5 h-5 text-orange-500 mr-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                        <path d="M9 16.172l-5.414-5.414 1.414-1.414L9 13.344l7.586-7.586 1.414 1.414z"/>
-                    </svg>
-                    CERO AZÚCAR AÑADIDA
+                    <div class="flex items-center justify-center w-7 h-7 bg-[rgb(222,55,5)] rounded-full">
+                        <svg class="w-5 h-5 text-white" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                            <path d="M9 16.172l-5.414-5.414 1.414-1.414L9 13.344l7.586-7.586 1.414 1.414z"/>
+                        </svg>
+                    </div>
+                    <span class="ml-2">CERO AZÚCAR AÑADIDA</span>
                 </li>
+
                 <li class="flex items-center text-gray-700">
-                    <svg class="w-5 h-5 text-orange-500 mr-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                        <path d="M9 16.172l-5.414-5.414 1.414-1.414L9 13.344l7.586-7.586 1.414 1.414z"/>
-                    </svg>
-                    ENDULZADO CON STEVIA
+                    <div class="flex items-center justify-center w-7 h-7 bg-[rgb(222,55,5)] rounded-full">
+                        <svg class="w-5 h-5 text-white" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                            <path d="M9 16.172l-5.414-5.414 1.414-1.414L9 13.344l7.586-7.586 1.414 1.414z"/>
+                        </svg>
+                    </div>
+                    <span class="ml-2">ENDULZADO CON STEVIA</span>
                 </li>
+
                 <li class="flex items-center text-gray-700">
-                    <svg class="w-5 h-5 text-orange-500 mr-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                        <path d="M9 16.172l-5.414-5.414 1.414-1.414L9 13.344l7.586-7.586 1.414 1.414z"/>
-                    </svg>
-                    CERO COLESTEROL
+                    <div class="flex items-center justify-center w-7 h-7 bg-[rgb(222,55,5)] rounded-full">
+                        <svg class="w-5 h-5 text-white" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                            <path d="M9 16.172l-5.414-5.414 1.414-1.414L9 13.344l7.586-7.586 1.414 1.414z"/>
+                        </svg>
+                    </div>
+                    <span class="ml-2">CERO COLESTEROL</span>
                 </li>
             </ul>
             <div class="flex mb-5">
-                <p class="mr-2 text-4xl">Características</p><p class="text-4xl font-bold text-orange-500">Clave</p>
+                <p class="mr-2 text-4xl delivery">Características</p><p class="text-4xl font-bold text-orange-500 delivery">Clave</p>
             </div>
             <!-- Características Clave -->
             <div class="flex space-x-8 text-center">
@@ -206,12 +222,16 @@
                     <p class="text-gray-600">Proteína</p>
                 </div>
                 <div>
-                    <span class="text-4xl font-bold text-gray-800">5.6</span><span class="text-xl font-bold">g</span>
+                    <span class="text-3xl font-bold text-gray-800">5.6</span><span class="text-xl font-bold">g</span>
                     <p class="text-gray-600">BCAAs</p>
                 </div>
                 <div>
-                    <span class="text-4xl font-bold text-gray-800">139</span><span class="text-xl font-bold">kcal</span>
+                    <span class="text-3xl font-bold text-gray-800">139</span><span class="text-xl font-bold">kcal</span>
                     <p class="text-gray-600">Calorías por servicio</p>
+                </div>
+                <div>
+                    <span id="grams-text" class="text-3xl font-bold text-gray-800">60</span><span class="text-xl font-bold">g</span>
+                    <p class="text-gray-600">gramos por servicio</p>
                 </div>
             </div>
         </div>
@@ -265,31 +285,94 @@
     </section>
 
 
+    <section class="bg-[#ECECEC] p-8 h-max">
+        <h2 class="text-4xl font-bold text-black text-center py-8 delivery tracking-[0.1em]">Añade a tu Compra</h2>
+
+          <!-- Swiper -->
+        <div class="swiper-container two">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="slider-image">
+                        <img src="{% static 'img/products/collagen3.png'%}" alt="slide 1">
+                        <div class="text-center py-4">
+                            <div class=" bg-[#ffc30e] text-black w-32 mx-auto">
+                                Más fuerza
+                            </div>
+                            <div class="py-4">
+                                Proteína ISO | 1.76lb
+                            </div>
+                            <div class="flex items-center justify-center ">
+                                <div class="grid grid-cols-2 gap-4 text-center">
+                                    <p class="text-gray-400 line-through">S/199</p>
+                                    <p class="text-xl">S/99.50</p>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slider-image">
+                        <img src="{% static 'img/products/collagen3.png'%}" alt="slide 2">
+                        <div class="text-center py-4">
+                            <div class="bg-[#ffc30e] text-black w-32 mx-auto">
+                                Más fuerza
+                            </div>
+                            <div class="py-4">
+                                Proteína ISO | 1.76lb
+                            </div>
+                            <div class="flex items-center justify-center ">
+                                <div class="grid grid-cols-2 gap-4 text-center">
+                                    <p class="text-gray-400 line-through">S/199</p>
+                                    <p class="text-xl">S/99.50</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slider-image">
+                        <img src="{% static 'img/products/collagen3.png'%}" alt="slide 3">
+                        <div class="text-center py-4">
+
+                            <div class="bg-[#ffc30e] text-black-50 w-32 mx-auto">
+                                Más fuerza
+                            </div>
+                            <div class="py-4">
+                                Proteína ISO | 1.76lb
+                            </div>
+                            <div class="flex items-center justify-center ">
+                                <div class="grid grid-cols-2 gap-4 text-center">
+                                    <p class="text-gray-400 line-through">S/199</p>
+                                    <p class="text-xl">S/99.50</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</section>
+
     {% endblock content %}
     {% block js %}
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const sections = document.querySelectorAll('.scroll-section');
+        // Escuchar el cambio de selección en los radio buttons
+        document.getElementById('option1').addEventListener('change', function() {
+            if (this.checked) {
+                document.getElementById('grams-text').innerText = '60'; // Opción 1
+            }
+        });
 
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        setTimeout(() => {
-                            entry.target.classList.add('active');
-                        }, 100); // Añade un pequeño retraso de 100ms
-                    } else {
-                        setTimeout(() => {
-                            entry.target.classList.remove('active');
-                        }, 100); // Añade un pequeño retraso de 100ms
-                    }
-                });
-            }, {
-                threshold: 0.7 // Se activa cuando el 30% de la sección es visible
-            });
-
-            sections.forEach(section => {
-                observer.observe(section);
-            });
+        document.getElementById('option2').addEventListener('change', function() {
+            if (this.checked) {
+                document.getElementById('grams-text').innerText = '70'; // Opción 2
+            }
         });
 
     </script>
