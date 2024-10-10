@@ -1,19 +1,19 @@
 {% load static %}
 
 
-<section class="bg-black p-8 h-max">
+<section class="bg-black p-8 h-max" style="background-image: url('{% static 'img/banner/background2.png' %}'); background-size: cover; background-position: center;">
   <div class="container mx-auto py-8">
     <div class="flex justify-center items-center">
-      <h2 class="text-3xl font-normal px-8 text-white cursor-pointer text-shadow-effect"
+      <h2 class="text-3xl font-normal px-8 text-white cursor-pointer text-shadow-effect font-avenir-black"
           onclick="ToggleWithDataAttr(event, 'data-oferta')">
           OFERTAS
       </h2>
 
-        <h2 class="text-3xl font-normal text-white px-8 text-shadow-effect cursor-pointer"
+        <h2 class="text-3xl font-normal text-white px-8 text-shadow-effect cursor-pointer font-avenir-black"
             onclick="ToggleWithDataAttr(event, 'data-novedad')">
             NOVEDADES
         </h2>
-        <h2 class="text-3xl font-normal text-white px-8 text-shadow-effect cursor-pointer"
+        <h2 class="text-3xl font-normal text-white px-8 text-shadow-effect cursor-pointer font-avenir-black"
             onclick="ToggleWithDataAttr(event, 'data-packs')">
             PACKS
         </h2>

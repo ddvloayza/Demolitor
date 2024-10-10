@@ -11,6 +11,12 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'ArupalaGrotesk-Ultra';
+    src: url('../fonts/ArupalaGrotesk-Ultra.ttf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
 
 body{
 	font-family: 'Avenir-Roman';
@@ -774,6 +780,14 @@ button.swiper-pagination-bullet {
     letter-spacing: 3px;
     font-size: 24px;
 
+}
+.font-avenir-black{
+	font-family: Avenir-Black;
+}
+.header_text{
+	font-family: ArupalaGrotesk-Ultra;
+    letter-spacing: 1px;
+    font-size: 16px;
 }
 .hover\:shadow-custom:hover {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6); /* Personaliza la sombra aquí */
