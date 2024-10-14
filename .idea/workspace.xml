@@ -7,6 +7,8 @@
     <list default="true" id="d909a866-9aed-4c03-ba3b-68a2a6b56495" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/apps/core/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/apps/core/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/settings/django.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/settings/django.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/core/objetivos.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/core/objetivos.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +116,7 @@
       <workItem from="1728824296602" duration="3777000" />
       <workItem from="1728842948291" duration="599000" />
       <workItem from="1728852794505" duration="23000" />
-      <workItem from="1728852824388" duration="7139000" />
+      <workItem from="1728852824388" duration="10101000" />
     </task>
     <servers />
   </component>
