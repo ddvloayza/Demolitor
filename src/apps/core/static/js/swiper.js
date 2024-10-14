@@ -6,7 +6,7 @@ var swiper = new Swiper( '.swiper-container.two', {
 		loop: false,
 		centerInsufficientSlides: true,
 		centeredSlides: true,
-		slidesPerView: '5',
+		slidesPerView: 'auto',
 		initialSlide: 1,
 		coverflow: {
 			rotate: 0,

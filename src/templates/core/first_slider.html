@@ -4,37 +4,35 @@
 <section class="relative">
     <div id="default-carousel" class="relative w-full group" data-carousel="slide">
         <!-- Carousel wrapper -->
-        <div class="relative h-56 overflow-hidden rounded-lg md:h-[70vh]">
-            <!-- Item 1 -->
-            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <img src="{% static 'img/home_slider.png' %}" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-                <!-- Overlay -->
-                <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex justify-center items-center">
-                    <button class="text-white bg-red-500 px-4 py-2 rounded-lg hover:bg-red-700 transition-colors duration-300">
-                        Ver más
-                    </button>
-                </div>
-            </div>
+        <div class="relative  overflow-hidden rounded-lg md:h-[70vh] max-[1100px]:h-[70%]">
 
-            <!-- Item 2 -->
-            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <img src="{% static 'img/home_slider.png' %}" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-                <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex justify-center items-center">
-                    <button class="text-white bg-red-500 px-4 py-2 rounded-lg hover:bg-red-700 transition-colors duration-300">
-                        Ver más
-                    </button>
-                </div>
-            </div>
+            {% for banner in  banners%}
 
-            <!-- Item 3 -->
-            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <img src="{% static 'img/home_slider.png' %}" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-                <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex justify-center items-center">
-                    <button class="text-white bg-red-500 px-4 py-2 rounded-lg hover:bg-red-700 transition-colors duration-300">
-                        Ver más
-                    </button>
+                <!-- Item 1 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <!-- Imagen para pantallas grandes -->
+                    <img
+                        src="{{ banner.image.url }}"
+                        class="hidden min-[1100px]:block absolute w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                        alt="Imagen de escritorio">
+
+                    <!-- Imagen para pantallas pequeñas -->
+                    <img
+                        src="{{ banner.image_responsive.url }}"
+                        class="block min-[1100px]:hidden absolute w-full h-full object-contain -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                        alt="Imagen móvil">
+
+                    <!-- Overlay -->
+                    <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex justify-center items-center">
+                        <button class="text-white bg-red-500 px-4 py-2 rounded-lg hover:bg-red-700 transition-colors duration-300">
+                            Ver más
+                        </button>
+                    </div>
                 </div>
-            </div>
+            {% endfor %}
+
+
+
         </div>
 
         <!-- Slider indicators (no change needed here) -->

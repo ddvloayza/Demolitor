@@ -6,8 +6,19 @@
   <component name="ChangeListManager">
     <list default="true" id="d909a866-9aed-4c03-ba3b-68a2a6b56495" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/apps/core/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/apps/core/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/apps/core/static/js/swiper.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/apps/core/static/js/swiper.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/apps/core/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/apps/core/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/apps/customuser/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/apps/customuser/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/apps/customuser/models/customuser.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/apps/customuser/models/customuser.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/settings/django.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/settings/django.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/templates/core/first_slider.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/core/first_slider.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/core/novedades.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/core/novedades.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/core/objetivos.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/core/objetivos.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/core/variados.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/core/variados.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/products/product_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/products/product_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/web/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/web/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/web/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/web/header.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +122,11 @@
       <workItem from="1727800817157" duration="14413000" />
       <workItem from="1727885288890" duration="2062000" />
       <workItem from="1728277797888" duration="30541000" />
-      <workItem from="1728659549279" duration="2798000" />
+      <workItem from="1728659549279" duration="7056000" />
+      <workItem from="1728824296602" duration="3777000" />
+      <workItem from="1728842948291" duration="599000" />
+      <workItem from="1728852794505" duration="23000" />
+      <workItem from="1728852824388" duration="6438000" />
     </task>
     <servers />
   </component>

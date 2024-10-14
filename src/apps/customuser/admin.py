@@ -65,7 +65,7 @@ class CustomWebPageAdmin(admin.ModelAdmin):
     )
 
 class BannerAdmin(admin.ModelAdmin):
-    list_display = ("image", )
+    list_display = ("uuid", "image", )
 
 admin.site.register(CustomUser, CustomUserAdmin)
 admin.site.register(UserProfile, UserProfileAdmin)

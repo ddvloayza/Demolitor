@@ -188,6 +188,13 @@ class Banner(BaseModelMixin):
         null=True,
     )
 
+    image_responsive = models.ImageField(
+        verbose_name=_("image_responsive"),
+        upload_to="banner-responsive",
+        blank=True,
+        null=True,
+    )
+
     def __str__(self):
         return "{}".format(self.name)
     

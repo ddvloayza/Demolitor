@@ -43,6 +43,7 @@ class HomeView(TemplateView):
             category__company__comercial_name__icontains="demolitor",
             tag__slug="packs"
         )
+        context['banners'] = Banner.objects.all()
         print("context['ofertas']", context['ofertas'])
         return context
 

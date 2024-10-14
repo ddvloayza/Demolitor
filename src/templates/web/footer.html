@@ -1,76 +1,76 @@
 {% load static %}
 
-  <!-- ================= FOOTER ================= -->
+<!-- ================= FOOTER ================= -->
 <section class="bg-gray-100 p-8">
-      <div class="container mx-auto text-center">
+    <div class="container mx-auto text-center">
         <h2 class="text-2xl font-bold text-black">También puedes encontrarnos en</h2>
-        <div class="flex justify-center space-x-40 mt-8">
-          <img src="{% static 'img/partners/falabella.png'%}" alt="Falabella" class="h-24">
-          <img src="{% static 'img/partners/mifarma.png'%}" alt="Mifarma" class="h-24">
-          <img src="{% static 'img/partners/inkafarma.png'%}" alt="Inkafarma" class="h-24">
+        <div class="flex space-x-4 overflow-x-auto whitespace-nowrap justify-center items-center md:space-x-20 mt-8 scrollbar-hide">
+            <img src="{% static 'img/partners/falabella.png' %}" alt="Falabella" class="h-16 md:h-24">
+            <img src="{% static 'img/partners/mifarma.png' %}" alt="Mifarma" class="h-16 md:h-24">
+            <img src="{% static 'img/partners/inkafarma.png' %}" alt="Inkafarma" class="h-16 md:h-24">
         </div>
-      </div>
+    </div>
 </section>
-<footer class="bg-[#F8F8F8] text-gray-400 p-8">
-    <div class="container mx-auto grid grid-cols-4 gap-8">
-      <div>
-        <h3 class="text-xl font-bold text-black">Productos</h3>
-        <ul class="mt-4 space-y-2">
-          <li><a href="#" class="hover:text-white">Proteína Whey</a></li>
-          <li><a href="#" class="hover:text-white">Proteína ISO</a></li>
-          <li><a href="#" class="hover:text-white">Creatinas</a></li>
-          <li><a href="#" class="hover:text-white">Colágenos Hidrolizados</a></li>
-          <li><a href="#" class="hover:text-white">Black Maca</a></li>
-          <li><a href="#" class="hover:text-white">Línea Sport</a></li>
-          <li><a href="#" class="hover:text-white">Proteína Svelt</a></li>
-        </ul>
-      </div>
-      <div>
-        <h3 class="text-xl font-bold text-black">Contenido</h3>
-        <ul class="mt-4 space-y-2">
-          <li><a href="#" class="hover:text-white">Home</a></li>
-          <li><a href="#" class="hover:text-white">Nosotros</a></li>
-          <li><a href="#" class="hover:text-white">Contacto</a></li>
-          <li><a href="#" class="hover:text-white">Blog</a></li>
-          <li><a href="#" class="hover:text-white">Sé un embajador</a></li>
-        </ul>
-      </div>
-      <div>
-        <h3 class="text-xl font-bold text-black">Servicio al cliente</h3>
-        <ul class="mt-4 space-y-2">
-          <li><a href="#" class="hover:text-white">Consulta un pedido</a></li>
-          <li><a href="#" class="hover:text-white">Distribuidor</a></li>
-          <li><a href="#" class="hover:text-white">Distribuidor Internacional</a></li>
-          <li><a href="#" class="hover:text-white">Política de cambio</a></li>
-          <li><a href="#" class="hover:text-white">Libro de reclamaciones</a></li>
-          <li><a href="#" class="hover:text-white">Promociones vigentes</a></li>
-          <li><a href="#" class="hover:text-white">Términos y condiciones</a></li>
-          <li><a href="#" class="hover:text-white">Políticas de privacidad</a></li>
-        </ul>
-      </div>
-        <div class="text-center">
-            <h2 class="text-gray-600 mb-2">Redes sociales</h2>
-            <div class="flex flex-wrap w-full max-w-4xl bg-white border-gray-300 border">
-                <a href="{{ dynamic_data.facebook_url }}" target="_blank"
-                   class="flex flex-col w-1/4 items-center bg-white p-4 border-r border-gray-300">
-                    <i class="fab fa-facebook-f"></i>
 
+<footer class="bg-[#F8F8F8] text-gray-400 p-8">
+    <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center lg:text-left">
+        <!-- Productos -->
+        <div>
+            <h3 class="text-xl font-bold text-black">Productos</h3>
+            <ul class="mt-4 space-y-2">
+                <li><a href="#" class="hover:text-white">Proteína Whey</a></li>
+                <li><a href="#" class="hover:text-white">Proteína ISO</a></li>
+                <li><a href="#" class="hover:text-white">Creatinas</a></li>
+                <li><a href="#" class="hover:text-white">Colágenos Hidrolizados</a></li>
+                <li><a href="#" class="hover:text-white">Black Maca</a></li>
+                <li><a href="#" class="hover:text-white">Línea Sport</a></li>
+                <li><a href="#" class="hover:text-white">Proteína Svelt</a></li>
+            </ul>
+        </div>
+        <!-- Contenido -->
+        <div>
+            <h3 class="text-xl font-bold text-black">Contenido</h3>
+            <ul class="mt-4 space-y-2">
+                <li><a href="#" class="hover:text-white">Home</a></li>
+                <li><a href="#" class="hover:text-white">Nosotros</a></li>
+                <li><a href="#" class="hover:text-white">Contacto</a></li>
+                <li><a href="#" class="hover:text-white">Blog</a></li>
+                <li><a href="#" class="hover:text-white">Sé un embajador</a></li>
+            </ul>
+        </div>
+        <!-- Servicio al cliente -->
+        <div>
+            <h3 class="text-xl font-bold text-black">Servicio al cliente</h3>
+            <ul class="mt-4 space-y-2">
+                <li><a href="#" class="hover:text-white">Consulta un pedido</a></li>
+                <li><a href="#" class="hover:text-white">Distribuidor</a></li>
+                <li><a href="#" class="hover:text-white">Distribuidor Internacional</a></li>
+                <li><a href="#" class="hover:text-white">Política de cambio</a></li>
+                <li><a href="#" class="hover:text-white">Libro de reclamaciones</a></li>
+                <li><a href="#" class="hover:text-white">Promociones vigentes</a></li>
+                <li><a href="#" class="hover:text-white">Términos y condiciones</a></li>
+                <li><a href="#" class="hover:text-white">Políticas de privacidad</a></li>
+            </ul>
+        </div>
+        <!-- Redes Sociales -->
+        <div class="text-center">
+            <h3 class="text-xl font-bold text-black mb-4">Redes sociales</h3>
+            <div class="flex justify-center lg:justify-start space-x-4">
+                <a href="{{ dynamic_data.facebook_url }}" target="_blank" class="text-gray-400 hover:text-gray-700">
+                    <i class="fab fa-facebook-f fa-2x"></i>
                 </a>
-                <a href="{{ dynamic_data.instagram_url }}" target="_blank" class="flex flex-col w-1/4 items-center bg-white p-4 border-r border-gray-300">
-                    <i class="fab fa-instagram"></i>
+                <a href="{{ dynamic_data.instagram_url }}" target="_blank" class="text-gray-400 hover:text-gray-700">
+                    <i class="fab fa-instagram fa-2x"></i>
                 </a>
-                <a href="{{ dynamic_data.tiktok_url }}" target="_blank" class="flex flex-col w-1/4 items-center bg-white p-4 border-r border-gray-300">
-                    <i class="fab fa-tiktok"></i>
+                <a href="{{ dynamic_data.tiktok_url }}" target="_blank" class="text-gray-400 hover:text-gray-700">
+                    <i class="fab fa-tiktok fa-2x"></i>
                 </a>
-                <a href="{{ dynamic_data.whatsapp_url }}" target="_blank" class="flex flex-col w-1/4 items-center bg-white p-4 ">
-                    <i class="fab fa-whatsapp"></i>
+                <a href="{{ dynamic_data.whatsapp_url }}" target="_blank" class="text-gray-400 hover:text-gray-700">
+                    <i class="fab fa-whatsapp fa-2x"></i>
                 </a>
             </div>
         </div>
     </div>
-
-      <p class="text-center p-8">Copyright © 2024 Demolitor</p>
-    </div>
-  </footer>
-
+    <p class="text-center pt-8 text-sm">Copyright © 2024 Demolitor</p>
+</footer>
 <!-- =============== FOOTER END =============== -->

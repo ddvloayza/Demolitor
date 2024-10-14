@@ -1,45 +1,46 @@
 {% load static %}
-    <!-- Header Section Begin -->
-    <header class="bg-black">
-    <div class="container mx-auto flex justify-between items-center p-4">
+<!-- Header Section Begin -->
+<header class="bg-black">
+    <div class="container mx-auto flex justify-between items-center p-4 flex-wrap">
         <a href="{% url 'core:home' %}">
             <img src="{{ dynamic_data.image.url}}" alt="Demolitor Logo" class="h-10">
         </a>
-      <nav class="flex space-x-32">
-        <a href="#" class="text-white hover:text-gray-400">Nosotros</a>
-        <a href="{% url 'core:product_list' %}" class="text-white hover:text-gray-400">Productos</a>
-        <a href="#" class="text-white hover:text-gray-400">Contacto</a>
-        <a href="#" class="text-white hover:text-gray-400">Blog</a>
-      </nav>
+
+        <!-- Menú de navegación -->
+        <nav class="hidden md:flex space-x-8">
+            <a href="#" class="text-white hover:text-gray-400">Nosotros</a>
+            <a href="{% url 'core:product_list' %}" class="text-white hover:text-gray-400">Productos</a>
+            <a href="#" class="text-white hover:text-gray-400">Contacto</a>
+            <a href="#" class="text-white hover:text-gray-400">Blog</a>
+        </nav>
 
         <div class="flex items-center space-x-4">
             <!-- Ícono de lupa -->
             <button id="search-icon" class="text-white p-2 rounded-full">
-                <!-- Aquí puedes agregar el ícono de la lupa, por ejemplo, de Font Awesome -->
                 <i class="fas fa-search"></i>
             </button>
 
-            <!-- Campo de entrada oculto que se muestra al hacer clic en el ícono de lupa -->
-            <input id="search-input" type="text" placeholder="Buscar" class="bg-black hidden border-b-2  p-2 focus:outline-none text-white">
-
+            <!-- Campo de búsqueda oculto que se muestra al hacer clic en el ícono de lupa -->
+            <input id="search-input" type="text" placeholder="Buscar" class="bg-black hidden border-b-2 p-2 focus:outline-none text-white w-full md:w-64">
         </div>
-        <div class="flex items-center space-x-4">
+
+        <div class="flex items-center space-x-4 mt-4 md:mt-0">
             <button class="text-white bg-[rgb(222,55,5)] px-4 py-2 rounded hover:bg-red-700">Contáctanos</button>
         </div>
-        </div>
-
-    <div class="bg-[#EDEDED] py-8 flex space-x-4 justify-center text-sm">
-        {% for category in dynamic_data.category_company.all %}
-            <a href="#" class="bg-gray-300 text-black px-24 py-2 rounded-full hover:bg-gray-400 font-bold header_text">{{ category.name}}</a>
-        {% endfor %}
     </div>
 
-  </header>
-  <!-- Header Section End -->
+    <!-- Barra de categorías -->
+    <div class="bg-[#EDEDED] py-8 flex space-x-4 overflow-x-auto flex-nowrap justify-start md:justify-center text-sm">
+    {% for category in dynamic_data.category_company.all %}
+        <a href="#" class="bg-gray-300 text-black px-8 py-2 rounded-full hover:bg-gray-400 font-bold whitespace-nowrap header_text">{{ category.name }}</a>
+    {% endfor %}
+</div>
+</header>
+<!-- Header Section End -->
+
 <script>
     document.getElementById('search-icon').addEventListener('click', function() {
         const searchInput = document.getElementById('search-input');
-        // Mostrar el input si está oculto y ocultar si ya está visible
         if (searchInput.classList.contains('hidden')) {
             searchInput.classList.remove('hidden');
         } else {
