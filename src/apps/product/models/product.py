@@ -82,9 +82,9 @@ class Product(BaseModelMixin, SEOMixin):
         blank=True,
         null=True
     )
-    
+
     image = models.ImageField(
-        verbose_name=_("image_product"),
+        verbose_name=_("image_principal_product"),
         upload_to=custom_product_upload_to,
         blank=True,
         null=True,
@@ -138,6 +138,26 @@ class Product(BaseModelMixin, SEOMixin):
     class Meta:
         verbose_name = _("Product")
         verbose_name_plural = _("Products")
+
+
+class ProductImage(models.Model):
+    product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name="images")
+    image = models.ImageField(
+        verbose_name=_("Product Image"),
+        upload_to=custom_product_upload_to,
+        blank=True,
+        null=True,
+    )
+
+    def __str__(self):
+        return f"Image for {self.product.name}"
+
+    class Meta:
+        verbose_name = _("Product Image")
+        verbose_name_plural = _("Product Images")
+
+    def __str__(self):
+        return "{}-{}".format(self.product.name, self.lote)
 
 
 class Certificate(BaseModelMixin, SEOMixin):

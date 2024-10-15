@@ -768,11 +768,13 @@ button.swiper-pagination-bullet {
 	color: #F06A32; /* Color similar al de la imagen */
 	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra de texto difusa */
 }
+
 .variety-effect:hover {
-	font-size: 3rem;
-	cursor: pointer;
-	font-weight: bold;
-	color: #DE3704; /* Color similar al de la imagen */
+    transform: scale(1.2);
+    cursor: pointer;
+    font-weight: bold;
+    color: #DE3704;
+    transition: transform 0.3s ease;
 }
 
 .delivery {

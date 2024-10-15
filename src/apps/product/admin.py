@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from apps.product.models.product import Product, Category, Certificate
+from apps.product.models.product import Product, Category, Certificate, ProductImage
 
 from apps.product.models.quotation_requests import QuotationRequest, QuotationRequestDetail
 from django.utils.safestring import mark_safe
@@ -9,6 +9,9 @@ class QuotationRequestDetailInline(admin.TabularInline):
     model = QuotationRequestDetail
     extra = 1
 
+class ProductImageInline(admin.TabularInline):
+    model = ProductImage
+    extra = 1
 
 class CategoryAdmin(admin.ModelAdmin):
     list_display = ("name", )
@@ -17,6 +20,7 @@ class CategoryAdmin(admin.ModelAdmin):
 
 
 class ProductAdmin(admin.ModelAdmin):
+    inlines = [ProductImageInline]
     list_display = ("name", )
     search_fields = ("name",)
     prepopulated_fields = {'slug': ('name',)}

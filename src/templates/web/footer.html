@@ -3,8 +3,25 @@
 <!-- ================= FOOTER ================= -->
 <section class="bg-gray-100 p-8">
     <div class="container mx-auto text-center">
-        <h2 class="text-2xl font-bold text-black">También puedes encontrarnos en</h2>
-        <div class="flex space-x-4 overflow-x-auto whitespace-nowrap justify-center items-center md:space-x-20 mt-8 scrollbar-hide">
+        <h2 class="text-2xl font-bold font-avenir-black">También puedes encontrarnos en</h2>
+
+        <!-- Swiper para pantallas pequeñas -->
+        <div class="swiper-container two block md:hidden mt-8">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="{% static 'img/partners/falabella.png' %}" alt="Falabella" class="h-16 md:h-24 mx-auto">
+                </div>
+                <div class="swiper-slide">
+                    <img src="{% static 'img/partners/mifarma.png' %}" alt="Mifarma" class="h-16 md:h-24 mx-auto">
+                </div>
+                <div class="swiper-slide">
+                    <img src="{% static 'img/partners/inkafarma.png' %}" alt="Inkafarma" class="h-16 md:h-24 mx-auto">
+                </div>
+            </div>
+        </div>
+
+        <!-- Grid para pantallas grandes -->
+        <div class="hidden md:flex space-x-8 md:space-x-20 justify-center items-center mt-8">
             <img src="{% static 'img/partners/falabella.png' %}" alt="Falabella" class="h-16 md:h-24">
             <img src="{% static 'img/partners/mifarma.png' %}" alt="Mifarma" class="h-16 md:h-24">
             <img src="{% static 'img/partners/inkafarma.png' %}" alt="Inkafarma" class="h-16 md:h-24">
@@ -53,7 +70,7 @@
             </ul>
         </div>
         <!-- Redes Sociales -->
-        <div class="text-center">
+        <div class="text-center lg:text-left">
             <h3 class="text-xl font-bold text-black mb-4">Redes sociales</h3>
             <div class="flex justify-center lg:justify-start space-x-4">
                 <a href="{{ dynamic_data.facebook_url }}" target="_blank" class="text-gray-400 hover:text-gray-700">
