@@ -9195,3 +9195,271 @@ INFO [2024-10-16 00:30:06,698] autoreload /www/src/apps/product/models/product.p
 INFO [2024-10-16 00:30:07,469] autoreload Watching for file changes with StatReloader
 INFO [2024-10-16 00:30:16,816] autoreload /www/src/apps/product/models/product.py changed, reloading.
 INFO [2024-10-16 00:30:17,498] autoreload Watching for file changes with StatReloader
+INFO [2024-10-16 00:31:18,395] autoreload Watching for file changes with StatReloader
+INFO [2024-10-16 00:32:41,093] autoreload Watching for file changes with StatReloader
+INFO [2024-10-16 00:33:52,813] autoreload /www/src/apps/product/admin.py changed, reloading.
+INFO [2024-10-16 00:33:53,603] autoreload Watching for file changes with StatReloader
+INFO [2024-10-16 00:34:28,753] autoreload /www/src/apps/product/admin.py changed, reloading.
+INFO [2024-10-16 00:34:29,553] autoreload Watching for file changes with StatReloader
+INFO [2024-10-16 00:34:54,252] autoreload /www/src/apps/product/admin.py changed, reloading.
+INFO [2024-10-16 00:34:55,048] autoreload Watching for file changes with StatReloader
+INFO [2024-10-16 00:35:01,374] autoreload /www/src/apps/product/admin.py changed, reloading.
+INFO [2024-10-16 00:35:02,216] autoreload Watching for file changes with StatReloader
+INFO [2024-10-16 00:35:07,520] autoreload /www/src/apps/product/admin.py changed, reloading.
+INFO [2024-10-16 00:35:08,433] autoreload Watching for file changes with StatReloader
+INFO [2024-10-16 00:35:10,654] autoreload /www/src/apps/product/admin.py changed, reloading.
+INFO [2024-10-16 00:35:11,349] autoreload Watching for file changes with StatReloader
+INFO [2024-10-16 00:35:17,234] basehttp "GET /admin/product/product/94a32d41-4561-4277-b831-a55d546d806f/change/ HTTP/1.1" 200 41037
+INFO [2024-10-16 00:35:17,292] basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+INFO [2024-10-16 00:35:17,302] basehttp "GET /static/admin/js/SelectBox.js HTTP/1.1" 200 4530
+INFO [2024-10-16 00:35:17,303] basehttp "GET /static/admin/js/SelectFilter2.js HTTP/1.1" 200 15502
+WARNING [2024-10-16 00:35:17,392] basehttp "GET /static/tinymce_4/tinymce/langs/.js HTTP/1.1" 404 2006
+WARNING [2024-10-16 00:35:17,446] basehttp "GET /static/tinymce_4/css/__tinymce_4.css?1729056917321 HTTP/1.1" 404 2026
+WARNING [2024-10-16 00:35:17,480] basehttp "GET /static/tinymce_4/css/__tinymce_4.css?1729056917321 HTTP/1.1" 404 2026
+INFO [2024-10-16 00:35:17,484] basehttp "GET /static/admin/img/selector-icons.svg HTTP/1.1" 200 3291
+INFO [2024-10-16 00:35:17,484] basehttp "GET /static/admin/img/icon-unknown-alt.svg HTTP/1.1" 200 655
+INFO [2024-10-16 00:35:17,485] basehttp "GET /static/admin/img/icon-unknown.svg HTTP/1.1" 200 655
+INFO [2024-10-16 00:36:41,892] basehttp "GET /admin/product/flavor/add/?_to_field=id&_popup=1 HTTP/1.1" 200 4416
+INFO [2024-10-16 00:36:41,924] basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+ERROR [2024-10-16 00:36:46,743] log Internal Server Error: /admin/product/flavor/add/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/admin/options.py", line 718, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 241, in inner
+    return view(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1961, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1820, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1877, in _changeform_view
+    self.log_addition(request, new_object, change_message)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/admin/options.py", line 952, in log_addition
+    return LogEntry.objects.log_actions(
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/admin/models.py", line 82, in log_actions
+    log_entry_list = [
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/admin/models.py", line 89, in <listcomp>
+    object_repr=str(obj)[:200],
+  File "/www/src/apps/product/models/product.py", line 167, in __str__
+    return f"{self.name} - {self.product.name}"
+AttributeError: 'Flavor' object has no attribute 'product'
+ERROR [2024-10-16 00:36:46,746] basehttp "POST /admin/product/flavor/add/?_to_field=id&_popup=1 HTTP/1.1" 500 138046
+INFO [2024-10-16 00:38:15,036] basehttp "GET /admin/product/product/94a32d41-4561-4277-b831-a55d546d806f/change/ HTTP/1.1" 200 41109
+INFO [2024-10-16 00:38:15,094] basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+WARNING [2024-10-16 00:38:15,166] basehttp "GET /static/tinymce_4/tinymce/langs/.js HTTP/1.1" 404 2006
+WARNING [2024-10-16 00:38:15,242] basehttp "GET /static/tinymce_4/css/__tinymce_4.css?1729057095114 HTTP/1.1" 404 2026
+WARNING [2024-10-16 00:38:15,263] basehttp "GET /static/tinymce_4/css/__tinymce_4.css?1729057095114 HTTP/1.1" 404 2026
+INFO [2024-10-16 00:38:16,504] basehttp "GET /admin/product/flavor/add/?_to_field=id&_popup=1 HTTP/1.1" 200 4416
+INFO [2024-10-16 00:38:16,533] basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+ERROR [2024-10-16 00:38:19,566] log Internal Server Error: /admin/product/flavor/add/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/admin/options.py", line 718, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 241, in inner
+    return view(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1961, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1820, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1877, in _changeform_view
+    self.log_addition(request, new_object, change_message)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/admin/options.py", line 952, in log_addition
+    return LogEntry.objects.log_actions(
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/admin/models.py", line 82, in log_actions
+    log_entry_list = [
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/admin/models.py", line 89, in <listcomp>
+    object_repr=str(obj)[:200],
+  File "/www/src/apps/product/models/product.py", line 167, in __str__
+    return f"{self.name} - {self.product.name}"
+AttributeError: 'Flavor' object has no attribute 'product'
+ERROR [2024-10-16 00:38:19,567] basehttp "POST /admin/product/flavor/add/?_to_field=id&_popup=1 HTTP/1.1" 500 138046
+INFO [2024-10-16 00:38:30,274] basehttp "GET /admin/product/flavor/ HTTP/1.1" 200 14939
+INFO [2024-10-16 00:38:30,322] basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+INFO [2024-10-16 00:38:30,336] basehttp "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+INFO [2024-10-16 00:38:30,345] basehttp "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+INFO [2024-10-16 00:38:31,601] basehttp "GET /admin/product/flavor/add/ HTTP/1.1" 200 15394
+INFO [2024-10-16 00:38:31,643] basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+ERROR [2024-10-16 00:38:34,497] log Internal Server Error: /admin/product/flavor/add/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/admin/options.py", line 718, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 241, in inner
+    return view(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1961, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1820, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1877, in _changeform_view
+    self.log_addition(request, new_object, change_message)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/admin/options.py", line 952, in log_addition
+    return LogEntry.objects.log_actions(
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/admin/models.py", line 82, in log_actions
+    log_entry_list = [
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/admin/models.py", line 89, in <listcomp>
+    object_repr=str(obj)[:200],
+  File "/www/src/apps/product/models/product.py", line 167, in __str__
+    return f"{self.name} - {self.product.name}"
+AttributeError: 'Flavor' object has no attribute 'product'
+ERROR [2024-10-16 00:38:34,498] basehttp "POST /admin/product/flavor/add/ HTTP/1.1" 500 136865
+INFO [2024-10-16 00:39:01,571] autoreload /www/src/apps/product/models/product.py changed, reloading.
+INFO [2024-10-16 00:39:02,459] autoreload Watching for file changes with StatReloader
+INFO [2024-10-16 00:39:04,197] basehttp "POST /admin/product/flavor/add/ HTTP/1.1" 302 0
+INFO [2024-10-16 00:39:04,247] basehttp "GET /admin/product/flavor/ HTTP/1.1" 200 16476
+INFO [2024-10-16 00:39:04,289] basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+INFO [2024-10-16 00:39:04,353] basehttp "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+INFO [2024-10-16 00:39:09,259] basehttp "GET /admin/product/product/ HTTP/1.1" 200 17056
+INFO [2024-10-16 00:39:09,345] basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+INFO [2024-10-16 00:39:10,734] basehttp "GET /admin/product/product/94a32d41-4561-4277-b831-a55d546d806f/change/ HTTP/1.1" 200 41077
+INFO [2024-10-16 00:39:10,765] basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+WARNING [2024-10-16 00:39:10,833] basehttp "GET /static/tinymce_4/tinymce/langs/.js HTTP/1.1" 404 2006
+WARNING [2024-10-16 00:39:10,888] basehttp "GET /static/tinymce_4/css/__tinymce_4.css?1729057150792 HTTP/1.1" 404 2026
+WARNING [2024-10-16 00:39:10,921] basehttp "GET /static/tinymce_4/css/__tinymce_4.css?1729057150792 HTTP/1.1" 404 2026
+INFO [2024-10-16 00:39:37,341] basehttp "GET /admin/product/packaging/add/?_to_field=id&_popup=1 HTTP/1.1" 200 5048
+INFO [2024-10-16 00:39:37,373] basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+INFO [2024-10-16 00:39:42,973] basehttp "GET /admin/product/flavor/add/?_to_field=id&_popup=1 HTTP/1.1" 200 4416
+INFO [2024-10-16 00:39:43,000] basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+INFO [2024-10-16 00:39:45,555] basehttp "POST /admin/product/flavor/add/?_to_field=id&_popup=1 HTTP/1.1" 200 341
+INFO [2024-10-16 00:39:45,587] basehttp "GET /static/admin/js/popup_response.js HTTP/1.1" 200 532
+INFO [2024-10-16 00:39:49,022] basehttp "GET /admin/product/packaging/add/?_to_field=id&_popup=1 HTTP/1.1" 200 5048
+INFO [2024-10-16 00:39:49,049] basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+INFO [2024-10-16 00:40:12,389] basehttp "POST /admin/product/packaging/add/?_to_field=id&_popup=1 HTTP/1.1" 200 341
+INFO [2024-10-16 00:40:20,161] basehttp "GET /admin/product/packaging/add/?_to_field=id&_popup=1 HTTP/1.1" 200 5048
+INFO [2024-10-16 00:40:20,190] basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+INFO [2024-10-16 00:40:25,357] basehttp "POST /admin/product/packaging/add/?_to_field=id&_popup=1 HTTP/1.1" 200 341
+INFO [2024-10-16 00:40:28,401] basehttp "POST /admin/product/product/94a32d41-4561-4277-b831-a55d546d806f/change/ HTTP/1.1" 302 0
+INFO [2024-10-16 00:40:28,424] basehttp "GET /admin/product/product/ HTTP/1.1" 200 17297
+INFO [2024-10-16 00:40:28,496] basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+INFO [2024-10-16 00:40:30,818] basehttp "GET /admin/product/product/94a32d41-4561-4277-b831-a55d546d806f/change/ HTTP/1.1" 200 41374
+INFO [2024-10-16 00:40:30,847] basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+WARNING [2024-10-16 00:40:30,913] basehttp "GET /static/tinymce_4/tinymce/langs/.js HTTP/1.1" 404 2006
+WARNING [2024-10-16 00:40:30,982] basehttp "GET /static/tinymce_4/css/__tinymce_4.css?1729057230876 HTTP/1.1" 404 2026
+WARNING [2024-10-16 00:40:31,014] basehttp "GET /static/tinymce_4/css/__tinymce_4.css?1729057230876 HTTP/1.1" 404 2026
+INFO [2024-10-16 00:55:34,360] basehttp "GET /product/94a32d41-4561-4277-b831-a55d546d806f/ HTTP/1.1" 200 30929
+INFO [2024-10-16 00:56:20,118] basehttp "GET /product/94a32d41-4561-4277-b831-a55d546d806f/ HTTP/1.1" 200 30929
+INFO [2024-10-16 00:56:27,281] basehttp "GET /product/94a32d41-4561-4277-b831-a55d546d806f/ HTTP/1.1" 200 30625
+INFO [2024-10-16 00:58:57,786] basehttp "GET /product/94a32d41-4561-4277-b831-a55d546d806f/ HTTP/1.1" 200 30746
+INFO [2024-10-16 00:58:58,933] basehttp "GET /product/94a32d41-4561-4277-b831-a55d546d806f/ HTTP/1.1" 200 30746
+INFO [2024-10-16 01:00:07,142] basehttp "GET /product/94a32d41-4561-4277-b831-a55d546d806f/ HTTP/1.1" 200 30758
+INFO [2024-10-16 01:00:21,858] basehttp "POST /admin/product/product/94a32d41-4561-4277-b831-a55d546d806f/change/ HTTP/1.1" 302 0
+INFO [2024-10-16 01:00:21,926] basehttp "GET /admin/product/product/94a32d41-4561-4277-b831-a55d546d806f/change/ HTTP/1.1" 200 41804
+INFO [2024-10-16 01:00:22,014] basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+WARNING [2024-10-16 01:00:22,073] basehttp "GET /static/tinymce_4/tinymce/langs/.js HTTP/1.1" 404 2006
+WARNING [2024-10-16 01:00:22,125] basehttp "GET /static/tinymce_4/css/__tinymce_4.css?1729058422026 HTTP/1.1" 404 2026
+WARNING [2024-10-16 01:00:22,159] basehttp "GET /static/tinymce_4/css/__tinymce_4.css?1729058422026 HTTP/1.1" 404 2026
+INFO [2024-10-16 01:00:50,319] basehttp "GET /product/94a32d41-4561-4277-b831-a55d546d806f/ HTTP/1.1" 200 30758
+INFO [2024-10-16 01:00:51,970] basehttp "GET /product/94a32d41-4561-4277-b831-a55d546d806f/ HTTP/1.1" 200 30758
+INFO [2024-10-16 01:00:52,157] basehttp "GET /product/94a32d41-4561-4277-b831-a55d546d806f/ HTTP/1.1" 200 30758
+INFO [2024-10-16 01:00:56,751] basehttp "GET /product/94a32d41-4561-4277-b831-a55d546d806f/ HTTP/1.1" 200 30758
+INFO [2024-10-16 01:01:03,732] basehttp "GET /product/94a32d41-4561-4277-b831-a55d546d806f/ HTTP/1.1" 200 30759
+INFO [2024-10-16 01:01:07,309] basehttp "GET /product/94a32d41-4561-4277-b831-a55d546d806f/ HTTP/1.1" 200 30758
+INFO [2024-10-16 01:03:20,548] basehttp "POST /admin/product/product/94a32d41-4561-4277-b831-a55d546d806f/change/ HTTP/1.1" 302 0
+INFO [2024-10-16 01:03:20,635] basehttp "GET /admin/product/product/94a32d41-4561-4277-b831-a55d546d806f/change/ HTTP/1.1" 200 42247
+INFO [2024-10-16 01:03:20,703] basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+WARNING [2024-10-16 01:03:20,774] basehttp "GET /static/tinymce_4/tinymce/langs/.js HTTP/1.1" 404 2006
+WARNING [2024-10-16 01:03:20,850] basehttp "GET /static/tinymce_4/css/__tinymce_4.css?1729058600720 HTTP/1.1" 404 2026
+WARNING [2024-10-16 01:03:20,872] basehttp "GET /static/tinymce_4/css/__tinymce_4.css?1729058600720 HTTP/1.1" 404 2026
+INFO [2024-10-16 01:03:22,199] basehttp "GET /product/94a32d41-4561-4277-b831-a55d546d806f/ HTTP/1.1" 200 31137
+INFO [2024-10-16 01:03:34,084] basehttp "GET /product/94a32d41-4561-4277-b831-a55d546d806f/ HTTP/1.1" 200 31101
+INFO [2024-10-16 01:04:11,064] basehttp "POST /admin/product/product/94a32d41-4561-4277-b831-a55d546d806f/change/ HTTP/1.1" 302 0
+INFO [2024-10-16 01:04:11,136] basehttp "GET /admin/product/product/94a32d41-4561-4277-b831-a55d546d806f/change/ HTTP/1.1" 200 42360
+INFO [2024-10-16 01:04:11,178] basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+WARNING [2024-10-16 01:04:11,246] basehttp "GET /static/tinymce_4/tinymce/langs/.js HTTP/1.1" 404 2006
+WARNING [2024-10-16 01:04:11,320] basehttp "GET /static/tinymce_4/css/__tinymce_4.css?1729058651205 HTTP/1.1" 404 2026
+WARNING [2024-10-16 01:04:11,334] basehttp "GET /static/tinymce_4/css/__tinymce_4.css?1729058651205 HTTP/1.1" 404 2026
+INFO [2024-10-16 01:04:13,632] basehttp "GET /product/94a32d41-4561-4277-b831-a55d546d806f/ HTTP/1.1" 200 31051
+INFO [2024-10-16 01:04:33,386] basehttp "GET / HTTP/1.1" 200 24743
+INFO [2024-10-16 01:04:33,469] basehttp "GET /static/img/demolitor-musculo.png HTTP/1.1" 200 105131
+INFO [2024-10-16 01:04:33,469] basehttp "GET /static/img/demolitor-fitness.png HTTP/1.1" 200 107760
+INFO [2024-10-16 01:04:33,471] basehttp "GET /static/img/demolitor-sport.png HTTP/1.1" 200 110063
+INFO [2024-10-16 01:04:33,473] basehttp "GET /static/img/demolitor-salud.png HTTP/1.1" 200 107181
+INFO [2024-10-16 01:04:33,477] basehttp "GET /media/banner/krak.png HTTP/1.1" 200 635211
+INFO [2024-10-16 01:04:33,504] basehttp "GET /media/banner-responsive/Banner_Krak.png HTTP/1.1" 200 1020020
+INFO [2024-10-16 01:04:33,539] basehttp "GET /static/img/banner/background2.png HTTP/1.1" 200 1358304
+INFO [2024-10-16 01:04:33,556] basehttp "GET /static/img/fondo_black_maca1.png HTTP/1.1" 200 1912646
+INFO [2024-10-16 01:09:04,322] basehttp "GET / HTTP/1.1" 200 26182
+INFO [2024-10-16 01:09:11,041] basehttp "GET / HTTP/1.1" 200 26182
+INFO [2024-10-16 01:09:11,070] basehttp "GET /static/css/style.css HTTP/1.1" 200 21600
+INFO [2024-10-16 01:09:11,072] basehttp "GET /media/finniu/images/company/f043e14e/7367a8a7.png HTTP/1.1" 200 7698
+INFO [2024-10-16 01:09:11,080] basehttp "GET /media/banner/krak.png HTTP/1.1" 200 635211
+INFO [2024-10-16 01:09:11,116] basehttp "GET /media/banner-responsive/Banner_Krak.png HTTP/1.1" 200 1020020
+INFO [2024-10-16 01:09:11,126] basehttp "GET /media/finniu/images/product/900e4c89/proteina-iso.png HTTP/1.1" 200 95786
+INFO [2024-10-16 01:09:11,155] basehttp "GET /static/js/swiper.js HTTP/1.1" 200 382
+INFO [2024-10-16 01:09:11,159] basehttp "GET /static/img/demolitor-salud.png HTTP/1.1" 200 107181
+INFO [2024-10-16 01:09:11,163] basehttp "GET /static/img/demolitor-fitness.png HTTP/1.1" 200 107760
+INFO [2024-10-16 01:09:11,163] basehttp "GET /media/finniu/images/product/cf7b6a8f/creatina-sport.png HTTP/1.1" 200 2743302
+INFO [2024-10-16 01:09:11,164] basehttp "GET /static/img/demolitor-musculo.png HTTP/1.1" 200 105131
+INFO [2024-10-16 01:09:11,171] basehttp "GET /static/img/partners/mifarma.png HTTP/1.1" 200 4643
+INFO [2024-10-16 01:09:11,173] basehttp "GET /static/img/partners/inkafarma.png HTTP/1.1" 200 7786
+INFO [2024-10-16 01:09:11,173] basehttp "GET /static/img/partners/falabella.png HTTP/1.1" 200 3202
+INFO [2024-10-16 01:09:11,175] basehttp "GET /static/img/demolitor-sport.png HTTP/1.1" 200 110063
+INFO [2024-10-16 01:09:11,176] basehttp "GET /media/finniu/images/product/7c897460/black-maca.png HTTP/1.1" 200 382222
+INFO [2024-10-16 01:09:11,177] basehttp "GET /static/img/products/collagen3.png HTTP/1.1" 200 73303
+INFO [2024-10-16 01:09:11,208] basehttp "GET /static/fonts/ArupalaGrotesk-Ultra.ttf HTTP/1.1" 200 92356
+INFO [2024-10-16 01:09:11,208] basehttp "GET /static/fonts/AvenirLTStd-Roman.otf HTTP/1.1" 200 27176
+INFO [2024-10-16 01:09:11,243] basehttp "GET /static/img/banner/background2.png HTTP/1.1" 200 1358304
+INFO [2024-10-16 01:09:11,252] basehttp "GET /static/fonts/AvenirLTStd-Black.otf HTTP/1.1" 200 27912
+INFO [2024-10-16 01:09:11,276] basehttp "GET /static/img/fondo_black_maca1.png HTTP/1.1" 200 1912646
+WARNING [2024-10-16 01:09:11,297] basehttp "GET /static/images/favicon.ico HTTP/1.1" 404 1979
+INFO [2024-10-16 01:11:46,054] basehttp "GET / HTTP/1.1" 200 26206
+INFO [2024-10-16 01:17:25,158] basehttp "GET / HTTP/1.1" 200 26513
+INFO [2024-10-16 01:21:38,254] basehttp "GET / HTTP/1.1" 200 26513
+INFO [2024-10-16 01:24:09,316] basehttp "GET / HTTP/1.1" 200 27387
+INFO [2024-10-16 01:24:57,905] basehttp "GET /products/ HTTP/1.1" 200 14319
+INFO [2024-10-16 01:24:58,149] basehttp "POST /api/v1/graph/demolitor HTTP/1.1" 200 1354
+INFO [2024-10-16 01:28:37,397] basehttp "GET /products/ HTTP/1.1" 200 14343
+INFO [2024-10-16 01:28:37,655] basehttp "POST /api/v1/graph/demolitor HTTP/1.1" 200 1354
+INFO [2024-10-16 01:32:53,125] basehttp "GET /products/ HTTP/1.1" 200 15969
+INFO [2024-10-16 01:32:53,362] basehttp "POST /api/v1/graph/demolitor HTTP/1.1" 200 1354
+INFO [2024-10-16 01:36:35,818] basehttp "GET /products/ HTTP/1.1" 200 16059
+INFO [2024-10-16 01:36:36,075] basehttp "POST /api/v1/graph/demolitor HTTP/1.1" 200 1354
+INFO [2024-10-16 01:42:29,090] basehttp "GET /products/ HTTP/1.1" 200 18636
+INFO [2024-10-16 01:42:29,337] basehttp "POST /api/v1/graph/demolitor HTTP/1.1" 200 1354
+INFO [2024-10-16 01:49:44,505] basehttp "GET /products/ HTTP/1.1" 200 20277
+INFO [2024-10-16 01:49:44,728] basehttp "POST /api/v1/graph/demolitor HTTP/1.1" 200 1354

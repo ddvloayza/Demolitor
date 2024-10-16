@@ -2,11 +2,11 @@
 <!-- Header Section Begin -->
 <header class="bg-black">
     <div class="container mx-auto flex justify-between items-center p-4 flex-wrap">
-        <a href="{% url 'core:home' %}">
-            <img src="{{ dynamic_data.image.url}}" alt="Demolitor Logo" class="h-10">
+        <a href="{% url 'core:home' %}" id="logo">
+            <img src="{{ dynamic_data.image.url }}" alt="Demolitor Logo" class="h-10">
         </a>
 
-        <!-- Menú de navegación -->
+        <!-- Menú de navegación en pantallas grandes -->
         <nav class="hidden md:flex space-x-8">
             <a href="#" class="text-white hover:text-gray-400">Nosotros</a>
             <a href="{% url 'core:product_list' %}" class="text-white hover:text-gray-400">Productos</a>
@@ -14,7 +14,15 @@
             <a href="#" class="text-white hover:text-gray-400">Blog</a>
         </nav>
 
-        <div class="flex items-center space-x-4">
+        <!-- Menú hamburguesa en pantallas pequeñas -->
+        <div class="md:hidden">
+            <button id="menu-toggle" class="text-white p-2 rounded-full focus:outline-none">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Campo de búsqueda y botón en pantallas grandes -->
+        <div class="hidden md:flex items-center space-x-4">
             <!-- Ícono de lupa -->
             <button id="search-icon" class="text-white p-2 rounded-full">
                 <i class="fas fa-search"></i>
@@ -22,9 +30,8 @@
 
             <!-- Campo de búsqueda oculto que se muestra al hacer clic en el ícono de lupa -->
             <input id="search-input" type="text" placeholder="Buscar" class="bg-black hidden border-b-2 p-2 focus:outline-none text-white w-full md:w-64">
-        </div>
 
-        <div class="flex items-center space-x-4 mt-4 md:mt-0">
+            <!-- Botón de contáctanos -->
             <button class="text-white bg-[rgb(222,55,5)] px-4 py-2 rounded hover:bg-red-700">Contáctanos</button>
         </div>
     </div>
@@ -34,17 +41,61 @@
     {% for category in dynamic_data.category_company.all %}
         <a href="#" class="bg-gray-300 text-black px-8 py-2 rounded-full hover:bg-gray-400 font-bold whitespace-nowrap header_text">{{ category.name }}</a>
     {% endfor %}
-</div>
+    </div>
+
+    <!-- Menú móvil -->
+    <div id="mobile-menu" class="fixed inset-0 bg-black bg-opacity-90 text-white hidden flex flex-col items-center justify-center space-y-8 z-50">
+        <a href="#" class="text-white text-2xl hover:text-gray-400 block">Nosotros</a>
+        <a href="{% url 'core:product_list' %}" class="text-white text-2xl hover:text-gray-400 block">Productos</a>
+        <a href="#" class="text-white text-2xl hover:text-gray-400 block">Contacto</a>
+        <a href="#" class="text-white text-2xl hover:text-gray-400 block">Blog</a>
+
+        <!-- Ícono de lupa en menú móvil -->
+        <div class="flex items-center space-x-4">
+            <button id="search-icon-mobile" class="text-white p-2 rounded-full">
+                <i class="fas fa-search"></i>
+            </button>
+            <!-- Campo de búsqueda para el menú móvil -->
+            <input id="search-input-mobile" type="text" placeholder="Buscar" class="bg-black hidden border-b-2 p-2 focus:outline-none text-white w-full">
+        </div>
+
+        <!-- Botón de contáctanos en el menú móvil -->
+        <button class="text-white bg-[rgb(222,55,5)] px-4 py-2 rounded hover:bg-red-700">Contáctanos</button>
+    </div>
+
+    <!-- Botón de cerrar (X) en la esquina superior derecha -->
+    <button id="menu-close" class="text-white absolute top-4 right-4 text-3xl z-50 hidden">
+        &times;
+    </button>
 </header>
 <!-- Header Section End -->
 
 <script>
+    // Toggle para el menú móvil
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeButton = document.getElementById('menu-close');
+        mobileMenu.classList.toggle('hidden');
+        closeButton.classList.toggle('hidden');
+    });
+
+    // Cerrar el menú móvil
+    document.getElementById('menu-close').addEventListener('click', function() {
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeButton = document.getElementById('menu-close');
+        mobileMenu.classList.add('hidden');
+        closeButton.classList.add('hidden');
+    });
+
+    // Mostrar/ocultar el campo de búsqueda en pantallas grandes
     document.getElementById('search-icon').addEventListener('click', function() {
         const searchInput = document.getElementById('search-input');
-        if (searchInput.classList.contains('hidden')) {
-            searchInput.classList.remove('hidden');
-        } else {
-            searchInput.classList.add('hidden');
-        }
+        searchInput.classList.toggle('hidden');
+    });
+
+    // Mostrar/ocultar el campo de búsqueda en el menú móvil
+    document.getElementById('search-icon-mobile').addEventListener('click', function() {
+        const searchInputMobile = document.getElementById('search-input-mobile');
+        searchInputMobile.classList.toggle('hidden');
     });
 </script>

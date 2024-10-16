@@ -164,7 +164,7 @@ class Flavor(models.Model):
     name = models.CharField(max_length=100, verbose_name="Flavor Name")
 
     def __str__(self):
-        return f"{self.name} - {self.product.name}"
+        return f"{self.name}"
 
     class Meta:
         verbose_name = _("Flavor")
@@ -176,7 +176,7 @@ class Packaging(models.Model):
     price = models.DecimalField(max_digits=10, decimal_places=2, verbose_name="Packaging Price")
 
     def __str__(self):
-        return f"{self.size} - {self.product.name}"
+        return f"{self.size}"
 
     class Meta:
         verbose_name = _("Packaging")

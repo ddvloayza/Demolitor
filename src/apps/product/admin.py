@@ -6,18 +6,7 @@ from apps.product.models.quotation_requests import QuotationRequest, QuotationRe
 from django.utils.safestring import mark_safe
 
 # Inline for Flavor
-class FlavorInline(admin.TabularInline):
-    model = Flavor
-    extra = 1  # Define how many extra empty fields you want by default
-    min_num = 1  # Minimum number of flavors required
-    max_num = 10  # Maximum number of flavors allowed
 
-# Inline for Packaging
-class PackagingInline(admin.TabularInline):
-    model = Packaging
-    extra = 1  # Define how many extra empty fields you want by default
-    min_num = 1  # Minimum number of packaging required
-    max_num = 5  # Maximum number of packaging allowed
 
 class QuotationRequestDetailInline(admin.TabularInline):
     model = QuotationRequestDetail
@@ -34,12 +23,23 @@ class CategoryAdmin(admin.ModelAdmin):
 
 
 class ProductAdmin(admin.ModelAdmin):
-    inlines = [ProductImageInline, FlavorInline, PackagingInline]
+    inlines = [ProductImageInline]
     list_display = ("name", )
     search_fields = ("name",)
+    filter_horizontal = ('flavors', 'packagings')
     prepopulated_fields = {'slug': ('name',)}
 
 
+@admin.register(Flavor)
+class FlavorAdmin(admin.ModelAdmin):
+    list_display = ('name',)
+    search_fields = ('name',)
+
+
+@admin.register(Packaging)
+class PackagingAdmin(admin.ModelAdmin):
+    list_display = ('size', 'price')
+    search_fields = ('size',)
 
 class QuotationRequestAdmin(admin.ModelAdmin):
     list_display = (

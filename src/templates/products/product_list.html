@@ -21,7 +21,7 @@
         <nav class="text-gray-600 ">
             <a href="#" class="pr-4 hover:underline hover:text-[#F06A32] hover:font-bold">HOME </a>
             <i class="fas fa-chevron-right"></i>
-            <a href="#" class="px-4 hover:underline hover:text-[#F06A32] hover:font-bold"> PRODUCTOS</a>
+            <a href="#" class="px-4 hover:underline hover:text-[#F06A32] hover:font-bold text-[#F06A32] font-bold">PRODUCTOS</a>
         </nav>
     </div>
 
@@ -29,26 +29,89 @@
     <div class="container mx-auto mt-4 flex flex-col md:flex-row">
         <!-- Sidebar -->
         <div class="w-full md:w-1/4 pr-4 text-black mb-8 md:mb-0">
+            <!-- Tabs de Categorías y Filtros -->
             <div class="flex py-6">
                 <!-- Tab de Categorías -->
-                <div class="cursor-pointer  py-2 text-center">
+                <div id="tab-categorias" class="cursor-pointer py-2 text-center w-1/2 border-b-2 border-orange-600" onclick="showTab('categorias')">
                     <span class="px-4 font-semibold">CATEGORÍAS</span>
-                    <div class="h-2  bg-orange-600 w-full"></div>
                 </div>
                 <!-- Tab de Filtros -->
-                <div class="cursor-pointer  py-2 text-center">
+                <div id="tab-filtros" class="cursor-pointer py-2 text-center w-1/2 border-b-2 border-gray-300" onclick="showTab('filtros')">
                     <span class="px-4 font-semibold">FILTROS</span>
-                    <div class="h-2  bg-gray-300 w-full"></div>
                 </div>
             </div>
-            <ul class="space-y-8 ">
-                <li><a href="#" class="block hover:underline">Proteinas</a></li>
-                <li><a href="#" class="block hover:underline">Creatinas</a></li>
-                <li><a href="#" class="block hover:underline">Black Maca</a></li>
-                <li><a href="#" class="block hover:underline">Colagenos</a></li>
-                <li><a href="#" class="block hover:underline">Linea Sport</a></li>
-                <li><a href="#" class="block hover:underline">Snacks</a></li>
+
+            <!-- Contenido de CATEGORÍAS -->
+            <ul id="content-categorias" class="space-y-8">
+                {% for category in dynamic_data.category_company.all %}
+                    <li><a href="#" class="block hover:underline">{{ category.name }}</a></li>
+                {% endfor %}
             </ul>
+
+            <!-- Contenido de FILTROS (con acordeones) -->
+            <div id="content-filtros" class="space-y-4 hidden">
+                <!-- Ordenar por -->
+                <div class="accordion">
+                    <button class="w-full text-left p-4 flex justify-between items-center" onclick="toggleAccordion('ordenar')">
+                        <span>Ordenar por</span>
+                        <i id="chevron-ordenar" class="fas fa-chevron-down"></i>
+                    </button>
+                    <div id="ordenar" class="p-4 hidden">
+                        <ul>
+                            <li><a href="#" class="block hover:underline">Más vendidos</a></li>
+                            <li><a href="#" class="block hover:underline">Mejor calificación</a></li>
+                            <li><a href="#" class="block hover:underline">Precio: más bajo primero</a></li>
+                            <li><a href="#" class="block hover:underline">Precio: más alto primero</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Descuento -->
+                <div class="accordion">
+                    <button class="w-full text-left p-4 flex justify-between items-center" onclick="toggleAccordion('descuento')">
+                        <span>Descuento</span>
+                        <i id="chevron-descuento" class="fas fa-chevron-down"></i>
+                    </button>
+                    <div id="descuento" class="p-4 hidden">
+                        <ul>
+                            <li><a href="#" class="block hover:underline">10% o más</a></li>
+                            <li><a href="#" class="block hover:underline">20% o más</a></li>
+                            <li><a href="#" class="block hover:underline">30% o más</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Objetivo -->
+                <div class="accordion">
+                    <button class="w-full text-left p-4 flex justify-between items-center" onclick="toggleAccordion('objetivo')">
+                        <span>Objetivo</span>
+                        <i id="chevron-objetivo" class="fas fa-chevron-down"></i>
+                    </button>
+                    <div id="objetivo" class="p-4 hidden">
+                        <ul>
+                            <li><a href="#" class="block hover:underline">Ganar músculo</a></li>
+                            <li><a href="#" class="block hover:underline">Bajar de peso</a></li>
+                            <li><a href="#" class="block hover:underline">Mantenerse en forma</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Precio con filtro de rango -->
+                <div class="accordion">
+                    <button class="w-full text-left p-4 flex justify-between items-center" onclick="toggleAccordion('precio')">
+                        <span>Precio</span>
+                        <i id="chevron-precio" class="fas fa-chevron-down"></i>
+                    </button>
+                    <div id="precio" class="p-4 hidden">
+                        <label for="priceRange" class="block text-gray-700">Rango de precio</label>
+                        <input type="range" id="priceRange" min="0" max="500" value="250" class="w-full mt-4">
+                        <div class="flex justify-between text-gray-600 mt-2">
+                            <span>S/0</span>
+                            <span>S/500</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- Products Grid -->
@@ -61,4 +124,44 @@
 {% endblock content %}
 {% block js %}
     <script src="{% static 'js/product/product.js' %}"></script>
+    <!-- JavaScript para el acordeón -->
+    <script>
+        function toggleAccordion(id) {
+            const content = document.getElementById(id);
+            const chevron = document.getElementById(`chevron-${id}`);
+
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                chevron.classList.remove('fa-chevron-down');
+                chevron.classList.add('fa-chevron-up');
+            } else {
+                content.classList.add('hidden');
+                chevron.classList.remove('fa-chevron-up');
+                chevron.classList.add('fa-chevron-down');
+            }
+        }
+
+        function showTab(tab) {
+            // Ocultar ambos contenidos
+            document.getElementById('content-categorias').classList.add('hidden');
+            document.getElementById('content-filtros').classList.add('hidden');
+
+            // Restablecer el estilo de los tabs
+            document.getElementById('tab-categorias').classList.remove('border-orange-600');
+            document.getElementById('tab-filtros').classList.remove('border-orange-600');
+            document.getElementById('tab-categorias').classList.add('border-gray-300');
+            document.getElementById('tab-filtros').classList.add('border-gray-300');
+
+            // Mostrar el contenido seleccionado
+            if (tab === 'categorias') {
+                document.getElementById('content-categorias').classList.remove('hidden');
+                document.getElementById('tab-categorias').classList.add('border-orange-600');
+                document.getElementById('tab-categorias').classList.remove('border-gray-300');
+            } else {
+                document.getElementById('content-filtros').classList.remove('hidden');
+                document.getElementById('tab-filtros').classList.add('border-orange-600');
+                document.getElementById('tab-filtros').classList.remove('border-gray-300');
+            }
+        }
+    </script>
 {% endblock js %}
