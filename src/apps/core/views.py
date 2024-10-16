@@ -6,11 +6,11 @@ from django.views.generic.detail import DetailView
 
 from apps.company.models import Company
 from apps.product.models.product import Category
-from apps.customuser.models.customuser import CustomWebPage, Banner
-from django.db.models import Prefetch
+from apps.customuser.models.customuser import Banner
 
-from apps.product.models.product import Product, Certificate
-from django.db.models import Q
+
+from apps.product.models.product import Product
+
 
 
 
@@ -139,31 +139,5 @@ def search_results(request):
 class ContactView(TemplateView):
     template_name = "core/contact.html"
 
-class CotizarView(TemplateView):
-    template_name = "core/cotizar.html"
 
 
-class CertificatesView(TemplateView):
-    template_name = "core/certificados.html"
-
-
-def search_certificates(request):
-    search_lote = request.GET.get('lote')
-    search_product = request.GET.get('product')
-    query = Q()
-    if search_product:
-        query &= Q(code__icontains=search_product)
-    if search_lote:
-        query &= Q(lote__icontains=search_lote)
-
-    results = Certificate.objects.filter(query)
-
-    data = [
-        {
-            'name': certificate.product.name,
-            'uuid': certificate.product.uuid,
-            'certificate': certificate.certificado.url
-        }
-        for certificate in results
-    ]
-    return JsonResponse(data, safe=False)

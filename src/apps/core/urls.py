@@ -7,10 +7,7 @@ from .views import (
     ProductDetailView,
     ProductListView,
     ContactView,
-    CotizarView,
-    CertificatesView,
     search_results,
-    search_certificates,
     CategoryListView,
     CategoryDetailView
     )
@@ -24,11 +21,6 @@ urlpatterns = [
     path('category/<uuid:pk>/', CategoryDetailView.as_view(), name='category_detail'),
     path('categories/', CategoryListView.as_view(), name='category_list'),
     path('contact/', ContactView.as_view(), name='contact'),
-    path('cotizar/', CotizarView.as_view(), name='cotizar'),
-    path('certificados/', CertificatesView.as_view(), name='certificados'),
     path('search/', search_results, name='search_results'),
-    path('search-certificates/', search_certificates, name='search_certificates'),
-    
-    
     path("404/", Error404View.as_view(), name="error-404"),
 ]

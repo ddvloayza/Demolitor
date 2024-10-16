@@ -1,9 +1,23 @@
 from django.contrib import admin
 
-from apps.product.models.product import Product, Category, Certificate, ProductImage
+from apps.product.models.product import Product, Category, ProductImage, Packaging, Flavor
 
 from apps.product.models.quotation_requests import QuotationRequest, QuotationRequestDetail
 from django.utils.safestring import mark_safe
+
+# Inline for Flavor
+class FlavorInline(admin.TabularInline):
+    model = Flavor
+    extra = 1  # Define how many extra empty fields you want by default
+    min_num = 1  # Minimum number of flavors required
+    max_num = 10  # Maximum number of flavors allowed
+
+# Inline for Packaging
+class PackagingInline(admin.TabularInline):
+    model = Packaging
+    extra = 1  # Define how many extra empty fields you want by default
+    min_num = 1  # Minimum number of packaging required
+    max_num = 5  # Maximum number of packaging allowed
 
 class QuotationRequestDetailInline(admin.TabularInline):
     model = QuotationRequestDetail
@@ -20,15 +34,11 @@ class CategoryAdmin(admin.ModelAdmin):
 
 
 class ProductAdmin(admin.ModelAdmin):
-    inlines = [ProductImageInline]
+    inlines = [ProductImageInline, FlavorInline, PackagingInline]
     list_display = ("name", )
     search_fields = ("name",)
     prepopulated_fields = {'slug': ('name',)}
 
-
-class CertificateAdmin(admin.ModelAdmin):
-    list_display = ("product", "certificado" )
-    search_fields = ("product__name", "lote")
 
 
 class QuotationRequestAdmin(admin.ModelAdmin):
@@ -58,5 +68,4 @@ class QuotationRequestAdmin(admin.ModelAdmin):
 
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(Product, ProductAdmin)
-admin.site.register(Certificate, CertificateAdmin)
 admin.site.register(QuotationRequest, QuotationRequestAdmin)

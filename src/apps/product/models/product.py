@@ -98,7 +98,9 @@ class Product(BaseModelMixin, SEOMixin):
     )
 
     tag = models.ManyToManyField("tag.Tag", verbose_name=_("Tags"), blank=True, related_name="product_tags")
-    
+    flavors = models.ManyToManyField('Flavor', related_name="products", blank=True)
+    packagings = models.ManyToManyField('Packaging', related_name="products", blank=True)
+
     @property
     def get_absolute_image_url(self):
         if self.image:
@@ -148,6 +150,7 @@ class ProductImage(models.Model):
         blank=True,
         null=True,
     )
+    order = models.PositiveSmallIntegerField()
 
     def __str__(self):
         return f"Image for {self.product.name}"
@@ -156,29 +159,25 @@ class ProductImage(models.Model):
         verbose_name = _("Product Image")
         verbose_name_plural = _("Product Images")
 
+
+class Flavor(models.Model):
+    name = models.CharField(max_length=100, verbose_name="Flavor Name")
+
     def __str__(self):
-        return "{}-{}".format(self.product.name, self.lote)
-
-
-class Certificate(BaseModelMixin, SEOMixin):
-
-    certificado = models.FileField(
-        verbose_name=_("certificado"),
-        upload_to='certificados/',
-        blank=True,
-        null=True,)
-    
-    code = models.CharField(
-        max_length=150, blank=True, verbose_name=_("Code")
-    )
-    product = models.ForeignKey(Product, on_delete=models.SET_NULL, null=True)
-    lote = models.CharField(
-        max_length=150, blank=True, verbose_name=_("Lote")
-    )
-    
-    def __str__(self):
-        return "{}-{}".format(self.product.name, self.lote)
+        return f"{self.name} - {self.product.name}"
 
     class Meta:
-        verbose_name = _("Certificate")
-        verbose_name_plural = _("Certificates")
+        verbose_name = _("Flavor")
+        verbose_name_plural = _("Flavors")
+
+
+class Packaging(models.Model):
+    size = models.CharField(max_length=50, verbose_name="Size or Packaging")  # Example: 1kg, 500ml
+    price = models.DecimalField(max_digits=10, decimal_places=2, verbose_name="Packaging Price")
+
+    def __str__(self):
+        return f"{self.size} - {self.product.name}"
+
+    class Meta:
+        verbose_name = _("Packaging")
+        verbose_name_plural = _("Packagings")

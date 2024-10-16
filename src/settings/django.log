@@ -8308,3 +8308,890 @@ INFO [2024-10-15 09:49:52,023] basehttp "GET /static/fonts/AvenirLTStd-Black.otf
 WARNING [2024-10-15 09:49:53,061] basehttp "GET /static/images/favicon.ico HTTP/1.1" 404 1979
 INFO [2024-10-15 09:50:06,663] basehttp "GET /product/496b6c16-d1c3-462d-8195-bee8c1e1a0ed/ HTTP/1.1" 200 31696
 INFO [2024-10-15 09:52:42,607] basehttp "GET /product/496b6c16-d1c3-462d-8195-bee8c1e1a0ed/ HTTP/1.1" 200 31830
+INFO [2024-10-15 10:01:13,328] basehttp "GET /admin/product/product/94a32d41-4561-4277-b831-a55d546d806f/change/ HTTP/1.1" 200 29931
+INFO [2024-10-15 10:01:13,449] basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+WARNING [2024-10-15 10:01:13,529] basehttp "GET /static/tinymce_4/tinymce/langs/.js HTTP/1.1" 404 2006
+WARNING [2024-10-15 10:01:13,587] basehttp "GET /static/tinymce_4/css/__tinymce_4.css?1729004473463 HTTP/1.1" 404 2026
+WARNING [2024-10-15 10:01:13,625] basehttp "GET /static/tinymce_4/css/__tinymce_4.css?1729004473463 HTTP/1.1" 404 2026
+WARNING [2024-10-15 10:01:13,684] log Not Found: /favicon.ico
+WARNING [2024-10-15 10:01:13,684] basehttp "GET /favicon.ico HTTP/1.1" 404 5773
+ERROR [2024-10-15 10:02:29,234] log Internal Server Error: /admin/product/product/94a32d41-4561-4277-b831-a55d546d806f/change/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/admin/options.py", line 718, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 241, in inner
+    return view(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1964, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1820, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1873, in _changeform_view
+    change_message = self.construct_change_message(
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1253, in construct_change_message
+    return construct_change_message(form, formsets, add)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/admin/utils.py", line 578, in construct_change_message
+    "object": str(added_object),
+  File "/www/src/apps/product/models/product.py", line 160, in __str__
+    return "{}-{}".format(self.product.name, self.lote)
+AttributeError: 'ProductImage' object has no attribute 'lote'
+ERROR [2024-10-15 10:02:29,237] basehttp "POST /admin/product/product/94a32d41-4561-4277-b831-a55d546d806f/change/ HTTP/1.1" 500 140750
+INFO [2024-10-15 10:02:50,966] autoreload /www/src/apps/product/models/product.py changed, reloading.
+INFO [2024-10-15 10:02:51,860] autoreload Watching for file changes with StatReloader
+INFO [2024-10-15 10:03:00,216] autoreload /www/src/apps/product/models/product.py changed, reloading.
+INFO [2024-10-15 10:03:00,911] autoreload Watching for file changes with StatReloader
+INFO [2024-10-15 10:03:03,754] basehttp "POST /admin/product/product/94a32d41-4561-4277-b831-a55d546d806f/change/ HTTP/1.1" 302 0
+INFO [2024-10-15 10:03:03,796] basehttp "GET /admin/product/product/ HTTP/1.1" 200 16883
+INFO [2024-10-15 10:03:03,871] basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+INFO [2024-10-15 10:03:06,664] basehttp "GET /admin/product/product/94a32d41-4561-4277-b831-a55d546d806f/change/ HTTP/1.1" 200 35897
+INFO [2024-10-15 10:03:06,730] basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+WARNING [2024-10-15 10:03:06,780] basehttp "GET /static/tinymce_4/tinymce/langs/.js HTTP/1.1" 404 2006
+WARNING [2024-10-15 10:03:06,839] basehttp "GET /static/tinymce_4/css/__tinymce_4.css?1729004586738 HTTP/1.1" 404 2026
+WARNING [2024-10-15 10:03:06,876] basehttp "GET /static/tinymce_4/css/__tinymce_4.css?1729004586738 HTTP/1.1" 404 2026
+INFO [2024-10-15 10:03:18,602] autoreload /www/src/apps/product/models/product.py changed, reloading.
+INFO [2024-10-15 10:03:19,407] autoreload Watching for file changes with StatReloader
+INFO [2024-10-15 10:05:23,966] autoreload Watching for file changes with StatReloader
+ERROR [2024-10-15 10:05:59,685] log Internal Server Error: /admin/product/product/94a32d41-4561-4277-b831-a55d546d806f/change/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedColumn: column product_productimage.order does not exist
+LINE 1: ...ge"."product_id", "product_productimage"."image", "product_p...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/admin/options.py", line 718, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 241, in inner
+    return view(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1964, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1820, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1919, in _changeform_view
+    media += inline_formset.media
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/admin/helpers.py", line 465, in media
+    media = self.opts.media + self.formset.media
+  File "/usr/local/lib/python3.10/site-packages/django/forms/formsets.py", line 521, in media
+    if self.forms:
+  File "/usr/local/lib/python3.10/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python3.10/site-packages/django/forms/formsets.py", line 207, in forms
+    for i in range(self.total_form_count())
+  File "/usr/local/lib/python3.10/site-packages/django/forms/formsets.py", line 182, in total_form_count
+    initial_forms = self.initial_form_count()
+  File "/usr/local/lib/python3.10/site-packages/django/forms/models.py", line 1123, in initial_form_count
+    return super().initial_form_count()
+  File "/usr/local/lib/python3.10/site-packages/django/forms/models.py", line 697, in initial_form_count
+    return len(self.get_queryset())
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 382, in __len__
+    self._fetch_all()
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1574, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/usr/local/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: column product_productimage.order does not exist
+LINE 1: ...ge"."product_id", "product_productimage"."image", "product_p...
+                                                             ^
+
+ERROR [2024-10-15 10:05:59,689] basehttp "GET /admin/product/product/94a32d41-4561-4277-b831-a55d546d806f/change/ HTTP/1.1" 500 205209
+INFO [2024-10-15 10:07:56,592] basehttp "GET /admin/product/product/94a32d41-4561-4277-b831-a55d546d806f/change/ HTTP/1.1" 200 37859
+INFO [2024-10-15 10:07:56,639] basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+WARNING [2024-10-15 10:07:56,721] basehttp "GET /static/tinymce_4/tinymce/langs/.js HTTP/1.1" 404 2006
+WARNING [2024-10-15 10:07:56,776] basehttp "GET /static/tinymce_4/css/__tinymce_4.css?1729004876670 HTTP/1.1" 404 2026
+WARNING [2024-10-15 10:07:56,820] basehttp "GET /static/tinymce_4/css/__tinymce_4.css?1729004876670 HTTP/1.1" 404 2026
+INFO [2024-10-15 10:08:09,155] basehttp "POST /admin/product/product/94a32d41-4561-4277-b831-a55d546d806f/change/ HTTP/1.1" 302 0
+INFO [2024-10-15 10:08:09,205] basehttp "GET /admin/product/product/94a32d41-4561-4277-b831-a55d546d806f/change/ HTTP/1.1" 200 38287
+INFO [2024-10-15 10:08:09,235] basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+WARNING [2024-10-15 10:08:09,304] basehttp "GET /static/tinymce_4/tinymce/langs/.js HTTP/1.1" 404 2006
+WARNING [2024-10-15 10:08:09,350] basehttp "GET /static/tinymce_4/css/__tinymce_4.css?1729004889257 HTTP/1.1" 404 2026
+WARNING [2024-10-15 10:08:09,391] basehttp "GET /static/tinymce_4/css/__tinymce_4.css?1729004889257 HTTP/1.1" 404 2026
+INFO [2024-10-15 10:10:06,337] basehttp "GET /product/496b6c16-d1c3-462d-8195-bee8c1e1a0ed/ HTTP/1.1" 200 30904
+WARNING [2024-10-15 10:10:06,693] basehttp "GET /static/images/favicon.ico HTTP/1.1" 404 1979
+INFO [2024-10-15 10:10:28,167] basehttp "GET /product/496b6c16-d1c3-462d-8195-bee8c1e1a0ed/ HTTP/1.1" 200 30900
+INFO [2024-10-15 10:10:39,540] basehttp "GET /product/496b6c16-d1c3-462d-8195-bee8c1e1a0ed/ HTTP/1.1" 200 30886
+INFO [2024-10-15 16:57:28,798] basehttp "GET /static/css/style.css HTTP/1.1" 304 0
+ERROR [2024-10-15 16:57:35,037] log Internal Server Error: /product/496b6c16-d1c3-462d-8195-bee8c1e1a0ed/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/usr/local/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/usr/local/lib/python3.10/site-packages/django/template/response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/usr/local/lib/python3.10/site-packages/django/template/response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+  File "/usr/local/lib/python3.10/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/usr/local/lib/python3.10/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+  File "/usr/local/lib/python3.10/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.10/site-packages/django/template/defaulttags.py", line 841, in do_for
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: 'for' statements should have at least four words: for foo in
+ERROR [2024-10-15 16:57:35,039] basehttp "GET /product/496b6c16-d1c3-462d-8195-bee8c1e1a0ed/ HTTP/1.1" 500 199019
+ERROR [2024-10-15 16:57:35,254] log Internal Server Error: /product/496b6c16-d1c3-462d-8195-bee8c1e1a0ed/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/usr/local/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/usr/local/lib/python3.10/site-packages/django/template/response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/usr/local/lib/python3.10/site-packages/django/template/response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+  File "/usr/local/lib/python3.10/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/usr/local/lib/python3.10/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+  File "/usr/local/lib/python3.10/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.10/site-packages/django/template/defaulttags.py", line 841, in do_for
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: 'for' statements should have at least four words: for foo in
+ERROR [2024-10-15 16:57:35,255] basehttp "GET /product/496b6c16-d1c3-462d-8195-bee8c1e1a0ed/ HTTP/1.1" 500 199019
+ERROR [2024-10-15 16:57:35,401] log Internal Server Error: /product/496b6c16-d1c3-462d-8195-bee8c1e1a0ed/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/usr/local/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/usr/local/lib/python3.10/site-packages/django/template/response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/usr/local/lib/python3.10/site-packages/django/template/response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+  File "/usr/local/lib/python3.10/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/usr/local/lib/python3.10/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+  File "/usr/local/lib/python3.10/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.10/site-packages/django/template/defaulttags.py", line 841, in do_for
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: 'for' statements should have at least four words: for foo in
+ERROR [2024-10-15 16:57:35,402] basehttp "GET /product/496b6c16-d1c3-462d-8195-bee8c1e1a0ed/ HTTP/1.1" 500 199019
+ERROR [2024-10-15 16:57:35,550] log Internal Server Error: /product/496b6c16-d1c3-462d-8195-bee8c1e1a0ed/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/usr/local/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/usr/local/lib/python3.10/site-packages/django/template/response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/usr/local/lib/python3.10/site-packages/django/template/response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+  File "/usr/local/lib/python3.10/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/usr/local/lib/python3.10/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+  File "/usr/local/lib/python3.10/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.10/site-packages/django/template/defaulttags.py", line 841, in do_for
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: 'for' statements should have at least four words: for foo in
+ERROR [2024-10-15 16:57:35,551] basehttp "GET /product/496b6c16-d1c3-462d-8195-bee8c1e1a0ed/ HTTP/1.1" 500 199019
+ERROR [2024-10-15 16:57:36,974] log Internal Server Error: /product/496b6c16-d1c3-462d-8195-bee8c1e1a0ed/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/usr/local/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/usr/local/lib/python3.10/site-packages/django/template/response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/usr/local/lib/python3.10/site-packages/django/template/response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+  File "/usr/local/lib/python3.10/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/usr/local/lib/python3.10/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+  File "/usr/local/lib/python3.10/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.10/site-packages/django/template/defaulttags.py", line 841, in do_for
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: 'for' statements should have at least four words: for foo in
+ERROR [2024-10-15 16:57:36,975] basehttp "GET /product/496b6c16-d1c3-462d-8195-bee8c1e1a0ed/ HTTP/1.1" 500 199019
+ERROR [2024-10-15 16:57:37,108] log Internal Server Error: /product/496b6c16-d1c3-462d-8195-bee8c1e1a0ed/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/usr/local/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/usr/local/lib/python3.10/site-packages/django/template/response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/usr/local/lib/python3.10/site-packages/django/template/response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+  File "/usr/local/lib/python3.10/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/usr/local/lib/python3.10/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+  File "/usr/local/lib/python3.10/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.10/site-packages/django/template/defaulttags.py", line 841, in do_for
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: 'for' statements should have at least four words: for foo in
+ERROR [2024-10-15 16:57:37,109] basehttp "GET /product/496b6c16-d1c3-462d-8195-bee8c1e1a0ed/ HTTP/1.1" 500 199019
+ERROR [2024-10-15 16:57:37,304] log Internal Server Error: /product/496b6c16-d1c3-462d-8195-bee8c1e1a0ed/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/usr/local/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/usr/local/lib/python3.10/site-packages/django/template/response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/usr/local/lib/python3.10/site-packages/django/template/response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+  File "/usr/local/lib/python3.10/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/usr/local/lib/python3.10/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+  File "/usr/local/lib/python3.10/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.10/site-packages/django/template/defaulttags.py", line 841, in do_for
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: 'for' statements should have at least four words: for foo in
+ERROR [2024-10-15 16:57:37,305] basehttp "GET /product/496b6c16-d1c3-462d-8195-bee8c1e1a0ed/ HTTP/1.1" 500 199019
+ERROR [2024-10-15 16:57:38,172] log Internal Server Error: /product/496b6c16-d1c3-462d-8195-bee8c1e1a0ed/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/usr/local/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/usr/local/lib/python3.10/site-packages/django/template/response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/usr/local/lib/python3.10/site-packages/django/template/response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+  File "/usr/local/lib/python3.10/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/usr/local/lib/python3.10/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+  File "/usr/local/lib/python3.10/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.10/site-packages/django/template/defaulttags.py", line 841, in do_for
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: 'for' statements should have at least four words: for foo in
+ERROR [2024-10-15 16:57:38,173] basehttp "GET /product/496b6c16-d1c3-462d-8195-bee8c1e1a0ed/ HTTP/1.1" 500 199019
+ERROR [2024-10-15 16:57:38,326] log Internal Server Error: /product/496b6c16-d1c3-462d-8195-bee8c1e1a0ed/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/usr/local/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/usr/local/lib/python3.10/site-packages/django/template/response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/usr/local/lib/python3.10/site-packages/django/template/response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+  File "/usr/local/lib/python3.10/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/usr/local/lib/python3.10/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+  File "/usr/local/lib/python3.10/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.10/site-packages/django/template/defaulttags.py", line 841, in do_for
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: 'for' statements should have at least four words: for foo in
+ERROR [2024-10-15 16:57:38,327] basehttp "GET /product/496b6c16-d1c3-462d-8195-bee8c1e1a0ed/ HTTP/1.1" 500 199019
+ERROR [2024-10-15 17:39:12,968] log Internal Server Error: /product/496b6c16-d1c3-462d-8195-bee8c1e1a0ed/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/usr/local/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/usr/local/lib/python3.10/site-packages/django/template/response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/usr/local/lib/python3.10/site-packages/django/template/response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+  File "/usr/local/lib/python3.10/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/usr/local/lib/python3.10/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+  File "/usr/local/lib/python3.10/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.10/site-packages/django/template/defaulttags.py", line 862, in do_for
+    nodelist_loop = parser.parse(
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 483, in parse
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Empty variable tag on line 37
+ERROR [2024-10-15 17:39:12,976] basehttp "GET /product/496b6c16-d1c3-462d-8195-bee8c1e1a0ed/ HTTP/1.1" 500 206498
+ERROR [2024-10-15 17:39:13,807] log Internal Server Error: /product/496b6c16-d1c3-462d-8195-bee8c1e1a0ed/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/usr/local/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/usr/local/lib/python3.10/site-packages/django/template/response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/usr/local/lib/python3.10/site-packages/django/template/response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+  File "/usr/local/lib/python3.10/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/usr/local/lib/python3.10/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+  File "/usr/local/lib/python3.10/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.10/site-packages/django/template/defaulttags.py", line 862, in do_for
+    nodelist_loop = parser.parse(
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 483, in parse
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Empty variable tag on line 37
+ERROR [2024-10-15 17:39:13,808] basehttp "GET /product/496b6c16-d1c3-462d-8195-bee8c1e1a0ed/ HTTP/1.1" 500 206498
+INFO [2024-10-15 23:44:12,632] basehttp "GET /product/496b6c16-d1c3-462d-8195-bee8c1e1a0ed/ HTTP/1.1" 200 30932
+INFO [2024-10-15 23:44:12,746] basehttp "GET /static/css/style.css HTTP/1.1" 200 21600
+INFO [2024-10-15 23:44:12,785] basehttp "GET /static/img/products/product_transition/whey-frontal.png HTTP/1.1" 200 620105
+INFO [2024-10-15 23:44:12,786] basehttp "GET /static/img/products/product_transition/whey-completo.png HTTP/1.1" 200 729706
+INFO [2024-10-15 23:44:12,819] basehttp "GET /static/img/products/product_transition/whey-lateral-izquierdo.png HTTP/1.1" 200 639493
+INFO [2024-10-15 23:44:12,819] basehttp "GET /static/img/products/product_transition/whey-lateral-derecho.png HTTP/1.1" 200 634078
+INFO [2024-10-15 23:44:12,849] basehttp "GET /static/js/swiper.js HTTP/1.1" 304 0
+INFO [2024-10-15 23:44:12,892] basehttp "GET /static/img/products/product_transition/whey-posterior-derecho.png HTTP/1.1" 200 699383
+INFO [2024-10-15 23:44:12,947] basehttp "GET /static/img/products/product_transition/whey-posterior-izquierdo.png HTTP/1.1" 200 705991
+INFO [2024-10-15 23:44:12,958] basehttp "GET /static/img/products/description/slide1.png HTTP/1.1" 200 322813
+INFO [2024-10-15 23:44:12,962] basehttp "GET /static/img/products/description/slide2.png HTTP/1.1" 200 63354
+INFO [2024-10-15 23:44:12,967] basehttp "GET /static/img/products/collagen3.png HTTP/1.1" 200 73303
+INFO [2024-10-15 23:44:12,967] basehttp "GET /static/img/products/description/slide3.png HTTP/1.1" 200 56408
+INFO [2024-10-15 23:44:13,040] basehttp "GET /static/fonts/ArupalaGrotesk-Ultra.ttf HTTP/1.1" 200 92356
+INFO [2024-10-15 23:44:13,040] basehttp "GET /static/fonts/AvenirLTStd-Roman.otf HTTP/1.1" 200 27176
+INFO [2024-10-15 23:44:13,084] basehttp "GET /static/fonts/AvenirLTStd-Black.otf HTTP/1.1" 200 27912
+INFO [2024-10-15 23:44:56,214] basehttp "GET /product/496b6c16-d1c3-462d-8195-bee8c1e1a0ed/ HTTP/1.1" 200 30928
+INFO [2024-10-15 23:45:06,630] basehttp "GET /product/496b6c16-d1c3-462d-8195-bee8c1e1a0ed/ HTTP/1.1" 200 30928
+INFO [2024-10-15 23:45:07,555] basehttp "GET /product/496b6c16-d1c3-462d-8195-bee8c1e1a0ed/ HTTP/1.1" 200 30928
+INFO [2024-10-15 23:46:43,187] basehttp "GET /product/496b6c16-d1c3-462d-8195-bee8c1e1a0ed/ HTTP/1.1" 200 30928
+INFO [2024-10-15 23:46:57,117] basehttp "GET /products/ HTTP/1.1" 200 11675
+INFO [2024-10-15 23:46:57,393] basehttp "POST /api/v1/graph/demolitor HTTP/1.1" 200 1108
+INFO [2024-10-15 23:46:57,424] basehttp "GET /media/finniu/images/product/900e4c89/proteina-iso.png HTTP/1.1" 200 95786
+INFO [2024-10-15 23:46:57,439] basehttp "GET /media/finniu/images/product/7c897460/black-maca.png HTTP/1.1" 200 382222
+INFO [2024-10-15 23:46:57,509] basehttp "GET /media/finniu/images/product/cf7b6a8f/creatina-sport.png HTTP/1.1" 200 2743302
+INFO [2024-10-15 23:47:01,281] basehttp "GET /product/94a32d41-4561-4277-b831-a55d546d806f/ HTTP/1.1" 200 31375
+INFO [2024-10-15 23:48:03,422] basehttp "GET /product/94a32d41-4561-4277-b831-a55d546d806f/ HTTP/1.1" 200 30596
+INFO [2024-10-15 23:48:03,497] basehttp "GET /media/finniu/images/product/5fcf47a2/94deaa4c.png HTTP/1.1" 200 729706
+INFO [2024-10-15 23:48:03,561] basehttp "GET /media/finniu/images/product/3354f1ab/ce0de5e6.png HTTP/1.1" 200 634078
+INFO [2024-10-15 23:48:03,571] basehttp "GET /media/finniu/images/product/7563aedb/7f79b686.png HTTP/1.1" 200 705991
+INFO [2024-10-15 23:48:03,574] basehttp "GET /media/finniu/images/product/4f62df47/58cc7e4f.png HTTP/1.1" 200 699383
+INFO [2024-10-15 23:48:03,578] basehttp "GET /media/finniu/images/product/f455cc01/b84bc12d.png HTTP/1.1" 200 639493
+INFO [2024-10-15 23:49:07,178] basehttp "GET /product/94a32d41-4561-4277-b831-a55d546d806f/ HTTP/1.1" 200 30547
+INFO [2024-10-15 23:49:08,483] basehttp "GET /product/94a32d41-4561-4277-b831-a55d546d806f/ HTTP/1.1" 200 30547
+INFO [2024-10-15 23:49:08,511] basehttp "GET /static/css/style.css HTTP/1.1" 200 21600
+INFO [2024-10-15 23:49:08,569] basehttp "GET /media/finniu/images/company/f043e14e/7367a8a7.png HTTP/1.1" 200 7698
+INFO [2024-10-15 23:49:08,581] basehttp "GET /media/finniu/images/product/5fcf47a2/94deaa4c.png HTTP/1.1" 200 729706
+INFO [2024-10-15 23:49:08,589] basehttp "GET /media/finniu/images/product/3354f1ab/ce0de5e6.png HTTP/1.1" 200 634078
+INFO [2024-10-15 23:49:08,605] basehttp "GET /media/finniu/images/product/4f62df47/58cc7e4f.png HTTP/1.1" 200 699383
+INFO [2024-10-15 23:49:08,610] basehttp "GET /media/finniu/images/product/f455cc01/b84bc12d.png HTTP/1.1" 200 639493
+INFO [2024-10-15 23:49:08,647] basehttp "GET /static/js/swiper.js HTTP/1.1" 200 382
+INFO [2024-10-15 23:49:08,651] basehttp "GET /static/img/products/description/slide2.png HTTP/1.1" 200 63354
+INFO [2024-10-15 23:49:08,653] basehttp "GET /static/img/products/description/slide3.png HTTP/1.1" 200 56408
+INFO [2024-10-15 23:49:08,654] basehttp "GET /static/img/products/collagen3.png HTTP/1.1" 200 73303
+INFO [2024-10-15 23:49:08,658] basehttp "GET /static/img/partners/falabella.png HTTP/1.1" 200 3202
+INFO [2024-10-15 23:49:08,661] basehttp "GET /static/img/partners/inkafarma.png HTTP/1.1" 200 7786
+INFO [2024-10-15 23:49:08,663] basehttp "GET /static/img/partners/mifarma.png HTTP/1.1" 200 4643
+INFO [2024-10-15 23:49:08,669] basehttp "GET /static/img/products/description/slide1.png HTTP/1.1" 200 322813
+INFO [2024-10-15 23:49:08,671] basehttp "GET /media/finniu/images/product/7563aedb/7f79b686.png HTTP/1.1" 200 705991
+INFO [2024-10-15 23:49:08,697] basehttp "GET /static/fonts/ArupalaGrotesk-Ultra.ttf HTTP/1.1" 200 92356
+INFO [2024-10-15 23:49:08,697] basehttp "GET /static/fonts/AvenirLTStd-Roman.otf HTTP/1.1" 200 27176
+INFO [2024-10-15 23:49:08,728] basehttp "GET /static/fonts/AvenirLTStd-Black.otf HTTP/1.1" 200 27912
+WARNING [2024-10-15 23:49:08,806] basehttp "GET /static/images/favicon.ico HTTP/1.1" 404 1979
+INFO [2024-10-15 23:49:52,328] basehttp "GET /product/94a32d41-4561-4277-b831-a55d546d806f/ HTTP/1.1" 200 30549
+INFO [2024-10-15 23:49:52,396] basehttp "GET /media/finniu/images/company/f043e14e/7367a8a7.png HTTP/1.1" 200 7698
+INFO [2024-10-15 23:49:52,397] basehttp "GET /static/css/style.css HTTP/1.1" 200 21600
+INFO [2024-10-15 23:49:52,433] basehttp "GET /media/finniu/images/product/5fcf47a2/94deaa4c.png HTTP/1.1" 200 729706
+INFO [2024-10-15 23:49:52,437] basehttp "GET /media/finniu/images/product/3354f1ab/ce0de5e6.png HTTP/1.1" 200 634078
+INFO [2024-10-15 23:49:52,461] basehttp "GET /media/finniu/images/product/4f62df47/58cc7e4f.png HTTP/1.1" 200 699383
+INFO [2024-10-15 23:49:52,464] basehttp "GET /media/finniu/images/product/f455cc01/b84bc12d.png HTTP/1.1" 200 639493
+INFO [2024-10-15 23:49:52,488] basehttp "GET /static/js/swiper.js HTTP/1.1" 200 382
+INFO [2024-10-15 23:49:52,514] basehttp "GET /media/finniu/images/product/7563aedb/7f79b686.png HTTP/1.1" 200 705991
+INFO [2024-10-15 23:49:52,520] basehttp "GET /static/img/products/description/slide1.png HTTP/1.1" 200 322813
+INFO [2024-10-15 23:49:52,534] basehttp "GET /static/img/products/description/slide2.png HTTP/1.1" 200 63354
+INFO [2024-10-15 23:49:52,535] basehttp "GET /static/img/products/description/slide3.png HTTP/1.1" 200 56408
+INFO [2024-10-15 23:49:52,548] basehttp "GET /static/img/partners/falabella.png HTTP/1.1" 200 3202
+INFO [2024-10-15 23:49:52,549] basehttp "GET /static/img/partners/mifarma.png HTTP/1.1" 200 4643
+INFO [2024-10-15 23:49:52,550] basehttp "GET /static/img/partners/inkafarma.png HTTP/1.1" 200 7786
+INFO [2024-10-15 23:49:52,556] basehttp "GET /static/img/products/collagen3.png HTTP/1.1" 200 73303
+INFO [2024-10-15 23:49:52,639] basehttp "GET /static/fonts/AvenirLTStd-Roman.otf HTTP/1.1" 200 27176
+INFO [2024-10-15 23:49:52,641] basehttp "GET /static/fonts/ArupalaGrotesk-Ultra.ttf HTTP/1.1" 200 92356
+INFO [2024-10-15 23:49:52,696] basehttp "GET /static/fonts/AvenirLTStd-Black.otf HTTP/1.1" 200 27912
+WARNING [2024-10-15 23:49:52,753] basehttp "GET /static/images/favicon.ico HTTP/1.1" 404 1979
+INFO [2024-10-15 23:49:59,315] basehttp "GET /product/94a32d41-4561-4277-b831-a55d546d806f/ HTTP/1.1" 200 30549
+INFO [2024-10-15 23:50:27,927] basehttp "GET /product/94a32d41-4561-4277-b831-a55d546d806f/ HTTP/1.1" 200 30549
+INFO [2024-10-15 23:50:30,140] basehttp "GET /product/94a32d41-4561-4277-b831-a55d546d806f/ HTTP/1.1" 200 30549
+INFO [2024-10-15 23:50:30,172] basehttp "GET /media/finniu/images/company/f043e14e/7367a8a7.png HTTP/1.1" 200 7698
+INFO [2024-10-15 23:50:30,173] basehttp "GET /static/css/style.css HTTP/1.1" 200 21600
+INFO [2024-10-15 23:50:30,199] basehttp "GET /media/finniu/images/product/5fcf47a2/94deaa4c.png HTTP/1.1" 200 729706
+INFO [2024-10-15 23:50:30,222] basehttp "GET /media/finniu/images/product/3354f1ab/ce0de5e6.png HTTP/1.1" 200 634078
+INFO [2024-10-15 23:50:30,248] basehttp "GET /media/finniu/images/product/4f62df47/58cc7e4f.png HTTP/1.1" 200 699383
+INFO [2024-10-15 23:50:30,250] basehttp "GET /media/finniu/images/product/f455cc01/b84bc12d.png HTTP/1.1" 200 639493
+INFO [2024-10-15 23:50:30,271] basehttp "GET /static/js/swiper.js HTTP/1.1" 200 382
+INFO [2024-10-15 23:50:30,304] basehttp "GET /static/img/partners/falabella.png HTTP/1.1" 200 3202
+INFO [2024-10-15 23:50:30,304] basehttp "GET /static/img/products/collagen3.png HTTP/1.1" 200 73303
+INFO [2024-10-15 23:50:30,308] basehttp "GET /static/img/products/description/slide2.png HTTP/1.1" 200 63354
+INFO [2024-10-15 23:50:30,313] basehttp "GET /static/img/products/description/slide3.png HTTP/1.1" 200 56408
+INFO [2024-10-15 23:50:30,314] basehttp "GET /static/img/partners/inkafarma.png HTTP/1.1" 200 7786
+INFO [2024-10-15 23:50:30,315] basehttp "GET /static/img/partners/mifarma.png HTTP/1.1" 200 4643
+INFO [2024-10-15 23:50:30,320] basehttp "GET /static/img/products/description/slide1.png HTTP/1.1" 200 322813
+INFO [2024-10-15 23:50:30,327] basehttp "GET /media/finniu/images/product/7563aedb/7f79b686.png HTTP/1.1" 200 705991
+INFO [2024-10-15 23:50:30,358] basehttp "GET /static/fonts/AvenirLTStd-Roman.otf HTTP/1.1" 200 27176
+INFO [2024-10-15 23:50:30,359] basehttp "GET /static/fonts/ArupalaGrotesk-Ultra.ttf HTTP/1.1" 200 92356
+INFO [2024-10-15 23:50:30,409] basehttp "GET /static/fonts/AvenirLTStd-Black.otf HTTP/1.1" 200 27912
+WARNING [2024-10-15 23:50:30,465] basehttp "GET /static/images/favicon.ico HTTP/1.1" 404 1979
+INFO [2024-10-16 00:00:38,569] basehttp "GET /product/94a32d41-4561-4277-b831-a55d546d806f/ HTTP/1.1" 200 30542
+INFO [2024-10-16 00:00:38,687] basehttp "GET /media/finniu/images/company/f043e14e/7367a8a7.png HTTP/1.1" 200 7698
+INFO [2024-10-16 00:00:38,687] basehttp "GET /static/css/style.css HTTP/1.1" 200 21600
+INFO [2024-10-16 00:00:38,700] basehttp "GET /media/finniu/images/product/5fcf47a2/94deaa4c.png HTTP/1.1" 200 729706
+INFO [2024-10-16 00:00:38,733] basehttp "GET /static/js/swiper.js HTTP/1.1" 200 382
+INFO [2024-10-16 00:00:38,758] basehttp "GET /static/img/products/description/slide2.png HTTP/1.1" 200 63354
+INFO [2024-10-16 00:00:38,766] basehttp "GET /media/finniu/images/product/4f62df47/58cc7e4f.png HTTP/1.1" 200 699383
+INFO [2024-10-16 00:00:38,767] basehttp "GET /media/finniu/images/product/3354f1ab/ce0de5e6.png HTTP/1.1" 200 634078
+INFO [2024-10-16 00:00:38,770] basehttp "GET /media/finniu/images/product/f455cc01/b84bc12d.png HTTP/1.1" 200 639493
+INFO [2024-10-16 00:00:38,773] basehttp "GET /static/img/products/description/slide1.png HTTP/1.1" 200 322813
+INFO [2024-10-16 00:00:38,789] basehttp "GET /static/img/partners/falabella.png HTTP/1.1" 200 3202
+INFO [2024-10-16 00:00:38,795] basehttp "GET /static/img/partners/mifarma.png HTTP/1.1" 200 4643
+INFO [2024-10-16 00:00:38,792] basehttp "GET /static/img/products/collagen3.png HTTP/1.1" 200 73303
+INFO [2024-10-16 00:00:38,790] basehttp "GET /static/img/products/description/slide3.png HTTP/1.1" 200 56408
+INFO [2024-10-16 00:00:38,797] basehttp "GET /static/img/partners/inkafarma.png HTTP/1.1" 200 7786
+INFO [2024-10-16 00:00:38,800] basehttp "GET /media/finniu/images/product/7563aedb/7f79b686.png HTTP/1.1" 200 705991
+INFO [2024-10-16 00:00:38,807] basehttp "GET /static/fonts/ArupalaGrotesk-Ultra.ttf HTTP/1.1" 200 92356
+INFO [2024-10-16 00:00:38,809] basehttp "GET /static/fonts/AvenirLTStd-Roman.otf HTTP/1.1" 200 27176
+INFO [2024-10-16 00:00:38,837] basehttp "GET /static/fonts/AvenirLTStd-Black.otf HTTP/1.1" 200 27912
+WARNING [2024-10-16 00:00:38,948] basehttp "GET /static/images/favicon.ico HTTP/1.1" 404 1979
+INFO [2024-10-16 00:10:44,734] autoreload /www/src/apps/product/models/product.py changed, reloading.
+INFO [2024-10-16 00:10:45,687] autoreload Watching for file changes with StatReloader
+INFO [2024-10-16 00:11:00,130] autoreload /www/src/apps/product/models/product.py changed, reloading.
+INFO [2024-10-16 00:11:00,935] autoreload Watching for file changes with StatReloader
+INFO [2024-10-16 00:18:53,441] autoreload /www/src/apps/product/models/__init__.py changed, reloading.
+INFO [2024-10-16 00:18:54,283] autoreload Watching for file changes with StatReloader
+INFO [2024-10-16 00:18:56,477] autoreload /www/src/apps/product/models/__init__.py changed, reloading.
+INFO [2024-10-16 00:18:57,133] autoreload Watching for file changes with StatReloader
+INFO [2024-10-16 00:19:08,512] autoreload /www/src/apps/product/admin.py changed, reloading.
+INFO [2024-10-16 00:19:09,234] autoreload Watching for file changes with StatReloader
+INFO [2024-10-16 00:19:16,530] autoreload /www/src/apps/product/admin.py changed, reloading.
+INFO [2024-10-16 00:19:17,183] autoreload Watching for file changes with StatReloader
+INFO [2024-10-16 00:19:22,436] autoreload /www/src/apps/product/admin.py changed, reloading.
+INFO [2024-10-16 00:19:23,202] autoreload Watching for file changes with StatReloader
+INFO [2024-10-16 00:19:35,570] autoreload /www/src/apps/core/urls.py changed, reloading.
+INFO [2024-10-16 00:19:36,333] autoreload Watching for file changes with StatReloader
+INFO [2024-10-16 00:19:44,698] autoreload /www/src/apps/core/urls.py changed, reloading.
+INFO [2024-10-16 00:19:45,374] autoreload Watching for file changes with StatReloader
+INFO [2024-10-16 00:20:03,868] autoreload /www/src/apps/core/urls.py changed, reloading.
+INFO [2024-10-16 00:20:04,612] autoreload Watching for file changes with StatReloader
+INFO [2024-10-16 00:20:11,870] autoreload /www/src/apps/core/urls.py changed, reloading.
+INFO [2024-10-16 00:20:12,523] autoreload Watching for file changes with StatReloader
+INFO [2024-10-16 00:20:15,751] autoreload /www/src/apps/core/urls.py changed, reloading.
+INFO [2024-10-16 00:20:16,428] autoreload Watching for file changes with StatReloader
+INFO [2024-10-16 00:20:34,082] basehttp "GET /product/94a32d41-4561-4277-b831-a55d546d806f/ HTTP/1.1" 200 30542
+INFO [2024-10-16 00:20:58,731] autoreload Watching for file changes with StatReloader
+INFO [2024-10-16 00:21:06,526] basehttp "GET /product/94a32d41-4561-4277-b831-a55d546d806f/ HTTP/1.1" 200 30542
+INFO [2024-10-16 00:21:15,674] basehttp "GET /admin/product/product/94a32d41-4561-4277-b831-a55d546d806f/change/ HTTP/1.1" 200 37331
+INFO [2024-10-16 00:21:15,787] basehttp "GET /static/admin/js/inlines.js HTTP/1.1" 200 15526
+INFO [2024-10-16 00:21:15,787] basehttp "GET /static/admin/css/forms.css HTTP/1.1" 200 8710
+INFO [2024-10-16 00:21:15,795] basehttp "GET /static/admin/css/base.css HTTP/1.1" 200 22092
+INFO [2024-10-16 00:21:15,799] basehttp "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO [2024-10-16 00:21:15,801] basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+INFO [2024-10-16 00:21:15,803] basehttp "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO [2024-10-16 00:21:15,807] basehttp "GET /static/admin/css/responsive.css HTTP/1.1" 200 17972
+INFO [2024-10-16 00:21:15,809] basehttp "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 9097
+INFO [2024-10-16 00:21:15,811] basehttp "GET /static/admin/css/widgets.css HTTP/1.1" 200 11564
+INFO [2024-10-16 00:21:15,812] basehttp "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO [2024-10-16 00:21:15,814] basehttp "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO [2024-10-16 00:21:15,815] basehttp "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO [2024-10-16 00:21:15,815] basehttp "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 285314
+INFO [2024-10-16 00:21:15,815] basehttp "GET /static/tinymce_4/tinymce/tinymce.min.js HTTP/1.1" 200 390376
+INFO [2024-10-16 00:21:15,824] basehttp "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO [2024-10-16 00:21:15,824] basehttp "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO [2024-10-16 00:21:15,828] basehttp "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+INFO [2024-10-16 00:21:15,833] basehttp "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 325171
+INFO [2024-10-16 00:21:15,840] basehttp "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO [2024-10-16 00:21:15,847] basehttp "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+INFO [2024-10-16 00:21:15,847] basehttp "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO [2024-10-16 00:21:15,886] basehttp "GET /static/tinymce_4/tinymce/themes/silver/theme.min.js HTTP/1.1" 200 407300
+WARNING [2024-10-16 00:21:15,922] basehttp "GET /static/tinymce_4/tinymce/langs/.js HTTP/1.1" 404 2006
+INFO [2024-10-16 00:21:15,924] basehttp "GET /static/tinymce_4/tinymce/plugins/charmap/plugin.min.js HTTP/1.1" 200 12024
+INFO [2024-10-16 00:21:15,924] basehttp "GET /static/tinymce_4/tinymce/plugins/fullscreen/plugin.min.js HTTP/1.1" 200 11101
+INFO [2024-10-16 00:21:15,927] basehttp "GET /static/tinymce_4/tinymce/plugins/codesample/plugin.min.js HTTP/1.1" 200 33839
+INFO [2024-10-16 00:21:15,928] basehttp "GET /static/tinymce_4/tinymce/plugins/image/plugin.min.js HTTP/1.1" 200 21728
+INFO [2024-10-16 00:21:15,929] basehttp "GET /static/tinymce_4/tinymce/plugins/lists/plugin.min.js HTTP/1.1" 200 27502
+INFO [2024-10-16 00:21:15,930] basehttp "GET /static/tinymce_4/tinymce/icons/default/icons.min.js HTTP/1.1" 200 59004
+INFO [2024-10-16 00:21:15,932] basehttp "GET /static/tinymce_4/tinymce/plugins/imagetools/plugin.min.js HTTP/1.1" 200 16878
+INFO [2024-10-16 00:21:15,934] basehttp "GET /static/tinymce_4/tinymce/plugins/link/plugin.min.js HTTP/1.1" 200 15473
+INFO [2024-10-16 00:21:15,936] basehttp "GET /static/tinymce_4/tinymce/plugins/media/plugin.min.js HTTP/1.1" 200 17383
+INFO [2024-10-16 00:21:15,936] basehttp "GET /static/tinymce_4/tinymce/plugins/spellchecker/plugin.min.js HTTP/1.1" 200 10047
+INFO [2024-10-16 00:21:15,937] basehttp "GET /static/tinymce_4/tinymce/plugins/paste/plugin.min.js HTTP/1.1" 200 22084
+INFO [2024-10-16 00:21:15,939] basehttp "GET /static/tinymce_4/tinymce/plugins/searchreplace/plugin.min.js HTTP/1.1" 200 15169
+INFO [2024-10-16 00:21:15,942] basehttp "GET /static/tinymce_4/tinymce/plugins/table/plugin.min.js HTTP/1.1" 200 126026
+INFO [2024-10-16 00:21:15,944] basehttp "GET /static/tinymce_4/tinymce/plugins/wordcount/plugin.min.js HTTP/1.1" 200 12283
+INFO [2024-10-16 00:21:15,963] basehttp "GET /static/tinymce_4/tinymce/skins/ui/oxide/skin.min.css HTTP/1.1" 200 58689
+WARNING [2024-10-16 00:21:16,019] basehttp "GET /static/tinymce_4/css/__tinymce_4.css?1729056075838 HTTP/1.1" 404 2026
+INFO [2024-10-16 00:21:16,020] basehttp "GET /static/tinymce_4/tinymce/skins/ui/oxide/content.min.css HTTP/1.1" 200 20667
+WARNING [2024-10-16 00:21:16,071] basehttp "GET /static/tinymce_4/css/__tinymce_4.css?1729056075838 HTTP/1.1" 404 2026
+INFO [2024-10-16 00:21:16,115] basehttp "GET /static/tinymce_4/tinymce/plugins/emoticons/js/emojis.min.js HTTP/1.1" 200 193222
+WARNING [2024-10-16 00:21:16,142] log Not Found: /favicon.ico
+WARNING [2024-10-16 00:21:16,142] basehttp "GET /favicon.ico HTTP/1.1" 404 4968
+INFO [2024-10-16 00:24:36,331] autoreload /www/src/apps/product/admin.py changed, reloading.
+INFO [2024-10-16 00:24:37,192] autoreload Watching for file changes with StatReloader
+INFO [2024-10-16 00:24:46,606] autoreload /www/src/apps/product/admin.py changed, reloading.
+INFO [2024-10-16 00:24:47,392] autoreload Watching for file changes with StatReloader
+INFO [2024-10-16 00:25:05,033] autoreload /www/src/apps/product/admin.py changed, reloading.
+INFO [2024-10-16 00:25:05,852] autoreload Watching for file changes with StatReloader
+INFO [2024-10-16 00:25:11,790] basehttp "GET /admin/product/product/94a32d41-4561-4277-b831-a55d546d806f/change/ HTTP/1.1" 200 44871
+INFO [2024-10-16 00:25:11,852] basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+WARNING [2024-10-16 00:25:11,935] basehttp "GET /static/tinymce_4/tinymce/langs/.js HTTP/1.1" 404 2006
+WARNING [2024-10-16 00:25:12,013] basehttp "GET /static/tinymce_4/css/__tinymce_4.css?1729056311875 HTTP/1.1" 404 2026
+WARNING [2024-10-16 00:25:12,035] basehttp "GET /static/tinymce_4/css/__tinymce_4.css?1729056311875 HTTP/1.1" 404 2026
+INFO [2024-10-16 00:29:42,023] autoreload /www/src/apps/product/models/product.py changed, reloading.
+INFO [2024-10-16 00:29:42,961] autoreload Watching for file changes with StatReloader
+INFO [2024-10-16 00:30:06,698] autoreload /www/src/apps/product/models/product.py changed, reloading.
+INFO [2024-10-16 00:30:07,469] autoreload Watching for file changes with StatReloader
+INFO [2024-10-16 00:30:16,816] autoreload /www/src/apps/product/models/product.py changed, reloading.
+INFO [2024-10-16 00:30:17,498] autoreload Watching for file changes with StatReloader
