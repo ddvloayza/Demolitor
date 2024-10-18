@@ -77,11 +77,6 @@ class Product(BaseModelMixin, SEOMixin):
         verbose_name=_("Slug"), max_length=128, unique=True, null=True
     )
     description = TinyMCEModelField(null=True, blank=True)
-    content = TinyMCEModelField(
-        verbose_name=_('Content'),
-        blank=True,
-        null=True
-    )
 
     image = models.ImageField(
         verbose_name=_("image_principal_product"),
@@ -96,6 +91,13 @@ class Product(BaseModelMixin, SEOMixin):
         default=0.00,
         verbose_name="price",
     )
+    price_discount = models.DecimalField(
+        max_digits=18,
+        decimal_places=2,
+        default=0.00,
+        verbose_name="price_discount",
+    )
+    is_best_seller = models.BooleanField(default=False, verbose_name="Best Seller")
 
     tag = models.ManyToManyField("tag.Tag", verbose_name=_("Tags"), blank=True, related_name="product_tags")
     flavors = models.ManyToManyField('Flavor', related_name="products", blank=True)
@@ -142,6 +144,16 @@ class Product(BaseModelMixin, SEOMixin):
         verbose_name_plural = _("Products")
 
 
+class Characteristic(models.Model):
+    product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name="characteristics")
+    feature_name = models.CharField(max_length=100, verbose_name="Feature Name", blank=True, null=True)
+    feature_value = models.CharField(max_length=200, verbose_name="Feature Value", blank=True, null=True)
+    is_key_feature = models.BooleanField(default=False, verbose_name="Is Key Feature")  # Added boolean field
+
+    def __str__(self):
+        return f"{self.feature_name}: {self.feature_value} (Key: {self.is_key_feature})"
+
+
 class ProductImage(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name="images")
     image = models.ImageField(
@@ -151,7 +163,7 @@ class ProductImage(models.Model):
         null=True,
     )
     order = models.PositiveSmallIntegerField()
-
+    is_info_image = models.BooleanField(default=False, verbose_name="Is Info Image")
     def __str__(self):
         return f"Image for {self.product.name}"
 

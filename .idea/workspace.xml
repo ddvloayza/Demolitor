@@ -7,11 +7,9 @@
     <list default="true" id="d909a866-9aed-4c03-ba3b-68a2a6b56495" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/apps/product/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/apps/product/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/apps/product/migrations/0020_flavor_packaging_delete_certificate.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/apps/product/models/product.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/apps/product/models/product.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/settings/django.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/settings/django.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/templates/products/product_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/products/product_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/products/product_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/products/product_list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/templates/web/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/web/header.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -123,7 +121,10 @@
       <workItem from="1728852824388" duration="13391000" />
       <workItem from="1728992280476" duration="25191000" />
       <workItem from="1729061366174" duration="2000" />
-      <workItem from="1729061375974" duration="6000" />
+      <workItem from="1729061375974" duration="3918000" />
+      <workItem from="1729129465243" duration="3732000" />
+      <workItem from="1729189052746" duration="589000" />
+      <workItem from="1729198488019" duration="3373000" />
     </task>
     <servers />
   </component>

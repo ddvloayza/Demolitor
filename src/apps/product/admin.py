@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from apps.product.models.product import Product, Category, ProductImage, Packaging, Flavor
+from apps.product.models.product import Product, Category, ProductImage, Packaging, Flavor, Characteristic
 
 from apps.product.models.quotation_requests import QuotationRequest, QuotationRequestDetail
 from django.utils.safestring import mark_safe
@@ -16,6 +16,11 @@ class ProductImageInline(admin.TabularInline):
     model = ProductImage
     extra = 1
 
+# Define an inline admin descriptor for the Characteristic model
+class CharacteristicInline(admin.TabularInline):
+    model = Characteristic
+    extra = 1  # How many empty inlines to display by default
+
 class CategoryAdmin(admin.ModelAdmin):
     list_display = ("name", )
     search_fields = ("name",)
@@ -23,7 +28,7 @@ class CategoryAdmin(admin.ModelAdmin):
 
 
 class ProductAdmin(admin.ModelAdmin):
-    inlines = [ProductImageInline]
+    inlines = [ProductImageInline, CharacteristicInline]
     list_display = ("name", )
     search_fields = ("name",)
     filter_horizontal = ('flavors', 'packagings')

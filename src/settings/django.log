@@ -9463,3 +9463,337 @@ INFO [2024-10-16 01:42:29,090] basehttp "GET /products/ HTTP/1.1" 200 18636
 INFO [2024-10-16 01:42:29,337] basehttp "POST /api/v1/graph/demolitor HTTP/1.1" 200 1354
 INFO [2024-10-16 01:49:44,505] basehttp "GET /products/ HTTP/1.1" 200 20277
 INFO [2024-10-16 01:49:44,728] basehttp "POST /api/v1/graph/demolitor HTTP/1.1" 200 1354
+INFO [2024-10-16 10:48:53,361] basehttp "GET /product/496b6c16-d1c3-462d-8195-bee8c1e1a0ed/ HTTP/1.1" 200 30452
+INFO [2024-10-16 10:48:53,420] basehttp "GET /static/css/style.css HTTP/1.1" 304 0
+INFO [2024-10-16 10:48:53,438] basehttp "GET /static/js/swiper.js HTTP/1.1" 304 0
+INFO [2024-10-16 10:48:55,790] basehttp "GET /product/94a32d41-4561-4277-b831-a55d546d806f/ HTTP/1.1" 200 33695
+INFO [2024-10-16 10:48:55,881] basehttp "GET /media/finniu/images/product/f455cc01/b84bc12d.png HTTP/1.1" 200 639493
+INFO [2024-10-16 10:48:55,888] basehttp "GET /media/finniu/images/product/5fcf47a2/94deaa4c.png HTTP/1.1" 200 729706
+INFO [2024-10-16 10:48:55,889] basehttp "GET /media/finniu/images/product/3354f1ab/ce0de5e6.png HTTP/1.1" 200 634078
+INFO [2024-10-16 10:48:55,905] basehttp "GET /media/finniu/images/product/7563aedb/7f79b686.png HTTP/1.1" 200 705991
+INFO [2024-10-16 10:48:55,912] basehttp "GET /media/finniu/images/product/4f62df47/58cc7e4f.png HTTP/1.1" 200 699383
+INFO [2024-10-16 10:49:13,523] basehttp "GET /admin/product/flavor/add/?_to_field=id&_popup=1 HTTP/1.1" 200 4416
+INFO [2024-10-16 10:49:13,573] basehttp "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 285314
+INFO [2024-10-16 10:49:13,582] basehttp "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 325171
+INFO [2024-10-16 10:49:13,593] basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+WARNING [2024-10-16 10:49:13,644] log Not Found: /favicon.ico
+WARNING [2024-10-16 10:49:13,644] basehttp "GET /favicon.ico HTTP/1.1" 404 4968
+INFO [2024-10-16 10:49:17,407] basehttp "POST /admin/product/flavor/add/?_to_field=id&_popup=1 HTTP/1.1" 200 341
+INFO [2024-10-16 10:49:21,119] basehttp "POST /admin/product/product/94a32d41-4561-4277-b831-a55d546d806f/change/ HTTP/1.1" 302 0
+INFO [2024-10-16 10:49:21,257] basehttp "GET /admin/product/product/94a32d41-4561-4277-b831-a55d546d806f/change/ HTTP/1.1" 200 42552
+INFO [2024-10-16 10:49:21,345] basehttp "GET /static/tinymce_4/tinymce/tinymce.min.js HTTP/1.1" 200 390376
+INFO [2024-10-16 10:49:21,354] basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+INFO [2024-10-16 10:49:21,410] basehttp "GET /static/tinymce_4/tinymce/themes/silver/theme.min.js HTTP/1.1" 200 407300
+WARNING [2024-10-16 10:49:21,460] basehttp "GET /static/tinymce_4/tinymce/langs/.js HTTP/1.1" 404 2006
+WARNING [2024-10-16 10:49:21,528] basehttp "GET /static/tinymce_4/css/__tinymce_4.css?1729093761369 HTTP/1.1" 404 2026
+WARNING [2024-10-16 10:49:21,571] basehttp "GET /static/tinymce_4/css/__tinymce_4.css?1729093761369 HTTP/1.1" 404 2026
+INFO [2024-10-16 10:49:21,612] basehttp "GET /static/tinymce_4/tinymce/plugins/emoticons/js/emojis.min.js HTTP/1.1" 200 193222
+INFO [2024-10-16 10:49:22,540] basehttp "GET /product/94a32d41-4561-4277-b831-a55d546d806f/ HTTP/1.1" 200 33875
+INFO [2024-10-16 10:51:27,977] basehttp "GET / HTTP/1.1" 200 27387
+INFO [2024-10-16 10:51:28,139] basehttp "GET /media/banner/krak.png HTTP/1.1" 200 635211
+INFO [2024-10-16 10:51:28,151] basehttp "GET /media/banner-responsive/Banner_Krak.png HTTP/1.1" 200 1020020
+INFO [2024-10-16 10:51:28,196] basehttp "GET /media/finniu/images/product/7c897460/black-maca.png HTTP/1.1" 200 382222
+INFO [2024-10-16 10:51:28,227] basehttp "GET /media/finniu/images/product/cf7b6a8f/creatina-sport.png HTTP/1.1" 200 2743302
+INFO [2024-10-16 10:51:28,366] basehttp "GET /static/img/banner/background2.png HTTP/1.1" 200 1358304
+INFO [2024-10-16 10:51:28,401] basehttp "GET /static/img/fondo_black_maca1.png HTTP/1.1" 200 1912646
+INFO [2024-10-16 10:51:29,588] basehttp "GET / HTTP/1.1" 200 27387
+INFO [2024-10-16 10:51:37,926] basehttp "GET / HTTP/1.1" 200 27387
+INFO [2024-10-16 10:51:40,640] basehttp "GET /products/ HTTP/1.1" 200 20277
+INFO [2024-10-16 10:51:40,938] basehttp "POST /api/v1/graph/demolitor HTTP/1.1" 200 1354
+INFO [2024-10-16 10:51:49,518] basehttp "GET /product/94a32d41-4561-4277-b831-a55d546d806f/ HTTP/1.1" 200 33875
+INFO [2024-10-16 10:52:34,792] basehttp "GET /admin/product/category/ HTTP/1.1" 200 18088
+INFO [2024-10-16 10:52:34,853] basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+INFO [2024-10-16 10:52:59,206] basehttp "GET /admin/product/category/f3f90832-b4e7-45c5-ba1b-2a3107539b36/change/ HTTP/1.1" 200 24693
+INFO [2024-10-16 10:52:59,249] basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+WARNING [2024-10-16 10:52:59,300] basehttp "GET /static/tinymce_4/tinymce/langs/.js HTTP/1.1" 404 2006
+WARNING [2024-10-16 10:52:59,355] basehttp "GET /static/tinymce_4/css/__tinymce_4.css?1729093979262 HTTP/1.1" 404 2026
+WARNING [2024-10-16 10:52:59,392] basehttp "GET /static/tinymce_4/css/__tinymce_4.css?1729093979262 HTTP/1.1" 404 2026
+INFO [2024-10-16 10:53:06,945] basehttp "GET /admin/product/product/ HTTP/1.1" 200 17056
+INFO [2024-10-16 10:53:06,984] basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+INFO [2024-10-16 10:53:08,641] basehttp "GET /admin/product/product/94a32d41-4561-4277-b831-a55d546d806f/change/ HTTP/1.1" 200 42412
+INFO [2024-10-16 10:53:08,720] basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+WARNING [2024-10-16 10:53:08,773] basehttp "GET /static/tinymce_4/tinymce/langs/.js HTTP/1.1" 404 2006
+WARNING [2024-10-16 10:53:08,834] basehttp "GET /static/tinymce_4/css/__tinymce_4.css?1729093988734 HTTP/1.1" 404 2026
+WARNING [2024-10-16 10:53:08,870] basehttp "GET /static/tinymce_4/css/__tinymce_4.css?1729093988734 HTTP/1.1" 404 2026
+INFO [2024-10-16 10:53:22,845] basehttp "POST /admin/product/product/94a32d41-4561-4277-b831-a55d546d806f/change/ HTTP/1.1" 302 0
+INFO [2024-10-16 10:53:22,916] basehttp "GET /admin/product/product/94a32d41-4561-4277-b831-a55d546d806f/change/ HTTP/1.1" 200 42900
+INFO [2024-10-16 10:53:22,979] basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+WARNING [2024-10-16 10:53:23,034] basehttp "GET /static/tinymce_4/tinymce/langs/.js HTTP/1.1" 404 2006
+WARNING [2024-10-16 10:53:23,085] basehttp "GET /static/tinymce_4/css/__tinymce_4.css?1729094002991 HTTP/1.1" 404 2026
+WARNING [2024-10-16 10:53:23,145] basehttp "GET /static/tinymce_4/css/__tinymce_4.css?1729094002991 HTTP/1.1" 404 2026
+INFO [2024-10-16 10:53:24,759] basehttp "GET /product/94a32d41-4561-4277-b831-a55d546d806f/ HTTP/1.1" 200 33973
+INFO [2024-10-16 10:53:37,610] basehttp "POST /admin/product/product/94a32d41-4561-4277-b831-a55d546d806f/change/ HTTP/1.1" 302 0
+INFO [2024-10-16 10:53:37,668] basehttp "GET /admin/product/product/94a32d41-4561-4277-b831-a55d546d806f/change/ HTTP/1.1" 200 43044
+INFO [2024-10-16 10:53:37,710] basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+WARNING [2024-10-16 10:53:37,768] basehttp "GET /static/tinymce_4/tinymce/langs/.js HTTP/1.1" 404 2006
+WARNING [2024-10-16 10:53:37,833] basehttp "GET /static/tinymce_4/css/__tinymce_4.css?1729094017725 HTTP/1.1" 404 2026
+WARNING [2024-10-16 10:53:37,857] basehttp "GET /static/tinymce_4/css/__tinymce_4.css?1729094017725 HTTP/1.1" 404 2026
+INFO [2024-10-16 10:53:39,197] basehttp "GET /product/94a32d41-4561-4277-b831-a55d546d806f/ HTTP/1.1" 200 33973
+INFO [2024-10-16 11:03:24,186] basehttp "GET / HTTP/1.1" 200 27387
+INFO [2024-10-16 11:06:50,106] basehttp "GET /products/ HTTP/1.1" 200 20277
+INFO [2024-10-16 11:06:50,468] basehttp "POST /api/v1/graph/demolitor HTTP/1.1" 200 1394
+INFO [2024-10-16 11:06:56,283] basehttp "GET /product/496b6c16-d1c3-462d-8195-bee8c1e1a0ed/ HTTP/1.1" 200 30452
+INFO [2024-10-16 11:07:03,395] basehttp "GET /product/496b6c16-d1c3-462d-8195-bee8c1e1a0ed/ HTTP/1.1" 200 30452
+INFO [2024-10-16 11:07:27,365] basehttp "GET /product/496b6c16-d1c3-462d-8195-bee8c1e1a0ed/ HTTP/1.1" 200 30452
+INFO [2024-10-18 03:07:18,539] autoreload Watching for file changes with StatReloader
+INFO [2024-10-18 03:09:19,156] basehttp "GET / HTTP/1.1" 200 27312
+INFO [2024-10-18 03:09:19,194] basehttp "GET /media/finniu/images/company/f043e14e/7367a8a7.png HTTP/1.1" 200 7698
+INFO [2024-10-18 03:09:19,226] basehttp "GET /static/css/style.css HTTP/1.1" 200 21600
+INFO [2024-10-18 03:09:19,237] basehttp "GET /media/banner/krak.png HTTP/1.1" 200 635211
+INFO [2024-10-18 03:09:19,256] basehttp "GET /media/banner-responsive/Banner_Krak.png HTTP/1.1" 200 1020020
+INFO [2024-10-18 03:09:19,264] basehttp "GET /media/finniu/images/product/900e4c89/proteina-iso.png HTTP/1.1" 200 95786
+INFO [2024-10-18 03:09:19,294] basehttp "GET /media/finniu/images/product/cf7b6a8f/creatina-sport.png HTTP/1.1" 200 2743302
+INFO [2024-10-18 03:09:19,313] basehttp "GET /static/js/swiper.js HTTP/1.1" 200 382
+INFO [2024-10-18 03:09:19,320] basehttp "GET /static/img/demolitor-fitness.png HTTP/1.1" 200 107760
+INFO [2024-10-18 03:09:19,321] basehttp "GET /static/img/demolitor-salud.png HTTP/1.1" 200 107181
+INFO [2024-10-18 03:09:19,322] basehttp "GET /static/img/demolitor-musculo.png HTTP/1.1" 200 105131
+INFO [2024-10-18 03:09:19,326] basehttp "GET /static/img/demolitor-sport.png HTTP/1.1" 200 110063
+INFO [2024-10-18 03:09:19,329] basehttp "GET /static/img/partners/falabella.png HTTP/1.1" 200 3202
+INFO [2024-10-18 03:09:19,329] basehttp "GET /static/img/products/collagen3.png HTTP/1.1" 200 73303
+INFO [2024-10-18 03:09:19,333] basehttp "GET /static/img/partners/mifarma.png HTTP/1.1" 200 4643
+INFO [2024-10-18 03:09:19,334] basehttp "GET /static/img/partners/inkafarma.png HTTP/1.1" 200 7786
+INFO [2024-10-18 03:09:19,335] basehttp "GET /media/finniu/images/product/7c897460/black-maca.png HTTP/1.1" 200 382222
+INFO [2024-10-18 03:09:19,377] basehttp "GET /static/fonts/AvenirLTStd-Roman.otf HTTP/1.1" 200 27176
+INFO [2024-10-18 03:09:19,379] basehttp "GET /static/fonts/ArupalaGrotesk-Ultra.ttf HTTP/1.1" 200 92356
+INFO [2024-10-18 03:09:19,424] basehttp "GET /static/fonts/AvenirLTStd-Black.otf HTTP/1.1" 200 27912
+INFO [2024-10-18 03:09:19,486] basehttp "GET /static/img/banner/background2.png HTTP/1.1" 200 1358304
+INFO [2024-10-18 03:09:19,513] basehttp "GET /static/img/fondo_black_maca1.png HTTP/1.1" 200 1912646
+WARNING [2024-10-18 03:09:19,537] basehttp "GET /static/images/favicon.ico HTTP/1.1" 404 1979
+INFO [2024-10-18 03:09:30,513] basehttp "GET /products/ HTTP/1.1" 200 20202
+INFO [2024-10-18 03:09:30,540] basehttp "GET /static/js/product/product.js HTTP/1.1" 200 2203
+INFO [2024-10-18 03:09:30,637] basehttp "POST /api/v1/graph/demolitor HTTP/1.1" 200 1394
+INFO [2024-10-18 03:09:51,627] basehttp "GET /product/496b6c16-d1c3-462d-8195-bee8c1e1a0ed/ HTTP/1.1" 200 30377
+INFO [2024-10-18 03:09:51,648] basehttp "GET /static/img/products/description/slide2.png HTTP/1.1" 200 63354
+INFO [2024-10-18 03:09:51,649] basehttp "GET /static/img/products/description/slide1.png HTTP/1.1" 200 322813
+INFO [2024-10-18 03:09:51,663] basehttp "GET /static/img/products/description/slide3.png HTTP/1.1" 200 56408
+INFO [2024-10-18 03:15:12,382] autoreload /www/src/apps/product/models/product.py changed, reloading.
+INFO [2024-10-18 03:15:13,148] autoreload Watching for file changes with StatReloader
+INFO [2024-10-18 03:17:24,310] autoreload /www/src/apps/product/admin.py changed, reloading.
+INFO [2024-10-18 03:17:25,092] autoreload Watching for file changes with StatReloader
+INFO [2024-10-18 03:17:28,354] autoreload /www/src/apps/product/admin.py changed, reloading.
+INFO [2024-10-18 03:17:29,082] autoreload Watching for file changes with StatReloader
+INFO [2024-10-18 03:18:01,312] basehttp "GET / HTTP/1.1" 200 27312
+INFO [2024-10-18 03:18:02,479] basehttp "GET /admin HTTP/1.1" 301 0
+INFO [2024-10-18 03:18:02,533] basehttp "GET /admin/ HTTP/1.1" 200 19508
+INFO [2024-10-18 03:18:02,557] basehttp "GET /static/admin/css/base.css HTTP/1.1" 200 22092
+INFO [2024-10-18 03:18:02,570] basehttp "GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+INFO [2024-10-18 03:18:02,602] basehttp "GET /static/admin/js/theme.js HTTP/1.1" 200 1653
+INFO [2024-10-18 03:18:02,602] basehttp "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2810
+INFO [2024-10-18 03:18:02,605] basehttp "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2804
+INFO [2024-10-18 03:18:02,608] basehttp "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+INFO [2024-10-18 03:18:02,608] basehttp "GET /static/admin/css/responsive.css HTTP/1.1" 200 17972
+INFO [2024-10-18 03:18:02,615] basehttp "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+INFO [2024-10-18 03:18:02,615] basehttp "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+WARNING [2024-10-18 03:18:02,657] log Not Found: /favicon.ico
+WARNING [2024-10-18 03:18:02,658] basehttp "GET /favicon.ico HTTP/1.1" 404 4968
+INFO [2024-10-18 03:18:07,965] basehttp "GET /admin/product/product/ HTTP/1.1" 200 17056
+INFO [2024-10-18 03:18:07,984] basehttp "GET /static/admin/css/changelists.css HTTP/1.1" 200 6878
+INFO [2024-10-18 03:18:08,002] basehttp "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+INFO [2024-10-18 03:18:08,002] basehttp "GET /static/admin/js/core.js HTTP/1.1" 200 6208
+INFO [2024-10-18 03:18:08,005] basehttp "GET /static/admin/js/actions.js HTTP/1.1" 200 8076
+INFO [2024-10-18 03:18:08,006] basehttp "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 9097
+INFO [2024-10-18 03:18:08,030] basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+INFO [2024-10-18 03:18:08,031] basehttp "GET /static/admin/img/search.svg HTTP/1.1" 200 458
+INFO [2024-10-18 03:18:08,032] basehttp "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+INFO [2024-10-18 03:18:08,034] basehttp "GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+INFO [2024-10-18 03:18:08,039] basehttp "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 285314
+INFO [2024-10-18 03:18:08,043] basehttp "GET /static/admin/js/filters.js HTTP/1.1" 200 978
+INFO [2024-10-18 03:18:08,043] basehttp "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 325171
+INFO [2024-10-18 03:18:08,059] basehttp "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+INFO [2024-10-18 03:18:09,468] basehttp "GET /admin/product/product/94a32d41-4561-4277-b831-a55d546d806f/change/ HTTP/1.1" 200 45873
+INFO [2024-10-18 03:18:09,490] basehttp "GET /static/admin/css/forms.css HTTP/1.1" 200 8710
+INFO [2024-10-18 03:18:09,506] basehttp "GET /static/tinymce_4/settings/django-grapelli.css HTTP/1.1" 200 150
+INFO [2024-10-18 03:18:09,507] basehttp "GET /static/tinymce_4/settings/tinymce_initialization.js HTTP/1.1" 200 2184
+INFO [2024-10-18 03:18:09,508] basehttp "GET /static/admin/js/inlines.js HTTP/1.1" 200 15526
+INFO [2024-10-18 03:18:09,508] basehttp "GET /static/tinymce_4/settings/django-filebrowser.js HTTP/1.1" 200 395
+INFO [2024-10-18 03:18:09,517] basehttp "GET /static/admin/js/SelectFilter2.js HTTP/1.1" 200 15502
+INFO [2024-10-18 03:18:09,517] basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+INFO [2024-10-18 03:18:09,518] basehttp "GET /static/tinymce_4/settings/full/setup.js HTTP/1.1" 200 27
+INFO [2024-10-18 03:18:09,520] basehttp "GET /static/tinymce_4/settings/full/custom_style_formats.js HTTP/1.1" 200 156
+INFO [2024-10-18 03:18:09,521] basehttp "GET /static/admin/js/SelectBox.js HTTP/1.1" 200 4530
+INFO [2024-10-18 03:18:09,523] basehttp "GET /static/tinymce_4/settings/full/settings.js HTTP/1.1" 200 698
+INFO [2024-10-18 03:18:09,524] basehttp "GET /static/admin/css/widgets.css HTTP/1.1" 200 11564
+INFO [2024-10-18 03:18:09,525] basehttp "GET /static/tinymce_4/settings/full/menubar.js HTTP/1.1" 200 70
+INFO [2024-10-18 03:18:09,525] basehttp "GET /static/tinymce_4/settings/full/external_plugins.js HTTP/1.1" 200 80
+INFO [2024-10-18 03:18:09,527] basehttp "GET /static/tinymce_4/tinymce/tinymce.min.js HTTP/1.1" 200 390376
+INFO [2024-10-18 03:18:09,527] basehttp "GET /static/tinymce_4/settings/full/image_class_list.js HTTP/1.1" 200 145
+INFO [2024-10-18 03:18:09,529] basehttp "GET /static/tinymce_4/settings/full/menu.js HTTP/1.1" 200 96
+INFO [2024-10-18 03:18:09,530] basehttp "GET /static/tinymce_4/settings/full/toolbar.js HTTP/1.1" 200 642
+INFO [2024-10-18 03:18:09,531] basehttp "GET /static/tinymce_4/settings/full/language.js HTTP/1.1" 200 49
+INFO [2024-10-18 03:18:09,532] basehttp "GET /static/tinymce_4/settings/full/plugins.js HTTP/1.1" 200 467
+INFO [2024-10-18 03:18:09,533] basehttp "GET /static/tinymce_4/settings/full/table_class_list.js HTTP/1.1" 200 66
+INFO [2024-10-18 03:18:09,533] basehttp "GET /static/tinymce_4/settings/full/style_formats.js HTTP/1.1" 200 1395
+INFO [2024-10-18 03:18:09,534] basehttp "GET /static/tinymce_4/settings/full/templates.js HTTP/1.1" 200 99
+INFO [2024-10-18 03:18:09,536] basehttp "GET /static/tinymce_4/settings/full.js HTTP/1.1" 200 1596
+INFO [2024-10-18 03:18:09,536] basehttp "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+INFO [2024-10-18 03:18:09,545] basehttp "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 200 581
+INFO [2024-10-18 03:18:09,545] basehttp "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 392
+INFO [2024-10-18 03:18:09,545] basehttp "GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+INFO [2024-10-18 03:18:09,569] basehttp "GET /static/admin/img/inline-delete.svg HTTP/1.1" 200 560
+INFO [2024-10-18 03:18:09,576] basehttp "GET /static/tinymce_4/tinymce/themes/silver/theme.min.js HTTP/1.1" 200 407300
+WARNING [2024-10-18 03:18:09,612] basehttp "GET /static/tinymce_4/tinymce/langs/.js HTTP/1.1" 404 2006
+INFO [2024-10-18 03:18:09,616] basehttp "GET /static/tinymce_4/tinymce/plugins/advlist/plugin.min.js HTTP/1.1" 200 3829
+INFO [2024-10-18 03:18:09,617] basehttp "GET /static/tinymce_4/tinymce/plugins/autolink/plugin.min.js HTTP/1.1" 200 2473
+INFO [2024-10-18 03:18:09,617] basehttp "GET /static/tinymce_4/tinymce/plugins/code/plugin.min.js HTTP/1.1" 200 1165
+INFO [2024-10-18 03:18:09,618] basehttp "GET /static/tinymce_4/tinymce/plugins/anchor/plugin.min.js HTTP/1.1" 200 2804
+INFO [2024-10-18 03:18:09,620] basehttp "GET /static/tinymce_4/tinymce/icons/default/icons.min.js HTTP/1.1" 200 59004
+INFO [2024-10-18 03:18:09,621] basehttp "GET /static/tinymce_4/tinymce/plugins/charmap/plugin.min.js HTTP/1.1" 200 12024
+INFO [2024-10-18 03:18:09,622] basehttp "GET /static/tinymce_4/tinymce/plugins/directionality/plugin.min.js HTTP/1.1" 200 4064
+INFO [2024-10-18 03:18:09,623] basehttp "GET /static/tinymce_4/tinymce/plugins/codesample/plugin.min.js HTTP/1.1" 200 33839
+INFO [2024-10-18 03:18:09,624] basehttp "GET /static/tinymce_4/tinymce/plugins/emoticons/plugin.min.js HTTP/1.1" 200 6556
+INFO [2024-10-18 03:18:09,625] basehttp "GET /static/tinymce_4/tinymce/plugins/fullscreen/plugin.min.js HTTP/1.1" 200 11101
+INFO [2024-10-18 03:18:09,626] basehttp "GET /static/tinymce_4/tinymce/plugins/hr/plugin.min.js HTTP/1.1" 200 816
+INFO [2024-10-18 03:18:09,627] basehttp "GET /static/tinymce_4/tinymce/plugins/image/plugin.min.js HTTP/1.1" 200 21728
+INFO [2024-10-18 03:18:09,629] basehttp "GET /static/tinymce_4/tinymce/plugins/imagetools/plugin.min.js HTTP/1.1" 200 16878
+INFO [2024-10-18 03:18:09,631] basehttp "GET /static/tinymce_4/tinymce/plugins/importcss/plugin.min.js HTTP/1.1" 200 4086
+INFO [2024-10-18 03:18:09,632] basehttp "GET /static/tinymce_4/tinymce/plugins/insertdatetime/plugin.min.js HTTP/1.1" 200 3011
+INFO [2024-10-18 03:18:09,633] basehttp "GET /static/tinymce_4/tinymce/plugins/link/plugin.min.js HTTP/1.1" 200 15473
+INFO [2024-10-18 03:18:09,635] basehttp "GET /static/tinymce_4/tinymce/plugins/lists/plugin.min.js HTTP/1.1" 200 27502
+INFO [2024-10-18 03:18:09,636] basehttp "GET /static/tinymce_4/tinymce/plugins/pagebreak/plugin.min.js HTTP/1.1" 200 1722
+INFO [2024-10-18 03:18:09,637] basehttp "GET /static/tinymce_4/tinymce/plugins/nonbreaking/plugin.min.js HTTP/1.1" 200 1471
+INFO [2024-10-18 03:18:09,637] basehttp "GET /static/tinymce_4/tinymce/plugins/media/plugin.min.js HTTP/1.1" 200 17383
+INFO [2024-10-18 03:18:09,639] basehttp "GET /static/tinymce_4/tinymce/plugins/preview/plugin.min.js HTTP/1.1" 200 2159
+INFO [2024-10-18 03:18:09,641] basehttp "GET /static/tinymce_4/tinymce/plugins/paste/plugin.min.js HTTP/1.1" 200 22084
+INFO [2024-10-18 03:18:09,642] basehttp "GET /static/tinymce_4/tinymce/plugins/print/plugin.min.js HTTP/1.1" 200 864
+INFO [2024-10-18 03:18:09,642] basehttp "GET /static/tinymce_4/tinymce/plugins/save/plugin.min.js HTTP/1.1" 200 1741
+INFO [2024-10-18 03:18:09,643] basehttp "GET /static/tinymce_4/tinymce/plugins/quickbars/plugin.min.js HTTP/1.1" 200 6601
+INFO [2024-10-18 03:18:09,644] basehttp "GET /static/tinymce_4/tinymce/plugins/searchreplace/plugin.min.js HTTP/1.1" 200 15169
+INFO [2024-10-18 03:18:09,645] basehttp "GET /static/tinymce_4/tinymce/plugins/spellchecker/plugin.min.js HTTP/1.1" 200 10047
+INFO [2024-10-18 03:18:09,649] basehttp "GET /static/tinymce_4/tinymce/plugins/visualblocks/plugin.min.js HTTP/1.1" 200 1460
+INFO [2024-10-18 03:18:09,651] basehttp "GET /static/tinymce_4/tinymce/plugins/template/plugin.min.js HTTP/1.1" 200 7790
+INFO [2024-10-18 03:18:09,651] basehttp "GET /static/tinymce_4/tinymce/plugins/visualchars/plugin.min.js HTTP/1.1" 200 6241
+INFO [2024-10-18 03:18:09,651] basehttp "GET /static/tinymce_4/tinymce/plugins/wordcount/plugin.min.js HTTP/1.1" 200 12283
+INFO [2024-10-18 03:18:09,652] basehttp "GET /static/tinymce_4/tinymce/plugins/table/plugin.min.js HTTP/1.1" 200 126026
+INFO [2024-10-18 03:18:09,673] basehttp "GET /static/tinymce_4/tinymce/skins/ui/oxide/skin.min.css HTTP/1.1" 200 58689
+INFO [2024-10-18 03:18:09,723] basehttp "GET /static/tinymce_4/tinymce/skins/ui/oxide/content.min.css HTTP/1.1" 200 20667
+WARNING [2024-10-18 03:18:09,726] basehttp "GET /static/tinymce_4/css/__tinymce_4.css?1729239489539 HTTP/1.1" 404 2026
+WARNING [2024-10-18 03:18:09,759] basehttp "GET /static/tinymce_4/css/__tinymce_4.css?1729239489539 HTTP/1.1" 404 2026
+INFO [2024-10-18 03:18:09,793] basehttp "GET /static/tinymce_4/tinymce/plugins/emoticons/js/emojis.min.js HTTP/1.1" 200 193222
+INFO [2024-10-18 03:18:09,822] basehttp "GET /static/admin/img/icon-unknown-alt.svg HTTP/1.1" 200 655
+INFO [2024-10-18 03:18:09,822] basehttp "GET /static/admin/img/selector-icons.svg HTTP/1.1" 200 3291
+INFO [2024-10-18 03:18:09,822] basehttp "GET /static/admin/img/icon-unknown.svg HTTP/1.1" 200 655
+INFO [2024-10-18 03:18:51,210] autoreload /www/src/apps/product/models/product.py changed, reloading.
+INFO [2024-10-18 03:18:51,910] autoreload Watching for file changes with StatReloader
+INFO [2024-10-18 03:19:25,843] autoreload /www/src/apps/product/migrations/0021_characteristic.py changed, reloading.
+INFO [2024-10-18 03:19:26,692] autoreload Watching for file changes with StatReloader
+INFO [2024-10-18 03:19:32,063] basehttp "GET /admin/product/product/94a32d41-4561-4277-b831-a55d546d806f/change/ HTTP/1.1" 200 45855
+INFO [2024-10-18 03:19:32,102] basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+WARNING [2024-10-18 03:19:32,183] basehttp "GET /static/tinymce_4/tinymce/langs/.js HTTP/1.1" 404 2006
+WARNING [2024-10-18 03:19:32,251] basehttp "GET /static/tinymce_4/css/__tinymce_4.css?1729239572130 HTTP/1.1" 404 2026
+WARNING [2024-10-18 03:19:32,280] basehttp "GET /static/tinymce_4/css/__tinymce_4.css?1729239572130 HTTP/1.1" 404 2026
+INFO [2024-10-18 03:21:15,602] basehttp "POST /admin/product/product/94a32d41-4561-4277-b831-a55d546d806f/change/ HTTP/1.1" 302 0
+INFO [2024-10-18 03:21:15,660] basehttp "GET /admin/product/product/94a32d41-4561-4277-b831-a55d546d806f/change/ HTTP/1.1" 200 62319
+INFO [2024-10-18 03:21:15,685] basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+INFO [2024-10-18 03:21:15,722] basehttp "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+WARNING [2024-10-18 03:21:15,763] basehttp "GET /static/tinymce_4/tinymce/langs/.js HTTP/1.1" 404 2006
+WARNING [2024-10-18 03:21:15,825] basehttp "GET /static/tinymce_4/css/__tinymce_4.css?1729239675710 HTTP/1.1" 404 2026
+WARNING [2024-10-18 03:21:15,853] basehttp "GET /static/tinymce_4/css/__tinymce_4.css?1729239675710 HTTP/1.1" 404 2026
+INFO [2024-10-18 03:21:26,223] basehttp "GET /products/ HTTP/1.1" 200 20202
+INFO [2024-10-18 03:21:26,387] basehttp "POST /api/v1/graph/demolitor HTTP/1.1" 200 1394
+INFO [2024-10-18 03:21:29,638] basehttp "GET /product/94a32d41-4561-4277-b831-a55d546d806f/ HTTP/1.1" 200 33898
+INFO [2024-10-18 03:21:29,679] basehttp "GET /media/finniu/images/product/5fcf47a2/94deaa4c.png HTTP/1.1" 200 729706
+INFO [2024-10-18 03:21:29,730] basehttp "GET /media/finniu/images/product/3354f1ab/ce0de5e6.png HTTP/1.1" 200 634078
+INFO [2024-10-18 03:21:29,737] basehttp "GET /media/finniu/images/product/7563aedb/7f79b686.png HTTP/1.1" 200 705991
+INFO [2024-10-18 03:21:29,740] basehttp "GET /media/finniu/images/product/f455cc01/b84bc12d.png HTTP/1.1" 200 639493
+INFO [2024-10-18 03:21:29,742] basehttp "GET /media/finniu/images/product/4f62df47/58cc7e4f.png HTTP/1.1" 200 699383
+ERROR [2024-10-18 03:23:32,716] log Internal Server Error: /product/94a32d41-4561-4277-b831-a55d546d806f/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/usr/local/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/usr/local/lib/python3.10/site-packages/django/template/response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/usr/local/lib/python3.10/site-packages/django/template/response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+  File "/usr/local/lib/python3.10/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/usr/local/lib/python3.10/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+  File "/usr/local/lib/python3.10/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.10/site-packages/django/template/defaulttags.py", line 861, in do_for
+    sequence = parser.compile_filter(bits[in_index + 1])
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 605, in compile_filter
+    return FilterExpression(token, self)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 706, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '()' from 'product.characteristics.all()'
+ERROR [2024-10-18 03:23:32,719] basehttp "GET /product/94a32d41-4561-4277-b831-a55d546d806f/ HTTP/1.1" 500 207345
+INFO [2024-10-18 03:23:39,303] basehttp "GET /product/94a32d41-4561-4277-b831-a55d546d806f/ HTTP/1.1" 200 39611
+INFO [2024-10-18 03:24:04,537] basehttp "GET /product/94a32d41-4561-4277-b831-a55d546d806f/ HTTP/1.1" 200 36280
+INFO [2024-10-18 03:25:42,084] basehttp "GET /product/94a32d41-4561-4277-b831-a55d546d806f/ HTTP/1.1" 200 34591
+INFO [2024-10-18 03:27:14,342] basehttp "GET /product/94a32d41-4561-4277-b831-a55d546d806f/ HTTP/1.1" 200 35682
+INFO [2024-10-18 03:27:37,798] basehttp "GET /product/94a32d41-4561-4277-b831-a55d546d806f/ HTTP/1.1" 200 34952
+INFO [2024-10-18 03:28:51,814] autoreload /www/src/apps/product/models/product.py changed, reloading.
+INFO [2024-10-18 03:28:52,567] autoreload Watching for file changes with StatReloader
+INFO [2024-10-18 03:29:04,057] basehttp "GET /admin/product/product/94a32d41-4561-4277-b831-a55d546d806f/change/ HTTP/1.1" 200 63782
+INFO [2024-10-18 03:29:04,140] basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+WARNING [2024-10-18 03:29:04,205] basehttp "GET /static/tinymce_4/tinymce/langs/.js HTTP/1.1" 404 2006
+WARNING [2024-10-18 03:29:04,260] basehttp "GET /static/tinymce_4/css/__tinymce_4.css?1729240144151 HTTP/1.1" 404 2026
+WARNING [2024-10-18 03:29:04,293] basehttp "GET /static/tinymce_4/css/__tinymce_4.css?1729240144151 HTTP/1.1" 404 2026
+INFO [2024-10-18 03:32:10,818] basehttp "POST /admin/product/product/94a32d41-4561-4277-b831-a55d546d806f/change/ HTTP/1.1" 302 0
+INFO [2024-10-18 03:32:10,886] basehttp "GET /admin/product/product/94a32d41-4561-4277-b831-a55d546d806f/change/ HTTP/1.1" 200 69394
+INFO [2024-10-18 03:32:10,921] basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+WARNING [2024-10-18 03:32:11,012] basehttp "GET /static/tinymce_4/tinymce/langs/.js HTTP/1.1" 404 2006
+WARNING [2024-10-18 03:32:11,081] basehttp "GET /static/tinymce_4/css/__tinymce_4.css?1729240330953 HTTP/1.1" 404 2026
+WARNING [2024-10-18 03:32:11,107] basehttp "GET /static/tinymce_4/css/__tinymce_4.css?1729240330953 HTTP/1.1" 404 2026
+INFO [2024-10-18 03:33:15,701] basehttp "GET /product/94a32d41-4561-4277-b831-a55d546d806f/ HTTP/1.1" 200 34706
+INFO [2024-10-18 03:33:15,722] basehttp "GET /media/finniu/images/product/1b27ee3b/f5c4945d.png HTTP/1.1" 200 81620
+INFO [2024-10-18 03:33:15,724] basehttp "GET /media/finniu/images/product/bda3658a/8b582f19.png HTTP/1.1" 200 63354
+INFO [2024-10-18 03:33:15,748] basehttp "GET /media/finniu/images/product/128b6069/9bd90a29.png HTTP/1.1" 200 322813
+INFO [2024-10-18 03:33:24,181] basehttp "GET /product/94a32d41-4561-4277-b831-a55d546d806f/ HTTP/1.1" 200 35404
+INFO [2024-10-18 03:34:43,101] basehttp "GET /product/94a32d41-4561-4277-b831-a55d546d806f/ HTTP/1.1" 200 35768
+INFO [2024-10-18 03:34:43,126] basehttp "GET /media/finniu/images/product/1b27ee3b/f5c4945d.png HTTP/1.1" 304 0
+INFO [2024-10-18 03:34:43,139] basehttp "GET /media/finniu/images/product/128b6069/9bd90a29.png HTTP/1.1" 304 0
+INFO [2024-10-18 03:34:43,139] basehttp "GET /media/finniu/images/product/bda3658a/8b582f19.png HTTP/1.1" 304 0
+INFO [2024-10-18 03:35:12,433] basehttp "GET /product/94a32d41-4561-4277-b831-a55d546d806f/ HTTP/1.1" 200 35741
+INFO [2024-10-18 03:35:12,468] basehttp "GET /media/finniu/images/product/bda3658a/8b582f19.png HTTP/1.1" 304 0
+INFO [2024-10-18 03:35:12,471] basehttp "GET /media/finniu/images/product/1b27ee3b/f5c4945d.png HTTP/1.1" 304 0
+INFO [2024-10-18 03:35:12,480] basehttp "GET /media/finniu/images/product/128b6069/9bd90a29.png HTTP/1.1" 304 0
+INFO [2024-10-18 03:35:49,660] basehttp "GET /product/94a32d41-4561-4277-b831-a55d546d806f/ HTTP/1.1" 200 34860
+INFO [2024-10-18 03:35:49,688] basehttp "GET /media/finniu/images/product/bda3658a/8b582f19.png HTTP/1.1" 304 0
+INFO [2024-10-18 03:35:49,688] basehttp "GET /media/finniu/images/product/1b27ee3b/f5c4945d.png HTTP/1.1" 304 0
+INFO [2024-10-18 03:35:49,739] basehttp "GET /media/finniu/images/product/128b6069/9bd90a29.png HTTP/1.1" 304 0
+INFO [2024-10-18 03:36:03,704] basehttp "GET /product/94a32d41-4561-4277-b831-a55d546d806f/ HTTP/1.1" 200 34860
+INFO [2024-10-18 03:36:14,584] basehttp "GET /product/94a32d41-4561-4277-b831-a55d546d806f/ HTTP/1.1" 200 34861
+INFO [2024-10-18 03:36:14,644] basehttp "GET /media/finniu/images/product/bda3658a/8b582f19.png HTTP/1.1" 304 0
+INFO [2024-10-18 03:36:14,645] basehttp "GET /media/finniu/images/product/1b27ee3b/f5c4945d.png HTTP/1.1" 304 0
+INFO [2024-10-18 03:36:14,676] basehttp "GET /media/finniu/images/product/128b6069/9bd90a29.png HTTP/1.1" 304 0
+INFO [2024-10-18 03:36:26,407] basehttp "GET /product/94a32d41-4561-4277-b831-a55d546d806f/ HTTP/1.1" 200 34862
+INFO [2024-10-18 03:37:37,260] autoreload /www/src/apps/product/models/product.py changed, reloading.
+INFO [2024-10-18 03:37:37,997] autoreload Watching for file changes with StatReloader
+INFO [2024-10-18 03:37:51,458] autoreload /www/src/apps/product/models/product.py changed, reloading.
+INFO [2024-10-18 03:37:52,159] autoreload Watching for file changes with StatReloader
+INFO [2024-10-18 03:38:05,597] autoreload /www/src/apps/product/models/product.py changed, reloading.
+INFO [2024-10-18 03:38:06,396] autoreload Watching for file changes with StatReloader
+INFO [2024-10-18 03:40:24,611] autoreload /www/src/apps/product/models/product.py changed, reloading.
+INFO [2024-10-18 03:40:25,316] autoreload Watching for file changes with StatReloader
