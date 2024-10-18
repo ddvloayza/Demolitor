@@ -10307,3 +10307,16 @@ LINE 1: ...duct_product"."image", "product_product"."price", "product_p...
                                                              ^
 
 ERROR [2024-10-18 09:38:03,087] basehttp "GET /product/94a32d41-4561-4277-b831-a55d546d806f/ HTTP/1.1" 500 144855
+INFO [2024-10-18 09:39:48,672] basehttp "GET /product/94a32d41-4561-4277-b831-a55d546d806f/ HTTP/1.1" 200 34862
+INFO [2024-10-18 09:39:48,753] basehttp "GET /media/finniu/images/product/1b27ee3b/f5c4945d.png HTTP/1.1" 304 0
+INFO [2024-10-18 09:39:48,757] basehttp "GET /media/finniu/images/product/bda3658a/8b582f19.png HTTP/1.1" 304 0
+INFO [2024-10-18 09:39:48,760] basehttp "GET /media/finniu/images/product/128b6069/9bd90a29.png HTTP/1.1" 304 0
+INFO [2024-10-18 10:06:20,373] basehttp "GET /admin/product/product/94a32d41-4561-4277-b831-a55d546d806f/change/ HTTP/1.1" 200 69517
+INFO [2024-10-18 10:06:20,416] basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+WARNING [2024-10-18 10:06:20,550] basehttp "GET /static/tinymce_4/tinymce/langs/.js HTTP/1.1" 404 2006
+WARNING [2024-10-18 10:06:20,611] basehttp "GET /static/tinymce_4/css/__tinymce_4.css?1729263980460 HTTP/1.1" 404 2026
+INFO [2024-10-18 10:07:16,573] basehttp "GET /products/ HTTP/1.1" 200 20202
+INFO [2024-10-18 10:07:16,827] basehttp "POST /api/v1/graph/demolitor HTTP/1.1" 200 1394
+INFO [2024-10-18 10:07:16,869] basehttp "GET /media/finniu/images/product/cf7b6a8f/creatina-sport.png HTTP/1.1" 200 2743302
+INFO [2024-10-18 10:23:13,468] basehttp "GET /product/496b6c16-d1c3-462d-8195-bee8c1e1a0ed/ HTTP/1.1" 200 24369
+INFO [2024-10-18 10:23:16,089] basehttp "GET /product/496b6c16-d1c3-462d-8195-bee8c1e1a0ed/ HTTP/1.1" 200 24369
