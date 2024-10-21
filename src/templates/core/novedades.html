@@ -31,10 +31,16 @@
             <div class="text-center py-4 text-white">
               <div class="py-4 text-white text-2xl">{{ product_oferta.name }}</div>
               <div class="flex flex-col items-center justify-center">
-                <div class="grid grid-cols-2 gap-4 text-center">
-                  <p class="text-2xl text-white line-through">S/. {{ product_oferta.price }}</p>
-                  <p class="text-2xl">S/. {{ product_oferta.price }}</p>
-                </div>
+                {% if product_oferta.price_discount %}
+                    <div class="grid grid-cols-2 gap-4 text-center">
+                        <p class="text-white text-2xl line-through">S/. {{ product_oferta.price }}</p>
+                        <p class="text-white text-2xl">S/. {{ product_oferta.price_discount }}</p>
+                    </div>
+                {% else %}
+                    <div class="grid grid-cols-1 gap-4 text-center">
+                        <p class="text-white text-2xl">S/. {{ product_oferta.price }}</p>
+                    </div>
+                {% endif %}
                 <!-- Botón centrado y más grande -->
                   <a href="{% url 'core:product_detail' product_oferta.uuid %}">
                     <button class="mt-4 text-white bg-red-500 px-8 py-3 rounded-lg hover:bg-red-700 transition-colors duration-300">
@@ -56,10 +62,16 @@
             <div class="text-center py-4 text-white">
               <div class="py-4 text-white text-2xl">{{ product_novedad.name }}</div>
               <div class="flex flex-col items-center justify-center">
-                <div class="grid grid-cols-2 gap-4 text-center">
-                  <p class="text-white text-2xl line-through">S/. {{ product_novedad.price }}</p>
-                  <p class="text-white text-2xl ">S/. {{ product_novedad.price }}</p>
-                </div>
+                {% if product_novedad.price_discount %}
+                    <div class="grid grid-cols-2 gap-4 text-center">
+                        <p class="text-white text-2xl line-through">S/. {{ product_novedad.price }}</p>
+                        <p class="text-white text-2xl">S/. {{ product_novedad.price_discount }}</p>
+                    </div>
+                {% else %}
+                    <div class="grid grid-cols-1 gap-4 text-center">
+                        <p class="text-white text-2xl">S/. {{ product_novedad.price }}</p>
+                    </div>
+                {% endif %}
                   <!-- Botón centrado y más grande -->
                 <a href="{% url 'core:product_detail' product_novedad.uuid %}">
                     <button class="mt-4 text-white bg-red-500 px-8 py-3 rounded-lg hover:bg-red-700 transition-colors duration-300">
@@ -81,10 +93,19 @@
             <div class="text-center py-4">
               <div class="py-4 text-white text-2xl">{{ product_packs.name }}</div>
               <div class="flex flex-col items-center justify-center">
-                <div class="grid grid-cols-2 gap-4 text-center">
-                  <p class="text-white text-2xl line-through">S/. {{ product_packs.price }}</p>
-                  <p class="text-white text-2xl">S/. {{ product_packs.price }}</p>
-                </div>
+
+                    {% if product_packs.price_discount %}
+                        <div class="grid grid-cols-2 gap-4 text-center">
+                            <p class="text-white text-2xl line-through">S/. {{ product_packs.price }}</p>
+                            <p class="text-white text-2xl">S/. {{ product_packs.price_discount }}</p>
+                        </div>
+                    {% else %}
+                        <div class="grid grid-cols-1 gap-4 text-center">
+                            <p class="text-white text-2xl">S/. {{ product_packs.price }}</p>
+                        </div>
+                    {% endif %}
+
+
                   <!-- Botón centrado y más grande -->
                 <a href="{% url 'core:product_detail' product_packs.uuid %}">
                     <button class="mt-4 text-white bg-red-500 px-8 py-3 rounded-lg hover:bg-red-700 transition-colors duration-300">

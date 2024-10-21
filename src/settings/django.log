@@ -336,3 +336,358 @@ INFO [2024-10-20 23:15:34,024] basehttp "POST /api/v1/graph/demolitor HTTP/1.1" 
 INFO [2024-10-20 23:15:46,166] basehttp "GET / HTTP/1.1" 200 28757
 INFO [2024-10-20 23:15:52,196] basehttp "GET /product/7376a63a-103f-4acc-ac20-263401a8e17b/ HTTP/1.1" 200 24729
 INFO [2024-10-20 23:15:58,079] basehttp "GET / HTTP/1.1" 200 28757
+INFO [2024-10-21 12:53:44,486] autoreload Watching for file changes with StatReloader
+ERROR [2024-10-21 15:52:05,550] log Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/usr/local/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/usr/local/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/usr/local/lib/python3.10/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader_tags.py", line 199, in render
+    template = context.template.engine.select_template(template_name)
+  File "/usr/local/lib/python3.10/site-packages/django/template/engine.py", line 208, in select_template
+    return self.get_template(template_name)
+  File "/usr/local/lib/python3.10/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+  File "/usr/local/lib/python3.10/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.10/site-packages/django/template/defaulttags.py", line 862, in do_for
+    nodelist_loop = parser.parse(
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.10/site-packages/django/template/defaulttags.py", line 982, in do_if
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Malformed template tag at line 88: "else %"
+ERROR [2024-10-21 15:52:05,556] basehttp "GET / HTTP/1.1" 500 242147
+WARNING [2024-10-21 15:52:05,808] log Not Found: /favicon.ico
+WARNING [2024-10-21 15:52:05,811] basehttp "GET /favicon.ico HTTP/1.1" 404 4968
+INFO [2024-10-21 15:52:13,198] basehttp "GET / HTTP/1.1" 200 28729
+INFO [2024-10-21 15:52:13,227] basehttp "GET /static/css/style.css HTTP/1.1" 304 0
+INFO [2024-10-21 15:52:13,237] basehttp "GET /media/banner/krak.png HTTP/1.1" 200 635211
+INFO [2024-10-21 15:52:13,280] basehttp "GET /media/banner-responsive/Banner_Krak.png HTTP/1.1" 200 1020020
+INFO [2024-10-21 15:52:13,292] basehttp "GET /media/finniu/images/product/900e4c89/proteina-iso.png HTTP/1.1" 200 95786
+INFO [2024-10-21 15:52:13,323] basehttp "GET /media/finniu/images/product/cf7b6a8f/creatina-sport.png HTTP/1.1" 200 2743302
+INFO [2024-10-21 15:52:13,367] basehttp "GET /static/js/swiper.js HTTP/1.1" 304 0
+INFO [2024-10-21 15:52:13,900] basehttp "GET /media/finniu/images/product/7c897460/black-maca.png HTTP/1.1" 200 382222
+INFO [2024-10-21 15:52:13,947] basehttp "GET /static/img/demolitor-musculo.png HTTP/1.1" 200 105131
+INFO [2024-10-21 15:52:13,957] basehttp "GET /static/img/demolitor-fitness.png HTTP/1.1" 200 107760
+INFO [2024-10-21 15:52:13,958] basehttp "GET /static/img/demolitor-salud.png HTTP/1.1" 200 107181
+INFO [2024-10-21 15:52:13,962] basehttp "GET /static/img/products/collagen3.png HTTP/1.1" 200 73303
+INFO [2024-10-21 15:52:13,963] basehttp "GET /static/img/demolitor-sport.png HTTP/1.1" 200 110063
+INFO [2024-10-21 15:52:13,990] basehttp "GET /static/fonts/ArupalaGrotesk-Ultra.ttf HTTP/1.1" 200 92356
+INFO [2024-10-21 15:52:14,021] basehttp "GET /static/img/banner/background2.png HTTP/1.1" 200 1358304
+INFO [2024-10-21 15:52:14,050] basehttp "GET /static/img/fondo_black_maca1.png HTTP/1.1" 200 1912646
+WARNING [2024-10-21 15:52:14,120] basehttp "GET /static/images/favicon.ico HTTP/1.1" 404 1979
+INFO [2024-10-21 15:52:42,066] basehttp "GET / HTTP/1.1" 200 28741
+INFO [2024-10-21 16:11:08,411] basehttp "GET / HTTP/1.1" 200 28751
+INFO [2024-10-21 16:17:28,367] basehttp "GET / HTTP/1.1" 200 28706
+INFO [2024-10-21 16:29:12,418] basehttp "GET / HTTP/1.1" 200 28706
+INFO [2024-10-21 16:43:05,278] basehttp "GET / HTTP/1.1" 200 28706
+INFO [2024-10-21 16:43:49,378] basehttp "GET /admin HTTP/1.1" 301 0
+INFO [2024-10-21 16:43:49,566] basehttp "GET /admin/ HTTP/1.1" 200 19591
+INFO [2024-10-21 16:43:49,601] basehttp "GET /static/admin/css/base.css HTTP/1.1" 200 22092
+INFO [2024-10-21 16:43:49,619] basehttp "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+INFO [2024-10-21 16:43:49,620] basehttp "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2804
+INFO [2024-10-21 16:43:49,621] basehttp "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2810
+INFO [2024-10-21 16:43:49,621] basehttp "GET /static/admin/css/responsive.css HTTP/1.1" 200 17972
+INFO [2024-10-21 16:43:49,670] basehttp "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+INFO [2024-10-21 16:44:01,136] basehttp "GET / HTTP/1.1" 200 28706
+INFO [2024-10-21 16:45:12,260] basehttp "GET /admin/product/product/ HTTP/1.1" 200 17056
+INFO [2024-10-21 16:45:12,275] basehttp "GET /static/admin/css/changelists.css HTTP/1.1" 200 6878
+INFO [2024-10-21 16:45:12,283] basehttp "GET /static/admin/js/actions.js HTTP/1.1" 200 8076
+INFO [2024-10-21 16:45:12,287] basehttp "GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+INFO [2024-10-21 16:45:12,289] basehttp "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 9097
+INFO [2024-10-21 16:45:12,291] basehttp "GET /static/admin/js/core.js HTTP/1.1" 200 6208
+INFO [2024-10-21 16:45:12,338] basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+INFO [2024-10-21 16:45:12,360] basehttp "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 285314
+INFO [2024-10-21 16:45:12,365] basehttp "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 325171
+INFO [2024-10-21 16:45:12,382] basehttp "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+INFO [2024-10-21 16:45:14,344] basehttp "GET /admin/product/product/7376a63a-103f-4acc-ac20-263401a8e17b/change/ HTTP/1.1" 200 40119
+INFO [2024-10-21 16:45:14,400] basehttp "GET /static/admin/css/forms.css HTTP/1.1" 200 8710
+INFO [2024-10-21 16:45:14,456] basehttp "GET /static/admin/js/SelectFilter2.js HTTP/1.1" 200 15502
+INFO [2024-10-21 16:45:14,465] basehttp "GET /static/tinymce_4/settings/tinymce_initialization.js HTTP/1.1" 200 2184
+INFO [2024-10-21 16:45:14,469] basehttp "GET /static/admin/js/SelectBox.js HTTP/1.1" 200 4530
+INFO [2024-10-21 16:45:14,472] basehttp "GET /static/admin/css/widgets.css HTTP/1.1" 200 11564
+INFO [2024-10-21 16:45:14,473] basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+INFO [2024-10-21 16:45:14,473] basehttp "GET /static/admin/js/inlines.js HTTP/1.1" 200 15526
+INFO [2024-10-21 16:45:14,479] basehttp "GET /static/tinymce_4/tinymce/tinymce.min.js HTTP/1.1" 200 390376
+INFO [2024-10-21 16:45:14,525] basehttp "GET /static/tinymce_4/tinymce/themes/silver/theme.min.js HTTP/1.1" 200 407300
+INFO [2024-10-21 16:45:14,583] basehttp "GET /static/tinymce_4/tinymce/plugins/charmap/plugin.min.js HTTP/1.1" 200 12024
+INFO [2024-10-21 16:45:14,583] basehttp "GET /static/tinymce_4/tinymce/plugins/anchor/plugin.min.js HTTP/1.1" 200 2804
+WARNING [2024-10-21 16:45:14,589] basehttp "GET /static/tinymce_4/tinymce/langs/.js HTTP/1.1" 404 2006
+INFO [2024-10-21 16:45:14,592] basehttp "GET /static/tinymce_4/tinymce/plugins/autolink/plugin.min.js HTTP/1.1" 200 2473
+INFO [2024-10-21 16:45:14,599] basehttp "GET /static/tinymce_4/tinymce/plugins/emoticons/plugin.min.js HTTP/1.1" 200 6556
+INFO [2024-10-21 16:45:14,600] basehttp "GET /static/tinymce_4/tinymce/plugins/advlist/plugin.min.js HTTP/1.1" 200 3829
+INFO [2024-10-21 16:45:14,602] basehttp "GET /static/tinymce_4/tinymce/plugins/directionality/plugin.min.js HTTP/1.1" 200 4064
+INFO [2024-10-21 16:45:14,602] basehttp "GET /static/tinymce_4/tinymce/icons/default/icons.min.js HTTP/1.1" 200 59004
+INFO [2024-10-21 16:45:14,603] basehttp "GET /static/tinymce_4/tinymce/plugins/fullscreen/plugin.min.js HTTP/1.1" 200 11101
+INFO [2024-10-21 16:45:14,606] basehttp "GET /static/tinymce_4/tinymce/plugins/codesample/plugin.min.js HTTP/1.1" 200 33839
+INFO [2024-10-21 16:45:14,609] basehttp "GET /static/tinymce_4/tinymce/plugins/imagetools/plugin.min.js HTTP/1.1" 200 16878
+INFO [2024-10-21 16:45:14,621] basehttp "GET /static/tinymce_4/tinymce/plugins/link/plugin.min.js HTTP/1.1" 200 15473
+INFO [2024-10-21 16:45:14,612] basehttp "GET /static/tinymce_4/tinymce/plugins/insertdatetime/plugin.min.js HTTP/1.1" 200 3011
+INFO [2024-10-21 16:45:14,614] basehttp "GET /static/tinymce_4/tinymce/plugins/importcss/plugin.min.js HTTP/1.1" 200 4086
+INFO [2024-10-21 16:45:14,617] basehttp "GET /static/tinymce_4/tinymce/plugins/lists/plugin.min.js HTTP/1.1" 200 27502
+INFO [2024-10-21 16:45:14,610] basehttp "GET /static/tinymce_4/tinymce/plugins/image/plugin.min.js HTTP/1.1" 200 21728
+INFO [2024-10-21 16:45:14,623] basehttp "GET /static/tinymce_4/tinymce/plugins/media/plugin.min.js HTTP/1.1" 200 17383
+INFO [2024-10-21 16:45:14,628] basehttp "GET /static/tinymce_4/tinymce/plugins/preview/plugin.min.js HTTP/1.1" 200 2159
+INFO [2024-10-21 16:45:14,628] basehttp "GET /static/tinymce_4/tinymce/plugins/spellchecker/plugin.min.js HTTP/1.1" 200 10047
+INFO [2024-10-21 16:45:14,629] basehttp "GET /static/tinymce_4/tinymce/plugins/quickbars/plugin.min.js HTTP/1.1" 200 6601
+INFO [2024-10-21 16:45:14,630] basehttp "GET /static/tinymce_4/tinymce/plugins/searchreplace/plugin.min.js HTTP/1.1" 200 15169
+INFO [2024-10-21 16:45:14,632] basehttp "GET /static/tinymce_4/tinymce/plugins/paste/plugin.min.js HTTP/1.1" 200 22084
+INFO [2024-10-21 16:45:14,633] basehttp "GET /static/tinymce_4/tinymce/plugins/table/plugin.min.js HTTP/1.1" 200 126026
+INFO [2024-10-21 16:45:14,634] basehttp "GET /static/tinymce_4/tinymce/plugins/template/plugin.min.js HTTP/1.1" 200 7790
+INFO [2024-10-21 16:45:14,636] basehttp "GET /static/tinymce_4/tinymce/plugins/visualchars/plugin.min.js HTTP/1.1" 200 6241
+INFO [2024-10-21 16:45:14,637] basehttp "GET /static/tinymce_4/tinymce/plugins/wordcount/plugin.min.js HTTP/1.1" 200 12283
+INFO [2024-10-21 16:45:14,655] basehttp "GET /static/tinymce_4/tinymce/skins/ui/oxide/skin.min.css HTTP/1.1" 200 58689
+INFO [2024-10-21 16:45:14,714] basehttp "GET /static/tinymce_4/tinymce/skins/ui/oxide/content.min.css HTTP/1.1" 200 20667
+WARNING [2024-10-21 16:45:14,728] basehttp "GET /static/tinymce_4/css/__tinymce_4.css?1729547114492 HTTP/1.1" 404 2026
+INFO [2024-10-21 16:45:14,734] basehttp "GET /static/admin/img/selector-icons.svg HTTP/1.1" 200 3291
+INFO [2024-10-21 16:45:14,750] basehttp "GET /static/tinymce_4/tinymce/plugins/emoticons/js/emojis.min.js HTTP/1.1" 200 193222
+INFO [2024-10-21 16:45:22,269] basehttp "POST /admin/product/product/7376a63a-103f-4acc-ac20-263401a8e17b/change/ HTTP/1.1" 302 0
+INFO [2024-10-21 16:45:22,337] basehttp "GET /admin/product/product/ HTTP/1.1" 200 17300
+INFO [2024-10-21 16:45:22,375] basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+INFO [2024-10-21 16:45:23,317] basehttp "GET /admin/product/product/94a32d41-4561-4277-b831-a55d546d806f/change/ HTTP/1.1" 200 70327
+INFO [2024-10-21 16:45:23,347] basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+WARNING [2024-10-21 16:45:23,442] basehttp "GET /static/tinymce_4/tinymce/langs/.js HTTP/1.1" 404 2006
+WARNING [2024-10-21 16:45:23,492] basehttp "GET /static/tinymce_4/css/__tinymce_4.css?1729547123381 HTTP/1.1" 404 2026
+INFO [2024-10-21 16:45:27,455] basehttp "POST /admin/product/product/94a32d41-4561-4277-b831-a55d546d806f/change/ HTTP/1.1" 302 0
+INFO [2024-10-21 16:45:27,483] basehttp "GET /admin/product/product/ HTTP/1.1" 200 17297
+INFO [2024-10-21 16:45:27,568] basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+INFO [2024-10-21 16:45:28,650] basehttp "GET /admin/product/product/496b6c16-d1c3-462d-8195-bee8c1e1a0ed/change/ HTTP/1.1" 200 40200
+INFO [2024-10-21 16:45:28,681] basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+WARNING [2024-10-21 16:45:28,756] basehttp "GET /static/tinymce_4/tinymce/langs/.js HTTP/1.1" 404 2006
+WARNING [2024-10-21 16:45:28,811] basehttp "GET /static/tinymce_4/css/__tinymce_4.css?1729547128708 HTTP/1.1" 404 2026
+INFO [2024-10-21 16:45:31,642] basehttp "POST /admin/product/product/496b6c16-d1c3-462d-8195-bee8c1e1a0ed/change/ HTTP/1.1" 302 0
+INFO [2024-10-21 16:45:31,662] basehttp "GET /admin/product/product/ HTTP/1.1" 200 17301
+INFO [2024-10-21 16:45:31,779] basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+INFO [2024-10-21 16:45:36,138] basehttp "GET / HTTP/1.1" 200 28692
+INFO [2024-10-21 16:45:38,385] basehttp "GET / HTTP/1.1" 200 28692
+INFO [2024-10-21 16:45:38,405] basehttp "GET /static/css/style.css HTTP/1.1" 200 21811
+INFO [2024-10-21 16:45:38,414] basehttp "GET /media/finniu/images/company/f043e14e/7367a8a7.png HTTP/1.1" 200 7698
+INFO [2024-10-21 16:45:38,427] basehttp "GET /media/banner/krak.png HTTP/1.1" 200 635211
+INFO [2024-10-21 16:45:38,513] basehttp "GET /media/banner-responsive/Banner_Krak.png HTTP/1.1" 200 1020020
+INFO [2024-10-21 16:45:38,531] basehttp "GET /media/finniu/images/product/7c897460/black-maca.png HTTP/1.1" 200 382222
+INFO [2024-10-21 16:45:38,540] basehttp "GET /media/finniu/images/product/cf7b6a8f/creatina-sport.png HTTP/1.1" 200 2743302
+INFO [2024-10-21 16:45:38,842] basehttp "GET /static/js/swiper.js HTTP/1.1" 200 382
+INFO [2024-10-21 16:45:38,980] basehttp "GET /media/finniu/images/product/900e4c89/proteina-iso.png HTTP/1.1" 200 95786
+INFO [2024-10-21 16:45:38,986] basehttp "GET /static/img/demolitor-musculo.png HTTP/1.1" 200 105131
+INFO [2024-10-21 16:45:38,991] basehttp "GET /static/img/demolitor-fitness.png HTTP/1.1" 200 107760
+INFO [2024-10-21 16:45:38,996] basehttp "GET /static/img/demolitor-salud.png HTTP/1.1" 200 107181
+INFO [2024-10-21 16:45:38,999] basehttp "GET /static/img/demolitor-sport.png HTTP/1.1" 200 110063
+INFO [2024-10-21 16:45:39,016] basehttp "GET /static/img/partners/falabella.png HTTP/1.1" 200 3202
+INFO [2024-10-21 16:45:39,017] basehttp "GET /static/img/products/collagen3.png HTTP/1.1" 200 73303
+INFO [2024-10-21 16:45:39,020] basehttp "GET /static/img/partners/inkafarma.png HTTP/1.1" 200 7786
+INFO [2024-10-21 16:45:39,020] basehttp "GET /static/img/partners/mifarma.png HTTP/1.1" 200 4643
+INFO [2024-10-21 16:45:39,106] basehttp "GET /static/fonts/AvenirLTStd-Roman.otf HTTP/1.1" 200 27176
+INFO [2024-10-21 16:45:39,107] basehttp "GET /static/fonts/ArupalaGrotesk-Ultra.ttf HTTP/1.1" 200 92356
+INFO [2024-10-21 16:45:39,155] basehttp "GET /static/fonts/AvenirLTStd-Black.otf HTTP/1.1" 200 27912
+INFO [2024-10-21 16:45:39,199] basehttp "GET /static/img/banner/background2.png HTTP/1.1" 200 1358304
+INFO [2024-10-21 16:45:39,207] basehttp "GET /static/img/fondo_black_maca1.png HTTP/1.1" 200 1912646
+WARNING [2024-10-21 16:45:40,123] basehttp "GET /static/images/favicon.ico HTTP/1.1" 404 1979
+INFO [2024-10-21 16:46:34,164] basehttp "GET / HTTP/1.1" 200 28692
+INFO [2024-10-21 16:47:32,428] basehttp "GET /admin/product/product/94a32d41-4561-4277-b831-a55d546d806f/change/ HTTP/1.1" 200 70399
+INFO [2024-10-21 16:47:32,465] basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+WARNING [2024-10-21 16:47:32,542] basehttp "GET /static/tinymce_4/tinymce/langs/.js HTTP/1.1" 404 2006
+WARNING [2024-10-21 16:47:32,605] basehttp "GET /static/tinymce_4/css/__tinymce_4.css?1729547252491 HTTP/1.1" 404 2026
+WARNING [2024-10-21 16:47:32,651] log Not Found: /favicon.ico
+WARNING [2024-10-21 16:47:32,652] basehttp "GET /favicon.ico HTTP/1.1" 404 4968
+INFO [2024-10-21 16:48:57,985] basehttp "GET /admin/product/product/ HTTP/1.1" 200 17056
+INFO [2024-10-21 16:48:58,048] basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+INFO [2024-10-21 16:48:59,422] basehttp "GET /admin/product/product/add/ HTTP/1.1" 200 39385
+INFO [2024-10-21 16:48:59,450] basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+WARNING [2024-10-21 16:48:59,543] basehttp "GET /static/tinymce_4/tinymce/langs/.js HTTP/1.1" 404 2006
+WARNING [2024-10-21 16:48:59,597] basehttp "GET /static/tinymce_4/css/__tinymce_4.css?1729547339477 HTTP/1.1" 404 2026
+INFO [2024-10-21 16:49:58,655] basehttp "POST /admin/product/product/add/ HTTP/1.1" 302 0
+INFO [2024-10-21 16:49:58,726] basehttp "GET /admin/product/product/ HTTP/1.1" 200 17647
+INFO [2024-10-21 16:49:58,827] basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+INFO [2024-10-21 16:50:06,437] basehttp "GET / HTTP/1.1" 200 29727
+INFO [2024-10-21 16:50:06,498] basehttp "GET /media/finniu/images/product/8041379f/svelt-protein.png HTTP/1.1" 200 482818
+INFO [2024-10-21 16:50:08,970] basehttp "GET / HTTP/1.1" 200 29727
+INFO [2024-10-21 16:50:09,029] basehttp "GET /media/finniu/images/company/f043e14e/7367a8a7.png HTTP/1.1" 200 7698
+INFO [2024-10-21 16:50:09,052] basehttp "GET /static/css/style.css HTTP/1.1" 200 21811
+INFO [2024-10-21 16:50:09,076] basehttp "GET /media/banner/krak.png HTTP/1.1" 200 635211
+INFO [2024-10-21 16:50:09,081] basehttp "GET /media/banner-responsive/Banner_Krak.png HTTP/1.1" 200 1020020
+INFO [2024-10-21 16:50:09,092] basehttp "GET /media/finniu/images/product/8041379f/svelt-protein.png HTTP/1.1" 200 482818
+INFO [2024-10-21 16:50:09,141] basehttp "GET /media/finniu/images/product/cf7b6a8f/creatina-sport.png HTTP/1.1" 200 2743302
+INFO [2024-10-21 16:50:09,149] basehttp "GET /static/js/swiper.js HTTP/1.1" 200 382
+INFO [2024-10-21 16:50:09,158] basehttp "GET /media/finniu/images/product/7c897460/black-maca.png HTTP/1.1" 200 382222
+INFO [2024-10-21 16:50:09,163] basehttp "GET /media/finniu/images/product/900e4c89/proteina-iso.png HTTP/1.1" 200 95786
+INFO [2024-10-21 16:50:09,168] basehttp "GET /static/img/demolitor-musculo.png HTTP/1.1" 200 105131
+INFO [2024-10-21 16:50:09,172] basehttp "GET /static/img/demolitor-fitness.png HTTP/1.1" 200 107760
+INFO [2024-10-21 16:50:09,188] basehttp "GET /static/img/demolitor-salud.png HTTP/1.1" 200 107181
+INFO [2024-10-21 16:50:09,242] basehttp "GET /static/img/demolitor-sport.png HTTP/1.1" 200 110063
+INFO [2024-10-21 16:50:09,253] basehttp "GET /static/img/products/collagen3.png HTTP/1.1" 200 73303
+INFO [2024-10-21 16:50:09,267] basehttp "GET /static/img/partners/falabella.png HTTP/1.1" 200 3202
+INFO [2024-10-21 16:50:09,271] basehttp "GET /static/img/partners/mifarma.png HTTP/1.1" 200 4643
+INFO [2024-10-21 16:50:09,274] basehttp "GET /static/img/partners/inkafarma.png HTTP/1.1" 200 7786
+INFO [2024-10-21 16:50:09,712] basehttp "GET /static/fonts/AvenirLTStd-Roman.otf HTTP/1.1" 200 27176
+INFO [2024-10-21 16:50:09,725] basehttp "GET /static/fonts/ArupalaGrotesk-Ultra.ttf HTTP/1.1" 200 92356
+INFO [2024-10-21 16:50:09,764] basehttp "GET /static/fonts/AvenirLTStd-Black.otf HTTP/1.1" 200 27912
+INFO [2024-10-21 16:50:09,783] basehttp "GET /static/img/banner/background2.png HTTP/1.1" 200 1358304
+INFO [2024-10-21 16:50:09,793] basehttp "GET /static/img/fondo_black_maca1.png HTTP/1.1" 200 1912646
+WARNING [2024-10-21 16:50:10,284] basehttp "GET /static/images/favicon.ico HTTP/1.1" 404 1979
+INFO [2024-10-21 16:50:45,343] basehttp "GET / HTTP/1.1" 200 29727
+INFO [2024-10-21 16:50:45,459] basehttp "GET /media/finniu/images/product/8041379f/svelt-protein.png HTTP/1.1" 304 0
+WARNING [2024-10-21 16:50:45,819] basehttp "GET /static/images/favicon.ico HTTP/1.1" 404 1979
+INFO [2024-10-21 16:53:16,932] basehttp "GET / HTTP/1.1" 200 29727
+INFO [2024-10-21 16:53:16,964] basehttp "GET /media/finniu/images/product/8041379f/svelt-protein.png HTTP/1.1" 304 0
+WARNING [2024-10-21 16:53:17,401] basehttp "GET /static/images/favicon.ico HTTP/1.1" 404 1979
+INFO [2024-10-21 16:53:18,634] basehttp "GET / HTTP/1.1" 200 29727
+INFO [2024-10-21 16:53:18,672] basehttp "GET /media/finniu/images/company/f043e14e/7367a8a7.png HTTP/1.1" 200 7698
+INFO [2024-10-21 16:53:18,677] basehttp "GET /static/css/style.css HTTP/1.1" 200 21811
+INFO [2024-10-21 16:53:18,714] basehttp "GET /media/banner/krak.png HTTP/1.1" 200 635211
+INFO [2024-10-21 16:53:18,743] basehttp "GET /media/banner-responsive/Banner_Krak.png HTTP/1.1" 200 1020020
+INFO [2024-10-21 16:53:18,814] basehttp "GET /media/finniu/images/product/8041379f/svelt-protein.png HTTP/1.1" 200 482818
+INFO [2024-10-21 16:53:18,827] basehttp "GET /media/finniu/images/product/cf7b6a8f/creatina-sport.png HTTP/1.1" 200 2743302
+INFO [2024-10-21 16:53:18,838] basehttp "GET /static/js/swiper.js HTTP/1.1" 200 379
+INFO [2024-10-21 16:53:18,866] basehttp "GET /media/finniu/images/product/7c897460/black-maca.png HTTP/1.1" 200 382222
+INFO [2024-10-21 16:53:18,871] basehttp "GET /media/finniu/images/product/900e4c89/proteina-iso.png HTTP/1.1" 200 95786
+INFO [2024-10-21 16:53:18,877] basehttp "GET /static/img/demolitor-musculo.png HTTP/1.1" 200 105131
+INFO [2024-10-21 16:53:18,881] basehttp "GET /static/img/demolitor-fitness.png HTTP/1.1" 200 107760
+INFO [2024-10-21 16:53:18,885] basehttp "GET /static/img/demolitor-salud.png HTTP/1.1" 200 107181
+INFO [2024-10-21 16:53:18,889] basehttp "GET /static/img/demolitor-sport.png HTTP/1.1" 200 110063
+INFO [2024-10-21 16:53:18,893] basehttp "GET /static/img/products/collagen3.png HTTP/1.1" 200 73303
+INFO [2024-10-21 16:53:18,897] basehttp "GET /static/img/partners/falabella.png HTTP/1.1" 200 3202
+INFO [2024-10-21 16:53:18,900] basehttp "GET /static/img/partners/mifarma.png HTTP/1.1" 200 4643
+INFO [2024-10-21 16:53:18,903] basehttp "GET /static/img/partners/inkafarma.png HTTP/1.1" 200 7786
+INFO [2024-10-21 16:53:19,075] basehttp "GET /static/fonts/AvenirLTStd-Roman.otf HTTP/1.1" 200 27176
+INFO [2024-10-21 16:53:19,075] basehttp "GET /static/fonts/ArupalaGrotesk-Ultra.ttf HTTP/1.1" 200 92356
+INFO [2024-10-21 16:53:19,188] basehttp "GET /static/fonts/AvenirLTStd-Black.otf HTTP/1.1" 200 27912
+INFO [2024-10-21 16:53:19,239] basehttp "GET /static/img/banner/background2.png HTTP/1.1" 200 1358304
+INFO [2024-10-21 16:53:19,246] basehttp "GET /static/img/fondo_black_maca1.png HTTP/1.1" 200 1912646
+WARNING [2024-10-21 16:53:19,687] basehttp "GET /static/images/favicon.ico HTTP/1.1" 404 1979
+INFO [2024-10-21 16:53:20,290] basehttp "GET / HTTP/1.1" 200 29727
+INFO [2024-10-21 16:53:20,318] basehttp "GET /media/finniu/images/company/f043e14e/7367a8a7.png HTTP/1.1" 200 7698
+INFO [2024-10-21 16:53:20,318] basehttp "GET /static/css/style.css HTTP/1.1" 200 21811
+INFO [2024-10-21 16:53:20,404] basehttp "GET /media/banner/krak.png HTTP/1.1" 200 635211
+INFO [2024-10-21 16:53:20,423] basehttp "GET /media/banner-responsive/Banner_Krak.png HTTP/1.1" 200 1020020
+INFO [2024-10-21 16:53:20,453] basehttp "GET /media/finniu/images/product/8041379f/svelt-protein.png HTTP/1.1" 200 482818
+INFO [2024-10-21 16:53:20,480] basehttp "GET /media/finniu/images/product/cf7b6a8f/creatina-sport.png HTTP/1.1" 200 2743302
+INFO [2024-10-21 16:53:20,482] basehttp "GET /static/js/swiper.js HTTP/1.1" 200 379
+INFO [2024-10-21 16:53:20,505] basehttp "GET /media/finniu/images/product/7c897460/black-maca.png HTTP/1.1" 200 382222
+INFO [2024-10-21 16:53:20,509] basehttp "GET /media/finniu/images/product/900e4c89/proteina-iso.png HTTP/1.1" 200 95786
+INFO [2024-10-21 16:53:20,513] basehttp "GET /static/img/demolitor-musculo.png HTTP/1.1" 200 105131
+INFO [2024-10-21 16:53:20,517] basehttp "GET /static/img/demolitor-fitness.png HTTP/1.1" 200 107760
+INFO [2024-10-21 16:53:20,519] basehttp "GET /static/img/demolitor-salud.png HTTP/1.1" 200 107181
+INFO [2024-10-21 16:53:20,523] basehttp "GET /static/img/demolitor-sport.png HTTP/1.1" 200 110063
+INFO [2024-10-21 16:53:20,526] basehttp "GET /static/img/products/collagen3.png HTTP/1.1" 200 73303
+INFO [2024-10-21 16:53:20,529] basehttp "GET /static/img/partners/falabella.png HTTP/1.1" 200 3202
+INFO [2024-10-21 16:53:20,531] basehttp "GET /static/img/partners/mifarma.png HTTP/1.1" 200 4643
+INFO [2024-10-21 16:53:20,534] basehttp "GET /static/img/partners/inkafarma.png HTTP/1.1" 200 7786
+INFO [2024-10-21 16:53:20,929] basehttp "GET /static/fonts/ArupalaGrotesk-Ultra.ttf HTTP/1.1" 200 92356
+INFO [2024-10-21 16:53:20,930] basehttp "GET /static/fonts/AvenirLTStd-Roman.otf HTTP/1.1" 200 27176
+INFO [2024-10-21 16:53:20,956] basehttp "GET /static/img/banner/background2.png HTTP/1.1" 200 1358304
+INFO [2024-10-21 16:53:20,984] basehttp "GET /static/fonts/AvenirLTStd-Black.otf HTTP/1.1" 200 27912
+INFO [2024-10-21 16:53:21,013] basehttp "GET /static/img/fondo_black_maca1.png HTTP/1.1" 200 1912646
+WARNING [2024-10-21 16:53:21,248] basehttp "GET /static/images/favicon.ico HTTP/1.1" 404 1979
+INFO [2024-10-21 16:53:25,886] basehttp "GET / HTTP/1.1" 200 29727
+INFO [2024-10-21 16:53:25,940] basehttp "GET /static/js/swiper.js HTTP/1.1" 200 379
+INFO [2024-10-21 16:53:28,367] basehttp "GET / HTTP/1.1" 200 29727
+INFO [2024-10-21 16:53:28,443] basehttp "GET /static/js/swiper.js HTTP/1.1" 304 0
+INFO [2024-10-21 16:53:35,867] basehttp "GET / HTTP/1.1" 200 29727
+INFO [2024-10-21 16:53:36,011] basehttp "GET /static/js/swiper.js HTTP/1.1" 200 379
+INFO [2024-10-21 16:53:40,953] basehttp "GET / HTTP/1.1" 200 29727
+INFO [2024-10-21 16:53:41,176] basehttp "GET /media/finniu/images/product/8041379f/svelt-protein.png HTTP/1.1" 304 0
+INFO [2024-10-21 16:53:41,185] basehttp "GET /static/js/swiper.js HTTP/1.1" 200 379
+INFO [2024-10-21 16:53:46,699] basehttp "GET / HTTP/1.1" 200 29727
+INFO [2024-10-21 16:53:46,755] basehttp "GET /static/js/swiper.js HTTP/1.1" 200 379
+INFO [2024-10-21 16:54:18,892] basehttp "GET / HTTP/1.1" 200 29727
+INFO [2024-10-21 16:54:19,060] basehttp "GET /media/finniu/images/company/f043e14e/7367a8a7.png HTTP/1.1" 200 7698
+INFO [2024-10-21 16:54:19,066] basehttp "GET /static/css/style.css HTTP/1.1" 200 21811
+INFO [2024-10-21 16:54:19,090] basehttp "GET /media/banner/krak.png HTTP/1.1" 200 635211
+INFO [2024-10-21 16:54:19,104] basehttp "GET /media/banner-responsive/Banner_Krak.png HTTP/1.1" 200 1020020
+INFO [2024-10-21 16:54:19,130] basehttp "GET /media/finniu/images/product/8041379f/svelt-protein.png HTTP/1.1" 200 482818
+INFO [2024-10-21 16:54:19,150] basehttp "GET /media/finniu/images/product/cf7b6a8f/creatina-sport.png HTTP/1.1" 200 2743302
+INFO [2024-10-21 16:54:19,155] basehttp "GET /static/js/swiper.js HTTP/1.1" 200 379
+INFO [2024-10-21 16:54:19,180] basehttp "GET /media/finniu/images/product/7c897460/black-maca.png HTTP/1.1" 200 382222
+INFO [2024-10-21 16:54:19,185] basehttp "GET /media/finniu/images/product/900e4c89/proteina-iso.png HTTP/1.1" 200 95786
+INFO [2024-10-21 16:54:19,190] basehttp "GET /static/img/demolitor-musculo.png HTTP/1.1" 200 105131
+INFO [2024-10-21 16:54:19,201] basehttp "GET /static/img/demolitor-fitness.png HTTP/1.1" 200 107760
+INFO [2024-10-21 16:54:19,212] basehttp "GET /static/img/demolitor-salud.png HTTP/1.1" 200 107181
+INFO [2024-10-21 16:54:19,235] basehttp "GET /static/img/demolitor-sport.png HTTP/1.1" 200 110063
+INFO [2024-10-21 16:54:19,253] basehttp "GET /static/img/products/collagen3.png HTTP/1.1" 200 73303
+INFO [2024-10-21 16:54:19,277] basehttp "GET /static/img/partners/falabella.png HTTP/1.1" 200 3202
+INFO [2024-10-21 16:54:19,280] basehttp "GET /static/img/partners/mifarma.png HTTP/1.1" 200 4643
+INFO [2024-10-21 16:54:19,283] basehttp "GET /static/img/partners/inkafarma.png HTTP/1.1" 200 7786
+INFO [2024-10-21 16:54:19,666] basehttp "GET /static/fonts/AvenirLTStd-Roman.otf HTTP/1.1" 200 27176
+INFO [2024-10-21 16:54:19,781] basehttp "GET /static/img/banner/background2.png HTTP/1.1" 200 1358304
+INFO [2024-10-21 16:54:19,783] basehttp "GET /static/img/fondo_black_maca1.png HTTP/1.1" 200 1912646
+INFO [2024-10-21 16:54:19,786] basehttp "GET /static/fonts/ArupalaGrotesk-Ultra.ttf HTTP/1.1" 200 92356
+INFO [2024-10-21 16:54:19,788] basehttp "GET /static/fonts/AvenirLTStd-Black.otf HTTP/1.1" 200 27912
+WARNING [2024-10-21 16:54:20,369] basehttp "GET /static/images/favicon.ico HTTP/1.1" 404 1979
+INFO [2024-10-21 16:54:24,165] basehttp "GET / HTTP/1.1" 200 29727
+INFO [2024-10-21 16:54:24,196] basehttp "GET /media/finniu/images/company/f043e14e/7367a8a7.png HTTP/1.1" 200 7698
+INFO [2024-10-21 16:54:24,198] basehttp "GET /static/css/style.css HTTP/1.1" 200 21811
+INFO [2024-10-21 16:54:24,204] basehttp "GET /media/banner/krak.png HTTP/1.1" 200 635211
+INFO [2024-10-21 16:54:24,253] basehttp "GET /media/banner-responsive/Banner_Krak.png HTTP/1.1" 200 1020020
+INFO [2024-10-21 16:54:24,268] basehttp "GET /media/finniu/images/product/8041379f/svelt-protein.png HTTP/1.1" 200 482818
+INFO [2024-10-21 16:54:24,274] basehttp "GET /media/finniu/images/product/cf7b6a8f/creatina-sport.png HTTP/1.1" 200 2743302
+INFO [2024-10-21 16:54:24,295] basehttp "GET /static/js/swiper.js HTTP/1.1" 200 379
+INFO [2024-10-21 16:54:24,318] basehttp "GET /media/finniu/images/product/7c897460/black-maca.png HTTP/1.1" 200 382222
+INFO [2024-10-21 16:54:24,329] basehttp "GET /media/finniu/images/product/900e4c89/proteina-iso.png HTTP/1.1" 200 95786
+INFO [2024-10-21 16:54:24,338] basehttp "GET /static/img/demolitor-musculo.png HTTP/1.1" 200 105131
+INFO [2024-10-21 16:54:24,342] basehttp "GET /static/img/demolitor-fitness.png HTTP/1.1" 200 107760
+INFO [2024-10-21 16:54:24,346] basehttp "GET /static/img/demolitor-salud.png HTTP/1.1" 200 107181
+INFO [2024-10-21 16:54:24,349] basehttp "GET /static/img/demolitor-sport.png HTTP/1.1" 200 110063
+INFO [2024-10-21 16:54:24,354] basehttp "GET /static/img/products/collagen3.png HTTP/1.1" 200 73303
+INFO [2024-10-21 16:54:24,358] basehttp "GET /static/img/partners/falabella.png HTTP/1.1" 200 3202
+INFO [2024-10-21 16:54:24,361] basehttp "GET /static/img/partners/mifarma.png HTTP/1.1" 200 4643
+INFO [2024-10-21 16:54:24,364] basehttp "GET /static/img/partners/inkafarma.png HTTP/1.1" 200 7786
+INFO [2024-10-21 16:54:24,805] basehttp "GET /static/fonts/AvenirLTStd-Roman.otf HTTP/1.1" 200 27176
+INFO [2024-10-21 16:54:24,811] basehttp "GET /static/fonts/ArupalaGrotesk-Ultra.ttf HTTP/1.1" 200 92356
+INFO [2024-10-21 16:54:24,831] basehttp "GET /static/img/banner/background2.png HTTP/1.1" 200 1358304
+INFO [2024-10-21 16:54:24,858] basehttp "GET /static/fonts/AvenirLTStd-Black.otf HTTP/1.1" 200 27912
+INFO [2024-10-21 16:54:24,911] basehttp "GET /static/img/fondo_black_maca1.png HTTP/1.1" 200 1912646
+WARNING [2024-10-21 16:54:25,130] basehttp "GET /static/images/favicon.ico HTTP/1.1" 404 1979
+INFO [2024-10-21 16:54:40,923] basehttp "GET /products/ HTTP/1.1" 200 22485
+INFO [2024-10-21 16:54:41,006] basehttp "GET /static/js/swiper.js HTTP/1.1" 304 0
+INFO [2024-10-21 16:54:41,055] basehttp "GET /static/js/product/product.js HTTP/1.1" 200 3344
+INFO [2024-10-21 16:54:41,310] basehttp "POST /api/v1/graph/demolitor HTTP/1.1" 200 2149
