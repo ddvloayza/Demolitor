@@ -58,25 +58,24 @@
       {% for product_novedad in novedades %}
         <div class="swiper-slide">
           <div class="slider-image">
-            <img src="{{ product_novedad.image.url }}" alt="slide 1" class="w-full h-auto object-cover rounded-md">
+            <img src="{{ product_novedad.image.url }}" class="swiper-image">
             <div class="text-center py-4 text-white">
               <div class="py-4 text-white text-2xl">{{ product_novedad.name }}</div>
               <div class="flex flex-col items-center justify-center">
                 {% if product_novedad.price_discount %}
-                    <div class="grid grid-cols-2 gap-4 text-center">
-                        <p class="text-white text-2xl line-through">S/. {{ product_novedad.price }}</p>
-                        <p class="text-white text-2xl">S/. {{ product_novedad.price_discount }}</p>
-                    </div>
+                  <div class="grid grid-cols-2 gap-4 text-center">
+                    <p class="text-white text-2xl line-through">S/. {{ product_novedad.price }}</p>
+                    <p class="text-white text-2xl">S/. {{ product_novedad.price_discount }}</p>
+                  </div>
                 {% else %}
-                    <div class="grid grid-cols-1 gap-4 text-center">
-                        <p class="text-white text-2xl">S/. {{ product_novedad.price }}</p>
-                    </div>
+                  <div class="grid grid-cols-1 gap-4 text-center">
+                    <p class="text-white text-2xl">S/. {{ product_novedad.price }}</p>
+                  </div>
                 {% endif %}
-                  <!-- Botón centrado y más grande -->
                 <a href="{% url 'core:product_detail' product_novedad.uuid %}">
-                    <button class="mt-4 text-white bg-red-500 px-8 py-3 rounded-lg hover:bg-red-700 transition-colors duration-300">
-                        Ver más
-                    </button>
+                  <button class="mt-4 text-white bg-red-500 px-8 py-3 rounded-lg hover:bg-red-700 transition-colors duration-300">
+                    Ver más
+                  </button>
                 </a>
               </div>
             </div>
@@ -118,6 +117,9 @@
         </div>
       {% endfor %}
     </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
   </div>
 </section>
 
