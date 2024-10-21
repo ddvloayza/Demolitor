@@ -1,6 +1,7 @@
 from django.db import models
 from apps.core.models.base import BaseModelMixin
 from apps.core.models.seo import SEOMixin
+from apps.product.schema.enums.enums import ObjectiveChoices
 from apps.product.utils import custom_category_upload_to, custom_product_upload_to
 from django.utils.translation import gettext_lazy as _
 from tinymce_4.fields import TinyMCEModelField
@@ -102,6 +103,12 @@ class Product(BaseModelMixin, SEOMixin):
     tag = models.ManyToManyField("tag.Tag", verbose_name=_("Tags"), blank=True, related_name="product_tags")
     flavors = models.ManyToManyField('Flavor', related_name="products", blank=True)
     packagings = models.ManyToManyField('Packaging', related_name="products", blank=True)
+    objective = models.CharField(
+        max_length=200,
+        choices=ObjectiveChoices.choices,
+        default=ObjectiveChoices.FITNESS,
+        verbose_name="Objetivo"
+    )
 
     @property
     def get_absolute_image_url(self):

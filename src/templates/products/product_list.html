@@ -44,42 +44,42 @@
             <!-- Contenido de CATEGORÍAS -->
             <ul id="content-categorias" class="space-y-8">
                 {% for category in dynamic_data.category_company.all %}
-                    <li><a href="#" class="block hover:underline">{{ category.name }}</a></li>
+                    <li><a href="javascript:void(0);" onclick="fetchProducts('{{ category.uuid }}')" class="block hover:underline">{{ category.name }}</a></li>
                 {% endfor %}
             </ul>
 
             <!-- Contenido de FILTROS (con acordeones) -->
             <div id="content-filtros" class="space-y-4 hidden">
-                <!-- Ordenar por -->
+                <!-- Filtro de Ordenar por -->
                 <div class="accordion">
                     <button class="w-full text-left p-4 flex justify-between items-center" onclick="toggleAccordion('ordenar')">
                         <span>Ordenar por</span>
                         <i id="chevron-ordenar" class="fas fa-chevron-down"></i>
                     </button>
-                    <div id="ordenar" class="p-4 hidden">
+                    <div id="ordenar" class="p-4">
                         <ul>
-                            <li><a href="#" class="block hover:underline">Más vendidos</a></li>
-                            <li><a href="#" class="block hover:underline">Mejor calificación</a></li>
-                            <li><a href="#" class="block hover:underline">Precio: más bajo primero</a></li>
-                            <li><a href="#" class="block hover:underline">Precio: más alto primero</a></li>
+{#                            <li><a href="javascript:void(0);" onclick="fetchProducts(null, 'best_selling')">Más vendidos</a></li>#}
+{#                            <li><a href="javascript:void(0);" onclick="fetchProducts(null, 'highest_rated')">Mejor calificación</a></li>#}
+                            <li><a href="javascript:void(0);" onclick="fetchProducts(null, 'low_to_high')">Precio: más bajo primero</a></li>
+                            <li><a href="javascript:void(0);" onclick="fetchProducts(null, 'high_to_low')">Precio: más alto primero</a></li>
                         </ul>
                     </div>
                 </div>
 
                 <!-- Descuento -->
-                <div class="accordion">
-                    <button class="w-full text-left p-4 flex justify-between items-center" onclick="toggleAccordion('descuento')">
-                        <span>Descuento</span>
-                        <i id="chevron-descuento" class="fas fa-chevron-down"></i>
-                    </button>
-                    <div id="descuento" class="p-4 hidden">
-                        <ul>
-                            <li><a href="#" class="block hover:underline">10% o más</a></li>
-                            <li><a href="#" class="block hover:underline">20% o más</a></li>
-                            <li><a href="#" class="block hover:underline">30% o más</a></li>
-                        </ul>
-                    </div>
-                </div>
+{#                <div class="accordion">#}
+{#                    <button class="w-full text-left p-4 flex justify-between items-center" onclick="toggleAccordion('descuento')">#}
+{#                        <span>Descuento</span>#}
+{#                        <i id="chevron-descuento" class="fas fa-chevron-down"></i>#}
+{#                    </button>#}
+{#                    <div id="descuento" class="p-4 hidden">#}
+{#                        <ul>#}
+{#                            <li><a href="#" class="block hover:underline">10% o más</a></li>#}
+{#                            <li><a href="#" class="block hover:underline">20% o más</a></li>#}
+{#                            <li><a href="#" class="block hover:underline">30% o más</a></li>#}
+{#                        </ul>#}
+{#                    </div>#}
+{#                </div>#}
 
                 <!-- Objetivo -->
                 <div class="accordion">
@@ -89,26 +89,32 @@
                     </button>
                     <div id="objetivo" class="p-4 hidden">
                         <ul>
-                            <li><a href="#" class="block hover:underline">Ganar músculo</a></li>
-                            <li><a href="#" class="block hover:underline">Bajar de peso</a></li>
-                            <li><a href="#" class="block hover:underline">Mantenerse en forma</a></li>
+                            <li><a href="javascript:void(0)" class="block hover:underline" onclick="applyObjectiveFilter('MUSCLE')">Músculo</a></li>
+                            <li><a href="javascript:void(0)" class="block hover:underline" onclick="applyObjectiveFilter('FITNESS')">Fitness</a></li>
+                            <li><a href="javascript:void(0)" class="block hover:underline" onclick="applyObjectiveFilter('HEALTH')">Salud</a></li>
+                            <li><a href="javascript:void(0)" class="block hover:underline" onclick="applyObjectiveFilter('SPORT')">Sport</a></li>
                         </ul>
                     </div>
                 </div>
 
                 <!-- Precio con filtro de rango -->
+                <!-- Filtro de rango de precio -->
                 <div class="accordion">
                     <button class="w-full text-left p-4 flex justify-between items-center" onclick="toggleAccordion('precio')">
                         <span>Precio</span>
                         <i id="chevron-precio" class="fas fa-chevron-down"></i>
                     </button>
                     <div id="precio" class="p-4 hidden">
-                        <label for="priceRange" class="block text-gray-700">Rango de precio</label>
-                        <input type="range" id="priceRange" min="0" max="500" value="250" class="w-full mt-4">
-                        <div class="flex justify-between text-gray-600 mt-2">
-                            <span>S/0</span>
-                            <span>S/500</span>
+                        <label for="rangeSlider" class="block text-gray-700">Rango de precio</label>
+                        <div class="range-slider-container">
+                            <input id="minRange" type="range" min="0" max="500" step="5" value="0" oninput="updateRangeValues()">
+                            <input id="maxRange" type="range" min="0" max="500" step="5" value="500" oninput="updateRangeValues()">
                         </div>
+                        <div class="range-values">
+                            <span>S/<span id="minValue">0</span></span>
+                            <span>S/<span id="maxValue">500</span></span>
+                        </div>
+                        <button type="button" class="mt-4 bg-blue-500 text-white px-4 py-2" onclick="applyPriceFilter()">Filtrar</button>
                     </div>
                 </div>
             </div>
@@ -126,6 +132,46 @@
     <script src="{% static 'js/product/product.js' %}"></script>
     <!-- JavaScript para el acordeón -->
     <script>
+        // Función para obtener el parámetro de la URL
+        function getUrlParameter(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        // Verificar si el parámetro "category_uuid" está presente
+        const categoryUuid = getUrlParameter('category_uuid');
+        if (categoryUuid) {
+            fetchProducts(categoryUuid);
+        }
+        function updateRangeValues() {
+          const minValue = document.getElementById('minRange').value;
+          const maxValue = document.getElementById('maxRange').value;
+
+          document.getElementById('minValue').innerText = minValue;
+          document.getElementById('maxValue').innerText = maxValue;
+
+          // Ensure the min handle does not overlap the max handle
+          const minInput = document.getElementById('minRange');
+          const maxInput = document.getElementById('maxRange');
+
+          if (parseInt(minValue) >= parseInt(maxValue)) {
+            minInput.value = maxValue - 10;
+          }
+
+          if (parseInt(maxValue) <= parseInt(minValue)) {
+            maxInput.value = parseInt(minValue) + 10;
+          }
+        }
+
+        function applyPriceFilter() {
+          const minPrice = document.getElementById('minRange').value;
+          const maxPrice = document.getElementById('maxRange').value;
+          fetchProducts(null, null, `${minPrice}-${maxPrice}`);
+        }
+
+        function updatePriceValue(value) {
+            document.getElementById('priceValue').innerText = value;
+        }
         function toggleAccordion(id) {
             const content = document.getElementById(id);
             const chevron = document.getElementById(`chevron-${id}`);
