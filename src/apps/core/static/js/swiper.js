@@ -6,7 +6,7 @@ setTimeout(function() {
         loop: false,
         centeredSlides: true,
         slidesPerView: 'auto',
-        initialSlide: 1,
+        initialSlide: 2,
         coverflow: {
             rotate: 0,
             stretch: 0,
