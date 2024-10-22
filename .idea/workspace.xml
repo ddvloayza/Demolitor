@@ -7,8 +7,6 @@
     <list default="true" id="d909a866-9aed-4c03-ba3b-68a2a6b56495" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/apps/core/static/js/swiper.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/apps/core/static/js/swiper.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/settings/django.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/settings/django.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/web/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/web/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +120,7 @@
       <workItem from="1729061375974" duration="3918000" />
       <workItem from="1729129465243" duration="3732000" />
       <workItem from="1729189052746" duration="589000" />
-      <workItem from="1729198488019" duration="62310000" />
+      <workItem from="1729198488019" duration="62913000" />
     </task>
     <servers />
   </component>

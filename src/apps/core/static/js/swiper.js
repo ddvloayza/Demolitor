@@ -1,19 +1,26 @@
 function initializeSwiper() {
     var swiper = new Swiper('.swiper-container.two', {
-        pagination: '.swiper-pagination',
-        paginationClickable: false,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true
+        },
         effect: 'coverflow',
         loop: false,
         centeredSlides: true,
-        slidesPerView: 3,
+        slidesPerView: 'auto', // Por defecto en móviles
         initialSlide: 1,
-        coverflow: {
+        coverflowEffect: {
             rotate: 0,
             stretch: 0,
             depth: 300,
             modifier: 1.5,
-            scale: 1,
             slideShadows: false,
+        },
+        breakpoints: {
+            // Cuando la pantalla sea de 768px o más, muestra 3 diapositivas
+            768: {
+                slidesPerView: 3,
+            }
         }
     });
 }
