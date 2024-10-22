@@ -9,7 +9,7 @@ function initializeSwiper() {
         centeredSlides: true,
         slidesPerView: 'auto', // Por defecto en móviles
         initialSlide: 1,
-        coverflowEffect: {
+        coverflow: {
             rotate: 0,
             stretch: 0,
             depth: 300,
@@ -19,7 +19,7 @@ function initializeSwiper() {
         breakpoints: {
             // Cuando la pantalla sea de 768px o más, muestra 3 diapositivas
             768: {
-                slidesPerView: 3,
+                slidesPerView: 5,
             }
         }
     });
