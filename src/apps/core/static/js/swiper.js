@@ -1,4 +1,4 @@
-window.onload = function() {
+setTimeout(function() {
     var swiper = new Swiper('.swiper-container.two', {
         pagination: '.swiper-pagination',
         paginationClickable: false,
@@ -16,4 +16,4 @@ window.onload = function() {
             slideShadows: false,
         }
     });
-};
+}, 1000); // 1 segundo de retraso
