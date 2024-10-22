@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+window.onload = function() {
     var swiper = new Swiper('.swiper-container.two', {
         pagination: '.swiper-pagination',
         paginationClickable: false,
@@ -16,4 +16,4 @@ document.addEventListener('DOMContentLoaded', function () {
             slideShadows: false,
         }
     });
-});
+};
