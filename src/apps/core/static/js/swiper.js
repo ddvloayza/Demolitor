@@ -5,7 +5,7 @@ function initializeSwiper() {
         effect: 'coverflow',
         loop: false,
         centeredSlides: true,
-        slidesPerView: 'auto',
+        slidesPerView: 3,
         initialSlide: 1,
         coverflow: {
             rotate: 0,
