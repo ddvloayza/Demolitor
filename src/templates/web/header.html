@@ -8,10 +8,10 @@
 
         <!-- Menú de navegación en pantallas grandes -->
         <nav class="hidden md:flex space-x-8">
-            <a href="#" class="text-white hover:text-gray-400">Nosotros</a>
-            <a href="{% url 'core:product_list' %}" class="text-white hover:text-gray-400">Productos</a>
+            <a href="#" class="text-white text-l font-bold hover:text-gray-400 header_text">NOSOTROS</a>
+            <a href="{% url 'core:product_list' %}" class="text-white text-l font-bold hover:text-gray-400 header_text">PRODUCTOS</a>
 {#            <a href="#" class="text-white hover:text-gray-400">Contacto</a>#}
-            <a href="#" class="text-white hover:text-gray-400">Blog</a>
+            <a href="#" class="text-white text-l font-bold hover:text-gray-400 header_text">BLOG</a>
         </nav>
 
         <!-- Menú hamburguesa en pantallas pequeñas -->
@@ -27,19 +27,25 @@
             <button id="search-icon" class="text-white p-2 rounded-full">
                 <i class="fas fa-search"></i>
             </button>
+            <button id="search-icon" class="text-white p-2 rounded-full">
+                <i class="fas fa-shopping-cart"></i>
+            </button>
+            <button id="search-icon" class="text-white p-2 rounded-full">
+                <i class="fas fa-user"></i>
+            </button>
 
             <!-- Campo de búsqueda oculto que se muestra al hacer clic en el ícono de lupa -->
             <input id="search-input" type="text" placeholder="Buscar" class="bg-black hidden border-b-2 p-2 focus:outline-none text-white w-full md:w-64">
 
             <!-- Botón de contáctanos -->
-            <button class="text-white bg-[rgb(222,55,5)] px-4 py-2 rounded hover:bg-red-700">Contáctanos</button>
+{#            <button class="text-white bg-[rgb(222,55,5)] px-4 py-2 rounded hover:bg-red-700">Contáctanos</button>#}
         </div>
     </div>
 
     <!-- Barra de categorías -->
-    <div class="bg-[#EDEDED] py-8 flex space-x-4 overflow-x-auto flex-nowrap justify-start md:justify-center text-sm">
+    <div class="bg-[#DE3704] py-2 flex space-x-4 overflow-x-auto flex-nowrap justify-start md:justify-center text-sm">
     {% for category in dynamic_data.category_company.all %}
-        <a href="/products/?category_uuid={{ category.uuid }}" class="bg-gray-300 text-black px-8 py-2 rounded-full hover:bg-gray-400 font-bold whitespace-nowrap header_text">{{ category.name }}</a>
+        <a href="/products/?category_uuid={{ category.uuid }}" class="text-white px-8 py-2 hover:text-black font-bold whitespace-nowrap header_text">{{ category.name|upper }}</a>
     {% endfor %}
     </div>
 

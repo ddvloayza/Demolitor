@@ -1,3 +1,20 @@
+// Función para obtener el parámetro de la URL
+function getUrlParameter(name) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(name);
+}
+
+// Verificar si el parámetro "category_uuid" está presente
+const categoryUuid = getUrlParameter('category_uuid');
+if (categoryUuid) {
+    console.log("categoryUuid", categoryUuid)
+    fetchProducts(categoryUuid);
+}
+else {
+    fetchProducts();
+}
+
+
 function fetchProducts(categoryUuid = null, sortOrder = null, priceRange = null, objective = null) {
     // Construir la consulta GraphQL con variables
     const query = `
@@ -80,4 +97,3 @@ function applyPriceFilter() {
 }
 
 // Ejecutar fetch inicial sin filtros
-fetchProducts();

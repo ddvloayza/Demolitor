@@ -1,14 +1,14 @@
 {% load static %}
 
-<section class="bg-[#ECECEC] p-8 h-max">
-    <h2 class="text-3xl font-bold text-black text-center font-avenir-black">Nuestros productos variados</h2>
-    <div class="container mx-auto py-8">
-        <div class="flex justify-center space-x-4 overflow-x-auto flex-nowrap items-center text-black">
-            <h2 class="text-xl md:text-2xl lg:text-3xl font-light px-4 variety-effect whitespace-nowrap font-avenir-black flex-shrink-0">CREATINAS</h2>
-            <h2 class="text-xl md:text-2xl lg:text-3xl font-light px-4 variety-effect whitespace-nowrap font-avenir-black flex-shrink-0">BLACK MACA</h2>
-            <h2 class="text-xl md:text-2xl lg:text-3xl font-light px-4 variety-effect whitespace-nowrap font-avenir-black flex-shrink-0">COLAGENOS</h2>
-            <h2 class="text-xl md:text-2xl lg:text-3xl font-light px-4 variety-effect whitespace-nowrap font-avenir-black flex-shrink-0">LINEA SPORT</h2>
-            <h2 class="text-xl md:text-2xl lg:text-3xl font-light px-4 variety-effect whitespace-nowrap font-avenir-black flex-shrink-0">SNACKS</h2>
+<section class="bg-[#ECECEC] p-24 h-max">
+    <h2 class="text-5xl font-bold text-black text-center font-avenir-black">Nuestros productos variados</h2>
+    <div class="container mx-auto py-16">
+        <div class="flex justify-center space-x-4 overflow-x-auto md:overflow-hidden flex-nowrap items-center text-black pr-4 md:pr-0 scrollbar-hide">
+            {% for category in dynamic_data.category_company.all %}
+                <h2 class="text-xl md:text-xl lg:text-2xl font-light px-4 variety-effect whitespace-nowrap font-avenir-black flex-shrink-0">
+                    <a href="/products/?category_uuid={{ category.uuid }}" class="">{{ category.name|upper }}</a>
+                </h2>
+            {% endfor %}
         </div>
     </div>
 
@@ -49,7 +49,7 @@
                 <div class="slider-image">
                     <img src="{% static 'img/products/collagen3.png' %}" alt="slide 3">
                     <div class="text-center py-4">
-                        <div class="text-init">50%</div>
+
                         <div class="py-4">Proteína ISO | 1.76lb</div>
                         <div class="flex items-center justify-center">
                             <div class="grid grid-cols-2 gap-4 text-center">

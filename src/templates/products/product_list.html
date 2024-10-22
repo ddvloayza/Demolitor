@@ -132,17 +132,7 @@
     <script src="{% static 'js/product/product.js' %}"></script>
     <!-- JavaScript para el acordeón -->
     <script>
-        // Función para obtener el parámetro de la URL
-        function getUrlParameter(name) {
-            const urlParams = new URLSearchParams(window.location.search);
-            return urlParams.get(name);
-        }
 
-        // Verificar si el parámetro "category_uuid" está presente
-        const categoryUuid = getUrlParameter('category_uuid');
-        if (categoryUuid) {
-            fetchProducts(categoryUuid);
-        }
         function updateRangeValues() {
           const minValue = document.getElementById('minRange').value;
           const maxValue = document.getElementById('maxRange').value;
@@ -210,4 +200,5 @@
             }
         }
     </script>
+
 {% endblock js %}

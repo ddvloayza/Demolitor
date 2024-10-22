@@ -12,10 +12,80 @@
 }
 
 @font-face {
-    font-family: 'ArupalaGrotesk-Ultra';
-    src: url('../fonts/ArupalaGrotesk-Ultra.ttf') format('opentype');
-    font-weight: bold;
+    font-family: 'ArupalaGrotesk';
+    src: url('../fonts/ArupalaGroteskTrial-Air.ttf') format('truetype');
+    font-weight: 100;
     font-style: normal;
+}
+
+@font-face {
+    font-family: 'ArupalaGrotesk';
+    src: url('../fonts/ArupalaGroteskTrial-AirItalic.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'ArupalaGrotesk';
+    src: url('../fonts/ArupalaGroteskTrial-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ArupalaGrotesk';
+    src: url('../fonts/ArupalaGroteskTrial-LightIta.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'ArupalaGrotesk';
+    src: url('../fonts/ArupalaGroteskTrial-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ArupalaGrotesk';
+    src: url('../fonts/ArupalaGroteskTrial-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ArupalaGrotesk';
+    src: url('../fonts/ArupalaGroteskTrial-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ArupalaGrotesk';
+    src: url('../fonts/ArupalaGroteskTrial-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ArupalaGrotesk';
+    src: url('../fonts/ArupalaGroteskTrial-SuperBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ArupalaGrotesk';
+    src: url('../fonts/ArupalaGroteskTrial-Ultra.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ArupalaGrotesk';
+    src: url('../fonts/ArupalaGroteskTrial-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
 }
 
 body{
@@ -787,8 +857,8 @@ button.swiper-pagination-bullet {
 	font-family: Avenir-Black;
 }
 .header_text{
-	font-family: ArupalaGrotesk-Ultra;
-    letter-spacing: 1px;
+	font-family: ArupalaGrotesk;
+    letter-spacing: 1.5px;
     font-size: 16px;
 }
 .hover\:shadow-custom:hover {
