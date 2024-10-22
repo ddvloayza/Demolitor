@@ -162,7 +162,7 @@ video {
 	-ms-flex: 0 0 auto;
 	-ms-flex-negative: 0;
 	flex-shrink: 0;
-	width: 100%;
+	width: auto;
 	height: 100%;
 	position: relative;
 }
