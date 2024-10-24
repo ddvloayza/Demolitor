@@ -6,9 +6,14 @@ function getUrlParameter(name) {
 
 // Verificar si el parámetro "category_uuid" está presente
 const categoryUuid = getUrlParameter('category_uuid');
+const objective = getUrlParameter('objective');
 if (categoryUuid) {
     console.log("categoryUuid", categoryUuid)
     fetchProducts(categoryUuid);
+}
+if (objective) {
+    console.log("objective", objective)
+    fetchProducts(null,null,null, objective);
 }
 else {
     fetchProducts();

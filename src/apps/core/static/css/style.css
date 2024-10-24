@@ -807,6 +807,7 @@ button.swiper-pagination-bullet {
     font-size: 3rem;
     font-weight: bold;
     color: #ff3401;
+	transition: all 0.7s;
     text-shadow: 3px 6px 20px #ff3401;
 }
 

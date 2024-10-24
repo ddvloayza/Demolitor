@@ -8,36 +8,53 @@
         <!-- Slider para pantallas pequeñas -->
         <div class="swiper-container two block md:hidden mt-8">
             <div class="swiper-wrapper">
-                <div class="swiper-slide cursor-pointer hover:shadow-custom transition-shadow duration-300">
+                <a href="/products/?objective=MUSCLE">
+                    <div class="swiper-slide cursor-pointer hover:shadow-custom transition-shadow duration-300">
                     <img src="{% static 'img/demolitor-musculo.png' %}" alt="Músculo" class="w-full h-[250px] object-cover rounded-lg ">
                 </div>
+                </a>
+
+                <a href="/products/?objective=FITNESS">
                 <div class="swiper-slide cursor-pointer hover:shadow-custom transition-shadow duration-300">
                     <img src="{% static 'img/demolitor-fitness.png' %}" alt="Fitness" class="w-full h-[250px] object-cover rounded-lg">
                 </div>
+                </a>
+                <a href="/products/?objective=FITNESS">
                 <div class="swiper-slide cursor-pointer hover:shadow-custom transition-shadow duration-300">
                     <img src="{% static 'img/demolitor-salud.png' %}" alt="Salud" class="w-full h-[250px] object-cover rounded-lg">
                 </div>
+                </a>
+                <a href="/products/?objective=FITNESS">
                 <div class="swiper-slide cursor-pointer hover:shadow-custom transition-shadow duration-300">
                     <img src="{% static 'img/demolitor-sport.png' %}" alt="Sport" class="w-full h-[250px] object-cover rounded-lg">
                 </div>
+                </a>
             </div>
 
         </div>
 
         <!-- Grid para pantallas más grandes -->
         <div class="hidden md:grid grid-cols-4 gap-10 md:gap-32 mt-8">
+            <a href="/products/?objective=MUSCLE">
             <div class="rounded-lg transition-shadow duration-300 cursor-pointer hover:shadow-custom">
                 <img src="{% static 'img/demolitor-musculo.png' %}" alt="Músculo" class="w-full h-[250px] object-cover rounded-lg">
             </div>
+            </a>
+            <a href="/products/?objective=FITNESS">
             <div class="rounded-lg transition-shadow duration-300 cursor-pointer hover:shadow-custom">
                 <img src="{% static 'img/demolitor-fitness.png' %}" alt="Fitness" class="w-full h-[250px] object-cover rounded-lg">
             </div>
+            </a>
+            <a href="/products/?objective=HEALTH">
             <div class="rounded-lg transition-shadow duration-300 cursor-pointer hover:shadow-custom">
                 <img src="{% static 'img/demolitor-salud.png' %}" alt="Salud" class="w-full h-[250px] object-cover rounded-lg">
             </div>
+            </a>
+            <a href="/products/?objective=SPORT">
             <div class="rounded-lg transition-shadow duration-300 cursor-pointer hover:shadow-custom">
                 <img src="{% static 'img/demolitor-sport.png' %}" alt="Sport" class="w-full h-[250px] object-cover rounded-lg">
             </div>
+            </a>
         </div>
     </div>
 </section>

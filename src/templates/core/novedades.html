@@ -2,27 +2,27 @@
 
 <section class="bg-black p-8 h-max" style="background-image: url('{% static 'img/banner/background2.png' %}'); background-size: cover; background-position: center;">
   <div class="container mx-auto py-8">
-        <!-- Cabecera para las categorías -->
-        <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8">
-          <h2 class="text-xl md:text-2xl lg:text-3xl font-normal px-4 md:px-8 text-white cursor-pointer text-shadow-effect header_text"
-              onclick="ToggleWithDataAttr(event, 'data-oferta')">
-              OFERTAS
-          </h2>
+    <!-- Cabecera para las categorías -->
+    <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8">
+      <h2 class="text-xl md:text-2xl lg:text-3xl font-normal px-4 md:px-8 text-white cursor-pointer text-shadow-effect header_text"
+          onclick="ToggleWithDataAttr(event, 'data-oferta')">
+          OFERTAS
+      </h2>
 
-          <h2 class="text-xl md:text-2xl lg:text-3xl font-normal text-white px-4 md:px-8 cursor-pointer text-shadow-effect header_text"
-              onclick="ToggleWithDataAttr(event, 'data-novedad')">
-              NOVEDADES
-          </h2>
+      <h2 class="text-xl md:text-2xl lg:text-3xl font-normal text-white px-4 md:px-8 cursor-pointer text-shadow-effect header_text"
+          onclick="ToggleWithDataAttr(event, 'data-novedad')">
+          NOVEDADES
+      </h2>
 
-          <h2 class="text-xl md:text-2xl lg:text-3xl font-normal text-white px-4 md:px-8 cursor-pointer text-shadow-effect header_text"
-              onclick="ToggleWithDataAttr(event, 'data-packs')">
-              PACKS
-          </h2>
-        </div>
+      <h2 class="text-xl md:text-2xl lg:text-3xl font-normal text-white px-4 md:px-8 cursor-pointer text-shadow-effect header_text"
+          onclick="ToggleWithDataAttr(event, 'data-packs')">
+          PACKS
+      </h2>
     </div>
+  </div>
 
   <!-- Swiper -->
-  <div class="swiper-container two mt-8">
+  <div class="swiper-container two mt-8 relative">
     <div class="swiper-wrapper hidden" data-oferta swiper>
       {% for product_oferta in ofertas %}
         <div class="swiper-slide">
@@ -58,24 +58,25 @@
       {% for product_novedad in novedades %}
         <div class="swiper-slide">
           <div class="slider-image">
-            <img src="{{ product_novedad.image.url }}" class="swiper-image">
+            <img src="{{ product_novedad.image.url }}" alt="slide 1" class=" swiper-image">
             <div class="text-center py-4 text-white">
               <div class="py-4 text-white text-2xl">{{ product_novedad.name }}</div>
               <div class="flex flex-col items-center justify-center">
                 {% if product_novedad.price_discount %}
-                  <div class="grid grid-cols-2 gap-4 text-center">
-                    <p class="text-white text-2xl line-through">S/. {{ product_novedad.price }}</p>
-                    <p class="text-white text-2xl">S/. {{ product_novedad.price_discount }}</p>
-                  </div>
+                    <div class="grid grid-cols-2 gap-4 text-center">
+                        <p class="text-white text-2xl line-through">S/. {{ product_novedad.price }}</p>
+                        <p class="text-white text-2xl">S/. {{ product_novedad.price_discount }}</p>
+                    </div>
                 {% else %}
-                  <div class="grid grid-cols-1 gap-4 text-center">
-                    <p class="text-white text-2xl">S/. {{ product_novedad.price }}</p>
-                  </div>
+                    <div class="grid grid-cols-1 gap-4 text-center">
+                        <p class="text-white text-2xl">S/. {{ product_novedad.price }}</p>
+                    </div>
                 {% endif %}
+                  <!-- Botón centrado y más grande -->
                 <a href="{% url 'core:product_detail' product_novedad.uuid %}">
-                  <button class="mt-4 text-white bg-red-500 px-8 py-3 rounded-lg hover:bg-red-700 transition-colors duration-300">
-                    Ver más
-                  </button>
+                    <button class="mt-4 text-white bg-red-500 px-8 py-3 rounded-lg hover:bg-red-700 transition-colors duration-300">
+                        Ver más
+                    </button>
                 </a>
               </div>
             </div>
@@ -118,10 +119,16 @@
       {% endfor %}
     </div>
 
+    <!-- Botones de navegación -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
   </div>
 </section>
 
+
 {% block js %}
+
+
 <script>
     function ToggleWithDataAttr(event, dataAttr) {
         var eventTarget = event.target;
@@ -141,5 +148,7 @@
             div.classList.toggle('hidden');
         }
     }
+
+
 </script>
 {% endblock js %}

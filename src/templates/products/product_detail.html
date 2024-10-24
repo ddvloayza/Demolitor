@@ -36,7 +36,7 @@
                       {% for product_image in  product.images.all%}
                           {% if not product_image.is_info_image %}
                           	<div class="hidden duration-700 ease-in-out" data-carousel-item>
-                                <img src="{{product_image.image.url }}" class="absolute block w-1/2 left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2" alt="...">
+                                <img src="{{product_image.image.url }}" class="absolute block max-w-full h-auto left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2" alt="...">
                             </div>
                           {% endif %}
 
