@@ -5720,3 +5720,15 @@ INFO [2024-10-24 04:27:47,782] basehttp "GET /static/fonts/ArupalaGroteskTrial-B
 INFO [2024-10-24 04:27:47,859] basehttp "GET /static/fonts/AvenirLTStd-Black.otf HTTP/1.1" 200 27912
 INFO [2024-10-24 04:27:47,859] basehttp "GET /static/fonts/ArupalaGroteskTrial-SemiBold.ttf HTTP/1.1" 200 24076
 WARNING [2024-10-24 04:27:47,882] basehttp "GET /static/images/favicon.ico HTTP/1.1" 404 1979
+INFO [2024-10-24 09:37:18,700] basehttp "GET /product/7376a63a-103f-4acc-ac20-263401a8e17b/ HTTP/1.1" 200 25185
+INFO [2024-10-24 09:37:18,755] basehttp "GET /static/css/style.css HTTP/1.1" 304 0
+INFO [2024-10-24 09:37:18,773] basehttp "GET /media/finniu/images/product/de4ce1ae/1a007f74.png HTTP/1.1" 304 0
+INFO [2024-10-24 09:37:18,786] basehttp "GET /static/js/swiper.js HTTP/1.1" 304 0
+INFO [2024-10-24 09:38:26,416] basehttp "GET /product/7376a63a-103f-4acc-ac20-263401a8e17b/ HTTP/1.1" 200 25195
+INFO [2024-10-24 09:38:27,685] basehttp "GET /product/7376a63a-103f-4acc-ac20-263401a8e17b/ HTTP/1.1" 200 25195
+INFO [2024-10-24 09:38:42,245] basehttp "GET /static/fonts/ArupalaGroteskTrial-Air.ttf HTTP/1.1" 200 23728
+INFO [2024-10-24 09:38:42,700] basehttp "GET /static/fonts/ArupalaGroteskTrial-Light.ttf HTTP/1.1" 200 24184
+INFO [2024-10-24 09:38:43,425] basehttp "GET /static/fonts/ArupalaGroteskTrial-SuperBold.ttf HTTP/1.1" 200 24456
+INFO [2024-10-24 09:38:43,556] basehttp "GET /static/fonts/ArupalaGroteskTrial-Ultra.ttf HTTP/1.1" 200 24568
+INFO [2024-10-24 09:39:10,309] basehttp "GET /product/7376a63a-103f-4acc-ac20-263401a8e17b/ HTTP/1.1" 200 25196
+INFO [2024-10-24 09:39:27,199] basehttp "GET /product/7376a63a-103f-4acc-ac20-263401a8e17b/ HTTP/1.1" 200 25197
