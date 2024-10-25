@@ -13,77 +13,77 @@
 
 @font-face {
     font-family: 'ArupalaGrotesk';
-    src: url('../fonts/ArupalaGroteskTrial-Air.ttf') format('truetype');
+    src: url('../fonts/ArupalaGrotesk-Air.ttf') format('truetype');
     font-weight: 100;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'ArupalaGrotesk';
-    src: url('../fonts/ArupalaGroteskTrial-AirItalic.ttf') format('truetype');
+    src: url('../fonts/ArupalaGrotesk-AirItalic.otf') format('truetype');
     font-weight: 100;
     font-style: italic;
 }
 
 @font-face {
     font-family: 'ArupalaGrotesk';
-    src: url('../fonts/ArupalaGroteskTrial-Light.ttf') format('truetype');
+    src: url('../fonts/ArupalaGrotesk-Light.otf') format('truetype');
     font-weight: 300;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'ArupalaGrotesk';
-    src: url('../fonts/ArupalaGroteskTrial-LightIta.ttf') format('truetype');
+    src: url('../fonts/ArupalaGrotesk-LightIta.otf') format('truetype');
     font-weight: 300;
     font-style: italic;
 }
 
 @font-face {
     font-family: 'ArupalaGrotesk';
-    src: url('../fonts/ArupalaGroteskTrial-Regular.ttf') format('truetype');
+    src: url('../fonts/ArupalaGrotesk-Regular.otf') format('truetype');
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'ArupalaGrotesk';
-    src: url('../fonts/ArupalaGroteskTrial-Medium.ttf') format('truetype');
+    src: url('../fonts/ArupalaGrotesk-Medium.otf') format('truetype');
     font-weight: 500;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'ArupalaGrotesk';
-    src: url('../fonts/ArupalaGroteskTrial-Bold.ttf') format('truetype');
+    src: url('../fonts/ArupalaGrotesk-Bold.otf') format('truetype');
     font-weight: 700;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'ArupalaGrotesk';
-    src: url('../fonts/ArupalaGroteskTrial-SemiBold.ttf') format('truetype');
+    src: url('../fonts/ArupalaGrotesk-SemiBold.otf') format('truetype');
     font-weight: 600;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'ArupalaGrotesk';
-    src: url('../fonts/ArupalaGroteskTrial-SuperBold.ttf') format('truetype');
+    src: url('../fonts/ArupalaGrotesk-SuperBold.otf') format('truetype');
     font-weight: 800;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'ArupalaGrotesk';
-    src: url('../fonts/ArupalaGroteskTrial-Ultra.ttf') format('truetype');
+    src: url('../fonts/ArupalaGrotesk-Ultra.otf') format('truetype');
     font-weight: 900;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'ArupalaGrotesk';
-    src: url('../fonts/ArupalaGroteskTrial-Italic.ttf') format('truetype');
+    src: url('../fonts/ArupalaGrotesk-Italic.otf') format('truetype');
     font-weight: 400;
     font-style: italic;
 }

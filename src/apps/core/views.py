@@ -43,7 +43,9 @@ class HomeView(TemplateView):
             category__company__comercial_name__icontains="demolitor",
             tag__slug="packs"
         )
-        context['banners'] = Banner.objects.all()
+        context['banners'] = Banner.objects.filter(first_slider=True)
+        context['middle_banner'] = Banner.objects.filter(second_slider=True).first()
+        print("middle_banner", context['middle_banner'])
         print("context['ofertas']", context['ofertas'])
         return context
 

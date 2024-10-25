@@ -6,6 +6,30 @@
   <component name="ChangeListManager">
     <list default="true" id="d909a866-9aed-4c03-ba3b-68a2a6b56495" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/apps/core/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/apps/core/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/apps/core/static/fonts/ArupalaGroteskTrial-Air.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/apps/core/static/fonts/ArupalaGroteskTrial-AirItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/apps/core/static/fonts/ArupalaGroteskTrial-Bold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/apps/core/static/fonts/ArupalaGroteskTrial-BoldIta.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/apps/core/static/fonts/ArupalaGroteskTrial-Italic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/apps/core/static/fonts/ArupalaGroteskTrial-Light.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/apps/core/static/fonts/ArupalaGroteskTrial-LightIta.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/apps/core/static/fonts/ArupalaGroteskTrial-MedIta.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/apps/core/static/fonts/ArupalaGroteskTrial-Medium.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/apps/core/static/fonts/ArupalaGroteskTrial-Regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/apps/core/static/fonts/ArupalaGroteskTrial-SemBdIta.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/apps/core/static/fonts/ArupalaGroteskTrial-SemiBold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/apps/core/static/fonts/ArupalaGroteskTrial-SuperBdIt.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/apps/core/static/fonts/ArupalaGroteskTrial-SuperBold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/apps/core/static/fonts/ArupalaGroteskTrial-SuperLt.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/apps/core/static/fonts/ArupalaGroteskTrial-SuperLtIt.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/apps/core/static/fonts/ArupalaGroteskTrial-Ultra.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/apps/core/static/fonts/ArupalaGroteskTrial-UltraIta.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/apps/core/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/apps/core/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/apps/customuser/models/customuser.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/apps/customuser/models/customuser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/settings/django.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/settings/django.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/core/explosividad.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/core/explosividad.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/core/first_slider.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/core/first_slider.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/templates/products/product_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/products/product_detail.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -28,27 +52,27 @@
     <option name="openDirectoriesWithSingleClick" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/diegodelavega/Diego/Demolitor/src/apps/core/static/img/products/product_transition&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.intellij.python.pro.templateLanguages.PyTemplateLanguageModulesConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/diegodelavega/Diego/Demolitor/src/apps/core/static/fonts",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.intellij.python.pro.templateLanguages.PyTemplateLanguageModulesConfigurable",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/apps/core/static/fonts" />
       <recent name="$PROJECT_DIR$/src/apps/core/static/img/products/product_transition" />
       <recent name="$PROJECT_DIR$/src/apps/core/api" />
       <recent name="$PROJECT_DIR$/src/apps/product/schema/mutations" />
       <recent name="$PROJECT_DIR$/src/apps/product/schema/nodes" />
-      <recent name="$PROJECT_DIR$/src/apps/product/schema/queries" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/apps/core/static/fonts" />
@@ -120,7 +144,8 @@
       <workItem from="1729061375974" duration="3918000" />
       <workItem from="1729129465243" duration="3732000" />
       <workItem from="1729189052746" duration="589000" />
-      <workItem from="1729198488019" duration="76579000" />
+      <workItem from="1729198488019" duration="77389000" />
+      <workItem from="1729802364276" duration="12677000" />
     </task>
     <servers />
   </component>

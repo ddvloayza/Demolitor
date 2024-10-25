@@ -2,12 +2,12 @@
 
 
 <section class="relative">
-    <div id="default-carousel" class="relative w-full group" data-carousel="slide">
+    <div id="default-carousel" class="relative w-full group" data-carousel="slide" data-carousel-autoplay="5000"> <!-- Autoplay ajustado a 5000ms (5 segundos) -->
         <!-- Carousel wrapper -->
-        <div class="relative  overflow-hidden rounded-lg md:h-[70vh] max-[1100px]:h-[70%]">
-            {% for banner in  banners%}
+        <div class="relative overflow-hidden rounded-lg md:h-[70vh] max-[1100px]:h-[70%]">
+            {% for banner in banners %}
                 <!-- Item 1 -->
-                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <div class="hidden duration-1000 ease-in-out" data-carousel-item>
                     <!-- Imagen para pantallas grandes -->
                     <img
                         src="{{ banner.image.url }}"
@@ -20,25 +20,25 @@
                         alt="Imagen móvil">
                     <!-- Overlay -->
                     <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex justify-center items-center">
-                        <button class="text-white bg-red-500 px-4 py-2 rounded-lg hover:bg-red-700 transition-colors duration-300">
-                            Ver más
-                        </button>
+                        <a href="{{ banner.url_redirect }}">
+                            <button class="text-white bg-red-500 px-4 py-2 rounded-lg hover:bg-red-700 transition-colors duration-300">
+                                Ver más
+                            </button>
+                        </a>
+
                     </div>
                 </div>
             {% endfor %}
-
-
-
         </div>
 
-        <!-- Slider indicators (no change needed here) -->
+        <!-- Slider indicators -->
         <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
             <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
             <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
             <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
         </div>
 
-        <!-- Slider controls (no change needed here) -->
+        <!-- Slider controls -->
         <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
             <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
                 <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">

@@ -194,7 +194,9 @@ class Banner(BaseModelMixin):
         blank=True,
         null=True,
     )
-
+    first_slider = models.BooleanField(default=False)
+    second_slider = models.BooleanField(default=False)
+    url_redirect = models.URLField(default="https://demo.demolitorprotein.com/", blank=True)
     def __str__(self):
         return "{}".format(self.name)
     
