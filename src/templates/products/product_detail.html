@@ -146,10 +146,10 @@
                         {% else %}
                             <span class="text-3xl text-gray-800 header_text font-black ">S/ {{ product.price|floatformat:2 }}</span>
                         {% endif %}
-
+                    </div>
+                    <div class="flex items-center space-x-4 mb-6">
                         <input type="text" placeholder="Código de dscto" class="px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500">
                     </div>
-
                     <!-- Botón de Comprar -->
                     <button class="w-full bg-[#DE3704] hover:bg-orange-500 text-white py-3 rounded-lg text-lg font-semibold focus:outline-none focus:ring-2 focus:ring-orange-500 header_text">Comprar</button>
 
@@ -180,23 +180,23 @@
                                 <path d="M9 16.172l-5.414-5.414 1.414-1.414L9 13.344l7.586-7.586 1.414 1.414z"/>
                             </svg>
                         </div>
-                        <span class="ml-2 font-bold font-arupala-grotesk">{{ characteristic.feature_name }}</span>
+                        <span class="ml-2 font-bold font-avenir tracking-widest">{{ characteristic.feature_name }}</span>
                     </li>
                     {% endif %}
                 {% endfor %}
 
             </ul>
-            <div class="flex flex-col sm:flex-row mb-5 items-center sm:items-start">
-                <p class="mr-0 sm:mr-2 text-2xl sm:text-3xl lg:text-4xl delivery">Características</p>
-                <p class="text-2xl sm:text-3xl lg:text-4xl font-bold text-orange-500 delivery">Clave</p>
+            <div class="flex flex-col sm:flex-row mb-5 items-center sm:items-start font-avenir font-bold">
+                <p class="mr-0 sm:mr-2 text-2xl sm:text-3xl lg:text-4xl tracking-widest">Características</p>
+                <p class="text-2xl sm:text-3xl lg:text-4xl font-bold text-orange-500 tracking-widest">Clave</p>
             </div>
             <!-- Características Clave -->
-            <div class="flex flex-col sm:flex-row sm:space-x-8 space-y-4 sm:space-y-0 text-center">
+            <div class="flex flex-col sm:flex-row sm:space-x-8 space-y-4 sm:space-y-0 text-center font-avenir">
                 {% for characteristic in product.characteristics.all %}
                     {% if characteristic.is_key_feature %}
                 	<div>
-                        <span class="text-2xl sm:text-3xl font-bold text-gray-800">{{ characteristic.feature_value}}</span>
-                        <p class="text-gray-600">{{ characteristic.feature_name }}</p>
+                        <span class="text-2xl sm:text-3xl font-black text-gray-800 tracking-widest">{{ characteristic.feature_value}}</span>
+                        <p class="text-gray-600 font-black tracking-widest" >{{ characteristic.feature_name }}</p>
                     </div>
                     {% endif %}
                 {% endfor %}
@@ -213,10 +213,7 @@
                         <img src="{{product_image.image.url }}" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
                     </div>
                   {% endif %}
-
               {% endfor %}
-
-
           </div>
           <!-- Slider controls -->
           <button type="button" class="absolute top-1/2 -left-16 transform -translate-y-1/2 flex items-center justify-center w-10 h-10 rounded-full bg-black bg-opacity-50 text-white hover:bg-opacity-70" data-carousel-prev>
@@ -235,7 +232,7 @@
                   <span class="sr-only">Next</span>
               </span>
           </button>
-      </div>
+        </div>
     </div>
         </div>
     </section>

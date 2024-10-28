@@ -1,11 +1,11 @@
 {% load static %}
 
 <section class="bg-[#ECECEC] p-24 h-max">
-    <h2 class="text-5xl font-bold text-black text-center font-avenir-black">Nuestros productos variados</h2>
+    <h2 class="text-5xl font-bold text-black text-center font-avenir">Nuestros productos variados</h2>
     <div class="container mx-auto py-16">
         <div class="flex justify-center space-x-4 overflow-x-auto md:overflow-hidden flex-nowrap items-center text-black pr-4 md:pr-0 scrollbar-hide">
             {% for category in dynamic_data.category_company.all %}
-                <h2 class="text-xl md:text-xl lg:text-2xl font-light px-4 variety-effect whitespace-nowrap font-avenir-black flex-shrink-0">
+                <h2 class="text-xl md:text-xl lg:text-2xl font-light px-4 variety-effect whitespace-nowrap font-avenir flex-shrink-0">
                     <a href="/products/?category_uuid={{ category.uuid }}" class="">{{ category.name|upper }}</a>
                 </h2>
             {% endfor %}

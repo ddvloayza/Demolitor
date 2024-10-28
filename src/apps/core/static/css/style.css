@@ -1,19 +1,44 @@
 @font-face {
-    font-family: 'Avenir-Roman';
-    src: url('../fonts/AvenirLTStd-Roman.otf') format('opentype');
-    font-weight: normal;
+    font-family: 'Avenir';
+    src: url('../fonts/AvenirLTStd-Light.otf') format('truetype');
+    font-weight: 100;
     font-style: normal;
 }
 @font-face {
-    font-family: 'Avenir-Black';
-    src: url('../fonts/AvenirLTStd-Black.otf') format('opentype');
-    font-weight: bold;
+    font-family: 'Avenir';
+    src: url('../fonts/AvenirLTStd-Roman.otf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Avenir';
+    src: url('../fonts/AvenirLTStd-Book.otf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Avenir';
+    src: url('../fonts/AvenirLTStd-Medium.otf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Avenir';
+    src: url('../fonts/AvenirLTStd-Heavy.otf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir';
+    src: url('../fonts/AvenirLTStd-Black.otf') format('truetype');
+    font-weight: 900;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'ArupalaGrotesk';
-    src: url('../fonts/ArupalaGrotesk-Air.ttf') format('truetype');
+    src: url('../fonts/ArupalaGrotesk-Air.otf') format('truetype');
     font-weight: 100;
     font-style: normal;
 }
@@ -89,7 +114,8 @@
 }
 
 body{
-	font-family: 'Avenir-Roman';
+	font-family: 'Avenir';
+	font-weight: 400;
 }
 .swiper-pagination-bullet {
 	border: 1px solid #1da1f2;
@@ -849,13 +875,14 @@ button.swiper-pagination-bullet {
 }
 
 .delivery {
-	font-family: Avenir-Black;
+	font-family: Avenir;
+	font-weight: 900;
     letter-spacing: 3px;
     font-size: 24px;
 
 }
-.font-avenir-black{
-	font-family: Avenir-Black;
+.font-avenir{
+	font-family: Avenir;
 }
 .font-arupala-grotesk{
 	font-family: ArupalaGrotesk;
@@ -924,3 +951,32 @@ input#maxRange::-webkit-slider-thumb {
     z-index: 3;
 }
 
+/*section Instagram*/
+	.reels-container {
+      display: flex;
+      gap: 1rem;
+      overflow-x: auto;
+      padding: 1rem;
+    }
+
+    .reel-video {
+      min-width: 200px; /* Ajusta el ancho mínimo según el tamaño de los videos */
+      flex-shrink: 0;
+      aspect-ratio: 9 / 16; /* Mantén la proporción de video de Instagram Reels */
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Oculta las barras de desplazamiento en algunos navegadores */
+    .reels-container::-webkit-scrollbar {
+      display: none;
+    }
+    .reels-container {
+      -ms-overflow-style: none;  /* IE y Edge */
+      scrollbar-width: none;  /* Firefox */
+    }
