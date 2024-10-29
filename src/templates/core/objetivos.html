@@ -10,29 +10,27 @@
         <!-- Slider para pantallas pequeñas -->
         <div class="swiper-container two block md:hidden mt-8">
             <div class="swiper-wrapper">
-                <a href="/products/?objective=MUSCLE">
+                <div class="swiper-slide cursor-pointer hover:shadow-custom transition-shadow duration-300">
+                    <a href="/products/?objective=MUSCLE">
+                        <img src="{% static 'img/demolitor-musculo.png' %}" alt="Músculo" class="w-full h-[250px] object-cover rounded-lg ">
+                    </a>
+                </div>
                     <div class="swiper-slide cursor-pointer hover:shadow-custom transition-shadow duration-300">
-                    <img src="{% static 'img/demolitor-musculo.png' %}" alt="Músculo" class="w-full h-[250px] object-cover rounded-lg ">
-                </div>
-                </a>
-
-                <a href="/products/?objective=FITNESS">
+                        <a href="/products/?objective=FITNESS">
+                            <img src="{% static 'img/demolitor-fitness.png' %}" alt="Fitness" class="w-full h-[250px] object-cover rounded-lg">
+                        </a>
+                    </div>
+                    <div class="swiper-slide cursor-pointer hover:shadow-custom transition-shadow duration-300">
+                        <a href="/products/?objective=FITNESS">
+                            <img src="{% static 'img/demolitor-salud.png' %}" alt="Salud" class="w-full h-[250px] object-cover rounded-lg">
+                        </a>
+                    </div>
                 <div class="swiper-slide cursor-pointer hover:shadow-custom transition-shadow duration-300">
-                    <img src="{% static 'img/demolitor-fitness.png' %}" alt="Fitness" class="w-full h-[250px] object-cover rounded-lg">
+                    <a href="/products/?objective=FITNESS">
+                        <img src="{% static 'img/demolitor-sport.png' %}" alt="Sport" class="w-full h-[250px] object-cover rounded-lg">
+                    </a>
                 </div>
-                </a>
-                <a href="/products/?objective=FITNESS">
-                <div class="swiper-slide cursor-pointer hover:shadow-custom transition-shadow duration-300">
-                    <img src="{% static 'img/demolitor-salud.png' %}" alt="Salud" class="w-full h-[250px] object-cover rounded-lg">
-                </div>
-                </a>
-                <a href="/products/?objective=FITNESS">
-                <div class="swiper-slide cursor-pointer hover:shadow-custom transition-shadow duration-300">
-                    <img src="{% static 'img/demolitor-sport.png' %}" alt="Sport" class="w-full h-[250px] object-cover rounded-lg">
-                </div>
-                </a>
             </div>
-
         </div>
 
         <!-- Grid para pantallas más grandes -->

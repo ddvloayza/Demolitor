@@ -18,7 +18,7 @@
   <!-- Grid para pantallas grandes -->
     <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-8 hidden" data-oferta>
       {% for product_oferta in ofertas %}
-      <div class=" p-4 rounded-md">
+        <div class=" p-4 rounded-md block hidden md:block">
           <img src="{{ product_oferta.image.url }}" alt="slide 1" class="w-full h-auto object-cover rounded-md">
             <div class="text-center py-4 text-white">
               <div class="py-4 text-white text-2xl">{{ product_oferta.name }}</div>
@@ -42,40 +42,94 @@
             </div>
       </div>
       {% endfor %}
-    </div>
-
-    <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-8 hidden" data-novedad >
-      {% for product_novedad in novedades %}
-        <div class=" p-4 rounded-md">
-            <img src="{{ product_novedad.image.url }}" alt="slide 1" class="w-full h-auto object-cover rounded-md">
-            <div class="text-center py-4 text-white">
-              <div class="py-4 text-white text-2xl">{{ product_novedad.name }}</div>
-              <div class="flex flex-col items-center justify-center">
-                {% if product_novedad.price_discount %}
-                    <div class="grid grid-cols-2 gap-4 text-center">
-                        <p class="text-white text-2xl line-through">S/. {{ product_novedad.price }}</p>
-                        <p class="text-white text-2xl">S/. {{ product_novedad.price_discount }}</p>
+        <!-- Grid para pantallas chicas -->
+        <div class="swiper-container two md:hidden mt-8">
+            <div class="swiper-wrapper">
+                {% for product_oferta in ofertas %}
+                    <div class="swiper-slide">
+                        <div class="slider-image">
+                            <img src="{{ product_oferta.image.url }}" alt="slide 3">
+                            <div class="text-center py-4">
+                                <div class="py-4">{{ product_oferta.name }}</div>
+                                <div class="flex items-center justify-center">
+                                    {% if product_oferta.price_discount %}
+                                        <div class="grid grid-cols-2 gap-4 text-center">
+                                            <p class="text-black text-2xl line-through">S/. {{ product_oferta.price }}</p>
+                                            <p class="text-black text-2xl">S/. {{ product_oferta.price_discount }}</p>
+                                        </div>
+                                    {% else %}
+                                        <div class="grid grid-cols-1 gap-4 text-center">
+                                            <p class="text-black text-2xl">S/. {{ product_oferta.price }}</p>
+                                        </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                {% else %}
-                    <div class="grid grid-cols-1 gap-4 text-center">
-                        <p class="text-white text-2xl">S/. {{ product_novedad.price }}</p>
-                    </div>
-                {% endif %}
-                <a href="{% url 'core:product_detail' product_novedad.uuid %}">
-                  <button class="mt-4 text-white bg-red-500 px-8 py-3 rounded-lg hover:bg-red-700 transition-colors duration-300">
-                      Ver más
-                  </button>
-                </a>
-              </div>
+                {% endfor %}
             </div>
-          </div>
-        {% endfor %}
+        </div>
     </div>
-    <!-- Contenedor de productos -->
+    <div class="hidden" data-novedad >
+        <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-8">
+            {% for product_novedad in novedades %}
+            <div class=" p-4 rounded-md hidden md:block">
+                <img src="{{ product_novedad.image.url }}" alt="slide 1" class="w-full h-auto object-cover rounded-md">
+                <div class="text-center py-4 text-white">
+                  <div class="py-4 text-white text-2xl">{{ product_novedad.name }}</div>
+                  <div class="flex flex-col items-center justify-center">
+                    {% if product_novedad.price_discount %}
+                        <div class="grid grid-cols-2 gap-4 text-center">
+                            <p class="text-white text-2xl line-through">S/. {{ product_novedad.price }}</p>
+                            <p class="text-white text-2xl">S/. {{ product_novedad.price_discount }}</p>
+                        </div>
+                    {% else %}
+                        <div class="grid grid-cols-1 gap-4 text-center">
+                            <p class="text-white text-2xl">S/. {{ product_novedad.price }}</p>
+                        </div>
+                    {% endif %}
+                    <a href="{% url 'core:product_detail' product_novedad.uuid %}">
+                      <button class="mt-4 text-white bg-red-500 px-8 py-3 rounded-lg hover:bg-red-700 transition-colors duration-300">
+                          Ver más
+                      </button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+          {% endfor %}
+        </div>
 
+        <!-- Grid para pantallas chicas -->
+        <div class="swiper-container two block md:hidden mt-8">
+            <div class="swiper-wrapper">
+                {% for product_novedad in novedades %}
+                    <div class="swiper-slide">
+                        <div>
+                            <img src="{{ product_novedad.image.url }}" alt="slide 3">
+                            <div class="text-center py-4">
+                                <div class="py-4">{{ product_novedad.name }}</div>
+                                <div class=" items-center justify-center">
+                                    {% if product_novedad.price_discount %}
+                                        <div class="grid grid-cols-2 gap-4 text-center">
+                                            <p class="text-white text-2xl line-through">S/. {{ product_novedad.price }}</p>
+                                            <p class="text-white text-2xl">S/. {{ product_novedad.price_discount }}</p>
+                                        </div>
+                                    {% else %}
+                                        <div class="grid grid-cols-1 gap-4 text-center">
+                                            <p class="text-white text-2xl">S/. {{ product_novedad.price }}</p>
+                                        </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
     <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-8 hidden" data-packs>
       {% for product_packs in packs %}
-      <div class=" p-4 rounded-md">
+      <div class=" p-4 rounded-md hidden md:block">
           <img src="{{ product_packs.image.url }}" alt="slide 1" class="w-full h-auto object-cover rounded-md">
             <div class="text-center py-4 text-white">
               <div class="py-4 text-white text-2xl">{{ product_packs.name }}</div>
@@ -99,7 +153,36 @@
             </div>
       </div>
       {% endfor %}
+        <!-- Grid para pantallas chicas -->
+        <div class="swiper-container two block md:hidden mt-8">
+            <div class="swiper-wrapper">
+                {% for product_packs in packs %}
+                    <div class="swiper-slide">
+                        <div class="slider-image">
+                            <img src="{{ product_packs.image.url }}" alt="slide 3">
+                            <div class="text-center py-4">
+                                <div class="py-4">{{ product_packs.name }}</div>
+                                <div class="flex items-center justify-center">
+                                    {% if product_packs.price_discount %}
+                                        <div class="grid grid-cols-2 gap-4 text-center">
+                                            <p class="text-black text-2xl line-through">S/. {{ product_packs.price }}</p>
+                                            <p class="text-black text-2xl">S/. {{ product_packs.price_discount }}</p>
+                                        </div>
+                                    {% else %}
+                                        <div class="grid grid-cols-1 gap-4 text-center">
+                                            <p class="text-black text-2xl">S/. {{ product_packs.price }}</p>
+                                        </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
     </div>
+
+
 
   </div>
 </section>
