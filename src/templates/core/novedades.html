@@ -4,20 +4,12 @@
   <div class="container mx-auto py-8">
     <!-- Cabecera para las categorías -->
     <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8">
-      <h2 class="text-xl md:text-2xl lg:text-3xl font-normal px-4 md:px-8 text-white cursor-pointer text-shadow-effect header_text"
-          onclick="ToggleWithDataAttr(event, 'data-oferta')">
-          OFERTAS
-      </h2>
-
-      <h2 class="text-xl md:text-2xl lg:text-3xl font-normal text-white px-4 md:px-8 cursor-pointer text-shadow-effect header_text"
-          onclick="ToggleWithDataAttr(event, 'data-novedad')">
-          NOVEDADES
-      </h2>
-
-      <h2 class="text-xl md:text-2xl lg:text-3xl font-normal text-white px-4 md:px-8 cursor-pointer text-shadow-effect header_text"
-          onclick="ToggleWithDataAttr(event, 'data-packs')">
-          PACKS
-      </h2>
+        <h2 class="header_text text-xl md:text-2xl lg:text-3xl font-normal px-4 md:px-8 text-white cursor-pointer text-shadow-effect"
+            onclick="ToggleWithDataAttr(event, 'data-oferta')">OFERTAS</h2>
+        <h2 class="header_text text-xl md:text-2xl lg:text-3xl font-normal text-white px-4 md:px-8 cursor-pointer text-shadow-effect"
+            onclick="ToggleWithDataAttr(event, 'data-novedad')">NOVEDADES</h2>
+        <h2 class="header_text text-xl md:text-2xl lg:text-3xl font-normal text-white px-4 md:px-8 cursor-pointer text-shadow-effect"
+            onclick="ToggleWithDataAttr(event, 'data-packs')">PACKS</h2>
     </div>
   </div>
 
@@ -52,7 +44,7 @@
       {% endfor %}
     </div>
 
-    <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-8" data-novedad >
+    <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-8 hidden" data-novedad >
       {% for product_novedad in novedades %}
         <div class=" p-4 rounded-md">
             <img src="{{ product_novedad.image.url }}" alt="slide 1" class="w-full h-auto object-cover rounded-md">
@@ -117,25 +109,36 @@
 
 
 <script>
-    function ToggleWithDataAttr(event, dataAttr) {
-        var eventTarget = event.target;
-        var div = document.querySelector(`[${dataAttr}]`);
-        var div_hidden = document.querySelectorAll(`[swiper]`);
-        var nav = document.querySelectorAll('.text-shadow-effect');
+document.addEventListener("DOMContentLoaded", function () {
+    // Al cargar, activa el tab "novedades" por defecto
+    const defaultTabContent = document.querySelector(`[data-novedad]`);
+    const defaultTabHeader = document.querySelector(`[onclick="ToggleWithDataAttr(event, 'data-novedad')"]`);
 
-        if (div) {
-            div_hidden.forEach(function(element) {
-                element.classList.add('hidden');
-            });
-            nav.forEach(function(element) {
-                element.classList.remove('text-shadow-effect-active');
-            });
+    if (defaultTabContent && defaultTabHeader) {
+        defaultTabContent.classList.remove("hidden");
+        defaultTabHeader.classList.add("text-shadow-effect-active");
+    }
+});
 
-            eventTarget.classList.toggle('text-shadow-effect-active');
-            div.classList.toggle('hidden');
-        }
+function ToggleWithDataAttr(event, dataAttr) {
+    const clickedTabHeader = event.target;
+    const targetTabContent = document.querySelector(`[${dataAttr}]`);
+    const allTabContents = document.querySelectorAll(`[data-oferta], [data-novedad], [data-packs]`);
+    const allTabHeaders = document.querySelectorAll(".header_text");
+
+    // Si ya está en el tab activo, no hacer nada
+    if (clickedTabHeader.classList.contains("text-shadow-effect-active")) {
+        return;
     }
 
+    // Ocultar todos los contenidos de tab y desactivar todos los headers de tab
+    allTabContents.forEach(content => content.classList.add("hidden"));
+    allTabHeaders.forEach(header => header.classList.remove("text-shadow-effect-active"));
+
+    // Activar el nuevo tab y mostrar su contenido
+    targetTabContent.classList.remove("hidden");
+    clickedTabHeader.classList.add("text-shadow-effect-active");
+}
 
 </script>
 {% endblock js %}

@@ -833,16 +833,29 @@ button.swiper-pagination-bullet {
     font-size: 3rem;
     font-weight: bold;
     color: #ff3401;
-	transition: all 0.7s;
+    transition: all 0.7s;
     text-shadow: 3px 6px 20px #ff3401;
 }
-
 .text-shadow-effect-active {
-    font-size: 3rem !important;
+    font-size: 3rem;
     font-weight: bold;
     color: #ff3401;
     text-shadow: 3px 6px 20px #ff3401;
 }
+
+/* Tamaños de pantalla pequeños: ajusta el crecimiento en hover */
+@media (max-width: 768px) {
+    .text-shadow-effect:hover {
+        font-size: 2rem; /* Tamaño de fuente más pequeño en pantallas pequeñas */
+        text-shadow: 2px 4px 10px #ff3401; /* Ajusta la sombra para que también sea más sutil */
+    }
+	.text-shadow-effect-active {
+		font-size: 2rem; /* Tamaño de fuente más pequeño en pantallas pequeñas */
+        text-shadow: 3px 6px 20px #ff3401; /* Ajusta la sombra para que también sea más sutil */
+	}
+}
+
+
 
 .text-effect {
 	font-size: 3rem; /* Equivalente a text-3xl */
@@ -980,3 +993,4 @@ input#maxRange::-webkit-slider-thumb {
       -ms-overflow-style: none;  /* IE y Edge */
       scrollbar-width: none;  /* Firefox */
     }
+

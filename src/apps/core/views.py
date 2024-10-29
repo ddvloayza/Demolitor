@@ -34,15 +34,19 @@ class HomeView(TemplateView):
         context['ofertas'] = Product.objects.filter(
             category__company__comercial_name__icontains="demolitor",
             tag__slug="ofertas"
-        )
+        ).order_by('?')[:3]
         context['novedades'] = Product.objects.filter(
             category__company__comercial_name__icontains="demolitor",
             tag__slug="novedades"
-        )
+        ).order_by('?')[:3]
         context['packs'] = Product.objects.filter(
             category__company__comercial_name__icontains="demolitor",
             tag__slug="packs"
-        )
+        ).order_by('?')[:3]
+        context['best_sellers'] = Product.objects.filter(
+            category__company__comercial_name__icontains="demolitor",
+            is_best_seller=True
+        ).order_by('?')[:3]
         context['banners'] = Banner.objects.filter(first_slider=True)
         context['middle_banner'] = Banner.objects.filter(second_slider=True).first()
         print("middle_banner", context['middle_banner'])

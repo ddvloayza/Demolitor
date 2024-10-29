@@ -60,7 +60,7 @@
                                 <div class="hidden duration-700 ease-in-out" data-carousel-item>
                                     <img
                                         src="{{ product_image.image.url }}"
-                                        class="absolute block max-w-full h-auto left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer"
+                                        class="relative block w-1/2 h-auto left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer"
                                         alt="..."
                                         onclick="openModal('{{ product_image.image.url }}')"
                                     >
@@ -70,22 +70,23 @@
                           {% endfor %}
                       </div>
                       <!-- Slider controls -->
-                      <button type="button" class="absolute top-1/2 -left-16 transform -translate-y-1/2 flex items-center justify-center w-10 h-10 rounded-full bg-black bg-opacity-50 text-white hover:bg-opacity-70" data-carousel-prev>
-                          <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-black/30 dark:bg-gray-800/30 group-hover:bg-black/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                              <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
-                              </svg>
-                              <span class="sr-only">Previous</span>
-                          </span>
-                      </button>
-                      <button type="button" class="absolute top-1/2 -right-16 transform -translate-y-1/2 flex items-center justify-center w-10 h-10 rounded-full bg-black bg-opacity-50 text-white hover:bg-opacity-70" data-carousel-next>
-                          <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-black/30 dark:bg-gray-800/30 group-hover:bg-black/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                              <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
-                              </svg>
-                              <span class="sr-only">Next</span>
-                          </span>
-                      </button>
+                        <div class="flex justify-center mt-4 md:absolute md:top-1/2 md:transform md:-translate-y-1/2 md:w-full md:justify-between md:px-8">
+                            <!-- Previous Button -->
+                            <button type="button" class="flex items-center justify-center w-10 h-10 rounded-full bg-black bg-opacity-50 text-white hover:bg-opacity-70 md:absolute md:left-4" data-carousel-prev>
+                                <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+                                </svg>
+                                <span class="sr-only">Previous</span>
+                            </button>
+
+                            <!-- Next Button -->
+                            <button type="button" class="flex items-center justify-center w-10 h-10 rounded-full bg-black bg-opacity-50 text-white hover:bg-opacity-70 md:absolute md:right-4" data-carousel-next>
+                                <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                                </svg>
+                                <span class="sr-only">Next</span>
+                            </button>
+                        </div>
                   </div>
                     <!-- Modal de imagen en pantalla completa -->
                     <div id="imageModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black bg-opacity-70 backdrop-blur-lg">
@@ -130,7 +131,7 @@
                         <div class="flex space-x-6">
                             {% for packaging in product.packagings.all %}
                                 <label class="flex items-center">
-                                    <input type="radio" name="packaging_option" class="form-radio h-5 w-5 text-orange-500" id="option{{ forloop.counter }}">
+                                    <input type="radio" name="packaging_option" class="form-radio h-5 w-5 text-[rgb(222,55,5)]" id="option{{ forloop.counter }}">
                                     <span class="ml-2 text-gray-700">{{ packaging.size }}</span>
                                 </label>
                             {% endfor %}
@@ -188,7 +189,7 @@
             </ul>
             <div class="flex flex-col sm:flex-row mb-5 items-center sm:items-start font-avenir font-bold">
                 <p class="mr-0 sm:mr-2 text-2xl sm:text-3xl lg:text-4xl tracking-widest">Características</p>
-                <p class="text-2xl sm:text-3xl lg:text-4xl font-bold text-orange-500 tracking-widest">Clave</p>
+                <p class="text-2xl sm:text-3xl lg:text-4xl font-bold text-[rgb(222,55,5)] tracking-widest">Clave</p>
             </div>
             <!-- Características Clave -->
             <div class="flex flex-col sm:flex-row sm:space-x-8 space-y-4 sm:space-y-0 text-center font-avenir">
@@ -216,22 +217,26 @@
               {% endfor %}
           </div>
           <!-- Slider controls -->
-          <button type="button" class="absolute top-1/2 -left-16 transform -translate-y-1/2 flex items-center justify-center w-10 h-10 rounded-full bg-black bg-opacity-50 text-white hover:bg-opacity-70" data-carousel-prev>
-              <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-black/50 dark:bg-gray-800/30 group-hover:bg-black/100 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                  <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
-                  </svg>
-                  <span class="sr-only">Previous</span>
-              </span>
-          </button>
-          <button type="button" class="absolute top-1/2 -right-16 transform -translate-y-1/2 flex items-center justify-center w-10 h-10 rounded-full bg-black bg-opacity-50 text-white hover:bg-opacity-70" data-carousel-next>
-              <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-black/50 dark:bg-gray-800/30 group-hover:bg-black/100 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                  <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
-                  </svg>
-                  <span class="sr-only">Next</span>
-              </span>
-          </button>
+        <div class="carousel-btn-container">
+            <!-- Coloca aquí los botones prev y next -->
+            <button type="button" class="carousel-btn absolute top-1/2 -left-16 transform -translate-y-1/2 flex items-center justify-center w-10 h-10 rounded-full bg-black bg-opacity-50 text-white hover:bg-opacity-70" data-carousel-prev>
+                <span class="carousel-icon inline-flex items-center justify-center w-10 h-10 rounded-full bg-black/50 dark:bg-gray-800/30 group-hover:bg-black/100 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                    <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+                    </svg>
+                    <span class="sr-only">Previous</span>
+                </span>
+            </button>
+            <button type="button" class="carousel-btn absolute top-1/2 -right-16 transform -translate-y-1/2 flex items-center justify-center w-10 h-10 rounded-full bg-black bg-opacity-50 text-white hover:bg-opacity-70" data-carousel-next>
+                <span class="carousel-icon inline-flex items-center justify-center w-10 h-10 rounded-full bg-black/50 dark:bg-gray-800/30 group-hover:bg-black/100 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                    <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                    </svg>
+                    <span class="sr-only">Next</span>
+                </span>
+            </button>
+        </div>
+
         </div>
     </div>
         </div>
