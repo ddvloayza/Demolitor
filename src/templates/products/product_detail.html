@@ -104,7 +104,15 @@
 
                     <!-- Título del Producto -->
                     <h1 class="text-4xl font-bold text-gray-800 mb-4 header_text font-black">{{ product.name }}</h1>
-
+                    <!-- Precio y Descuento -->
+                    <div class="flex items-center space-x-4 mb-6 justify-center">
+                        {% if product.price_discount %}
+                            <span class="text-xl text-gray-800 header_text font-black line-through">S/ {{ product.price|floatformat:2 }}</span>
+                            <span class="text-3xl text-gray-800 header_text font-black" id="product-price">S/ {{ product.price_discount|floatformat:2 }}</span>
+                        {% else %}
+                            <span class="text-3xl text-gray-800 header_text font-black" id="product-price">S/ {{ product.price|floatformat:2 }}</span>
+                        {% endif %}
+                    </div>
                     <!-- Selector de Sabor -->
                     <div class="mb-6">
                       <div class="flex space-x-4 justify-center">
@@ -139,15 +147,7 @@
                         </div>
                     </div>
 
-                    <!-- Precio y Descuento -->
-                    <div class="flex items-center space-x-4 mb-6 justify-center">
-                        {% if product.price_discount %}
-                            <span class="text-xl text-gray-800 header_text font-black line-through">S/ {{ product.price|floatformat:2 }}</span>
-                            <span class="text-3xl text-gray-800 header_text font-black" id="product-price">S/ {{ product.price_discount|floatformat:2 }}</span>
-                        {% else %}
-                            <span class="text-3xl text-gray-800 header_text font-black" id="product-price">S/ {{ product.price|floatformat:2 }}</span>
-                        {% endif %}
-                    </div>
+
 
                     <!-- Campo de código de descuento -->
                     <div class="flex items-center space-x-4 mb-6 justify-center">
