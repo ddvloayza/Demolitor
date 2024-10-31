@@ -3,7 +3,7 @@ from django.http import JsonResponse
 from django.views.generic import TemplateView, ListView
 from django.core.paginator import Paginator
 from django.views.generic.detail import DetailView
-
+import random
 from apps.company.models import Company
 from apps.product.models.product import Category
 from apps.customuser.models.customuser import Banner
@@ -58,6 +58,15 @@ class ProductDetailView(DetailView):
     template_name = 'products/product_detail.html'
     context_object_name = 'product'
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        # Obtener todos los productos excepto el actual
+        other_products = list(Product.objects.exclude(pk=self.object.pk))
+        # Seleccionar hasta 3 productos aleatorios (ajusta el número según tus necesidades)
+        random_products = random.sample(other_products, min(len(other_products), 3))
+        # Agregar al contexto
+        context['random_products'] = random_products
+        return context
 
 class ProductListView(ListView):
     model = Product
