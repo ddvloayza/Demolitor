@@ -2,7 +2,7 @@
 
 <section class="bg-[#ECECEC] p-24 h-max">
     <h2 class="text-5xl font-bold text-black text-center font-avenir">Nuestros productos variados</h2>
-    <div class="container mx-auto py-16">
+    <div class="hidden md:block container mx-auto py-16">
         <div class="flex justify-center space-x-4 overflow-x-auto md:overflow-hidden flex-nowrap items-center text-black pr-4 md:pr-0 scrollbar-hide">
             {% for category in dynamic_data.category_company.all %}
                 <h2 class="text-xl md:text-xl lg:text-2xl font-light px-4 variety-effect whitespace-nowrap font-avenir flex-shrink-0">
@@ -16,21 +16,21 @@
         {% for best_seller in best_sellers %}
         <div class="p-4 rounded-md">
             <img src="{{ best_seller.image.url }}" alt="slide 1" class="w-full h-auto object-cover rounded-md">
-            <div class="text-center py-4 text-white">
-                <div class="py-4 text-white text-2xl">{{ best_seller.name }}</div>
+            <div class="text-center py-4 text-black">
+                <div class="py-4 text-2xl">{{ best_seller.name }}</div>
                 <div class="flex flex-col items-center justify-center">
                     {% if best_seller.price_discount %}
                         <div class="grid grid-cols-2 gap-4 text-center">
-                            <p class="text-white text-2xl line-through">S/. {{ best_seller.price }}</p>
-                            <p class="text-white text-2xl">S/. {{ best_seller.price_discount }}</p>
+                            <p class=" text-2xl line-through">S/. {{ best_seller.price }}</p>
+                            <p class=" text-2xl">S/. {{ best_seller.price_discount }}</p>
                         </div>
                     {% else %}
                         <div class="grid grid-cols-1 gap-4 text-center">
-                            <p class="text-white text-2xl">S/. {{ best_seller.price }}</p>
+                            <p class=" text-2xl">S/. {{ best_seller.price }}</p>
                         </div>
                     {% endif %}
                     <a href="{% url 'core:product_detail' best_seller.uuid %}">
-                        <button class="mt-4 text-white bg-red-500 px-8 py-3 rounded-lg hover:bg-red-700 transition-colors duration-300">
+                        <button class="mt-4 text-white bg-[rgb(222,55,5)] px-8 py-3 rounded-lg hover:bg-red-700 transition-colors duration-300">
                             Ver más
                         </button>
                     </a>
@@ -41,14 +41,14 @@
     </div>
 
     <!-- Swiper -->
-    <div class="block md:hidden swiper-container two">
+    <div class="block md:hidden swiper-container two pt-12 ">
         <div class="swiper-wrapper">
             {% for best_seller in best_sellers %}
             	<div class="swiper-slide">
                     <div class="slider-image">
                         <img src="{{ best_seller.image.url }}" alt="slide 3">
                         <div class="text-center py-4">
-                            <div class="py-4">{{ best_seller.name }}</div>
+                            <div class="py-4 text-2xl">{{ best_seller.name }}</div>
                             <div class="flex items-center justify-center">
                                 {% if best_seller.price_discount %}
                                     <div class="grid grid-cols-2 gap-4 text-center">
@@ -60,7 +60,13 @@
                                         <p class="text-black text-2xl">S/. {{ best_seller.price }}</p>
                                     </div>
                                 {% endif %}
+
                             </div>
+                            <a href="{% url 'core:product_detail' best_seller.uuid %}">
+                                <button class="mt-4 text-white bg-[rgb(222,55,5)] px-8 py-3 rounded-lg hover:bg-red-700 transition-colors duration-300">
+                                    Ver más
+                                </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -69,7 +75,7 @@
     </div>
 
     <div class="flex items-center justify-center">
-        <a href="{% url 'core:product_list' %}" class="text-2xl text-white m-auto bg-[rgb(222,55,5)] px-8 py-4 rounded-[10px] mt-4 hover:bg-red-700">
+        <a href="{% url 'core:product_list' %}" class="text-lg sm:text-xl md:text-2xl text-white bg-[rgb(222,55,5)] px-4 py-2 sm:px-6 sm:py-3 md:px-8 md:py-4 rounded-[10px] mt-2 sm:mt-3 md:mt-4 w-full sm:w-auto text-center hover:bg-red-700">
             Ver todos los productos
         </a>
     </div>
