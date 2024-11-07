@@ -51,7 +51,7 @@
             <!-- Imagen del Producto -->
                 <div class="w-full lg:w-1/2 flex justify-center">
                     <!-- Imagen del Producto con Slider -->
-                    <div id="default-carousel" class="relative w-full" data-carousel="slide">
+                    <div id="default-carousel" class="relative w-full" data-carousel="static">
                       <!-- Carousel wrapper -->
                       <div class="relative h-80 overflow-hidden rounded-lg md:h-[80vh]">
                            <!-- Item 1 -->
@@ -115,12 +115,12 @@
                     </div>
                     <!-- Selector de Sabor -->
                     <div class="mb-6">
-                      <div class="flex space-x-4 justify-center">
-                        {% for flavor in product.flavors.all %}
-                        <button class="flavor-option px-4 py-2 border rounded-full text-gray-700 bg-gray-100 focus:bg-gray-200 focus:outline-none"
-                          onclick="selectFlavor('{{ flavor.name }}')">{{ flavor.name|capfirst }}</button>
-                        {% endfor %}
-                      </div>
+                        <div class="flex space-x-4 justify-center">
+                            {% for flavor in product.flavors.all %}
+                                <button class="flavor-option px-4 py-2 border rounded-full text-gray-700 bg-gray-100 focus:bg-gray-200 focus:outline-none"
+                                  onclick="selectFlavor('{{ flavor.name }}')">{{ flavor.name|capfirst }}</button>
+                            {% endfor %}
+                        </div>
                     </div>
 
                     <!-- Control de Cantidad -->
@@ -219,7 +219,7 @@
                     </div>
                 </div>
                 <!-- Imagen del Producto con Slider -->
-                <div id="default-carousel" class="relative w-full lg:w-1/2" data-carousel="slide">
+                <div id="default-carousel" class="relative w-full lg:w-1/2" data-carousel="static">
                   <!-- Carousel wrapper -->
                   <div class="relative h-96 overflow-hidden rounded-lg md:h-[80vh]">
                       {% for product_image in  product.images.all%}
@@ -334,6 +334,11 @@
                                         {% endif %}
 
                                     </div>
+                                <a href="{% url 'core:product_detail' random_product.uuid %}">
+                                <button class="mt-4 text-white bg-[rgb(222,55,5)] px-8 py-3 rounded-lg hover:bg-red-700 transition-colors duration-300">
+                                    Ver más
+                                </button>
+                            </a>
                                 </div>
 
                             </div>
@@ -374,6 +379,15 @@
         }
         function selectFlavor(flavor) {
             selectedFlavor = flavor;
+
+            // Remueve la clase de selección de todos los botones de sabor
+            const flavorButtons = document.querySelectorAll('.flavor-option');
+            flavorButtons.forEach(button => {
+                button.classList.remove('selected-flavor');
+            });
+
+            // Agrega la clase de selección al botón de sabor seleccionado
+            event.target.classList.add('selected-flavor');
         }
         function selectPresentation(presentation) {
             selectedPresentation = presentation;
@@ -385,15 +399,20 @@
             }
         }
         function sendToWhatsApp() {
-            const price = document.getElementById('product-price').textContent;
+            // Obteniendo el precio y removiendo cualquier formato de moneda
+            const priceText = document.getElementById('product-price').textContent;
+            const price = parseFloat(priceText.replace(/[^0-9.-]+/g, '')); // Extrae solo el número
             const discountCode = document.getElementById('discount-code').value;
             const productName = "{{ product.name }}";
 
+            // Calcular subtotal
+            const subtotal = price * quantity;
             const message = `Hola, quiero comprar el producto *${productName}*.\n\n` +
                             `- Sabor: ${selectedFlavor || 'No seleccionado'}\n` +
                             `- Cantidad: ${quantity}\n` +
                             `- Presentación: ${selectedPresentation || 'No seleccionado'}\n` +
-                            `- Precio: ${price}\n` +
+                            `- Precio unitario: S/. ${price.toFixed(2)}\n` +  // Formatear precio a dos decimales
+                            `- Subtotal: S/. ${subtotal.toFixed(2)}\n` +      // Formatear subtotal a dos decimales
                             `${discountCode ? `- Código de descuento: ${discountCode}` : ''}`;
 
             const whatsappUrl = `https://wa.me/51913137240?text=${encodeURIComponent(message)}`;

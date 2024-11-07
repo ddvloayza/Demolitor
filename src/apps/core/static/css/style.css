@@ -993,4 +993,7 @@ input#maxRange::-webkit-slider-thumb {
       -ms-overflow-style: none;  /* IE y Edge */
       scrollbar-width: none;  /* Firefox */
     }
-
+	.selected-flavor {
+        background-color: #ffeb3b; /* Puedes elegir el color que prefieras */
+        font-weight: bold;
+    }
