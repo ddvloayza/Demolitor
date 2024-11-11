@@ -11,7 +11,43 @@
 {% endblock social_facebook %}
 {% block css %}
 <style>
+    /* Estilos para el modal */
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 100;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.7);
+        backdrop-filter: blur(5px);
+        justify-content: center;
+        align-items: center;
+    }
 
+    .modal-content {
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        width: 90%;
+        max-width: 400px;
+    }
+
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
 </style>
 {% endblock css %}
 {% block content %}
@@ -30,7 +66,7 @@
         <!-- Sidebar -->
         <div class="w-full md:w-1/4 pr-4 text-black mb-8 md:mb-0">
             <!-- Tabs de Categorías y Filtros -->
-            <div class="flex py-6">
+            <div class="md:flex py-6 hidden">
                 <!-- Tab de Categorías -->
                 <div id="tab-categorias" class="cursor-pointer py-2 text-center w-1/2 border-b-2 border-orange-600" onclick="showTab('categorias')">
                     <span class="px-4 font-semibold">CATEGORÍAS</span>
@@ -40,84 +76,72 @@
                     <span class="px-4 font-semibold">FILTROS</span>
                 </div>
             </div>
-
-            <!-- Contenido de CATEGORÍAS -->
-            <ul id="content-categorias" class="space-y-8">
-                {% for category in dynamic_data.category_company.all %}
-                    <li><a href="javascript:void(0);" onclick="fetchProducts('{{ category.uuid }}')" class="block hover:underline">{{ category.name }}</a></li>
-                {% endfor %}
-            </ul>
-
-            <!-- Contenido de FILTROS (con acordeones) -->
-            <div id="content-filtros" class="space-y-4 hidden">
-                <!-- Filtro de Ordenar por -->
-                <div class="accordion">
-                    <button class="w-full text-left p-4 flex justify-between items-center" onclick="toggleAccordion('ordenar')">
-                        <span>Ordenar por</span>
-                        <i id="chevron-ordenar" class="fas fa-chevron-down"></i>
-                    </button>
-                    <div id="ordenar" class="p-4">
-                        <ul>
-{#                            <li><a href="javascript:void(0);" onclick="fetchProducts(null, 'best_selling')">Más vendidos</a></li>#}
-{#                            <li><a href="javascript:void(0);" onclick="fetchProducts(null, 'highest_rated')">Mejor calificación</a></li>#}
-                            <li><a href="javascript:void(0);" onclick="fetchProducts(null, 'low_to_high')">Precio: más bajo primero</a></li>
-                            <li><a href="javascript:void(0);" onclick="fetchProducts(null, 'high_to_low')">Precio: más alto primero</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Descuento -->
-{#                <div class="accordion">#}
-{#                    <button class="w-full text-left p-4 flex justify-between items-center" onclick="toggleAccordion('descuento')">#}
-{#                        <span>Descuento</span>#}
-{#                        <i id="chevron-descuento" class="fas fa-chevron-down"></i>#}
-{#                    </button>#}
-{#                    <div id="descuento" class="p-4 hidden">#}
-{#                        <ul>#}
-{#                            <li><a href="#" class="block hover:underline">10% o más</a></li>#}
-{#                            <li><a href="#" class="block hover:underline">20% o más</a></li>#}
-{#                            <li><a href="#" class="block hover:underline">30% o más</a></li>#}
-{#                        </ul>#}
-{#                    </div>#}
-{#                </div>#}
-
-                <!-- Objetivo -->
-                <div class="accordion">
-                    <button class="w-full text-left p-4 flex justify-between items-center" onclick="toggleAccordion('objetivo')">
-                        <span>Objetivo</span>
-                        <i id="chevron-objetivo" class="fas fa-chevron-down"></i>
-                    </button>
-                    <div id="objetivo" class="p-4 hidden">
-                        <ul>
-                            <li><a href="javascript:void(0)" class="block hover:underline" onclick="applyObjectiveFilter('MUSCLE')">Músculo</a></li>
-                            <li><a href="javascript:void(0)" class="block hover:underline" onclick="applyObjectiveFilter('FITNESS')">Fitness</a></li>
-                            <li><a href="javascript:void(0)" class="block hover:underline" onclick="applyObjectiveFilter('HEALTH')">Salud</a></li>
-                            <li><a href="javascript:void(0)" class="block hover:underline" onclick="applyObjectiveFilter('SPORT')">Sport</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Precio con filtro de rango -->
-                <!-- Filtro de rango de precio -->
-                <div class="accordion">
-                    <button class="w-full text-left p-4 flex justify-between items-center" onclick="toggleAccordion('precio')">
-                        <span>Precio</span>
-                        <i id="chevron-precio" class="fas fa-chevron-down"></i>
-                    </button>
-                    <div id="precio" class="p-4 hidden">
-                        <label for="rangeSlider" class="block text-gray-700">Rango de precio</label>
-                        <div class="range-slider-container">
-                            <input id="minRange" type="range" min="0" max="500" step="5" value="0" oninput="updateRangeValues()">
-                            <input id="maxRange" type="range" min="0" max="500" step="5" value="500" oninput="updateRangeValues()">
+            <!-- buttons de Categorías y Filtros -->
+            <div class="flex py-6 md:hidden">
+                <!-- Botón de Categorías -->
+                <button onclick="openModal('modal-categorias')" class="w-1/2 py-2 text-center font-semibold text-white bg-orange-600">CATEGORÍAS</button>
+                <!-- Botón de Filtros -->
+                <button onclick="openModal('modal-filtros')" class="w-1/2 py-2 text-center font-semibold text-white bg-orange-600">FILTROS</button>
+            </div>
+            <div class="hidden md:block">
+                <!-- Contenido de CATEGORÍAS -->
+                <ul id="content-categorias" class="space-y-8">
+                    {% for category in dynamic_data.category_company.all %}
+                        <li><a href="javascript:void(0);" onclick="fetchProducts('{{ category.uuid }}')" class="block hover:underline">{{ category.name }}</a></li>
+                    {% endfor %}
+                </ul>
+                <!-- Contenido de FILTROS (con acordeones) -->
+                <div id="content-filtros" class="space-y-4 hidden">
+                    <!-- Filtro de Ordenar por -->
+                    <div class="accordion">
+                        <button class="w-full text-left p-4 flex justify-between items-center" onclick="toggleAccordion('ordenar')">
+                            <span>Ordenar por</span>
+                            <i id="chevron-ordenar" class="fas fa-chevron-down"></i>
+                        </button>
+                        <div id="ordenar" class="p-4">
+                            <ul>
+                                <li><a href="javascript:void(0);" onclick="fetchProducts(null, 'low_to_high')">Precio: más bajo primero</a></li>
+                                <li><a href="javascript:void(0);" onclick="fetchProducts(null, 'high_to_low')">Precio: más alto primero</a></li>
+                            </ul>
                         </div>
-                        <div class="range-values">
-                            <span>S/<span id="minValue">0</span></span>
-                            <span>S/<span id="maxValue">500</span></span>
+                    </div>
+                    <!-- Objetivo -->
+                    <div class="accordion">
+                        <button class="w-full text-left p-4 flex justify-between items-center" onclick="toggleAccordion('objetivo')">
+                            <span>Objetivo</span>
+                            <i id="chevron-objetivo" class="fas fa-chevron-down"></i>
+                        </button>
+                        <div id="objetivo" class="p-4 hidden">
+                            <ul>
+                                <li><a href="javascript:void(0)" class="block hover:underline" onclick="applyObjectiveFilter('MUSCLE')">Músculo</a></li>
+                                <li><a href="javascript:void(0)" class="block hover:underline" onclick="applyObjectiveFilter('FITNESS')">Fitness</a></li>
+                                <li><a href="javascript:void(0)" class="block hover:underline" onclick="applyObjectiveFilter('HEALTH')">Salud</a></li>
+                                <li><a href="javascript:void(0)" class="block hover:underline" onclick="applyObjectiveFilter('SPORT')">Sport</a></li>
+                            </ul>
                         </div>
-                        <button type="button" class="mt-4 bg-blue-500 text-white px-4 py-2" onclick="applyPriceFilter()">Filtrar</button>
+                    </div>
+                    <!-- Filtro de rango de precio -->
+                    <div class="accordion">
+                        <button class="w-full text-left p-4 flex justify-between items-center" onclick="toggleAccordion('precio')">
+                            <span>Precio</span>
+                            <i id="chevron-precio" class="fas fa-chevron-down"></i>
+                        </button>
+                        <div id="precio" class="p-4 hidden">
+                            <label for="rangeSlider" class="block text-gray-700">Rango de precio</label>
+                            <div class="range-slider-container">
+                                <input id="minRange" type="range" min="0" max="500" step="5" value="0" oninput="updateRangeValues()">
+                                <input id="maxRange" type="range" min="0" max="500" step="5" value="500" oninput="updateRangeValues()">
+                            </div>
+                            <div class="range-values">
+                                <span>S/<span id="minValue">0</span></span>
+                                <span>S/<span id="maxValue">500</span></span>
+                            </div>
+                            <button type="button" class="mt-4 bg-blue-500 text-white px-4 py-2" onclick="applyPriceFilter()">Filtrar</button>
+                        </div>
                     </div>
                 </div>
             </div>
+
         </div>
 
         <!-- Products Grid -->
@@ -125,6 +149,79 @@
             <!-- Aquí se cargarán los productos -->
         </div>
     </div>
+
+<!-- Modals -->
+<div id="modal-categorias" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal-categorias')">&times;</span>
+        <h2 class="text-lg font-bold mb-4 text-center pt-8">Categorías</h2>
+        <ul>
+            {% for category in dynamic_data.category_company.all %}
+                <li><a
+                        href="javascript:void(0);"
+                        onclick="fetchProducts('{{ category.uuid }}');
+                        closeModal('modal-categorias')"
+                        class="block hover:underline py-4 text-center">{{ category.name }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+
+<div id="modal-filtros" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal-filtros')">&times;</span>
+        <h2 class="text-lg font-bold mb-4 text-center pt-8">Filtros</h2>
+        <div>
+                    <div class="accordion">
+                        <button class="w-full text-left p-4 flex justify-between items-center" onclick="toggleAccordion('ordenar2')">
+                            <span>Ordenar por</span>
+                            <i id="chevron-ordenar" class="fas fa-chevron-down"></i>
+                        </button>
+                        <div id="ordenar2" class="p-4">
+                            <ul>
+                                <li><a href="javascript:void(0);" onclick="fetchProducts(null, 'low_to_high')">Precio: más bajo primero</a></li>
+                                <li><a href="javascript:void(0);" onclick="fetchProducts(null, 'high_to_low')">Precio: más alto primero</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Objetivo -->
+                    <div class="accordion">
+                        <button class="w-full text-left p-4 flex justify-between items-center" onclick="toggleAccordion('objetivo2')">
+                            <span>Objetivo</span>
+                            <i id="chevron-objetivo" class="fas fa-chevron-down"></i>
+                        </button>
+                        <div id="objetivo2" class="p-4 hidden">
+                            <ul>
+                                <li><a href="javascript:void(0)" class="block hover:underline" onclick="applyObjectiveFilter('MUSCLE')">Músculo</a></li>
+                                <li><a href="javascript:void(0)" class="block hover:underline" onclick="applyObjectiveFilter('FITNESS')">Fitness</a></li>
+                                <li><a href="javascript:void(0)" class="block hover:underline" onclick="applyObjectiveFilter('HEALTH')">Salud</a></li>
+                                <li><a href="javascript:void(0)" class="block hover:underline" onclick="applyObjectiveFilter('SPORT')">Sport</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Filtro de rango de precio -->
+                    <div class="accordion">
+                        <button class="w-full text-left p-4 flex justify-between items-center" onclick="toggleAccordion('precio2')">
+                            <span>Precio</span>
+                            <i id="chevron-precio" class="fas fa-chevron-down"></i>
+                        </button>
+                        <div id="precio2" class="p-4 hidden">
+                            <label for="rangeSlider" class="block text-gray-700">Rango de precio</label>
+                            <div class="range-slider-container">
+                                <input id="minRange" type="range" min="0" max="500" step="5" value="0" oninput="updateRangeValues()">
+                                <input id="maxRange" type="range" min="0" max="500" step="5" value="500" oninput="updateRangeValues()">
+                            </div>
+                            <div class="range-values">
+                                <span>S/<span id="minValue">0</span></span>
+                                <span>S/<span id="maxValue">500</span></span>
+                            </div>
+                            <button type="button" class="mt-4 bg-blue-500 text-white px-4 py-2" onclick="applyPriceFilter()">Filtrar</button>
+                        </div>
+                    </div>
+        </div>
+    </div>
+</div>
+
 
 </section>
 {% endblock content %}
@@ -197,6 +294,22 @@
                 document.getElementById('content-filtros').classList.remove('hidden');
                 document.getElementById('tab-filtros').classList.add('border-orange-600');
                 document.getElementById('tab-filtros').classList.remove('border-gray-300');
+            }
+        }
+
+        // Funciones para abrir y cerrar el modal
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "flex";
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+
+        // Cerrar modal si se hace clic fuera del contenido
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = "none";
             }
         }
     </script>

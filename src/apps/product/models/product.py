@@ -163,8 +163,8 @@ class Characteristic(models.Model):
 
 class ProductImage(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name="images")
-    image = models.ImageField(
-        verbose_name=_("Product Image"),
+    image = models.FileField(
+        verbose_name=_("Product File"),
         upload_to=custom_product_upload_to,
         blank=True,
         null=True,

@@ -55,24 +55,37 @@
                       <!-- Carousel wrapper -->
                       <div class="relative h-80 overflow-hidden rounded-lg md:h-[80vh]">
                            <!-- Item 1 -->
-                          {% for product_image in  product.images.all%}
-                              {% if not product_image.is_info_image %}
-                                <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                                    <img
-                                        src="{{ product_image.image.url }}"
-                                        class="relative block w-full h-auto left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer"
-                                        alt="..."
-                                        onclick="openModal('{{ product_image.image.url }}')"
-                                    >
-                                </div>
-                              {% endif %}
 
-                          {% endfor %}
+                            {% for product_image in product.images.all %}
+                                {% if not product_image.is_info_image %}
+                                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                                        {% if ".mp4" in product_image.image.url or ".webm" in product_image.image.url %}
+                                            <!-- Display video -->
+                                            <video
+                                                class="relative block w-full h-auto left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer"
+                                                controls
+                                                onclick="openModal('{{ product_image.image.url }}', 'video')"
+                                            >
+                                                <source src="{{ product_image.image.url }}" type="video/mp4">
+                                                Your browser does not support the video tag.
+                                            </video>
+                                        {% else %}
+                                            <!-- Display image -->
+                                            <img
+                                                src="{{ product_image.image.url }}"
+                                                class="relative block w-full h-auto left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer"
+                                                alt="..."
+                                                onclick="openModal('{{ product_image.image.url }}', 'image')"
+                                            >
+                                        {% endif %}
+                                    </div>
+                                {% endif %}
+                            {% endfor %}
                       </div>
                       <!-- Slider controls -->
-                        <div class="flex justify-center mt-4 md:absolute md:top-1/2 md:transform md:-translate-y-1/2 md:w-full md:justify-between md:px-8">
+                        <div class="flex justify-center mt-4 md:absolute md:top-1/2 md:transform md:-translate-y-1/2 md:w-full md:justify-between md:px-8 z-50">
                             <!-- Previous Button -->
-                            <button type="button" class="flex items-center justify-center w-10 h-10 rounded-full bg-black bg-opacity-50 text-white hover:bg-opacity-70 md:absolute md:left-4" data-carousel-prev>
+                            <button type="button" class="flex items-center justify-center w-10 h-10 rounded-full bg-black bg-opacity-50 text-white hover:bg-opacity-70 md:absolute md:left-4 z-50" data-carousel-prev>
                                 <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
                                 </svg>
@@ -80,7 +93,7 @@
                             </button>
 
                             <!-- Next Button -->
-                            <button type="button" class="flex items-center justify-center w-10 h-10 rounded-full bg-black bg-opacity-50 text-white hover:bg-opacity-70 md:absolute md:right-4" data-carousel-next>
+                            <button type="button" class="flex items-center justify-center w-10 h-10 rounded-full bg-black bg-opacity-50 text-white hover:bg-opacity-70 md:absolute md:right-4 z-50" data-carousel-next>
                                 <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
                                 </svg>
@@ -92,6 +105,11 @@
                     <div id="imageModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black bg-opacity-70 backdrop-blur-lg">
                         <span class="absolute top-5 right-5 text-white text-3xl cursor-pointer" onclick="closeModal()">&times;</span>
                         <img id="modalImage" class="max-w-full max-h-full object-contain">
+                    </div>
+                    <!-- Modal de imagen en pantalla completa -->
+                    <div id="videpModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black bg-opacity-70 backdrop-blur-lg">
+                        <span class="absolute top-5 right-5 text-white text-3xl cursor-pointer" onclick="closeModal()">&times;</span>
+                        <img id="modalVideo" class="max-w-full max-h-full object-contain">
                     </div>
                 </div>
 
@@ -147,8 +165,6 @@
                         </div>
                     </div>
 
-
-
                     <!-- Campo de código de descuento -->
                     <div class="flex items-center space-x-4 mb-6 justify-center">
                         <input type="text" id="discount-code" placeholder="Código de dscto" class="px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500">
@@ -179,14 +195,6 @@
                 <!-- Lista de Características -->
 
                 <div class="w-full lg:w-1/2">
-
-{#                    <div class=" mb-10 items-center sm:items-start ">#}
-{#                        <p class="py-6 text-xl sm:text-2xl lg:text-3xl font-black font-arupala-grotesk tracking-widest">Demolitor®</p>#}
-{#                        <p class="pb-10 text-2xl sm:text-3xl lg:text-4xl font-black font-arupala-grotesk tracking-widest">WHEY PROTEIN</p>#}
-{#                        <p class="py-2">#}
-{#                            Suplemento protéico formulado con gran contenido de aminoácidos esenciales para reconstruir rápida y eficazmente las fibras musculares después del entrenamiento. Posee uno de los mejores porcentajes de digestibilidad y absorción de nutrientes dado el alto grado de pureza y perfil protéico.#}
-{#                        </p>#}
-{#                    </div>#}
                     <ul class="space-y-2 mb-6">
                         {% for characteristic in product.characteristics.all %}
                             {% if not characteristic.is_key_feature %}
@@ -258,50 +266,6 @@
             </div>
         </div>
     </section>
-{#    <section class="bg-black text-white py-8">#}
-{#            <div class="container mx-auto flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0">#}
-{#                <!-- Imagen del Producto -->#}
-{##}
-{#                <div class="w-full md:w-1/2 flex justify-center md:justify-end relative overflow-visible">#}
-{#                  {% for product_image in product.images.all|slice:2 %}#}
-{#                    {% if product_image.is_info_image %}#}
-{#                      <div class="relative duration-700 ease-in-out h-20 w-[30%]">#}
-{#                        <img#}
-{#                          src="{{ product_image.image.url }}"#}
-{#                          class="absolute top-[0%] right-[100%] transform -translate-x-1/2 -translate-y-1/2 md:scale-125 cursor-pointer"#}
-{#                          alt="..."#}
-{#                          onclick="openModal('{{ product_image.image.url }}')"#}
-{#                        >#}
-{#                      </div>#}
-{#                    {% endif %}#}
-{#                  {% endfor %}#}
-{#                </div>#}
-{#                <!-- Características del Producto -->#}
-{#                <div class="w-full md:w-1/2 text-center md:text-left p-4 font-arupala-grotesk">#}
-{#                    <h3 class="text-3xl font-bold mb-4 tracking-[5px]">Características Clave</h3>#}
-{#                    <div class="flex justify-around md:justify-start space-x-8">#}
-{#                        <!-- Característica 1 -->#}
-{#                        <div>#}
-{#                            <p class="text-4xl font-bold">25 <span class="text-xl font-normal">g</span></p>#}
-{#                            <p class="text-lg">Proteína</p>#}
-{#                        </div>#}
-{##}
-{#                        <!-- Característica 2 -->#}
-{#                        <div>#}
-{#                            <p class="text-4xl font-bold">5.6 <span class="text-xl font-normal">g</span></p>#}
-{#                            <p class="text-lg">BCAAs</p>#}
-{#                        </div>#}
-{##}
-{#                        <!-- Característica 3 -->#}
-{#                        <div>#}
-{#                            <p class="text-4xl font-bold">139 <span class="text-xl font-normal">KCAL</span></p>#}
-{#                            <p class="text-lg">Calorías por servicio</p>#}
-{#                        </div>#}
-{#                    </div>#}
-{#                </div>#}
-{#            </div>#}
-{#        </section>#}
-
 
     {% if random_products %}
         <section class="bg-[#ECECEC] p-8 h-max">
@@ -367,13 +331,21 @@
                 document.getElementById("quantity").innerText = quantity;
             }
         }
-        function openModal(imageUrl) {
-            const modal = document.getElementById('imageModal');
+        function openModal(imageUrl, type) {
+            const imageModal = document.getElementById('imageModal');
             const modalImage = document.getElementById('modalImage');
-            if (modal && modalImage) {
+            const videoModal = document.getElementById('videoModal');
+            const modalVideo = document.getElementById('modalVideo');
+            if (imageModal && modalImage && type === 'image') {
                 modalImage.src = imageUrl;
-                modal.style.display = 'flex'; // Cambia el display a flex al abrir
-            } else {
+                imageModal.style.display = 'flex'; // Cambia el display a flex al abrir
+
+            }
+            if (videoModal && modalVideo && type === 'video') {
+                modalVideo.src = imageUrl;
+                videoModal.style.display = 'flex'; // Cambia el display a flex al abrir
+            }
+            else {
                 console.error("No se encontró el elemento modal o la imagen en el DOM.");
             }
         }
@@ -401,12 +373,12 @@
         function sendToWhatsApp() {
             // Obteniendo el precio y removiendo cualquier formato de moneda
             const priceText = document.getElementById('product-price').textContent;
-            const price = parseFloat(priceText.replace(/[^0-9.-]+/g, '')); // Extrae solo el número
+            const price = parseFloat(priceText.replace(',', '.').replace(/[^\d.,]/g, '').replace(',', '.')); // Extrae solo el número
             const discountCode = document.getElementById('discount-code').value;
             const productName = "{{ product.name }}";
-
+            console.log("price", priceText.replace(/[^\d.,]/g, ''))
             // Calcular subtotal
-            const subtotal = price * quantity;
+            const subtotal = parsePrice(price.toFixed(2)) * quantity;
             const message = `Hola, quiero comprar el producto *${productName}*.\n\n` +
                             `- Sabor: ${selectedFlavor || 'No seleccionado'}\n` +
                             `- Cantidad: ${quantity}\n` +

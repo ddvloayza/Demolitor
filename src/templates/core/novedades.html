@@ -25,12 +25,12 @@
               <div class="flex flex-col items-center justify-center">
                 {% if product_oferta.price_discount %}
                     <div class="grid grid-cols-2 gap-4 text-center">
-                        <p class="text-white text-2xl line-through">S/. {{ product_oferta.price }}</p>
-                        <p class="text-white text-2xl">S/. {{ product_oferta.price_discount }}</p>
+                        <p class="text-white text-2xl line-through">S/. {{ product_oferta.price|floatformat:2 }}</p>
+                        <p class="text-white text-2xl">S/. {{ product_oferta.price_discount|floatformat:2 }}</p>
                     </div>
                 {% else %}
                     <div class="grid grid-cols-1 gap-4 text-center">
-                        <p class="text-white text-2xl">S/. {{ product_oferta.price }}</p>
+                        <p class="text-white text-2xl">S/. {{ product_oferta.price|floatformat:2 }}</p>
                     </div>
                 {% endif %}
                 <a href="{% url 'core:product_detail' product_oferta.uuid %}">
@@ -54,12 +54,12 @@
                                 <div class="flex items-center justify-center">
                                     {% if product_oferta.price_discount %}
                                         <div class="grid grid-cols-2 gap-4 text-center">
-                                            <p class="text-black text-2xl line-through">S/. {{ product_oferta.price }}</p>
-                                            <p class="text-black text-2xl">S/. {{ product_oferta.price_discount }}</p>
+                                            <p class="text-white text-2xl line-through">S/. {{ product_oferta.price|floatformat:2 }}</p>
+                                            <p class="text-white text-2xl">S/. {{ product_oferta.price_discount|floatformat:2 }}</p>
                                         </div>
                                     {% else %}
                                         <div class="grid grid-cols-1 gap-4 text-center">
-                                            <p class="text-black text-2xl">S/. {{ product_oferta.price }}</p>
+                                            <p class="text-white text-2xl">S/. {{ product_oferta.price|floatformat:2 }}</p>
                                         </div>
                                     {% endif %}
                                 </div>
@@ -85,12 +85,12 @@
                   <div class="flex flex-col items-center justify-center">
                     {% if product_novedad.price_discount %}
                         <div class="grid grid-cols-2 gap-4 text-center">
-                            <p class="text-white text-2xl line-through">S/. {{ product_novedad.price }}</p>
-                            <p class="text-white text-2xl">S/. {{ product_novedad.price_discount }}</p>
+                            <p class="text-white text-2xl line-through">S/. {{ product_novedad.price|floatformat:2 }}</p>
+                            <p class="text-white text-2xl">S/. {{ product_novedad.price_discount|floatformat:2 }}</p>
                         </div>
                     {% else %}
                         <div class="grid grid-cols-1 gap-4 text-center">
-                            <p class="text-white text-2xl">S/. {{ product_novedad.price }}</p>
+                            <p class="text-white text-2xl">S/. {{ product_novedad.price|floatformat:2 }}</p>
                         </div>
                     {% endif %}
                     <a href="{% url 'core:product_detail' product_novedad.uuid %}">
@@ -116,12 +116,12 @@
                                 <div class=" items-center justify-center">
                                     {% if product_novedad.price_discount %}
                                         <div class="grid grid-cols-2 gap-4 text-center">
-                                            <p class="text-white text-2xl line-through">S/. {{ product_novedad.price }}</p>
-                                            <p class="text-white text-2xl">S/. {{ product_novedad.price_discount }}</p>
+                                            <p class="text-white text-2xl line-through">S/. {{ product_novedad.price|floatformat:2 }}</p>
+                                            <p class="text-white text-2xl">S/. {{ product_novedad.price_discount|floatformat:2 }}</p>
                                         </div>
                                     {% else %}
                                         <div class="grid grid-cols-1 gap-4 text-center">
-                                            <p class=" text-2xl">S/. {{ product_novedad.price }}</p>
+                                            <p class=" text-2xl">S/. {{ product_novedad.price|floatformat:2 }}</p>
                                         </div>
                                     {% endif %}
                                 </div>
@@ -146,12 +146,12 @@
               <div class="flex flex-col items-center justify-center">
                 {% if product_packs.price_discount %}
                     <div class="grid grid-cols-2 gap-4 text-center">
-                        <p class="text-white text-2xl line-through">S/. {{ product_packs.price }}</p>
-                        <p class="text-white text-2xl">S/. {{ product_packs.price_discount }}</p>
+                        <p class="text-white text-2xl line-through">S/. {{ product_packs.price|floatformat:2 }}</p>
+                        <p class="text-white text-2xl">S/. {{ product_packs.price_discount|floatformat:2 }}</p>
                     </div>
                 {% else %}
                     <div class="grid grid-cols-1 gap-4 text-center">
-                        <p class="text-white text-2xl">S/. {{ product_packs.price }}</p>
+                        <p class="text-white text-2xl">S/. {{ product_packs.price|floatformat:2 }}</p>
                     </div>
                 {% endif %}
                 <a href="{% url 'core:product_detail' product_packs.uuid %}">
@@ -175,12 +175,12 @@
                                 <div class="flex items-center justify-center">
                                     {% if product_packs.price_discount %}
                                         <div class="grid grid-cols-2 gap-4 text-center">
-                                            <p class="text-black text-2xl line-through">S/. {{ product_packs.price }}</p>
-                                            <p class="text-black text-2xl">S/. {{ product_packs.price_discount }}</p>
+                                            <p class="text-white text-2xl line-through">S/. {{ product_packs.price|floatformat:2 }}</p>
+                                            <p class="text-white text-2xl">S/. {{ product_packs.price_discount|floatformat:2 }}</p>
                                         </div>
                                     {% else %}
                                         <div class="grid grid-cols-1 gap-4 text-center">
-                                            <p class="text-black text-2xl">S/. {{ product_packs.price }}</p>
+                                            <p class="text-white text-2xl">S/. {{ product_packs.price|floatformat:2 }}</p>
                                         </div>
                                     {% endif %}
                                 </div>

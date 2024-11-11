@@ -1,5 +1,20 @@
 {% load static %}
 <!-- Header Section Begin -->
+<style>
+    /* Define la animación de desplazamiento */
+    @keyframes marquee {
+        0% { transform: translateX(10%); }
+        100% { transform: translateX(-50%); }
+    }
+
+    /* Aplica la animación a la barra */
+    @media (max-width: 768px) {
+        .marquee {
+            display: flex;
+            animation: marquee 30s linear infinite; /* Duración de 30s para desplazamiento más lento */
+        }
+    }
+</style>
 <header class="bg-black">
     <div class="container mx-auto flex justify-between items-center p-4 flex-wrap">
         <a href="{% url 'core:home' %}" id="logo">
@@ -44,9 +59,11 @@
 
     <!-- Barra de categorías -->
     <div class="bg-[#DE3704] py-2 flex space-x-4 overflow-x-auto flex-nowrap justify-start md:justify-center text-sm">
-    {% for category in dynamic_data.category_company.all %}
-        <a href="/products/?category_uuid={{ category.uuid }}" class="text-white px-8 py-2 hover:text-black font-bold whitespace-nowrap header_text">{{ category.name|upper }}</a>
-    {% endfor %}
+        <div class="marquee flex space-x-4 flex-nowrap">
+            {% for category in dynamic_data.category_company.all %}
+                <a href="/products/?category_uuid={{ category.uuid }}" class="text-white px-8 py-2 hover:text-black font-bold whitespace-nowrap header_text">{{ category.name|upper }}</a>
+            {% endfor %}
+        </div>
     </div>
 
     <!-- Menú móvil -->

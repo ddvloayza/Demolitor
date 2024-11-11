@@ -7,15 +7,17 @@ function getUrlParameter(name) {
 // Verificar si el parámetro "category_uuid" está presente
 const categoryUuid = getUrlParameter('category_uuid');
 const objective = getUrlParameter('objective');
+console.log("categoryUuid", categoryUuid);
 if (categoryUuid) {
     console.log("categoryUuid", categoryUuid)
     fetchProducts(categoryUuid);
 }
-if (objective) {
+else if (objective) {
     console.log("objective", objective)
     fetchProducts(null,null,null, objective);
 }
 else {
+    console.log("no objective");
     fetchProducts();
 }
 
@@ -90,15 +92,6 @@ function applyObjectiveFilter(objective) {
     fetchProducts(null, null, null, objective);
 }
 
-// Función para actualizar el valor del rango de precio en la interfaz
-function updatePriceValue(value) {
-    document.getElementById('priceValue').innerText = value;
-}
 
-// Función para aplicar el filtro de rango de precio
-function applyPriceFilter() {
-    const priceRange = document.getElementById('priceRange').value;
-    fetchProducts(null, null, priceRange);
-}
 
 // Ejecutar fetch inicial sin filtros
