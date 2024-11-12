@@ -17,14 +17,19 @@ from apps.product.models.product import Product
 def webpage_processor(request):
     # Calculate or fetch some dynamic data
     webpage_data = Company.objects.filter(comercial_name__icontains="demolitor").first()
-
+    mi_farma_data = Company.objects.filter(comercial_name__icontains="mifarma").first()
+    inkafarma_data = Company.objects.filter(comercial_name__icontains="inkafarma").first()
     # Create a dictionary of values to be added to the context
     print("webpage_data", webpage_data)
     context = {
         'dynamic_data': webpage_data,
-        'static_data': 'Hello, World!'
+        'mi_farma_data': mi_farma_data,
+        'inkafarma_data': inkafarma_data,
     }
     return context
+
+class MiFarmaView(TemplateView):
+    template_name = "core/index.html"
 
 class HomeView(TemplateView):
     template_name = "core/index.html"

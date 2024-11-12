@@ -101,16 +101,7 @@
                             </button>
                         </div>
                   </div>
-                    <!-- Modal de imagen en pantalla completa -->
-                    <div id="imageModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black bg-opacity-70 backdrop-blur-lg">
-                        <span class="absolute top-5 right-5 text-white text-3xl cursor-pointer" onclick="closeModal()">&times;</span>
-                        <img id="modalImage" class="max-w-full max-h-full object-contain">
-                    </div>
-                    <!-- Modal de imagen en pantalla completa -->
-                    <div id="videpModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black bg-opacity-70 backdrop-blur-lg">
-                        <span class="absolute top-5 right-5 text-white text-3xl cursor-pointer" onclick="closeModal()">&times;</span>
-                        <img id="modalVideo" class="max-w-full max-h-full object-contain">
-                    </div>
+
                 </div>
 
                 <!-- Información del Producto -->
@@ -182,6 +173,18 @@
                 </div>
             </div>
         </div>
+
+        <!-- Modal de imagen en pantalla completa -->
+        <div id="imageModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black bg-opacity-70 backdrop-blur-lg">
+            <span class="absolute top-5 right-5 text-white text-3xl cursor-pointer" onclick="closeModal()">&times;</span>
+            <img id="modalImage" class="max-w-full max-h-full object-contain">
+        </div>
+        <!-- Modal de imagen en pantalla completa -->
+        <div id="videpModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black bg-opacity-70 backdrop-blur-lg">
+            <span class="absolute top-5 right-5 text-white text-3xl cursor-pointer" onclick="closeModal()">&times;</span>
+            <img id="modalVideo" class="max-w-full max-h-full object-contain">
+        </div>
+
     </section>
     <section>
         <div class="max-w container mx-auto py-10 flex flex-col text-white text-center font-bold delivery">
@@ -230,17 +233,30 @@
                 <div id="default-carousel" class="relative w-full lg:w-1/2" data-carousel="static">
                   <!-- Carousel wrapper -->
                   <div class="relative h-96 overflow-hidden rounded-lg md:h-[80vh]">
-                      {% for product_image in  product.images.all%}
-                          {% if product_image.is_info_image %}
+                      {% for product_image in product.images.all %}
+                        {% if product_image.is_info_image %}
                             <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                                <img
-                                        src="{{product_image.image.url }}"
+                                {% if ".mp4" in product_image.image.url or ".webm" in product_image.image.url %}
+                                    <!-- Display video -->
+                                    <video
+                                        class="relative block w-full h-auto left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer"
+                                        controls
+                                        onclick="openModal('{{ product_image.image.url }}', 'video')"
+                                    >
+                                        <source src="{{ product_image.image.url }}" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                {% else %}
+                                    <!-- Display image -->
+                                    <img
+                                        src="{{ product_image.image.url }}"
                                         class="relative block w-full h-auto left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer"
                                         alt="..."
-                                        onclick="openModal('{{ product_image.image.url }}')"
-                                >
+                                        onclick="openModal('{{ product_image.image.url }}', 'image')"
+                                    >
+                                {% endif %}
                             </div>
-                          {% endif %}
+                        {% endif %}
                       {% endfor %}
                   </div>
                     <!-- Slider controls -->
@@ -269,7 +285,7 @@
 
     {% if random_products %}
         <section class="bg-[#ECECEC] p-8 h-max">
-            <h2 class="text-5xl font-black text-black text-center py-16 tracking-[0.2em] font-arupala-grotesk">Añade a tu Compra</h2>
+            <h2 class="text-2xl md:text-5xl font-black text-black text-center py-16 tracking-[0.2em] font-arupala-grotesk">Añade a tu Compra</h2>
 
               <!-- Swiper -->
             <div class="swiper-container two">

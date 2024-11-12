@@ -28,7 +28,7 @@ class Company(BaseModelMixin, SEOMixin):
     provincia = models.ForeignKey(Provincia, on_delete=models.SET_NULL, blank=True, null=True)
     distrito = models.ForeignKey(Distrito, on_delete=models.SET_NULL, blank=True, null=True)
     image = models.ImageField(
-        verbose_name=_("image_category"),
+        verbose_name=_("image_logo_company"),
         upload_to=custom_company_upload_to,
         blank=True,
         null=True,
