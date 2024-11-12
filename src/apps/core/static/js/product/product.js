@@ -75,7 +75,7 @@ function fetchProducts(categoryUuid = null, sortOrder = null, priceRange = null,
                             <h3 class="text-black text-center text-lg font-bold">${product.name}</h3>
                             <p class="text-gray-600 text-2xl ">S/${product.price}</p>
 
-                            <button class="mt-4 bg-orange-600 text-white w-full py-3 rounded hover:bg-orange-700">
+                            <button class="mt-4 bg-[#DE3704] text-white w-full py-3 rounded hover:bg-orange-700">
                                 Ver más
                             </button>
                         </a>

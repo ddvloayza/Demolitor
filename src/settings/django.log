@@ -4244,3 +4244,5 @@ INFO [2024-11-12 14:48:36,628] basehttp "GET /media/finniu/images/product/5abe00
 INFO [2024-11-12 14:48:36,636] basehttp "GET /media/finniu/images/product/9cd322b2/e6449fee.png HTTP/1.1" 200 445914
 INFO [2024-11-12 14:48:40,181] basehttp "GET / HTTP/1.1" 200 57126
 INFO [2024-11-12 14:49:56,730] basehttp "GET / HTTP/1.1" 200 57066
+INFO [2024-11-12 14:52:06,401] basehttp "GET /products/?category_uuid=dd35fb7b-059c-449e-85fd-49c887352a6d HTTP/1.1" 200 31209
+INFO [2024-11-12 14:52:06,564] basehttp "POST /api/v1/graph/demolitor HTTP/1.1" 200 2004
