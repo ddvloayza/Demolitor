@@ -4234,3 +4234,13 @@ INFO [2024-11-12 13:14:25,332] basehttp "GET /products/?category_uuid=05d3cd70-f
 INFO [2024-11-12 13:14:25,397] basehttp "POST /api/v1/graph/demolitor HTTP/1.1" 200 3588
 INFO [2024-11-12 13:14:26,380] basehttp "GET /products/?category_uuid=dd35fb7b-059c-449e-85fd-49c887352a6d HTTP/1.1" 200 31209
 INFO [2024-11-12 13:14:26,428] basehttp "POST /api/v1/graph/demolitor HTTP/1.1" 200 2004
+INFO [2024-11-12 14:48:33,435] basehttp "GET /products/?category_uuid=dd35fb7b-059c-449e-85fd-49c887352a6d HTTP/1.1" 200 31209
+INFO [2024-11-12 14:48:33,586] basehttp "POST /api/v1/graph/demolitor HTTP/1.1" 200 2004
+WARNING [2024-11-12 14:48:34,350] basehttp "GET /static/images/favicon.ico HTTP/1.1" 404 1979
+INFO [2024-11-12 14:48:35,527] basehttp "GET /products/?category_uuid=dd35fb7b-059c-449e-85fd-49c887352a6d HTTP/1.1" 200 31209
+INFO [2024-11-12 14:48:35,647] basehttp "POST /api/v1/graph/demolitor HTTP/1.1" 200 2004
+INFO [2024-11-12 14:48:36,583] basehttp "GET /product/fab33146-f363-4924-bb29-96f99b2644fa/ HTTP/1.1" 200 40310
+INFO [2024-11-12 14:48:36,628] basehttp "GET /media/finniu/images/product/5abe0057/c8c8c144.webp HTTP/1.1" 200 47682
+INFO [2024-11-12 14:48:36,636] basehttp "GET /media/finniu/images/product/9cd322b2/e6449fee.png HTTP/1.1" 200 445914
+INFO [2024-11-12 14:48:40,181] basehttp "GET / HTTP/1.1" 200 57126
+INFO [2024-11-12 14:49:56,730] basehttp "GET / HTTP/1.1" 200 57066

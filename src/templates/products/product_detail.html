@@ -148,7 +148,7 @@
                         <div class="flex space-x-6 justify-center">
                             {% for packaging in product.packagings.all %}
                                 <label class="flex items-center">
-                                    <input type="radio" name="packaging_option" class="form-radio h-5 w-5 text-[rgb(222,55,5)]"
+                                    <input type="radio" name="packaging_option" class="form-radio h-5 w-5 text-[#DE3704]"
                                            id="option{{ forloop.counter }}" value="{{ packaging.size }}" onclick="selectPresentation('{{ packaging.size }}')">
                                     <span class="ml-2 text-gray-700">{{ packaging.size }}</span>
                                 </label>
@@ -202,7 +202,7 @@
                         {% for characteristic in product.characteristics.all %}
                             {% if not characteristic.is_key_feature %}
                             <li class="flex items-center text-gray-700">
-                                <div class="flex items-center justify-center w-7 h-7 bg-[rgb(222,55,5)] rounded-full">
+                                <div class="flex items-center justify-center w-7 h-7 bg-[#DE3704] rounded-full">
                                     <svg class="w-5 h-5 text-white" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                                         <path d="M9 16.172l-5.414-5.414 1.414-1.414L9 13.344l7.586-7.586 1.414 1.414z"/>
                                     </svg>
@@ -215,7 +215,7 @@
                     </ul>
                     <div class="flex flex-col sm:flex-row mb-5 items-center sm:items-start font-avenir font-bold">
                         <p class="mr-0 sm:mr-2 text-2xl sm:text-3xl lg:text-4xl tracking-widest">Características</p>
-                        <p class="text-2xl sm:text-3xl lg:text-4xl font-bold text-[rgb(222,55,5)] tracking-widest">Clave</p>
+                        <p class="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#DE3704] tracking-widest">Clave</p>
                     </div>
                     <!-- Características Clave -->
                     <div class="flex flex-col sm:flex-row sm:space-x-8 space-y-4 sm:space-y-0 text-center font-avenir">
@@ -315,7 +315,7 @@
 
                                     </div>
                                 <a href="{% url 'core:product_detail' random_product.uuid %}">
-                                <button class="mt-4 text-white bg-[rgb(222,55,5)] px-8 py-3 rounded-lg hover:bg-red-700 transition-colors duration-300">
+                                <button class="mt-4 text-white bg-[#DE3704] px-8 py-3 rounded-lg hover:bg-red-700 transition-colors duration-300">
                                     Ver más
                                 </button>
                             </a>
