@@ -116,10 +116,10 @@
                     <!-- Precio y Descuento -->
                     <div class="flex items-center space-x-4 mb-6 justify-center">
                         {% if product.price_discount %}
-                            <span class="text-xl text-gray-800 header_text font-black line-through">S/ {{ product.price|floatformat:2 }}</span>
-                            <span class="text-3xl text-gray-800 header_text font-black" id="product-price">S/ {{ product.price_discount|floatformat:2 }}</span>
+                            <span class="text-xl text-gray-800 header_text font-black line-through price">S/ {{ product.price|floatformat:2 }}</span>
+                            <span class="text-3xl text-gray-800 header_text font-black price" id="product-price">S/ {{ product.price_discount|floatformat:2 }}</span>
                         {% else %}
-                            <span class="text-3xl text-gray-800 header_text font-black" id="product-price">S/ {{ product.price|floatformat:2 }}</span>
+                            <span class="text-3xl text-gray-800 header_text font-black price" id="product-price">S/ {{ product.price|floatformat:2 }}</span>
                         {% endif %}
                     </div>
                     <!-- Selector de Sabor -->
@@ -304,12 +304,12 @@
                                     <div class="flex items-center justify-center ">
                                         {% if random_product.price_discount %}
                                             <div class="grid grid-cols-2 gap-4 text-center">
-                                                <p class="text-black text-2xl line-through">S/. {{ random_product.price }}</p>
-                                                <p class="text-black text-2xl">S/. {{ random_product.price_discount }}</p>
+                                                <p class="text-black text-2xl line-through price">S/. {{ random_product.price }}</p>
+                                                <p class="text-black text-2xl price">S/. {{ random_product.price_discount }}</p>
                                             </div>
                                         {% else %}
                                             <div class="grid grid-cols-1 gap-4 text-center">
-                                                <p class="text-black text-2xl">S/. {{ random_product.price }}</p>
+                                                <p class="text-black text-2xl price">S/. {{ random_product.price }}</p>
                                             </div>
                                         {% endif %}
 

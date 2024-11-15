@@ -21,12 +21,12 @@
                 <div class="flex flex-col items-center justify-center">
                     {% if best_seller.price_discount %}
                         <div class="grid grid-cols-2 gap-4 text-center">
-                            <p class=" text-2xl line-through">S/. {{ best_seller.price }}</p>
-                            <p class=" text-2xl">S/. {{ best_seller.price_discount }}</p>
+                            <p class=" text-2xl line-through price">S/. {{ best_seller.price }}</p>
+                            <p class=" text-2xl price">S/. {{ best_seller.price_discount }}</p>
                         </div>
                     {% else %}
                         <div class="grid grid-cols-1 gap-4 text-center">
-                            <p class=" text-2xl">S/. {{ best_seller.price }}</p>
+                            <p class=" text-2xl price">S/. {{ best_seller.price }}</p>
                         </div>
                     {% endif %}
                     <a href="{% url 'core:product_detail' best_seller.uuid %}">
@@ -52,12 +52,12 @@
                             <div class="flex items-center justify-center">
                                 {% if best_seller.price_discount %}
                                     <div class="grid grid-cols-2 gap-4 text-center">
-                                        <p class="text-black text-2xl line-through">S/. {{ best_seller.price }}</p>
-                                        <p class="text-black text-2xl">S/. {{ best_seller.price_discount }}</p>
+                                        <p class="text-black text-2xl line-through price">S/. {{ best_seller.price }}</p>
+                                        <p class="text-black text-2xl price">S/. {{ best_seller.price_discount }}</p>
                                     </div>
                                 {% else %}
                                     <div class="grid grid-cols-1 gap-4 text-center">
-                                        <p class="text-black text-2xl">S/. {{ best_seller.price }}</p>
+                                        <p class="text-black text-2xl price">S/. {{ best_seller.price }}</p>
                                     </div>
                                 {% endif %}
 

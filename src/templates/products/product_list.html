@@ -101,8 +101,8 @@
                         </button>
                         <div id="ordenar" class="p-4">
                             <ul>
-                                <li><a href="javascript:void(0);" onclick="fetchProducts(null, 'low_to_high')">Precio: más bajo primero</a></li>
-                                <li><a href="javascript:void(0);" onclick="fetchProducts(null, 'high_to_low')">Precio: más alto primero</a></li>
+                                <li><a href="javascript:void(0);" onclick="applySortOrderFilter('low_to_high')">Precio: más bajo primero</a></li>
+                                <li><a href="javascript:void(0);" onclick="applySortOrderFilter('high_to_low')">Precio: más alto primero</a></li>
                             </ul>
                         </div>
                     </div>
@@ -251,11 +251,7 @@
           }
         }
 
-        function applyPriceFilter() {
-          const minPrice = document.getElementById('minRange').value;
-          const maxPrice = document.getElementById('maxRange').value;
-          fetchProducts(null, null, `${minPrice}-${maxPrice}`);
-        }
+
 
         function updatePriceValue(value) {
             document.getElementById('priceValue').innerText = value;

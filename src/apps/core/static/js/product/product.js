@@ -1,25 +1,41 @@
+// Objeto global para almacenar los filtros seleccionados
+let selectedFilters = {
+    categoryUuid: null,
+    sortOrder: null,
+    priceRange: null,
+    objective: null,
+};
+
+// Función para actualizar los filtros y realizar el fetch
+function updateFilters(type, value) {
+    console.log(type, value);
+    if (type === "categoryUuid") {
+        selectedFilters.categoryUuid = value;
+    } else if (type === "sortOrder") {
+        selectedFilters.sortOrder = value;
+    } else if (type === "priceRange") {
+        selectedFilters.priceRange = value;
+    } else if (type === "objective") {
+        selectedFilters.objective = value;
+    }
+
+    // Realizar el fetch con los filtros acumulados
+    fetchProducts(
+        selectedFilters.categoryUuid,
+        selectedFilters.sortOrder,
+        selectedFilters.priceRange,
+        selectedFilters.objective
+    );
+}
+
+
 // Función para obtener el parámetro de la URL
 function getUrlParameter(name) {
     const urlParams = new URLSearchParams(window.location.search);
     return urlParams.get(name);
 }
 
-// Verificar si el parámetro "category_uuid" está presente
-const categoryUuid = getUrlParameter('category_uuid');
-const objective = getUrlParameter('objective');
-console.log("categoryUuid", categoryUuid);
-if (categoryUuid) {
-    console.log("categoryUuid", categoryUuid)
-    fetchProducts(categoryUuid);
-}
-else if (objective) {
-    console.log("objective", objective)
-    fetchProducts(null,null,null, objective);
-}
-else {
-    console.log("no objective");
-    fetchProducts();
-}
+
 
 
 function fetchProducts(categoryUuid = null, sortOrder = null, priceRange = null, objective = null) {
@@ -40,13 +56,15 @@ function fetchProducts(categoryUuid = null, sortOrder = null, priceRange = null,
             }
         }
     `;
-
+    // Extraer valores de rango de precio
+    const minPrice = priceRange ? parseFloat(priceRange.split('-')[0]) : null;
+    const maxPrice = priceRange ? parseFloat(priceRange.split('-')[1]) : null;
     // Define las variables de la consulta
     const variables = {
         categoryUuid: categoryUuid,
         sortOrder: sortOrder,
-        minPrice: priceRange ? parseFloat(priceRange.split('-')[0]) : null,
-        maxPrice: priceRange ? parseFloat(priceRange.split('-')[1]) : null,
+        minPrice: minPrice,
+        maxPrice: maxPrice,
         objective: objective,
     };
 
@@ -87,9 +105,43 @@ function fetchProducts(categoryUuid = null, sortOrder = null, priceRange = null,
         }
     });
 }
+// Funciones para aplicar filtros individuales
 function applyObjectiveFilter(objective) {
-    console.log(objective);
-    fetchProducts(null, null, null, objective);
+    updateFilters("objective", objective);
+}
+
+function applyCategoryFilter(categoryUuid) {
+    updateFilters("categoryUuid", categoryUuid);
+}
+
+function applyPriceFilter() {
+    // Obtener los valores directamente desde los elementos de entrada
+    const minPrice = parseFloat(document.getElementById('minRange').value);
+    const maxPrice = parseFloat(document.getElementById('maxRange').value);
+    console.log("minPrice", minPrice)
+    console.log("maxPrice", maxPrice)
+    if (minPrice >= maxPrice) {
+        console.error("El rango mínimo no puede ser mayor o igual al máximo.");
+        return;
+    }
+
+    // Llamar a la función para actualizar los filtros globales
+    updateFilters('priceRange',minPrice+'-'+maxPrice);
+}
+
+function applySortOrderFilter(sortOrder) {
+    updateFilters("sortOrder", sortOrder);
+}
+
+// Inicializar filtros desde parámetros de URL
+const categoryUuid = getUrlParameter('category_uuid');
+const objective = getUrlParameter('objective');
+if (categoryUuid) {
+    updateFilters("categoryUuid", categoryUuid);
+} else if (objective) {
+    updateFilters("objective", objective);
+} else {
+    fetchProducts();
 }
 
 

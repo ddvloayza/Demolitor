@@ -16,13 +16,16 @@ class ProductQuery(graphene.ObjectType):
     )
 
     def resolve_product_list_by_category(self, info, category_uuid=None, objective=None, min_price=None, max_price=None, sort_by=None, **kwargs):
-        print("ENTRO", objective)
+        print("category_uuid", category_uuid)
+        print("objective", objective)
+        print("min_price", min_price)
+        print("max_price", max_price)
+        print("sort_by", sort_by)
         # Filtrar por categoría si se proporciona un category_uuid
         queryset = Product.objects.all()
         if category_uuid:
             queryset = queryset.filter(category_id=category_uuid)
         if objective:
-            print("objective", objective)
             queryset = queryset.filter(objective=objective.value)
         # Filtrar por rango de precios si se proporciona
         if min_price is not None:
@@ -32,7 +35,6 @@ class ProductQuery(graphene.ObjectType):
 
         # Ordenar los productos según el parámetro sort_by
         if sort_by == "low_to_high":
-
             queryset = queryset.order_by("price")
             print("queryset",queryset )
         elif sort_by == "high_to_low":
@@ -43,5 +45,4 @@ class ProductQuery(graphene.ObjectType):
         elif sort_by == "highest_rated":
             # Asume que tienes un campo que mide las calificaciones
             queryset = queryset.order_by("-rating")
-
         return queryset

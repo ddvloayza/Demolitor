@@ -128,7 +128,7 @@ embed,
 object,
 video {
 	max-width: 100%;
-	height: fit-content;
+	height: auto;
 }
 
 .swiper-container {
