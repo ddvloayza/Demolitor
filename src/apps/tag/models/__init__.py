@@ -1,3 +1,3 @@
-from .tag import Tag
+from .tag import Tag, SkillTag
 
-__ALL__ = ["Tag",]
+__ALL__ = ["Tag", "SkillTag"]

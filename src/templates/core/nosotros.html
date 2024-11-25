@@ -1,0 +1,133 @@
+{% extends "web/base.html" %}
+{% load static %}
+{% block social_facebook %}
+  <meta property="og:url"           content="" />
+  <meta property="og:type"          content="article" />
+  <meta property="og:title"         content="" />
+  <meta property="og:description"   content="" />
+  <meta property="og:image"         content="" />
+  <meta property="og:image:width"   content="1920"/>
+  <meta property="og:image:height"   content="1079" />
+
+{% endblock social_facebook %}
+
+{% block css %}
+<style>
+
+
+</style>
+
+{% endblock css %}
+{% block content %}
+
+  <!-- Hero Section Begin -->
+<main>
+<section>
+    <div class="bg-black text-white py-16" style="background-image: url('{% static "img/nosotros/nosotros-bg.png" %}'); background-size: cover; background-position: center; height: 60vh;align-items: center;
+    justify-content: center;
+    display: flex;">
+      <!-- Header -->
+      <div class="container mx-auto text-center">
+
+        <p class="text-lg md:text-xl mt-4">
+          Una nueva forma de construir un estilo de vida saludable.
+        </p>
+          <h1 class="text-4xl md:text-5xl font-bold mb-4">
+          SUPLEMENTOS DE ALTA CALIDAD DISEÑADOS <br> PARA EL ATLETA QUE LLEVAS DENTRO
+        </h1>
+      </div>
+    </div>
+</section>
+
+
+<!-- Quiénes Somos -->
+<section class="bg-white py-16">
+  <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+    <div>
+        <p>Conoce</p>
+      <h2 class="text-3xl font-bold mb-4 text-orange-500">¿QUIÉNES SOMOS?</h2>
+      <p class="text-gray-700">
+        Somos una empresa dedicada a la nutrición deportiva. Ofrecemos suplementos diseñados para mejorar el rendimiento físico y mantener un estilo de vida saludable.
+      </p>
+    </div>
+    <div class="rounded-lg overflow-hidden">
+      <img src="{% static "img/nosotros/nosotros-bg.png" %}" alt="¿Quiénes Somos?" class="w-full h-auto">
+    </div>
+  </div>
+</section>
+
+<!-- Reconocimientos -->
+<section class="bg-gray-100 py-16">
+  <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <div>
+          <h2 class="text-3xl font-bold mb-8">RECONOCIMIENTOS</h2>
+          <p>
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputat.
+          </p>
+      </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Reconocimiento 1 -->
+      <div class="text-center">
+        <img src={% static "img/nosotros/logo1.png" %} alt="Reconocimiento" class="mx-auto mb-4">
+      </div>
+      <!-- Reconocimiento 2 -->
+      <div class="text-center">
+        <img src={% static "img/nosotros/logo2.png" %} alt="Reconocimiento" class="mx-auto mb-4">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Productos -->
+<section class="bg-orange-500 text-white" style="background-image: url('{% static "img/nosotros/bg-productos.png" %}'); background-size: cover; background-position: center; height: 100vh; display: flex; flex-direction: column; justify-content: space-between;">
+  <!-- Contenido superior -->
+  <div class="container mx-auto text-center mt-8">
+    <h2 class="text-3xl font-bold mb-8">PRODUCTOS</h2>
+    <p class="text-lg mb-8">
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
+    </p>
+  </div>
+
+  <!-- Botón en la parte inferior -->
+  <div class="container mx-auto text-center mb-8">
+    <button class="mt-8 bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-800">
+      Ver más
+    </button>
+  </div>
+</section>
+
+<!-- Puntos de Venta -->
+<section class="bg-white py-16">
+  <div class="container mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-8">PUNTOS DE VENTA</h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+      <img src="https://via.placeholder.com/150" alt="Marca" class="mx-auto">
+      <img src="https://via.placeholder.com/150" alt="Marca" class="mx-auto">
+      <img src="https://via.placeholder.com/150" alt="Marca" class="mx-auto">
+      <img src="https://via.placeholder.com/150" alt="Marca" class="mx-auto">
+    </div>
+  </div>
+</section>
+
+<!-- Galería -->
+<section class="bg-black py-16">
+  <div class="container mx-auto">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <img src="https://via.placeholder.com/200" alt="Galería" class="rounded-lg">
+      <img src="https://via.placeholder.com/200" alt="Galería" class="rounded-lg">
+      <img src="https://via.placeholder.com/200" alt="Galería" class="rounded-lg">
+      <img src="https://via.placeholder.com/200" alt="Galería" class="rounded-lg">
+    </div>
+  </div>
+</section>
+</main>
+
+
+
+
+{% endblock content %}
+{% block js %}
+
+
+{% endblock js %}

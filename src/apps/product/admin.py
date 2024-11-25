@@ -1,9 +1,12 @@
 from django.contrib import admin
 
-from apps.product.models.product import Product, Category, ProductImage, Packaging, Flavor, Characteristic
+from apps.product.models.product import Product, Category, ProductImage, Packaging, Flavor, Characteristic, KeyFeature
 
 from apps.product.models.quotation_requests import QuotationRequest, QuotationRequestDetail
 from django.utils.safestring import mark_safe
+
+from apps.tag.models import SkillTag
+
 
 # Inline for Flavor
 
@@ -31,12 +34,24 @@ class ProductAdmin(admin.ModelAdmin):
     inlines = [ProductImageInline, CharacteristicInline]
     list_display = ("name", )
     search_fields = ("name",)
-    filter_horizontal = ('flavors', 'packagings')
+    filter_horizontal = ('flavors', 'packagings', 'tag', 'skill_tags', 'key_features')
     prepopulated_fields = {'slug': ('name',)}
 
 
 @admin.register(Flavor)
 class FlavorAdmin(admin.ModelAdmin):
+    list_display = ('name',)
+    search_fields = ('name',)
+
+
+@admin.register(KeyFeature)
+class KeyFeatureAdmin(admin.ModelAdmin):
+    list_display = ('name',)
+    search_fields = ('name',)
+
+
+@admin.register(SkillTag)
+class SkillTagAdmin(admin.ModelAdmin):
     list_display = ('name',)
     search_fields = ('name',)
 

@@ -23,16 +23,15 @@
         overflow: auto;
         background-color: rgba(0, 0, 0, 0.7);
         backdrop-filter: blur(5px);
-        justify-content: center;
+        justify-content: start;
         align-items: center;
     }
 
     .modal-content {
         background-color: white;
         padding: 20px;
-        border-radius: 8px;
-        width: 90%;
-        max-width: 400px;
+        width: 25%;
+        height: 100%;
     }
 
     .close {
@@ -52,7 +51,7 @@
     <script src="{% static 'js/product/product.js' %}"></script>
 {% endblock css %}
 {% block content %}
-<section class="bg-white p-8 h-max container mx-auto">
+<section class="bg-white p-2 md:p-8 h-max container mx-auto">
     <!-- Breadcrumb -->
     <div class="container mx-auto mt-8">
         <nav class="text-gray-600 ">
@@ -61,164 +60,85 @@
             <a href="#" class="px-4 hover:underline hover:text-[#F06A32] hover:font-bold text-[#F06A32] font-bold">PRODUCTOS</a>
         </nav>
     </div>
-
+    <div class="flex py-6 ">
+        <!-- Botón de Filtros -->
+        <button onclick="openModal('modal-filtros')" class="py-2 px-10 text-center font-semibold text-white bg-[#DE3704]">FILTROS</button>
+    </div>
     <!-- Main Content -->
-    <div class="container mx-auto mt-4 flex flex-col md:flex-row">
-        <!-- Sidebar -->
-        <div class="w-full md:w-1/4 pr-4 text-black mb-8 md:mb-0">
-            <!-- Tabs de Categorías y Filtros -->
-            <div class="md:flex py-6 hidden">
-                <!-- Tab de Categorías -->
-                <div id="tab-categorias" class="cursor-pointer py-2 text-center w-1/2 border-b-2 border-orange-600" onclick="showTab('categorias')">
-                    <span class="px-4 font-semibold">CATEGORÍAS</span>
-                </div>
-                <!-- Tab de Filtros -->
-                <div id="tab-filtros" class="cursor-pointer py-2 text-center w-1/2 border-b-2 border-gray-300" onclick="showTab('filtros')">
-                    <span class="px-4 font-semibold">FILTROS</span>
-                </div>
-            </div>
-            <!-- buttons de Categorías y Filtros -->
-            <div class="flex py-6 md:hidden">
-                <!-- Botón de Categorías -->
-                <button onclick="openModal('modal-categorias')" class="w-1/2 py-2 text-center font-semibold text-white bg-[#DE3704]">CATEGORÍAS</button>
-                <!-- Botón de Filtros -->
-                <button onclick="openModal('modal-filtros')" class="w-1/2 py-2 text-center font-semibold text-white bg-[#DE3704]">FILTROS</button>
-            </div>
-            <div class="hidden md:block">
-                <!-- Contenido de CATEGORÍAS -->
-                <ul id="content-categorias" class="space-y-8">
-                    {% for category in dynamic_data.category_company.all %}
-                        <li><a href="javascript:void(0);" onclick="fetchProducts('{{ category.uuid }}')" class="block hover:underline">{{ category.name }}</a></li>
-                    {% endfor %}
-                </ul>
-                <!-- Contenido de FILTROS (con acordeones) -->
-                <div id="content-filtros" class="space-y-4 hidden">
-                    <!-- Filtro de Ordenar por -->
-                    <div class="accordion">
-                        <button class="w-full text-left p-4 flex justify-between items-center" onclick="toggleAccordion('ordenar')">
-                            <span>Ordenar por</span>
-                            <i id="chevron-ordenar" class="fas fa-chevron-down"></i>
-                        </button>
-                        <div id="ordenar" class="p-4">
-                            <ul>
-                                <li><a href="javascript:void(0);" onclick="applySortOrderFilter('low_to_high')">Precio: más bajo primero</a></li>
-                                <li><a href="javascript:void(0);" onclick="applySortOrderFilter('high_to_low')">Precio: más alto primero</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- Objetivo -->
-                    <div class="accordion">
-                        <button class="w-full text-left p-4 flex justify-between items-center" onclick="toggleAccordion('objetivo')">
-                            <span>Objetivo</span>
-                            <i id="chevron-objetivo" class="fas fa-chevron-down"></i>
-                        </button>
-                        <div id="objetivo" class="p-4 hidden">
-                            <ul>
-                                <li><a href="javascript:void(0)" class="block hover:underline" onclick="applyObjectiveFilter('MUSCLE')">Músculo</a></li>
-                                <li><a href="javascript:void(0)" class="block hover:underline" onclick="applyObjectiveFilter('FITNESS')">Fitness</a></li>
-                                <li><a href="javascript:void(0)" class="block hover:underline" onclick="applyObjectiveFilter('HEALTH')">Salud</a></li>
-                                <li><a href="javascript:void(0)" class="block hover:underline" onclick="applyObjectiveFilter('SPORT')">Sport</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- Filtro de rango de precio -->
-                    <div class="accordion">
-                        <button class="w-full text-left p-4 flex justify-between items-center" onclick="toggleAccordion('precio')">
-                            <span>Precio</span>
-                            <i id="chevron-precio" class="fas fa-chevron-down"></i>
-                        </button>
-                        <div id="precio" class="p-4 hidden">
-                            <label for="rangeSlider" class="block text-gray-700">Rango de precio</label>
-                            <div class="range-slider-container">
-                                <input id="minRange" type="range" min="0" max="500" step="5" value="0" oninput="updateRangeValues()">
-                                <input id="maxRange" type="range" min="0" max="500" step="5" value="500" oninput="updateRangeValues()">
-                            </div>
-                            <div class="range-values">
-                                <span>S/<span id="minValue">0</span></span>
-                                <span>S/<span id="maxValue">500</span></span>
-                            </div>
-                            <button type="button" class="mt-4 bg-blue-500 text-white px-4 py-2" onclick="applyPriceFilter()">Filtrar</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
         <!-- Products Grid -->
-        <div class="w-full md:w-3/4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="product-grid">
+        <div class="w-full  grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-2" id="product-grid">
             <!-- Aquí se cargarán los productos -->
         </div>
-    </div>
 
-<!-- Modals -->
-<div id="modal-categorias" class="modal">
-    <div class="modal-content">
-        <span class="close" onclick="closeModal('modal-categorias')">&times;</span>
-        <h2 class="text-lg font-bold mb-4 text-center pt-8">Categorías</h2>
-        <ul>
-            {% for category in dynamic_data.category_company.all %}
-                <li><a
-                        href="javascript:void(0);"
-                        onclick="fetchProducts('{{ category.uuid }}');
-                        closeModal('modal-categorias')"
-                        class="block hover:underline py-4 text-center">{{ category.name }}</a></li>
-            {% endfor %}
-        </ul>
-    </div>
-</div>
+
 
 <div id="modal-filtros" class="modal">
-    <div class="modal-content">
-        <span class="close" onclick="closeModal('modal-filtros')">&times;</span>
-        <h2 class="text-lg font-bold mb-4 text-center pt-8">Filtros</h2>
-        <div>
-                    <div class="accordion">
+    <div class="modal-content md:w-1/4 md:rounded-none md:relative
+        w-full h-full overflow-auto">
+        <span class="close text-black text-xl font-bold absolute top-4 right-4 md:top-4 md:right-4" onclick="closeModal('modal-filtros')">&times;</span>
+        <div class="flex mt-10">
+            <div id="tab-categorias" class="cursor-pointer py-2 text-center w-1/2 border-b-2 border-orange-600" onclick="showTab('categorias')">
+                <span class="px-4 font-semibold">CATEGORÍAS</span>
+            </div>
+            <!-- Tab de Filtros -->
+            <div id="tab-filtros" class="cursor-pointer py-2 text-center w-1/2 border-b-2 border-gray-300" onclick="showTab('filtros')">
+                <span class="px-4 font-semibold">FILTROS</span>
+            </div>
+        </div>
+        <div class="py-10">
+            <ul id="content-categorias" class="space-y-8">
+                {% for category in dynamic_data.category_company.all %}
+                    <li><a href="javascript:void(0);" onclick="updateFilters('categoryUuid', '{{ category.uuid }}')" class="block hover:underline">{{ category.name }}</a></li>
+                {% endfor %}
+            </ul>
+            <div id="content-filtros" class="space-y-4 hidden">
+                <div class="accordion">
                         <button class="w-full text-left p-4 flex justify-between items-center" onclick="toggleAccordion('ordenar2')">
                             <span>Ordenar por</span>
                             <i id="chevron-ordenar" class="fas fa-chevron-down"></i>
                         </button>
                         <div id="ordenar2" class="p-4">
                             <ul>
-                                <li><a href="javascript:void(0);" onclick="fetchProducts(null, 'low_to_high')">Precio: más bajo primero</a></li>
-                                <li><a href="javascript:void(0);" onclick="fetchProducts(null, 'high_to_low')">Precio: más alto primero</a></li>
+                                <li><a href="javascript:void(0);" onclick="applySortOrderFilter('low_to_high')">Precio: más bajo primero</a></li>
+                                <li><a href="javascript:void(0);" onclick="applySortOrderFilter('high_to_low')">Precio: más alto primero</a></li>
                             </ul>
                         </div>
                     </div>
-                    <!-- Objetivo -->
-                    <div class="accordion">
-                        <button class="w-full text-left p-4 flex justify-between items-center" onclick="toggleAccordion('objetivo2')">
-                            <span>Objetivo</span>
-                            <i id="chevron-objetivo" class="fas fa-chevron-down"></i>
-                        </button>
-                        <div id="objetivo2" class="p-4 hidden">
-                            <ul>
-                                <li><a href="javascript:void(0)" class="block hover:underline" onclick="applyObjectiveFilter('MUSCLE')">Músculo</a></li>
-                                <li><a href="javascript:void(0)" class="block hover:underline" onclick="applyObjectiveFilter('FITNESS')">Fitness</a></li>
-                                <li><a href="javascript:void(0)" class="block hover:underline" onclick="applyObjectiveFilter('HEALTH')">Salud</a></li>
-                                <li><a href="javascript:void(0)" class="block hover:underline" onclick="applyObjectiveFilter('SPORT')">Sport</a></li>
-                            </ul>
-                        </div>
+                <!-- Objetivo -->
+                <div class="accordion">
+                    <button class="w-full text-left p-4 flex justify-between items-center" onclick="toggleAccordion('objetivo2')">
+                        <span>Objetivo</span>
+                        <i id="chevron-objetivo" class="fas fa-chevron-down"></i>
+                    </button>
+                    <div id="objetivo2" class="p-4 hidden">
+                        <ul>
+                            <li><a href="javascript:void(0)" class="block hover:underline" onclick="applyObjectiveFilter('MUSCLE')">Músculo</a></li>
+                            <li><a href="javascript:void(0)" class="block hover:underline" onclick="applyObjectiveFilter('FITNESS')">Fitness</a></li>
+                            <li><a href="javascript:void(0)" class="block hover:underline" onclick="applyObjectiveFilter('HEALTH')">Salud</a></li>
+                            <li><a href="javascript:void(0)" class="block hover:underline" onclick="applyObjectiveFilter('SPORT')">Sport</a></li>
+                        </ul>
                     </div>
-                    <!-- Filtro de rango de precio -->
-                    <div class="accordion">
-                        <button class="w-full text-left p-4 flex justify-between items-center" onclick="toggleAccordion('precio2')">
-                            <span>Precio</span>
-                            <i id="chevron-precio" class="fas fa-chevron-down"></i>
-                        </button>
-                        <div id="precio2" class="p-4 hidden">
-                            <label for="rangeSlider" class="block text-gray-700">Rango de precio</label>
-                            <div class="range-slider-container">
-                                <input id="minRange" type="range" min="0" max="500" step="5" value="0" oninput="updateRangeValues()">
-                                <input id="maxRange" type="range" min="0" max="500" step="5" value="500" oninput="updateRangeValues()">
-                            </div>
-                            <div class="range-values">
-                                <span>S/<span id="minValue">0</span></span>
-                                <span>S/<span id="maxValue">500</span></span>
-                            </div>
-                            <button type="button" class="mt-4 bg-blue-500 text-white px-4 py-2" onclick="applyPriceFilter()">Filtrar</button>
+                </div>
+                <!-- Filtro de rango de precio -->
+                <div class="accordion">
+                    <button class="w-full text-left p-4 flex justify-between items-center" onclick="toggleAccordion('precio2')">
+                        <span>Precio</span>
+                        <i id="chevron-precio" class="fas fa-chevron-down"></i>
+                    </button>
+                    <div id="precio2" class="p-4 hidden">
+                        <label for="rangeSlider" class="block text-gray-700">Rango de precio</label>
+                        <div class="range-slider-container">
+                            <input id="minRange" type="range" min="0" max="500" step="5" value="0" oninput="updateRangeValues()">
+                            <input id="maxRange" type="range" min="0" max="500" step="5" value="500" oninput="updateRangeValues()">
                         </div>
+                        <div class="range-values">
+                            <span>S/<span id="minValue">0</span></span>
+                            <span>S/<span id="maxValue">500</span></span>
+                        </div>
+                        <button type="button" class="mt-4 bg-blue-500 text-white px-4 py-2" onclick="applyPriceFilter()">Filtrar</button>
                     </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -234,20 +154,30 @@
         function updateRangeValues() {
           const minValue = document.getElementById('minRange').value;
           const maxValue = document.getElementById('maxRange').value;
-
+          const minValueMobile = document.getElementById('minRangeMobile').value;
+          const maxValueMobile = document.getElementById('maxRangeMobile').value;
           document.getElementById('minValue').innerText = minValue;
           document.getElementById('maxValue').innerText = maxValue;
-
+          document.getElementById('minValueMobile').innerText = minValueMobile;
+          document.getElementById('maxValueMobile').innerText = maxValueMobile;
           // Ensure the min handle does not overlap the max handle
           const minInput = document.getElementById('minRange');
           const maxInput = document.getElementById('maxRange');
-
+          const minInputMobile = document.getElementById('minRangeMobile');
+          const maxInputMobile = document.getElementById('maxRangeMobile');
           if (parseInt(minValue) >= parseInt(maxValue)) {
             minInput.value = maxValue - 10;
           }
 
           if (parseInt(maxValue) <= parseInt(minValue)) {
             maxInput.value = parseInt(minValue) + 10;
+          }
+          if (parseInt(minValueMobile) >= parseInt(maxValueMobile)) {
+            minInputMobile.value = maxValueMobile - 10;
+          }
+
+          if (parseInt(maxValueMobile) <= parseInt(minValueMobile)) {
+            maxInputMobile.value = parseInt(minValueMobile) + 10;
           }
         }
 

@@ -58,6 +58,9 @@ class HomeView(TemplateView):
         print("context['ofertas']", context['ofertas'])
         return context
 
+class NosotrosView(TemplateView):
+    template_name = "core/nosotros.html"
+
 class ProductDetailView(DetailView):
     model = Product
     template_name = 'products/product_detail.html'

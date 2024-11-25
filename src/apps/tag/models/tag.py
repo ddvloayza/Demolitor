@@ -3,6 +3,8 @@ from apps.core.models.base import BaseModelMixin
 from apps.core.models.seo import SEOMixin
 from django.utils.translation import gettext_lazy as _
 
+from apps.tag.utils import HEXColorField
+
 
 class Tag(BaseModelMixin, SEOMixin):
     code = models.CharField(
@@ -34,4 +36,33 @@ class Tag(BaseModelMixin, SEOMixin):
     class Meta:
         verbose_name = _("Tag")
         verbose_name_plural = _("Tags")
+
+
+class SkillTag(BaseModelMixin):
+    name = models.CharField(
+        max_length=150, blank=True, verbose_name=_("Name")
+    )
+    slug = models.SlugField(
+        verbose_name=_("Slug"), max_length=128, unique=True, null=True
+    )
+
+    created_by = models.ForeignKey(
+        "customuser.CustomUser",
+        related_name="skill_tag_created_by",
+        null=True,
+        blank=True,
+        on_delete=models.PROTECT,
+    )
+    company = models.ForeignKey("company.Company", on_delete=models.SET_NULL, null=True)
+    color = HEXColorField(
+        verbose_name="HEX Color",
+        help_text="Use a valid HEX color code, e.g., #FFFFFF or #FFF"
+    )
+
+    def __str__(self):
+        return "{}".format(self.name)
+
+    class Meta:
+        verbose_name = _("SkillTag")
+        verbose_name_plural = _("Skill Tags")
 

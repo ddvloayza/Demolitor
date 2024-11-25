@@ -63,7 +63,11 @@ class Category(BaseModelMixin, SEOMixin):
         verbose_name_plural = _("Categories")
 
 
+class KeyFeature(BaseModelMixin):
+    name = models.CharField(max_length=255, verbose_name=_("Key Feature"))
 
+    def __str__(self):
+        return self.name
 class Product(BaseModelMixin, SEOMixin):
     category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True)
     
@@ -103,12 +107,31 @@ class Product(BaseModelMixin, SEOMixin):
     tag = models.ManyToManyField("tag.Tag", verbose_name=_("Tags"), blank=True, related_name="product_tags")
     flavors = models.ManyToManyField('Flavor', related_name="products", blank=True)
     packagings = models.ManyToManyField('Packaging', related_name="products", blank=True)
+    skill_tags = models.ManyToManyField('tag.SkillTag', related_name="skill_tag_products", blank=True)
+
     objective = models.CharField(
         max_length=200,
         choices=ObjectiveChoices.choices,
         default=ObjectiveChoices.FITNESS,
         verbose_name="Objetivo"
     )
+    # Nuevo campo para puntuación
+    rating = models.DecimalField(
+        max_digits=3,
+        decimal_places=2,
+        default=0.00,
+        verbose_name=_("Rating"),
+        help_text=_("Product rating (e.g., 0.00 to 5.00).")
+    )
+
+    # Nuevo campo para características claves
+    key_features = models.ManyToManyField(
+        KeyFeature,
+        related_name="products",
+        blank=True,
+        verbose_name=_("Key Features")
+    )
+
 
     @property
     def get_absolute_image_url(self):

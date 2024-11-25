@@ -1,6 +1,6 @@
 from django.urls import path
 
-from apps.core.views import Error404View
+from apps.core.views import Error404View, NosotrosView
 
 from .views import (
     HomeView,
@@ -16,6 +16,7 @@ app_name = "core"
 
 urlpatterns = [
     path("", HomeView.as_view(), name="home"),
+    path("nosotros/", NosotrosView.as_view(), name="nosotros"),
     path('product/<uuid:pk>/', ProductDetailView.as_view(), name='product_detail'),
     path('products/', ProductListView.as_view(), name='product_list'),
     path('category/<uuid:pk>/', CategoryDetailView.as_view(), name='category_detail'),

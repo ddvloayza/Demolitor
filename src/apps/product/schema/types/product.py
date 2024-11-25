@@ -2,6 +2,15 @@ import graphene
 from django.urls import reverse
 
 
+class SkillTagsType(graphene.ObjectType):
+    name = graphene.String()
+    color = graphene.String()
+
+
+class KeyFeaturesType(graphene.ObjectType):
+    name = graphene.String()
+
+
 class ProductType(graphene.ObjectType):
     uuid = graphene.String()
     name = graphene.String()
@@ -13,10 +22,25 @@ class ProductType(graphene.ObjectType):
     image_url = graphene.String()
     price = graphene.String()
     tags = graphene.String()
+    rating = graphene.String()
+    skill_tags = graphene.List(SkillTagsType)
+    key_features = graphene.List(KeyFeaturesType)
     created_at = graphene.DateTime()
     updated_at = graphene.DateTime()
     is_active = graphene.Boolean()
     url_detail = graphene.String()
+
+    def resolve_skill_tags(self, info):
+        skill_tags = []
+        if self.skill_tags.all():
+            return self.skill_tags.all()
+        return skill_tags
+
+    def resolve_key_features(self, info):
+        key_features = []
+        if self.key_features.all():
+            return self.key_features.all()
+        return key_features
 
     def resolve_url_detail(root, info):
         if root.image:

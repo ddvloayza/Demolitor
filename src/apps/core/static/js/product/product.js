@@ -48,6 +48,14 @@ function fetchProducts(categoryUuid = null, sortOrder = null, priceRange = null,
                     name
                     price
                     slug
+                    rating
+                    keyFeatures{
+                        name
+                    }
+                    skillTags{
+                        name
+                        color
+                    }
                     image
                     imageUrl
                     description
@@ -86,13 +94,61 @@ function fetchProducts(categoryUuid = null, sortOrder = null, priceRange = null,
             productGrid.innerHTML = ''; // Limpiar la cuadrícula de productos
 
             products.forEach(product => {
+                // Convert rating to stars (full ★, half ★, and empty ☆)
+                const fullStars = Math.floor(product.rating); // Cantidad de estrellas llenas
+                const halfStar = product.rating % 1 >= 0.5; // Verdadero si hay media estrella
+                const emptyStars = 5 - fullStars - (halfStar ? 1 : 0); // Restantes son estrellas vacías
+
+                // Generar HTML para las estrellas
+                let starsHtml = '';
+                for (let i = 0; i < fullStars; i++) {
+                    starsHtml += '★'; // Estrella llena
+                }
+                if (halfStar) {
+                    starsHtml += '☆'; // Media estrella (puedes usar un icono diferente si prefieres)
+                }
+                for (let i = 0; i < emptyStars; i++) {
+                    starsHtml += '☆'; // Estrella vacía
+                }
+                // Generar etiquetas dinámicas para skillTags
+                let skillTagsHtml = '';
+                if (product.skillTags && product.skillTags.length > 0) {
+                    skillTagsHtml = product.skillTags.map(tag => `
+                        <div class="text-center text-white text-xs font-bold px-2 py-1 rounded-lg w-full"
+                             style="background-color: ${tag.color}">
+                            ${tag.name}
+                        </div>
+                    `).join('');
+                }
+                // Generar atributos dinámicamente
+                let attributesHtml = '';
+                if (product.keyFeatures && product.keyFeatures.length > 0) {
+                    attributesHtml = product.keyFeatures.map(feature => `
+                        <span class="bg-gray-100 text-gray-600 text-xs font-medium px-2 py-1 rounded-full">
+                            ${feature.name}
+                        </span>
+                    `).join('');
+                }
                 const productCard = `
-                    <div class="bg-white py-6 px-8 rounded-lg shadow-md hover:shadow-2xl cursor-pointer">
+                    <div class="bg-white p-4  rounded-lg shadow-md hover:shadow-2xl cursor-pointer">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-2 my-2">
+                            ${skillTagsHtml}
+                        </div>
+                        
                         <a href="${product.urlDetail}">
                             <img src="${product.imageUrl}" alt="${product.name}" class="w-full h-auto mb-4">
-                            <h3 class="text-black text-center text-lg font-bold">${product.name}</h3>
-                            <p class="text-gray-600 text-2xl ">S/${product.price}</p>
-
+                            <h3 class="text-black text-center text-xs md:text-lg font-bold">${product.name}</h3>
+                            <div class="flex justify-center items-center space-x-1 my-2">
+                              <span class="text-yellow-500 text-sm">
+                                ${starsHtml}
+                              </span>
+                            </div>
+                            
+                            <!-- Product Attributes -->
+                            <div class="flex flex-wrap sm:flex-row flex-col justify-center items-center gap-2 my-2">
+                              ${attributesHtml}
+                            </div>
+                            <p class="text-gray-600 text-base md:text-2xl ">S/${product.price}</p>
                             <button class="mt-4 bg-[#DE3704] text-white w-full py-3 rounded hover:bg-orange-700">
                                 Ver más
                             </button>
@@ -101,6 +157,11 @@ function fetchProducts(categoryUuid = null, sortOrder = null, priceRange = null,
                 productGrid.innerHTML += productCard;
             });
         } else {
+            const notFoundProduct = `
+                    <div class="bg-white py-6 px-8 rounded-lg shadow-md hover:shadow-2xl cursor-pointer">
+                        NO SE ENCONTRARON PRODUCTOS
+                    </div>`;
+                productGrid.innerHTML += notFoundProduct;
             console.error("No se encontró la propiedad 'productQueries' en la respuesta de la API.");
         }
     });
