@@ -88,7 +88,7 @@ function fetchProducts(categoryUuid = null, sortOrder = null, priceRange = null,
     .then(response => response.json())
     .then(data => {
         console.log("API response:", data);  // Verifica la estructura completa de la respuesta
-        if (data.data && data.data.productQueries) {
+        if (data.data && data.data.productQueries && data.data.productQueries.productListByCategory.length > 0) {
             const products = data.data.productQueries.productListByCategory;
             const productGrid = document.getElementById('product-grid');
             productGrid.innerHTML = ''; // Limpiar la cuadrícula de productos
@@ -157,6 +157,8 @@ function fetchProducts(categoryUuid = null, sortOrder = null, priceRange = null,
                 productGrid.innerHTML += productCard;
             });
         } else {
+            const productGrid = document.getElementById('product-grid');
+            productGrid.innerHTML = ''; // Limpiar la cuadrícula de productos
             const notFoundProduct = `
                     <div class="bg-white py-6 px-8 rounded-lg shadow-md hover:shadow-2xl cursor-pointer">
                         NO SE ENCONTRARON PRODUCTOS
