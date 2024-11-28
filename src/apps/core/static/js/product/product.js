@@ -124,7 +124,7 @@ function fetchProducts(categoryUuid = null, sortOrder = null, priceRange = null,
                 let attributesHtml = '';
                 if (product.keyFeatures && product.keyFeatures.length > 0) {
                     attributesHtml = product.keyFeatures.map(feature => `
-                        <span class="bg-gray-100 text-gray-600 text-xs font-medium px-2 py-1 rounded-full">
+                        <span class="bg-gray-100 text-gray-600 text-base font-bold px-4 py-2 rounded-full">
                             ${feature.name}
                         </span>
                     `).join('');
@@ -137,9 +137,9 @@ function fetchProducts(categoryUuid = null, sortOrder = null, priceRange = null,
                         
                         <a href="${product.urlDetail}">
                             <img src="${product.imageUrl}" alt="${product.name}" class="w-full h-auto mb-4">
-                            <h3 class="text-black text-center text-xs md:text-lg font-bold">${product.name}</h3>
+                            <h3 class="text-black text-center text-xs md:text-lg font-bold overflow-hidden" style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;">${product.name}</h3>
                             <div class="flex justify-center items-center space-x-1 my-2">
-                              <span class="text-yellow-500 text-sm">
+                              <span class="text-yellow-500 text-lg">
                                 ${starsHtml}
                               </span>
                             </div>

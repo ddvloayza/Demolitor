@@ -66,7 +66,7 @@
     </div>
     <!-- Main Content -->
         <!-- Products Grid -->
-        <div class="w-full  grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-2" id="product-grid">
+        <div class="w-full grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4" id="product-grid">
             <!-- Aquí se cargarán los productos -->
         </div>
 
@@ -121,11 +121,11 @@
                 </div>
                 <!-- Filtro de rango de precio -->
                 <div class="accordion">
-                    <button class="w-full text-left p-4 flex justify-between items-center" onclick="toggleAccordion('precio2')">
+                    <button class="w-full text-left p-4 flex justify-between items-center" onclick="toggleAccordion('precio')">
                         <span>Precio</span>
                         <i id="chevron-precio" class="fas fa-chevron-down"></i>
                     </button>
-                    <div id="precio2" class="p-4 hidden">
+                    <div id="precio" class="p-4 hidden">
                         <label for="rangeSlider" class="block text-gray-700">Rango de precio</label>
                         <div class="range-slider-container">
                             <input id="minRange" type="range" min="0" max="500" step="5" value="0" oninput="updateRangeValues()">
@@ -152,19 +152,18 @@
     <script>
 
         function updateRangeValues() {
+            console.log("updateRangeValues", document.getElementById('minRange'))
           const minValue = document.getElementById('minRange').value;
           const maxValue = document.getElementById('maxRange').value;
-          const minValueMobile = document.getElementById('minRangeMobile').value;
-          const maxValueMobile = document.getElementById('maxRangeMobile').value;
+
+
           document.getElementById('minValue').innerText = minValue;
           document.getElementById('maxValue').innerText = maxValue;
-          document.getElementById('minValueMobile').innerText = minValueMobile;
-          document.getElementById('maxValueMobile').innerText = maxValueMobile;
+
           // Ensure the min handle does not overlap the max handle
           const minInput = document.getElementById('minRange');
           const maxInput = document.getElementById('maxRange');
-          const minInputMobile = document.getElementById('minRangeMobile');
-          const maxInputMobile = document.getElementById('maxRangeMobile');
+
           if (parseInt(minValue) >= parseInt(maxValue)) {
             minInput.value = maxValue - 10;
           }
@@ -172,13 +171,7 @@
           if (parseInt(maxValue) <= parseInt(minValue)) {
             maxInput.value = parseInt(minValue) + 10;
           }
-          if (parseInt(minValueMobile) >= parseInt(maxValueMobile)) {
-            minInputMobile.value = maxValueMobile - 10;
-          }
 
-          if (parseInt(maxValueMobile) <= parseInt(minValueMobile)) {
-            maxInputMobile.value = parseInt(minValueMobile) + 10;
-          }
         }
 
 
