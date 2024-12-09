@@ -102,13 +102,13 @@ function fetchProducts(categoryUuid = null, sortOrder = null, priceRange = null,
                 // Generar HTML para las estrellas
                 let starsHtml = '';
                 for (let i = 0; i < fullStars; i++) {
-                    starsHtml += '★'; // Estrella llena
+                    starsHtml += '<span class="text-yellow-500 text-lg">★</span>'; // Estrella llena
                 }
                 if (halfStar) {
-                    starsHtml += '☆'; // Media estrella (puedes usar un icono diferente si prefieres)
+                    starsHtml += '<span class="text-yellow-500 text-lg">★</span>'; // Media estrella (puedes usar un icono diferente si prefieres)
                 }
                 for (let i = 0; i < emptyStars; i++) {
-                    starsHtml += '☆'; // Estrella vacía
+                    starsHtml += '<span class="text-gray-400 text-lg">★</span>'; // Estrella vacía
                 }
                 // Generar etiquetas dinámicas para skillTags
                 let skillTagsHtml = '';
@@ -138,7 +138,7 @@ function fetchProducts(categoryUuid = null, sortOrder = null, priceRange = null,
                         <a href="${product.urlDetail}">
                             <img src="${product.imageUrl}" alt="${product.name}" class="w-full h-auto mb-4">
                             <h3 class="text-black text-center text-xs md:text-lg font-bold overflow-hidden h-16" style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;">${product.name}</h3>
-                            <div class="flex justify-center items-center space-x-1 my-2">
+                            <div class="flex items-center space-x-1 my-2">
                               <span class="text-yellow-500 text-lg">
                                 ${starsHtml}
                               </span>
