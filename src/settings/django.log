@@ -8511,3 +8511,5 @@ INFO [2024-12-09 14:10:39,762] basehttp "GET /media/finniu/images/product/e390e4
 INFO [2024-12-09 14:10:39,765] basehttp "GET /media/finniu/images/product/0a1e8e53/proteina-whey-5-lb-sabor-chocolate.png HTTP/1.1" 200 834297
 INFO [2024-12-09 14:10:39,768] basehttp "GET /media/finniu/images/product/d89197ba/pack-creatina-300g-krak-330-g.png HTTP/1.1" 200 621956
 INFO [2024-12-09 14:10:39,770] basehttp "GET /media/finniu/images/product/2ed8ca8c/proteina-5-lb-whey-creatina-de-300-g.png HTTP/1.1" 200 729737
+INFO [2024-12-09 14:13:32,807] basehttp "GET /products/ HTTP/1.1" 200 24517
+INFO [2024-12-09 14:13:32,995] basehttp "POST /api/v1/graph/demolitor HTTP/1.1" 200 22137

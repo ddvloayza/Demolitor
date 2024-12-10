@@ -102,13 +102,13 @@ function fetchProducts(categoryUuid = null, sortOrder = null, priceRange = null,
                 // Generar HTML para las estrellas
                 let starsHtml = '';
                 for (let i = 0; i < fullStars; i++) {
-                    starsHtml += '<span class="text-yellow-500 text-lg">★</span>'; // Estrella llena
+                    starsHtml += '<span class="text-yellow-500 text-2xl">★</span>'; // Estrella llena
                 }
                 if (halfStar) {
-                    starsHtml += '<span class="text-yellow-500 text-lg">★</span>'; // Media estrella (puedes usar un icono diferente si prefieres)
+                    starsHtml += '<span class="text-yellow-500 text-2xl">★</span>'; // Media estrella (puedes usar un icono diferente si prefieres)
                 }
                 for (let i = 0; i < emptyStars; i++) {
-                    starsHtml += '<span class="text-gray-400 text-lg">★</span>'; // Estrella vacía
+                    starsHtml += '<span class="text-gray-400 text-2xl">★</span>'; // Estrella vacía
                 }
                 // Generar etiquetas dinámicas para skillTags
                 let skillTagsHtml = '';
