@@ -8,6 +8,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/apps/core/static/js/product/product.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/apps/core/static/js/product/product.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/settings/django.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/settings/django.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/products/product_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/products/product_detail.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +128,11 @@
       <workItem from="1730165685252" duration="597000" />
       <workItem from="1730176164473" duration="48499000" />
       <workItem from="1730733566111" duration="93080000" />
-      <workItem from="1731842658560" duration="74074000" />
+      <workItem from="1731842658560" duration="76460000" />
+      <workItem from="1733982725001" duration="617000" />
+      <workItem from="1734713126041" duration="2407000" />
+      <workItem from="1734817961120" duration="1143000" />
+      <workItem from="1735310954615" duration="604000" />
     </task>
     <servers />
   </component>

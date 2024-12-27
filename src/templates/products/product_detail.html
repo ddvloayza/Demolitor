@@ -105,7 +105,7 @@
                 </div>
 
                 <!-- Información del Producto -->
-                <div class="w-full lg:w-1/2 mx-auto text-center">
+                <div class="w-full lg:w-1/2 mx-auto">
                     <!-- Etiqueta de Más Comprados -->
                     {% if product.is_best_seller %}
                         <span class="bg-yellow-200 text-yellow-700 px-2 py-1 rounded-full text-sm mb-2 inline-block">Más comprados</span>
@@ -114,12 +114,12 @@
                     <!-- Título del Producto -->
                     <h1 class="text-4xl font-bold text-gray-800 mb-4 header_text font-black">{{ product.name }}</h1>
                     <!-- Precio y Descuento -->
-                    <div class="flex items-center space-x-4 mb-6 justify-center">
+                    <div class="flex items-center space-x-4 mb-6 r">
                         {% if product.price_discount %}
-                            <span class="text-xl text-gray-800 header_text font-black line-through price">S/ {{ product.price|floatformat:2 }}</span>
-                            <span class="text-3xl text-gray-800 header_text font-black price" id="product-price">S/ {{ product.price_discount|floatformat:2 }}</span>
+                            <span class="text-2xl text-gray-500 header_text font-black line-through price">S/ {{ product.price|floatformat:2 }}</span>
+                            <span class="text-4xl text-gray-800 header_text font-black price" id="product-price">S/ {{ product.price_discount|floatformat:2 }}</span>
                         {% else %}
-                            <span class="text-3xl text-gray-800 header_text font-black price" id="product-price">S/ {{ product.price|floatformat:2 }}</span>
+                            <span class="text-5xl text-gray-800 header_text font-black price" id="product-price">S/ {{ product.price|floatformat:2 }}</span>
                         {% endif %}
                     </div>
                     <!-- Selector de Sabor -->
@@ -135,7 +135,7 @@
                     <!-- Control de Cantidad -->
                     <div class="mb-6">
                         <label class="block text-lg font-semibold mb-2">Cantidad</label>
-                        <div class="flex items-center space-x-4 justify-center">
+                        <div class="flex items-center space-x-4 ">
                             <button onclick="decreaseQuantity()" class="px-4 py-2 border rounded-full text-gray-700 bg-gray-100 focus:bg-gray-200 focus:outline-none">-</button>
                             <span id="quantity" class="text-xl font-semibold">1</span>
                             <button onclick="increaseQuantity()" class="px-4 py-2 border rounded-full text-gray-700 bg-gray-100 focus:bg-gray-200 focus:outline-none">+</button>
@@ -157,12 +157,12 @@
                     </div>
 
                     <!-- Campo de código de descuento -->
-                    <div class="flex items-center space-x-4 mb-6 justify-center">
+                    <div class="flex items-center space-x-4 mb-6">
                         <input type="text" id="discount-code" placeholder="Código de dscto" class="px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500">
                     </div>
 
                     <!-- Botón de Comprar -->
-                    <button onclick="sendToWhatsApp()" class="w-full bg-[#DE3704] hover:bg-orange-500 text-white py-3 rounded-lg text-lg font-semibold focus:outline-none focus:ring-2 focus:ring-orange-500 header_text">
+                    <button onclick="sendToWhatsApp()" class="w-full bg-[#DE3704] hover:bg-orange-500 text-white py-3 rounded-lg text-2xl font-semibold focus:outline-none focus:ring-2 focus:ring-orange-500 header_text">
                         Comprar
                     </button>
 
