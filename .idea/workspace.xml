@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="d909a866-9aed-4c03-ba3b-68a2a6b56495" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/apps/core/static/js/product/product.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/apps/core/static/js/product/product.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/apps/product/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/apps/product/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/apps/product/models/product.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/apps/product/models/product.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/settings/django.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/settings/django.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/templates/products/product_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/products/product_detail.html" afterDir="false" />
     </list>
@@ -132,7 +133,7 @@
       <workItem from="1733982725001" duration="617000" />
       <workItem from="1734713126041" duration="2407000" />
       <workItem from="1734817961120" duration="1143000" />
-      <workItem from="1735310954615" duration="604000" />
+      <workItem from="1735310954615" duration="15995000" />
     </task>
     <servers />
   </component>

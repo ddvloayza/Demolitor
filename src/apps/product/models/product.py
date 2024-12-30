@@ -174,6 +174,20 @@ class Product(BaseModelMixin, SEOMixin):
         verbose_name_plural = _("Products")
 
 
+class FAQ(BaseModelMixin):
+    product = models.ForeignKey(
+        Product,
+        on_delete=models.CASCADE,
+        related_name="faqs"  # Allows reverse access from Product to its FAQs
+    )
+    question = models.CharField(max_length=255)
+    answer = models.TextField()
+    suggestion = models.TextField()
+
+    def __str__(self):
+        return f"{self.question} ({self.product.name})"
+
+
 class Characteristic(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name="characteristics")
     feature_name = models.CharField(max_length=100, verbose_name="Feature Name", blank=True, null=True)

@@ -8824,3 +8824,233 @@ INFO [2024-12-27 20:32:10,569] basehttp "POST /admin/login/?next=/admin/ HTTP/1.
 INFO [2024-12-27 20:32:10,604] basehttp "GET /admin/ HTTP/1.1" 200 20954
 INFO [2024-12-27 20:33:58,412] basehttp "GET /products/ HTTP/1.1" 200 24517
 INFO [2024-12-27 20:33:58,648] basehttp "POST /api/v1/graph/demolitor HTTP/1.1" 200 22137
+INFO [2024-12-30 14:22:15,577] autoreload Watching for file changes with StatReloader
+INFO [2024-12-30 14:39:26,230] basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO [2024-12-30 14:39:26,265] basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4206
+INFO [2024-12-30 14:39:26,286] basehttp "GET /static/admin/css/base.css HTTP/1.1" 200 22092
+INFO [2024-12-30 14:39:26,291] basehttp "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2804
+INFO [2024-12-30 14:39:26,293] basehttp "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2810
+INFO [2024-12-30 14:39:26,293] basehttp "GET /static/admin/js/theme.js HTTP/1.1" 200 1653
+INFO [2024-12-30 14:39:26,294] basehttp "GET /static/admin/css/login.css HTTP/1.1" 200 951
+INFO [2024-12-30 14:39:26,294] basehttp "GET /static/admin/css/responsive.css HTTP/1.1" 200 17972
+INFO [2024-12-30 14:39:26,296] basehttp "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+INFO [2024-12-30 14:39:44,978] basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO [2024-12-30 14:39:45,015] basehttp "GET /admin/ HTTP/1.1" 200 20954
+INFO [2024-12-30 14:39:45,032] basehttp "GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+INFO [2024-12-30 14:39:45,051] basehttp "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+INFO [2024-12-30 14:39:45,051] basehttp "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+INFO [2024-12-30 14:39:52,852] basehttp "GET / HTTP/1.1" 200 56954
+INFO [2024-12-30 14:39:52,872] basehttp "GET /static/css/style.css HTTP/1.1" 304 0
+INFO [2024-12-30 14:39:52,959] basehttp "GET /static/img/partners/falabella.png HTTP/1.1" 304 0
+INFO [2024-12-30 14:39:52,961] basehttp "GET /static/img/partners/mifarma.png HTTP/1.1" 304 0
+INFO [2024-12-30 14:39:53,227] basehttp "GET /static/img/banner/background2.png HTTP/1.1" 200 1358304
+INFO [2024-12-30 14:39:55,490] basehttp "GET /products/ HTTP/1.1" 200 24517
+INFO [2024-12-30 14:39:55,516] basehttp "GET /static/js/product/product.js HTTP/1.1" 304 0
+INFO [2024-12-30 14:39:55,640] basehttp "POST /api/v1/graph/demolitor HTTP/1.1" 200 22137
+INFO [2024-12-30 14:40:14,774] basehttp "GET /product/99dc3438-1f41-483c-a154-8a3ca64f871e/ HTTP/1.1" 200 43701
+INFO [2024-12-30 14:41:36,186] basehttp "GET /product/99dc3438-1f41-483c-a154-8a3ca64f871e/ HTTP/1.1" 200 43411
+INFO [2024-12-30 14:41:54,944] basehttp "GET /product/99dc3438-1f41-483c-a154-8a3ca64f871e/ HTTP/1.1" 200 43641
+INFO [2024-12-30 14:48:27,919] basehttp "GET /product/99dc3438-1f41-483c-a154-8a3ca64f871e/ HTTP/1.1" 200 44414
+INFO [2024-12-30 14:51:01,660] basehttp "GET /product/99dc3438-1f41-483c-a154-8a3ca64f871e/ HTTP/1.1" 200 44572
+INFO [2024-12-30 14:56:42,477] basehttp "GET /product/99dc3438-1f41-483c-a154-8a3ca64f871e/ HTTP/1.1" 200 44928
+INFO [2024-12-30 14:56:43,437] basehttp "GET /product/99dc3438-1f41-483c-a154-8a3ca64f871e/ HTTP/1.1" 200 44917
+INFO [2024-12-30 14:56:43,476] basehttp "GET /static/css/style.css HTTP/1.1" 200 25557
+INFO [2024-12-30 14:56:43,477] basehttp "GET /static/js/product/utils.js HTTP/1.1" 200 1426
+INFO [2024-12-30 14:56:43,483] basehttp "GET /media/finniu/images/company/c0a381a7/4a281285.png HTTP/1.1" 200 7698
+INFO [2024-12-30 14:56:43,496] basehttp "GET /media/finniu/images/product/c7f5eb42/4783f707.png HTTP/1.1" 200 719694
+INFO [2024-12-30 14:56:43,506] basehttp "GET /media/finniu/images/product/56e9e67e/48a141a2.png HTTP/1.1" 200 137286
+INFO [2024-12-30 14:56:43,508] basehttp "GET /media/finniu/images/product/e15d39ef/01bf52c6.png HTTP/1.1" 200 212498
+INFO [2024-12-30 14:56:43,524] basehttp "GET /media/finniu/images/product/747d2057/svelt-protein.png HTTP/1.1" 200 893144
+INFO [2024-12-30 14:56:43,528] basehttp "GET /static/js/swiper.js HTTP/1.1" 200 446
+INFO [2024-12-30 14:56:43,624] basehttp "GET /static/img/partners/mifarma.png HTTP/1.1" 200 4643
+INFO [2024-12-30 14:56:43,624] basehttp "GET /static/img/partners/falabella.png HTTP/1.1" 200 3202
+INFO [2024-12-30 14:56:43,625] basehttp "GET /static/img/partners/inkafarma.png HTTP/1.1" 200 7786
+INFO [2024-12-30 14:56:43,633] basehttp "GET /media/finniu/images/product/c31f92b0/black-maca-sport-en-capsulas.png HTTP/1.1" 200 445914
+INFO [2024-12-30 14:56:43,637] basehttp "GET /media/finniu/images/product/a5c38111/proteina-whey-233-lb-sabor-vainilla.png HTTP/1.1" 200 703699
+INFO [2024-12-30 14:56:43,682] basehttp "GET /static/fonts/AvenirLTStd-Book.otf HTTP/1.1" 200 27444
+INFO [2024-12-30 14:56:43,684] basehttp "GET /static/fonts/ArupalaGrotesk-Bold.otf HTTP/1.1" 200 99900
+INFO [2024-12-30 14:56:43,719] basehttp "GET /static/fonts/AvenirLTStd-Black.otf HTTP/1.1" 200 27912
+INFO [2024-12-30 14:56:43,719] basehttp "GET /static/fonts/AvenirLTStd-Medium.otf HTTP/1.1" 200 27264
+INFO [2024-12-30 14:56:43,720] basehttp "GET /static/fonts/ArupalaGrotesk-SemiBold.otf HTTP/1.1" 200 102028
+INFO [2024-12-30 14:56:43,721] basehttp "GET /static/fonts/ArupalaGrotesk-Ultra.otf HTTP/1.1" 200 94344
+INFO [2024-12-30 14:56:43,721] basehttp "GET /static/fonts/AvenirLTStd-Heavy.otf HTTP/1.1" 200 27640
+WARNING [2024-12-30 14:56:44,626] basehttp "GET /static/images/favicon.ico HTTP/1.1" 404 1979
+INFO [2024-12-30 16:22:35,495] basehttp "GET /product/99dc3438-1f41-483c-a154-8a3ca64f871e/ HTTP/1.1" 200 45000
+INFO [2024-12-30 16:22:50,072] basehttp "GET /product/99dc3438-1f41-483c-a154-8a3ca64f871e/ HTTP/1.1" 200 45258
+INFO [2024-12-30 16:23:07,567] basehttp "GET /product/99dc3438-1f41-483c-a154-8a3ca64f871e/ HTTP/1.1" 200 45035
+INFO [2024-12-30 16:29:21,393] autoreload /www/src/apps/product/models/product.py changed, reloading.
+INFO [2024-12-30 16:29:22,658] autoreload Watching for file changes with StatReloader
+INFO [2024-12-30 18:37:25,625] basehttp "GET /product/99dc3438-1f41-483c-a154-8a3ca64f871e/ HTTP/1.1" 200 45084
+INFO [2024-12-30 18:45:40,550] autoreload /www/src/apps/product/models/product.py changed, reloading.
+INFO [2024-12-30 18:45:41,508] autoreload Watching for file changes with StatReloader
+INFO [2024-12-30 18:54:32,956] autoreload /www/src/apps/product/admin.py changed, reloading.
+INFO [2024-12-30 18:54:33,902] autoreload Watching for file changes with StatReloader
+INFO [2024-12-30 18:55:02,853] autoreload /www/src/apps/product/admin.py changed, reloading.
+INFO [2024-12-30 18:55:03,922] autoreload Watching for file changes with StatReloader
+INFO [2024-12-30 19:01:09,300] autoreload Watching for file changes with StatReloader
+INFO [2024-12-30 19:06:18,764] basehttp "GET /admin/ HTTP/1.1" 200 21532
+INFO [2024-12-30 19:06:18,780] basehttp "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO [2024-12-30 19:06:18,781] basehttp "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO [2024-12-30 19:06:18,783] basehttp "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO [2024-12-30 19:06:18,783] basehttp "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+INFO [2024-12-30 19:06:18,786] basehttp "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO [2024-12-30 19:06:18,788] basehttp "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO [2024-12-30 19:06:18,792] basehttp "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO [2024-12-30 19:06:18,831] basehttp "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO [2024-12-30 19:06:18,831] basehttp "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+WARNING [2024-12-30 19:06:18,885] log Not Found: /favicon.ico
+WARNING [2024-12-30 19:06:18,886] basehttp "GET /favicon.ico HTTP/1.1" 404 5227
+INFO [2024-12-30 19:06:19,839] basehttp "GET /admin/product/faq/ HTTP/1.1" 200 15881
+INFO [2024-12-30 19:06:19,861] basehttp "GET /static/admin/css/changelists.css HTTP/1.1" 200 6878
+INFO [2024-12-30 19:06:19,863] basehttp "GET /static/admin/js/core.js HTTP/1.1" 200 6208
+INFO [2024-12-30 19:06:19,864] basehttp "GET /static/admin/js/actions.js HTTP/1.1" 200 8076
+INFO [2024-12-30 19:06:19,866] basehttp "GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+INFO [2024-12-30 19:06:19,869] basehttp "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+INFO [2024-12-30 19:06:19,869] basehttp "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+INFO [2024-12-30 19:06:19,878] basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+INFO [2024-12-30 19:06:19,879] basehttp "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 9097
+INFO [2024-12-30 19:06:19,898] basehttp "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 325171
+INFO [2024-12-30 19:06:19,900] basehttp "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 285314
+INFO [2024-12-30 19:06:19,915] basehttp "GET /static/admin/js/filters.js HTTP/1.1" 200 978
+INFO [2024-12-30 19:06:19,930] basehttp "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+INFO [2024-12-30 19:06:21,601] basehttp "GET /admin/product/faq/add/ HTTP/1.1" 200 22249
+INFO [2024-12-30 19:06:21,630] basehttp "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+INFO [2024-12-30 19:06:21,631] basehttp "GET /static/admin/css/forms.css HTTP/1.1" 200 8710
+INFO [2024-12-30 19:06:21,640] basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+INFO [2024-12-30 19:06:21,641] basehttp "GET /static/admin/css/widgets.css HTTP/1.1" 200 11564
+INFO [2024-12-30 19:06:21,653] basehttp "GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+INFO [2024-12-30 19:06:21,653] basehttp "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 200 581
+INFO [2024-12-30 19:06:37,190] basehttp "POST /admin/product/faq/add/ HTTP/1.1" 302 0
+INFO [2024-12-30 19:06:37,221] basehttp "GET /admin/product/faq/ HTTP/1.1" 200 17804
+INFO [2024-12-30 19:06:37,248] basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+INFO [2024-12-30 19:06:37,258] basehttp "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+INFO [2024-12-30 19:06:41,082] basehttp "GET /product/99dc3438-1f41-483c-a154-8a3ca64f871e/ HTTP/1.1" 200 45070
+INFO [2024-12-30 19:06:43,295] basehttp "GET /product/99dc3438-1f41-483c-a154-8a3ca64f871e/ HTTP/1.1" 200 44925
+INFO [2024-12-30 19:06:43,324] basehttp "GET /media/finniu/images/company/c0a381a7/4a281285.png HTTP/1.1" 200 7698
+INFO [2024-12-30 19:06:43,325] basehttp "GET /static/css/style.css HTTP/1.1" 200 25557
+INFO [2024-12-30 19:06:43,326] basehttp "GET /static/js/product/utils.js HTTP/1.1" 200 1426
+INFO [2024-12-30 19:06:43,329] basehttp "GET /media/finniu/images/product/c7f5eb42/4783f707.png HTTP/1.1" 200 719694
+INFO [2024-12-30 19:06:43,338] basehttp "GET /media/finniu/images/product/e15d39ef/01bf52c6.png HTTP/1.1" 200 212498
+INFO [2024-12-30 19:06:43,346] basehttp "GET /media/finniu/images/product/56e9e67e/48a141a2.png HTTP/1.1" 200 137286
+INFO [2024-12-30 19:06:43,352] basehttp "GET /media/finniu/images/product/1b683430/black-maca.png HTTP/1.1" 200 501509
+INFO [2024-12-30 19:06:43,367] basehttp "GET /static/js/swiper.js HTTP/1.1" 200 446
+INFO [2024-12-30 19:06:43,447] basehttp "GET /static/img/partners/falabella.png HTTP/1.1" 200 3202
+INFO [2024-12-30 19:06:43,448] basehttp "GET /static/img/partners/inkafarma.png HTTP/1.1" 200 7786
+INFO [2024-12-30 19:06:43,448] basehttp "GET /static/img/partners/mifarma.png HTTP/1.1" 200 4643
+INFO [2024-12-30 19:06:43,455] basehttp "GET /media/finniu/images/product/c31f92b0/black-maca-sport-en-capsulas.png HTTP/1.1" 200 445914
+INFO [2024-12-30 19:06:43,457] basehttp "GET /media/finniu/images/product/370da7d1/proteina-whey-233-lb-sabor-chocolate.png HTTP/1.1" 200 692735
+INFO [2024-12-30 19:06:43,483] basehttp "GET /static/fonts/AvenirLTStd-Book.otf HTTP/1.1" 200 27444
+INFO [2024-12-30 19:06:43,484] basehttp "GET /static/fonts/ArupalaGrotesk-Bold.otf HTTP/1.1" 200 99900
+INFO [2024-12-30 19:06:43,508] basehttp "GET /static/fonts/AvenirLTStd-Heavy.otf HTTP/1.1" 200 27640
+INFO [2024-12-30 19:06:43,509] basehttp "GET /static/fonts/AvenirLTStd-Medium.otf HTTP/1.1" 200 27264
+INFO [2024-12-30 19:06:43,510] basehttp "GET /static/fonts/ArupalaGrotesk-Ultra.otf HTTP/1.1" 200 94344
+INFO [2024-12-30 19:06:43,510] basehttp "GET /static/fonts/AvenirLTStd-Black.otf HTTP/1.1" 200 27912
+INFO [2024-12-30 19:06:43,512] basehttp "GET /static/fonts/ArupalaGrotesk-SemiBold.otf HTTP/1.1" 200 102028
+WARNING [2024-12-30 19:06:44,351] basehttp "GET /static/images/favicon.ico HTTP/1.1" 404 1979
+ERROR [2024-12-30 19:11:49,844] log Internal Server Error: /product/99dc3438-1f41-483c-a154-8a3ca64f871e/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/usr/local/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/usr/local/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/usr/local/lib/python3.10/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.10/site-packages/django/template/defaulttags.py", line 198, in render
+    values = list(values)
+TypeError: 'RelatedManager' object is not iterable
+ERROR [2024-12-30 19:11:49,848] basehttp "GET /product/99dc3438-1f41-483c-a154-8a3ca64f871e/ HTTP/1.1" 500 157565
+WARNING [2024-12-30 19:11:49,926] log Not Found: /favicon.ico
+WARNING [2024-12-30 19:11:49,926] basehttp "GET /favicon.ico HTTP/1.1" 404 5227
+ERROR [2024-12-30 19:11:51,916] log Internal Server Error: /product/99dc3438-1f41-483c-a154-8a3ca64f871e/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/usr/local/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/usr/local/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/usr/local/lib/python3.10/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.10/site-packages/django/template/defaulttags.py", line 198, in render
+    values = list(values)
+TypeError: 'RelatedManager' object is not iterable
+ERROR [2024-12-30 19:11:51,917] basehttp "GET /product/99dc3438-1f41-483c-a154-8a3ca64f871e/ HTTP/1.1" 500 157684
+INFO [2024-12-30 19:11:57,174] basehttp "GET /product/99dc3438-1f41-483c-a154-8a3ca64f871e/ HTTP/1.1" 200 45178
+INFO [2024-12-30 19:12:18,536] basehttp "GET /product/99dc3438-1f41-483c-a154-8a3ca64f871e/ HTTP/1.1" 200 45237
+INFO [2024-12-30 19:15:30,512] basehttp "GET /product/99dc3438-1f41-483c-a154-8a3ca64f871e/ HTTP/1.1" 200 45000
+INFO [2024-12-30 19:56:52,884] basehttp "GET /product/99dc3438-1f41-483c-a154-8a3ca64f871e/ HTTP/1.1" 200 45072
+INFO [2024-12-30 19:57:15,153] basehttp "GET /product/99dc3438-1f41-483c-a154-8a3ca64f871e/ HTTP/1.1" 200 45235
+INFO [2024-12-30 19:57:27,990] basehttp "GET /product/99dc3438-1f41-483c-a154-8a3ca64f871e/ HTTP/1.1" 200 45103
+INFO [2024-12-30 19:58:24,090] basehttp "GET /product/99dc3438-1f41-483c-a154-8a3ca64f871e/ HTTP/1.1" 200 45282
+INFO [2024-12-30 19:58:43,102] basehttp "GET /product/99dc3438-1f41-483c-a154-8a3ca64f871e/ HTTP/1.1" 200 45209
+INFO [2024-12-30 19:58:46,817] basehttp "GET /product/99dc3438-1f41-483c-a154-8a3ca64f871e/ HTTP/1.1" 200 45037
+INFO [2024-12-30 19:59:01,400] basehttp "GET /product/99dc3438-1f41-483c-a154-8a3ca64f871e/ HTTP/1.1" 200 45029
+INFO [2024-12-30 19:59:59,804] basehttp "GET /product/99dc3438-1f41-483c-a154-8a3ca64f871e/ HTTP/1.1" 200 45184
+INFO [2024-12-30 20:00:31,835] basehttp "GET /product/99dc3438-1f41-483c-a154-8a3ca64f871e/ HTTP/1.1" 200 45249
+INFO [2024-12-30 20:00:49,256] basehttp "GET /product/99dc3438-1f41-483c-a154-8a3ca64f871e/ HTTP/1.1" 200 45249
+INFO [2024-12-30 20:01:44,737] basehttp "GET /product/99dc3438-1f41-483c-a154-8a3ca64f871e/ HTTP/1.1" 200 45332
+INFO [2024-12-30 20:02:15,196] basehttp "GET /product/99dc3438-1f41-483c-a154-8a3ca64f871e/ HTTP/1.1" 200 45084
+INFO [2024-12-30 20:02:21,463] basehttp "GET /product/99dc3438-1f41-483c-a154-8a3ca64f871e/ HTTP/1.1" 200 45278
+INFO [2024-12-30 20:02:59,473] basehttp "GET /product/99dc3438-1f41-483c-a154-8a3ca64f871e/ HTTP/1.1" 200 45145

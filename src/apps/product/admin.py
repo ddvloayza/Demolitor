@@ -1,6 +1,7 @@
 from django.contrib import admin
 
-from apps.product.models.product import Product, Category, ProductImage, Packaging, Flavor, Characteristic, KeyFeature
+from apps.product.models.product import Product, Category, ProductImage, Packaging, Flavor, Characteristic, KeyFeature, \
+    FAQ
 
 from apps.product.models.quotation_requests import QuotationRequest, QuotationRequestDetail
 from django.utils.safestring import mark_safe
@@ -9,7 +10,9 @@ from apps.tag.models import SkillTag
 
 
 # Inline for Flavor
-
+class FAQInline(admin.TabularInline):
+    model = FAQ
+    extra = 1
 
 class QuotationRequestDetailInline(admin.TabularInline):
     model = QuotationRequestDetail
@@ -31,12 +34,15 @@ class CategoryAdmin(admin.ModelAdmin):
 
 
 class ProductAdmin(admin.ModelAdmin):
-    inlines = [ProductImageInline, CharacteristicInline]
+    inlines = [ProductImageInline, CharacteristicInline, FAQInline]
     list_display = ("name", )
     search_fields = ("name",)
     filter_horizontal = ('flavors', 'packagings', 'tag', 'skill_tags', 'key_features')
     prepopulated_fields = {'slug': ('name',)}
 
+@admin.register(FAQ)
+class FAQAdmin(admin.ModelAdmin):
+    list_display = ("question", "product")
 
 @admin.register(Flavor)
 class FlavorAdmin(admin.ModelAdmin):
