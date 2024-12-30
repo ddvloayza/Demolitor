@@ -9054,3 +9054,11 @@ INFO [2024-12-30 20:01:44,737] basehttp "GET /product/99dc3438-1f41-483c-a154-8a
 INFO [2024-12-30 20:02:15,196] basehttp "GET /product/99dc3438-1f41-483c-a154-8a3ca64f871e/ HTTP/1.1" 200 45084
 INFO [2024-12-30 20:02:21,463] basehttp "GET /product/99dc3438-1f41-483c-a154-8a3ca64f871e/ HTTP/1.1" 200 45278
 INFO [2024-12-30 20:02:59,473] basehttp "GET /product/99dc3438-1f41-483c-a154-8a3ca64f871e/ HTTP/1.1" 200 45145
+INFO [2024-12-30 20:05:13,097] basehttp "GET /product/f5d0e9dd-6efe-4e07-9d93-e3a0de1da8fe/ HTTP/1.1" 200 43807
+INFO [2024-12-30 20:05:13,199] basehttp "GET /media/finniu/images/product/95542490/904d8523.png HTTP/1.1" 200 501509
+INFO [2024-12-30 20:05:13,268] basehttp "GET /media/finniu/images/product/a13dae90/e69e69fb.png HTTP/1.1" 200 106411
+INFO [2024-12-30 20:05:13,270] basehttp "GET /media/finniu/images/product/76e0b804/bab855b1.webp HTTP/1.1" 200 67284
+INFO [2024-12-30 20:05:13,336] basehttp "GET /media/finniu/images/product/9843ec8d/899c6ceb.gif HTTP/1.1" 200 9724301
+WARNING [2024-12-30 20:05:14,138] basehttp "GET /static/images/favicon.ico HTTP/1.1" 404 1979
+INFO [2024-12-30 20:05:39,238] basehttp "GET /product/f5d0e9dd-6efe-4e07-9d93-e3a0de1da8fe/ HTTP/1.1" 200 43432
+INFO [2024-12-30 20:05:44,525] basehttp "GET /product/99dc3438-1f41-483c-a154-8a3ca64f871e/ HTTP/1.1" 200 45306
