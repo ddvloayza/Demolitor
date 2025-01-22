@@ -47,6 +47,7 @@ function fetchProducts(categoryUuid = null, sortOrder = null, priceRange = null,
                     uuid
                     name
                     price
+                    priceDiscount
                     slug
                     rating
                     keyFeatures{
@@ -129,6 +130,25 @@ function fetchProducts(categoryUuid = null, sortOrder = null, priceRange = null,
                         </span>
                     `).join('');
                 }
+                let priceHtml = '';
+                if (product.price_discount && Int(product.price_discount) > 0) {
+                    // If there is a discount, show the discounted price and original price (strikethrough)
+                    priceHtml = `
+                      <span class="text-2xl text-gray-500 header_text font-black line-through price">
+                        S/ ${product.price}
+                      </span>
+                      <span class="text-4xl text-gray-800 header_text font-black price" id="product-price">
+                        S/ ${product.price_discount}
+                      </span>
+                    `;
+                  } else {
+                    // If price_discount is 0, show only the regular price
+                    priceHtml = `
+                      <p class="text-gray-600 text-base md:text-2xl">
+                        S/ ${product.price}
+                      </p>
+                    `;
+                  }
                 const productCard = `
                     <div class="bg-white p-4  rounded-lg shadow-md hover:shadow-2xl cursor-pointer">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-2 my-2">
@@ -148,7 +168,7 @@ function fetchProducts(categoryUuid = null, sortOrder = null, priceRange = null,
                             <div class="flex flex-wrap sm:flex-row flex-col justify-center items-center gap-2 my-2">
                               ${attributesHtml}
                             </div>
-                            <p class="text-gray-600 text-base md:text-2xl ">S/${product.price}</p>
+                            ${priceHtml}
                             <button class="mt-4 bg-[#DE3704] text-white w-full py-3 rounded hover:bg-orange-700">
                                 Ver más
                             </button>

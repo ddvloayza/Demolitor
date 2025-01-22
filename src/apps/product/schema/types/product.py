@@ -21,6 +21,7 @@ class ProductType(graphene.ObjectType):
     image = graphene.String()
     image_url = graphene.String()
     price = graphene.String()
+    price_discount = graphene.String()
     tags = graphene.String()
     rating = graphene.String()
     skill_tags = graphene.List(SkillTagsType)

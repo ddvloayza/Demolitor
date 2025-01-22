@@ -180,9 +180,9 @@ class FAQ(BaseModelMixin):
         on_delete=models.CASCADE,
         related_name="faqs"  # Allows reverse access from Product to its FAQs
     )
-    question = models.CharField(max_length=255)
-    answer = models.TextField()
-    suggestion = models.TextField()
+    question = models.CharField(max_length=255, blank=True, null=True)
+    answer = models.TextField(blank=True, null=True)
+    suggestion = models.TextField(blank=True, null=True)
 
     def __str__(self):
         return f"{self.question} ({self.product.name})"
