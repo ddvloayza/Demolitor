@@ -41,32 +41,36 @@
 
 
 <!-- Quiénes Somos -->
-<section class="bg-white py-16">
-  <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+<section class="bg-white">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
     <div>
-        <p>Conoce</p>
-      <h2 class="text-3xl font-bold mb-4 text-orange-500">¿QUIÉNES SOMOS?</h2>
-      <p class="text-gray-700">
-        Somos una empresa dedicada a la nutrición deportiva. Ofrecemos suplementos diseñados para mejorar el rendimiento físico y mantener un estilo de vida saludable.
-      </p>
+        <p class="font-arupala-grotesk font-black pt-4">Descubre</p>
+      <h2 class="font-arupala-grotesk text-3xl font-black text-[#DE3704]">NUESTRA</h2>
+        <h2 class="font-arupala-grotesk text-3xl font-black mb-4 text-[#DE3704]">ESENCIA</h2>
+
     </div>
+      <div>
+          <p class="text-gray-700 text-lg md:text-sm">
+            Somos una marca de suplementación deportiva avalada por la FDA de EE. UU., que fusiona la más alta calidad con insumos naturales del Perú. Diseñados para desatar tu máximo rendimiento, nuestros productos son la clave para dominar tus metas y llevar tu desempeño al siguiente nivel.
+          </p>
+      </div>
     <div class="rounded-lg overflow-hidden">
-      <img src="{% static "img/nosotros/nosotros-bg.png" %}" alt="¿Quiénes Somos?" class="w-full h-auto">
+      <img src="{% static "img/nosotros/Wall.png" %}" alt="¿Quiénes Somos?" class="w-full h-auto">
     </div>
   </div>
 </section>
 
 <!-- Reconocimientos -->
 <section class="bg-gray-100 py-16">
-  <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+  <div class="container px-4 sm:px-6 lg:px-8 mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
       <div>
-          <h2 class="text-3xl font-bold mb-8">RECONOCIMIENTOS</h2>
+          <h2 class="font-arupala-grotesk text-3xl font-black text-[#DE3704]">RECONOCIMIENTOS</h2>
           <p>
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputat.
+              En Demolitor, ofrecemos suplementos de calidad certificada, combinando insumos americanos con añadidos peruanos, como la maca negra, para crear fórmulas únicas. Cada producto es elaborado bajo estrictos estándares, diseñados para potenciar tu rendimiento, favorecer el desarrollo muscular y mejorar la recuperación, ayudándote a alcanzar tus objetivos como atleta.
           </p>
       </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
       <!-- Reconocimiento 1 -->
       <div class="text-center">
         <img src={% static "img/nosotros/logo1.png" %} alt="Reconocimiento" class="mx-auto mb-4">
@@ -83,15 +87,15 @@
 <section class="bg-orange-500 text-white" style="background-image: url('{% static "img/nosotros/bg-productos.png" %}'); background-size: cover; background-position: center; height: 100vh; display: flex; flex-direction: column; justify-content: space-between;">
   <!-- Contenido superior -->
   <div class="container mx-auto text-center mt-8">
-    <h2 class="text-3xl font-bold mb-8">PRODUCTOS</h2>
+    <h2 class="mb-8 font-arupala-grotesk text-3xl font-black">PRODUCTOS</h2>
     <p class="text-lg mb-8">
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
+      Explora nuestra línea de productos diseñados para potenciar tu rendimiento. Cada fórmula combina innovación, insumos de calidad y un compromiso con resultados reales, adaptados a tus metas.
     </p>
   </div>
 
   <!-- Botón en la parte inferior -->
   <div class="container mx-auto text-center mb-8">
-    <button class="mt-8 bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-800">
+    <button class="mt-8 bg-white text-[#DE3704] font-arupala-grotesk font-black px-6 py-3 rounded-lg hover:bg-gray-800">
       Ver más
     </button>
   </div>
@@ -99,25 +103,45 @@
 
 <!-- Puntos de Venta -->
 <section class="bg-white py-16">
-  <div class="container mx-auto text-center">
-    <h2 class="text-3xl font-bold mb-8">PUNTOS DE VENTA</h2>
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-      <img src="https://via.placeholder.com/150" alt="Marca" class="mx-auto">
-      <img src="https://via.placeholder.com/150" alt="Marca" class="mx-auto">
-      <img src="https://via.placeholder.com/150" alt="Marca" class="mx-auto">
-      <img src="https://via.placeholder.com/150" alt="Marca" class="mx-auto">
+  <div class="container mx-auto text-center overflow-x-auto">
+    <h2 class="text-3xl font-black mb-8 text-[#DE3704] font-arupala-grotesk">PUNTOS DE VENTA</h2>
+      <p class="text-center">Encuentra nuestros productos en tiendas físicas y plataformas en línea.</p>
+    <div class="grid grid-cols-4 md:grid-cols-8 gap-12 py-8 marquee">
+      <img src="{% static "img/partners/mifarma-gray.png" %}" alt="Galería" class="rounded-lg m-auto">
+      <img src="{% static "img/partners/inkafarma-gray.png" %}" alt="Galería" class="rounded-lg m-auto">
+      <img src="{% static "img/partners/wong-gray.png" %}" alt="Galería" class="rounded-lg m-auto">
+      <img src="{% static "img/partners/organa-gray.png" %}" alt="Galería" class="rounded-lg m-auto">
+        <img src="{% static "img/partners/selltech-gray.png" %}" alt="Galería" class="rounded-lg m-auto">
+        <img src="{% static "img/partners/kllao-gray.png" %}" alt="Galería" class="rounded-lg m-auto">
+        <img src="{% static "img/partners/labnutrition-gray.png" %}" alt="Galería" class="rounded-lg m-auto">
+        <img src="{% static "img/partners/sanahoria-gray.png" %}" alt="Galería" class="rounded-lg m-auto">
+    </div>
+      <div class="grid grid-cols-4 md:grid-cols-8 gap-12 py-8 marquee">
+          <img src="{% static "img/partners/tech-nutrition-gray.png" %}" alt="Galería" class="rounded-lg m-auto">
+        <img src="{% static "img/partners/organic-fit-gray.png" %}" alt="Galería" class="rounded-lg m-auto">
+        <img src="{% static "img/partners/anden-natural-gray.png" %}" alt="Galería" class="rounded-lg m-auto">
+        <img src="{% static "img/partners/feria-nativa-gray.png" %}" alt="Galería" class="rounded-lg m-auto">
+        <img src="{% static "img/partners/wellness-gray.png" %}" alt="Galería" class="rounded-lg m-auto">
+        <img src="{% static "img/partners/miski-foods-gray.png" %}" alt="Galería" class="rounded-lg m-auto">
+        <img src="{% static "img/partners/molina-gray.png" %}" alt="Galería" class="rounded-lg m-auto">
     </div>
   </div>
 </section>
 
 <!-- Galería -->
-<section class="bg-black py-16">
-  <div class="container mx-auto">
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-      <img src="https://via.placeholder.com/200" alt="Galería" class="rounded-lg">
-      <img src="https://via.placeholder.com/200" alt="Galería" class="rounded-lg">
-      <img src="https://via.placeholder.com/200" alt="Galería" class="rounded-lg">
-      <img src="https://via.placeholder.com/200" alt="Galería" class="rounded-lg">
+<section class="bg-black">
+  <div class="mx-auto overflow-x-auto">
+    <div class="grid sm:grid-cols-2 md:grid-cols-4 marquee">
+        <img src="{% static "img/man-working-out-gym.jpg" %}" alt="Galería" class="m-auto">
+        <img src="{% static "img/man-working-out-gym.jpg" %}" alt="Galería" class="m-auto">
+        <img src="{% static "img/man-working-out-gym.jpg" %}" alt="Galería" class="m-auto">
+        <img src="{% static "img/man-working-out-gym.jpg" %}" alt="Galería" class="m-auto">
+    </div>
+      <div class="grid sm:grid-cols-2 md:grid-cols-4 marquee">
+        <img src="{% static "img/man-working-out-gym.jpg" %}" alt="Galería" class="m-auto">
+        <img src="{% static "img/man-working-out-gym.jpg" %}" alt="Galería" class="m-auto">
+        <img src="{% static "img/man-working-out-gym.jpg" %}" alt="Galería" class="m-auto">
+        <img src="{% static "img/man-working-out-gym.jpg" %}" alt="Galería" class="m-auto">
     </div>
   </div>
 </section>

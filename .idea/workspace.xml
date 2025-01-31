@@ -6,11 +6,45 @@
   <component name="ChangeListManager">
     <list default="true" id="d909a866-9aed-4c03-ba3b-68a2a6b56495" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/apps/core/static/js/product/product.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/apps/core/static/js/product/product.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/apps/product/models/product.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/apps/product/models/product.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/apps/product/schema/types/product.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/apps/product/schema/types/product.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/apps/core/static/img/banner/banner-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/apps/core/static/img/banner/banner-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/apps/core/static/img/banner/slider1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/apps/core/static/img/banner/slider2_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/apps/core/static/img/blog/blog-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/apps/core/static/img/blog/blog-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/apps/core/static/img/blog/blog-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/apps/core/static/img/blog/blog-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/apps/core/static/img/blog/blog-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/apps/core/static/img/blog/blog-6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/apps/core/static/img/blog/details/details-author.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/apps/core/static/img/blog/details/details-hero.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/apps/core/static/img/blog/details/details-pic.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/apps/core/static/img/blog/sidebar/sr-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/apps/core/static/img/blog/sidebar/sr-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/apps/core/static/img/blog/sidebar/sr-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/apps/core/static/img/breadcrumb.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/apps/core/static/img/cart/cart-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/apps/core/static/img/cart/cart-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/apps/core/static/img/cart/cart-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/apps/core/static/img/categories/cat-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/apps/core/static/img/categories/cat-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/apps/core/static/img/categories/cat-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/apps/core/static/img/categories/cat-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/apps/core/static/img/categories/cat-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/apps/core/static/img/featured/feature-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/apps/core/static/img/featured/feature-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/apps/core/static/img/featured/feature-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/apps/core/static/img/featured/feature-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/apps/core/static/img/featured/feature-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/apps/core/static/img/featured/feature-6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/apps/core/static/img/featured/feature-7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/apps/core/static/img/featured/feature-8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/apps/core/static/img/latest-product/lp-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/apps/core/static/img/latest-product/lp-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/apps/core/static/img/latest-product/lp-3.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/settings/django.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/settings/django.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/products/product_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/products/product_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/core/nosotros.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/core/nosotros.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/web/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/web/footer.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,11 +89,11 @@
       <recent name="$PROJECT_DIR$/src/apps/core/api" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/apps/core/static/img" />
+      <recent name="$PROJECT_DIR$/src/apps/core/static/img/partners" />
       <recent name="$PROJECT_DIR$/src/apps/core/static/img/nosotros" />
       <recent name="$PROJECT_DIR$/src/templates/templatetags" />
       <recent name="$PROJECT_DIR$/src/apps/core/static/fonts" />
-      <recent name="$PROJECT_DIR$/src/apps/core/static/img/banner" />
-      <recent name="$PROJECT_DIR$/src/apps/core/static/img" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -136,7 +170,10 @@
       <workItem from="1734817961120" duration="1143000" />
       <workItem from="1735310954615" duration="22691000" />
       <workItem from="1736431539670" duration="626000" />
-      <workItem from="1737552827132" duration="2254000" />
+      <workItem from="1737552827132" duration="2742000" />
+      <workItem from="1737923394654" duration="1010000" />
+      <workItem from="1737993200456" duration="32000" />
+      <workItem from="1738259817516" duration="13244000" />
     </task>
     <servers />
   </component>
