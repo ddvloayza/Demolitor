@@ -1415,3 +1415,15 @@ INFO [2025-01-31 21:39:00,545] basehttp "GET /nosotros/ HTTP/1.1" 200 21104
 INFO [2025-01-31 21:39:02,044] basehttp "GET /nosotros/ HTTP/1.1" 200 21104
 INFO [2025-01-31 21:39:39,476] basehttp "GET /nosotros/ HTTP/1.1" 200 21105
 INFO [2025-01-31 21:39:39,552] basehttp "GET /static/img/nosotros/wall.png HTTP/1.1" 304 0
+INFO [2025-01-31 21:40:26,717] basehttp "GET / HTTP/1.1" 200 57365
+INFO [2025-01-31 21:40:26,785] basehttp "GET /static/css/style.css HTTP/1.1" 304 0
+INFO [2025-01-31 21:41:00,697] basehttp "GET / HTTP/1.1" 200 57365
+INFO [2025-01-31 21:41:03,017] basehttp "GET /products/?objective=FITNESS HTTP/1.1" 200 24800
+INFO [2025-01-31 21:41:03,108] basehttp "POST /api/v1/graph/demolitor HTTP/1.1" 200 2450
+INFO [2025-01-31 21:41:12,634] basehttp "GET /products/ HTTP/1.1" 200 24800
+INFO [2025-01-31 21:41:12,881] basehttp "POST /api/v1/graph/demolitor HTTP/1.1" 200 22661
+INFO [2025-01-31 21:43:49,816] basehttp "GET /products/ HTTP/1.1" 200 24790
+INFO [2025-01-31 21:43:49,928] basehttp "GET /static/img/book-claim-icon.png HTTP/1.1" 304 0
+INFO [2025-01-31 21:43:50,146] basehttp "POST /api/v1/graph/demolitor HTTP/1.1" 200 22661
+INFO [2025-01-31 21:43:51,087] basehttp "GET /products/ HTTP/1.1" 200 24790
+INFO [2025-01-31 21:43:51,248] basehttp "POST /api/v1/graph/demolitor HTTP/1.1" 200 22661
