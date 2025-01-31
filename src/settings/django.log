@@ -9755,3 +9755,15 @@ INFO [2025-01-31 14:34:47,916] basehttp "GET /product/99dc3438-1f41-483c-a154-8a
 INFO [2025-01-31 14:34:47,982] basehttp "GET /media/finniu/images/product/c7f5eb42/4783f707.png HTTP/1.1" 200 719694
 INFO [2025-01-31 14:34:48,001] basehttp "GET /media/finniu/images/product/e15d39ef/01bf52c6.png HTTP/1.1" 200 212498
 INFO [2025-01-31 14:34:48,019] basehttp "GET /media/finniu/images/product/56e9e67e/48a141a2.png HTTP/1.1" 200 137286
+INFO [2025-01-31 14:45:23,119] basehttp "GET /product/99dc3438-1f41-483c-a154-8a3ca64f871e/ HTTP/1.1" 200 45615
+INFO [2025-01-31 14:45:23,216] basehttp "GET /static/img/book-claim-icon.png HTTP/1.1" 304 0
+INFO [2025-01-31 14:46:54,570] basehttp "GET /product/99dc3438-1f41-483c-a154-8a3ca64f871e/ HTTP/1.1" 200 45494
+INFO [2025-01-31 14:47:19,498] basehttp "GET /product/99dc3438-1f41-483c-a154-8a3ca64f871e/ HTTP/1.1" 200 45284
+INFO [2025-01-31 14:47:19,563] basehttp "GET /static/img/book-claim-icon.png HTTP/1.1" 304 0
+INFO [2025-01-31 14:50:54,014] basehttp "GET /product/99dc3438-1f41-483c-a154-8a3ca64f871e/ HTTP/1.1" 200 45328
+INFO [2025-01-31 14:50:54,111] basehttp "GET /static/img/book-claim-icon.png HTTP/1.1" 304 0
+INFO [2025-01-31 14:51:00,982] basehttp "GET /product/99dc3438-1f41-483c-a154-8a3ca64f871e/ HTTP/1.1" 200 45670
+INFO [2025-01-31 14:51:06,754] basehttp "GET /product/99dc3438-1f41-483c-a154-8a3ca64f871e/ HTTP/1.1" 200 45456
+INFO [2025-01-31 14:51:26,493] basehttp "GET /product/99dc3438-1f41-483c-a154-8a3ca64f871e/ HTTP/1.1" 200 45540
+INFO [2025-01-31 14:51:36,203] basehttp "GET /product/99dc3438-1f41-483c-a154-8a3ca64f871e/ HTTP/1.1" 200 45422
+INFO [2025-01-31 14:52:10,960] basehttp "GET /product/99dc3438-1f41-483c-a154-8a3ca64f871e/ HTTP/1.1" 200 45563
