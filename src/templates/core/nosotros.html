@@ -23,16 +23,16 @@
   <!-- Hero Section Begin -->
 <main>
 <section>
-    <div class="bg-black text-white py-16" style="background-image: url('{% static "img/nosotros/nosotros-bg.png" %}'); background-size: cover; background-position: center; height: 60vh;align-items: center;
+    <div class="bg-black text-white py-0 md:py-16 md:h-[60vh] bg-cover px-16 py-16" style="background-image: url('{% static "img/nosotros/nosotros-bg.png" %}'); background-repeat: no-repeat;background-position: center;align-items: center;
     justify-content: center;
     display: flex;">
       <!-- Header -->
       <div class="container mx-auto text-center">
 
-        <p class="text-lg md:text-xl mt-4">
+        <p class="text-sm md:text-xl mt-4">
           Una nueva forma de construir un estilo de vida saludable.
         </p>
-          <h1 class="text-4xl md:text-5xl font-bold mb-4">
+          <h1 class="text-xl md:text-5xl font-black mb-4">
           SUPLEMENTOS DE ALTA CALIDAD DISEÑADOS <br> PARA EL ATLETA QUE LLEVAS DENTRO
         </h1>
       </div>
@@ -42,35 +42,37 @@
 
 <!-- Quiénes Somos -->
 <section class="bg-white">
-  <div class="container mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-    <div>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+    <div class="mx-auto ">
         <p class="font-arupala-grotesk font-black pt-4">Descubre</p>
-      <h2 class="font-arupala-grotesk text-3xl font-black text-[#DE3704]">NUESTRA</h2>
-        <h2 class="font-arupala-grotesk text-3xl font-black mb-4 text-[#DE3704]">ESENCIA</h2>
+      <h2 class="font-arupala-grotesk text-2xl md:text-3xl font-black text-[#DE3704]">NUESTRA</h2>
+        <h2 class="font-arupala-grotesk text-2xl md:text-3xl font-black mb-4 text-[#DE3704]">ESENCIA</h2>
 
     </div>
-      <div>
-          <p class="text-gray-700 text-lg md:text-sm">
+      <div class="mx-auto container">
+          <p class="text-gray-700 text-sm md:text-lg">
             Somos una marca de suplementación deportiva avalada por la FDA de EE. UU., que fusiona la más alta calidad con insumos naturales del Perú. Diseñados para desatar tu máximo rendimiento, nuestros productos son la clave para dominar tus metas y llevar tu desempeño al siguiente nivel.
           </p>
       </div>
-    <div class="rounded-lg overflow-hidden">
-      <img src="{% static "img/nosotros/Wall.png" %}" alt="¿Quiénes Somos?" class="w-full h-auto">
-    </div>
+      <img src="{% static "img/nosotros/wall.png" %}" alt="¿Quiénes Somos?" class="w-full h-auto md:block hidden">
+
   </div>
+    <div class="pt-10 md:hidden">
+      <img src="{% static "img/nosotros/wall.png" %}" alt="¿Quiénes Somos?" class="w-full h-auto">
+    </div>
 </section>
 
 <!-- Reconocimientos -->
 <section class="bg-gray-100 py-16">
   <div class="container px-4 sm:px-6 lg:px-8 mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
       <div>
-          <h2 class="font-arupala-grotesk text-3xl font-black text-[#DE3704]">RECONOCIMIENTOS</h2>
-          <p>
+          <h2 class="font-arupala-grotesk text-2xl md:text-3xl font-black text-[#DE3704] py-8">RECONOCIMIENTOS</h2>
+          <p class="text-sm md:text-lg">
               En Demolitor, ofrecemos suplementos de calidad certificada, combinando insumos americanos con añadidos peruanos, como la maca negra, para crear fórmulas únicas. Cada producto es elaborado bajo estrictos estándares, diseñados para potenciar tu rendimiento, favorecer el desarrollo muscular y mejorar la recuperación, ayudándote a alcanzar tus objetivos como atleta.
           </p>
       </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div class="grid grid-cols-2 md:grid-cols-2 gap-8">
       <!-- Reconocimiento 1 -->
       <div class="text-center">
         <img src={% static "img/nosotros/logo1.png" %} alt="Reconocimiento" class="mx-auto mb-4">
@@ -88,7 +90,7 @@
   <!-- Contenido superior -->
   <div class="container mx-auto text-center mt-8">
     <h2 class="mb-8 font-arupala-grotesk text-3xl font-black">PRODUCTOS</h2>
-    <p class="text-lg mb-8">
+    <p class="text-xl mb-8">
       Explora nuestra línea de productos diseñados para potenciar tu rendimiento. Cada fórmula combina innovación, insumos de calidad y un compromiso con resultados reales, adaptados a tus metas.
     </p>
   </div>
@@ -103,9 +105,12 @@
 
 <!-- Puntos de Venta -->
 <section class="bg-white py-16">
-  <div class="container mx-auto text-center overflow-x-auto">
-    <h2 class="text-3xl font-black mb-8 text-[#DE3704] font-arupala-grotesk">PUNTOS DE VENTA</h2>
-      <p class="text-center">Encuentra nuestros productos en tiendas físicas y plataformas en línea.</p>
+    <div class="container mx-auto text-center">
+        <h2 class="text-2xl font-black mb-8 text-[#DE3704] font-arupala-grotesk">PUNTOS DE VENTA</h2>
+      <p class="text-center text-sm md:text-normal">Encuentra nuestros productos en tiendas físicas y plataformas en línea.</p>
+    </div>
+  <div class="md:container mx-auto text-center overflow-x-auto">
+
     <div class="grid grid-cols-4 md:grid-cols-8 gap-12 py-8 marquee">
       <img src="{% static "img/partners/mifarma-gray.png" %}" alt="Galería" class="rounded-lg m-auto">
       <img src="{% static "img/partners/inkafarma-gray.png" %}" alt="Galería" class="rounded-lg m-auto">

@@ -853,6 +853,9 @@ button.swiper-pagination-bullet {
 		font-size: 2rem; /* Tamaño de fuente más pequeño en pantallas pequeñas */
         text-shadow: 3px 6px 20px #ff3401; /* Ajusta la sombra para que también sea más sutil */
 	}
+	.container{
+		width: 70%!important;
+	}
 }
 
 
