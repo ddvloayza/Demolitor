@@ -2,7 +2,7 @@ var swiper = new Swiper('.swiper-container', {
     effect: 'coverflow',
     loop: false,
     allowTouchMove: true, // Permite el desplazamiento táctil
-    spaceBetween: 20, // Espacio entre cada slide
+    spaceBetween: 100, // Espacio entre cada slide
     centeredSlides: true,
     slidesPerView: 'auto', // Número de slides visibles
     initialSlide: 1,
