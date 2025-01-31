@@ -6,9 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d909a866-9aed-4c03-ba3b-68a2a6b56495" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/settings/django.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/settings/django.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/products/product_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/products/product_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/web/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/web/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/web/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/web/header.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,7 +135,7 @@
       <workItem from="1737552827132" duration="2742000" />
       <workItem from="1737923394654" duration="1010000" />
       <workItem from="1737993200456" duration="32000" />
-      <workItem from="1738259817516" duration="14342000" />
+      <workItem from="1738259817516" duration="15328000" />
     </task>
     <servers />
   </component>
