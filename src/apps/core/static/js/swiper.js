@@ -6,6 +6,10 @@ var swiper = new Swiper('.swiper-container', {
     centeredSlides: true,
     slidesPerView: 'auto', // Número de slides visibles
     initialSlide: 1,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
     coverflow: {
         rotate: 0,
         stretch: 0,

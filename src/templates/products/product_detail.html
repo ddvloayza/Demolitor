@@ -45,7 +45,7 @@
 
 {% block content %}
     <!-- Product Details Section Begin -->
-    <section class="bg-white p-8 h-max ">
+    <section class="bg-white h-max ">
         <div class="max-w container mx-auto bg-white">
             <div class="max-w-6xl mx-auto py-10 flex flex-col lg:flex-row gap-24 items-center ">
             <!-- Imagen del Producto -->
@@ -83,7 +83,7 @@
                             {% endfor %}
                       </div>
                       <!-- Slider controls -->
-                        <div class="flex justify-center mt-4 md:absolute md:top-1/2 md:transform md:-translate-y-1/2 md:w-full md:justify-between md:px-8 z-50">
+                        <div class="flex justify-center mt-4 md:absolute md:top-1/2 md:transform md:-translate-y-1/2 md:w-full md:justify-between md:px-8 z-50 gap-12">
                             <!-- Previous Button -->
                             <button type="button" class="flex items-center justify-center w-10 h-10 rounded-full bg-black bg-opacity-50 text-white hover:bg-opacity-70 md:absolute md:-left-8 z-50" data-carousel-prev>
                                 <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
@@ -112,14 +112,14 @@
                     {% endif %}
 
                     <!-- Título del Producto -->
-                    <h1 class="text-4xl font-bold text-gray-800 mb-4 header_text font-black">{{ product.name }}</h1>
+                    <h1 class="text-xl md:text-3xl font-bold text-gray-800 mb-4 header_text font-black">{{ product.name }}</h1>
                     <!-- Precio y Descuento -->
                     <div class="flex items-center space-x-4 mb-6 r">
                         {% if product.price_discount %}
-                            <span class="text-2xl text-gray-500 header_text font-black line-through price">S/ {{ product.price|floatformat:2 }}</span>
-                            <span class="text-4xl text-gray-800 header_text font-black price" id="product-price">S/ {{ product.price_discount|floatformat:2 }}</span>
+                            <span class="text-lg text-gray-500 header_text font-black line-through price">S/ {{ product.price|floatformat:2 }}</span>
+                            <span class="text-2xl text-gray-800 header_text font-black price" id="product-price">S/ {{ product.price_discount|floatformat:2 }}</span>
                         {% else %}
-                            <span class="text-5xl text-gray-800 header_text font-black price" id="product-price">S/ {{ product.price|floatformat:2 }}</span>
+                            <span class="text-3xl text-gray-800 header_text font-black price" id="product-price">S/ {{ product.price|floatformat:2 }}</span>
                         {% endif %}
                     </div>
                     <!-- Selector de Sabor -->
@@ -191,7 +191,7 @@
             DELIVERY GRATIS A LIMA METROPOLITANA
         </div>
     </section>
-    <section class="bg-white p-8 h-max">
+    <section class="bg-white h-max">
         <div class="bg-white w-full container mx-auto">
             <div class="max-w-6xl mx-auto py-10 flex flex-col lg:flex-row items-center gap-10">
                 <!-- Lista de Características -->
@@ -258,7 +258,7 @@
                       {% endfor %}
                   </div>
                     <!-- Slider controls -->
-                    <div class="flex justify-center mt-4 md:absolute md:top-1/2 md:transform md:-translate-y-1/2 md:w-full md:justify-between md:px-8 z-50">
+                    <div class="flex justify-center mt-4 md:absolute md:top-1/2 md:transform md:-translate-y-1/2 md:w-full md:justify-between md:px-8 z-50 gap-12">
                         <!-- Previous Button -->
                         <button type="button" class="flex items-center justify-center w-10 h-10 rounded-full bg-black bg-opacity-50 text-white hover:bg-opacity-70 md:absolute md:-left-2 z-50" data-carousel-prev>
                             <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
@@ -312,48 +312,137 @@
     </section>
     {% endif %}
     {% if random_products %}
-        <section class="bg-[#ECECEC] p-8 h-max">
+        <!-- desktop -->
+        <section class="hidden md:block bg-[#ECECEC] p-8 h-max">
             <h2 class="text-2xl md:text-5xl font-black text-black text-center py-16 tracking-[0.2em] font-arupala-grotesk">Añade a tu Compra</h2>
-
-              <!-- Swiper -->
-            <div class="swiper-container two">
-                <div class="swiper-wrapper">
-                    {% for random_product in random_products %}
-                        <div class="swiper-slide">
-                            <div class="slider-image">
-                                <img src="{{ random_product.image.url }}" alt="slide 1">
-                                <div class="text-center py-4">
-{#                                    <div class=" bg-[#ffc30e] text-black w-32 mx-auto">#}
-{#                                        Más fuerza#}
-{#                                    </div>#}
-                                    <div class="py-4 font-arupala-grotesk font-black tracking-[0.1em]">
-                                        {{ random_product.name }}
-                                    </div>
-                                    <div class="flex items-center justify-center ">
-                                        {% if random_product.price_discount %}
-                                            <div class="grid grid-cols-2 gap-4 text-center">
-                                                <p class="text-black text-2xl line-through price">S/. {{ random_product.price }}</p>
-                                                <p class="text-black text-2xl price">S/. {{ random_product.price_discount }}</p>
-                                            </div>
-                                        {% else %}
-                                            <div class="grid grid-cols-1 gap-4 text-center">
-                                                <p class="text-black text-2xl price">S/. {{ random_product.price }}</p>
-                                            </div>
-                                        {% endif %}
-
-                                    </div>
-                                <a href="{% url 'core:product_detail' random_product.uuid %}">
-                                <button class="mt-4 text-white bg-[#DE3704] px-8 py-3 rounded-lg hover:bg-red-700 transition-colors duration-300">
+            <div class="md:flex  container mx-auto grid justify-center grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-8">
+            {% for random_product in random_products %}
+                <div class="p-4 rounded-md">
+                    <img src="{{ random_product.image.url }}" alt="slide 1" class="w-full h-auto object-cover rounded-md">
+                    <div class="text-center py-4 text-black">
+                        <div class="py-4 text-2xl">{{ random_product.name }}</div>
+                        <div class="flex flex-col items-center justify-center">
+                            {% if random_product.price_discount %}
+                                <div class="grid grid-cols-2 gap-4 text-center">
+                                    <p class=" text-2xl line-through price">S/. {{ random_product.price }}</p>
+                                    <p class=" text-2xl price">S/. {{ random_product.price_discount }}</p>
+                                </div>
+                            {% else %}
+                                <div class="grid grid-cols-1 gap-4 text-center">
+                                    <p class=" text-2xl price">S/. {{ random_product.price }}</p>
+                                </div>
+                            {% endif %}
+                            <a href="{% url 'core:product_detail' random_product.uuid %}">
+                                <button class="mt-4 text-white bg-[rgb(222,55,5)] px-8 py-3 rounded-lg hover:bg-red-700 transition-colors duration-300">
                                     Ver más
                                 </button>
                             </a>
-                                </div>
-
-                            </div>
                         </div>
-                    {% endfor %}
+                    </div>
                 </div>
+            {% endfor %}
             </div>
+    </section>
+        <!-- Responsive -->
+        <section class="md:hidden bg-[#ECECEC] p-8 h-max">
+            <h2 class="text-2xl md:text-5xl font-black text-black text-center py-4 tracking-[0.2em] font-arupala-grotesk">Añade a tu Compra</h2>
+            <div id="default-carousel" class="relative w-full lg:w-1/2" data-carousel="static">
+            <!-- Carousel wrapper -->
+                  <div class="relative h-[60vh] overflow-hidden rounded-lg md:h-[80vh]">
+                      {% for random_product in random_products %}
+
+                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                                <!-- Display image -->
+                                <div class="slider-image">
+                                    <img src="{{ random_product.image.url }}" alt="slide 1">
+                                    <div class="text-center py-4">
+{#                                      <div class=" bg-[#ffc30e] text-black w-32 mx-auto">#}
+{#                                          Más fuerza#}
+{#                                      </div>#}
+                                        <div class="py-4 font-arupala-grotesk font-black tracking-[0.1em]">
+                                            {{ random_product.name }}
+                                        </div>
+                                        <div class="flex items-center justify-center ">
+                                            {% if random_product.price_discount %}
+                                                <div class="grid grid-cols-2 gap-4 text-center">
+                                                    <p class="text-black text-2xl line-through price">S/. {{ random_product.price }}</p>
+                                                    <p class="text-black text-2xl price">S/. {{ random_product.price_discount }}</p>
+                                                </div>
+                                            {% else %}
+                                                <div class="grid grid-cols-1 gap-4 text-center">
+                                                    <p class="text-black text-2xl price">S/. {{ random_product.price }}</p>
+                                                </div>
+                                            {% endif %}
+                                        </div>
+                                        <a href="{% url 'core:product_detail' random_product.uuid %}">
+                                            <button class="mt-4 text-white bg-[#DE3704] px-8 py-3 rounded-lg hover:bg-red-700 transition-colors duration-300">
+                                                Ver más
+                                            </button>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                      {% endfor %}
+                  </div>
+                  <!-- Slider controls -->
+                    <div class="flex justify-center mt-4 md:absolute md:top-1/2 md:transform md:-translate-y-1/2 md:w-full md:justify-between md:px-8 z-50 gap-12">
+                        <!-- Previous Button -->
+                        <button type="button" class="flex items-center justify-center w-10 h-10 rounded-full bg-black bg-opacity-50 text-white hover:bg-opacity-70 md:absolute md:-left-2 z-50" data-carousel-prev>
+                            <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+                            </svg>
+                            <span class="sr-only">Previous</span>
+                        </button>
+
+                        <!-- Next Button -->
+                        <button type="button" class="flex items-center justify-center w-10 h-10 rounded-full bg-black bg-opacity-50 text-white hover:bg-opacity-70 md:absolute md:-right-2 z-50" data-carousel-next>
+                            <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                            </svg>
+                            <span class="sr-only">Next</span>
+                        </button>
+                    </div>
+                  </div>
+{#              <!-- Swiper -->#}
+{#            <div class="swiper-container two">#}
+{#                <div class="swiper-wrapper">#}
+{#                    {% for random_product in random_products %}#}
+{#                        <div class="swiper-slide">#}
+{#                            <div class="slider-image">#}
+{#                                <img src="{{ random_product.image.url }}" alt="slide 1">#}
+{#                                <div class="text-center py-4">#}
+{#                                    <div class=" bg-[#ffc30e] text-black w-32 mx-auto">#}
+{#                                        Más fuerza#}
+{#                                    </div>#}
+{#                                    <div class="py-4 font-arupala-grotesk font-black tracking-[0.1em]">#}
+{#                                        {{ random_product.name }}#}
+{#                                    </div>#}
+{#                                    <div class="flex items-center justify-center ">#}
+{#                                        {% if random_product.price_discount %}#}
+{#                                            <div class="grid grid-cols-2 gap-4 text-center">#}
+{#                                                <p class="text-black text-2xl line-through price">S/. {{ random_product.price }}</p>#}
+{#                                                <p class="text-black text-2xl price">S/. {{ random_product.price_discount }}</p>#}
+{#                                            </div>#}
+{#                                        {% else %}#}
+{#                                            <div class="grid grid-cols-1 gap-4 text-center">#}
+{#                                                <p class="text-black text-2xl price">S/. {{ random_product.price }}</p>#}
+{#                                            </div>#}
+{#                                        {% endif %}#}
+{##}
+{#                                    </div>#}
+{#                                <a href="{% url 'core:product_detail' random_product.uuid %}">#}
+{#                                <button class="mt-4 text-white bg-[#DE3704] px-8 py-3 rounded-lg hover:bg-red-700 transition-colors duration-300">#}
+{#                                    Ver más#}
+{#                                </button>#}
+{#                            </a>#}
+{#                                </div>#}
+{##}
+{#                            </div>#}
+{#                        </div>#}
+{#                    {% endfor %}#}
+{#                </div>#}
+{#            </div>#}
 
         </section>
     {% else %}
