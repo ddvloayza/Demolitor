@@ -39,12 +39,12 @@
         </div>
         {% endfor %}
     </div>
-
-    <!-- Swiper -->
-    <div class="block md:hidden swiper-container two pt-12 ">
-        <div class="swiper-wrapper">
+    <div class="md:hidden block py-5">
+    <div id="default-carousel" class="relative w-full lg:w-1/2" data-carousel="slide">
+     <!-- Carousel wrapper -->
+    <div class="relative h-[60vh] overflow-hidden rounded-lg md:h-[80vh]">
             {% for best_seller in best_sellers %}
-            	<div class="swiper-slide">
+            	<div class="hidden duration-700 ease-in-out" data-carousel-item>
                     <div class="slider-image">
                         <img src="{{ best_seller.image.url }}" alt="slide 3">
                         <div class="text-center py-4">
@@ -72,9 +72,26 @@
                 </div>
             {% endfor %}
         </div>
-        <!-- Botones de navegación -->
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
+        <!-- Slider controls -->
+        <div class="flex justify-center mt-4 md:absolute md:top-1/2 md:transform md:-translate-y-1/2 md:w-full md:justify-between md:px-8 z-50 gap-12">
+            <!-- Previous Button -->
+            <button type="button" class="flex items-center justify-center w-10 h-10 rounded-full bg-black bg-opacity-50 text-white hover:bg-opacity-70 md:absolute md:-left-2 z-50" data-carousel-prev>
+                <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+                </svg>
+                <span class="sr-only">Previous</span>
+            </button>
+
+            <!-- Next Button -->
+            <button type="button" class="flex items-center justify-center w-10 h-10 rounded-full bg-black bg-opacity-50 text-white hover:bg-opacity-70 md:absolute md:-right-2 z-50" data-carousel-next>
+                <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                </svg>
+                <span class="sr-only">Next</span>
+            </button>
+        </div>
+    </div>
+
     </div>
 
 

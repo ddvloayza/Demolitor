@@ -342,7 +342,7 @@
                 </div>
             {% endfor %}
             </div>
-    </section>
+        </section>
         <!-- Responsive -->
         <section class="md:hidden bg-[#ECECEC] p-8 h-max">
             <h2 class="text-2xl md:text-5xl font-black text-black text-center py-4 tracking-[0.2em] font-arupala-grotesk">Añade a tu Compra</h2>
@@ -356,9 +356,6 @@
                                 <div class="slider-image">
                                     <img src="{{ random_product.image.url }}" alt="slide 1">
                                     <div class="text-center py-4">
-{#                                      <div class=" bg-[#ffc30e] text-black w-32 mx-auto">#}
-{#                                          Más fuerza#}
-{#                                      </div>#}
                                         <div class="py-4 font-arupala-grotesk font-black tracking-[0.1em]">
                                             {{ random_product.name }}
                                         </div>
@@ -382,7 +379,6 @@
                                     </div>
                                 </div>
                             </div>
-
                       {% endfor %}
                   </div>
                   <!-- Slider controls -->
@@ -404,46 +400,6 @@
                         </button>
                     </div>
                   </div>
-{#              <!-- Swiper -->#}
-{#            <div class="swiper-container two">#}
-{#                <div class="swiper-wrapper">#}
-{#                    {% for random_product in random_products %}#}
-{#                        <div class="swiper-slide">#}
-{#                            <div class="slider-image">#}
-{#                                <img src="{{ random_product.image.url }}" alt="slide 1">#}
-{#                                <div class="text-center py-4">#}
-{#                                    <div class=" bg-[#ffc30e] text-black w-32 mx-auto">#}
-{#                                        Más fuerza#}
-{#                                    </div>#}
-{#                                    <div class="py-4 font-arupala-grotesk font-black tracking-[0.1em]">#}
-{#                                        {{ random_product.name }}#}
-{#                                    </div>#}
-{#                                    <div class="flex items-center justify-center ">#}
-{#                                        {% if random_product.price_discount %}#}
-{#                                            <div class="grid grid-cols-2 gap-4 text-center">#}
-{#                                                <p class="text-black text-2xl line-through price">S/. {{ random_product.price }}</p>#}
-{#                                                <p class="text-black text-2xl price">S/. {{ random_product.price_discount }}</p>#}
-{#                                            </div>#}
-{#                                        {% else %}#}
-{#                                            <div class="grid grid-cols-1 gap-4 text-center">#}
-{#                                                <p class="text-black text-2xl price">S/. {{ random_product.price }}</p>#}
-{#                                            </div>#}
-{#                                        {% endif %}#}
-{##}
-{#                                    </div>#}
-{#                                <a href="{% url 'core:product_detail' random_product.uuid %}">#}
-{#                                <button class="mt-4 text-white bg-[#DE3704] px-8 py-3 rounded-lg hover:bg-red-700 transition-colors duration-300">#}
-{#                                    Ver más#}
-{#                                </button>#}
-{#                            </a>#}
-{#                                </div>#}
-{##}
-{#                            </div>#}
-{#                        </div>#}
-{#                    {% endfor %}#}
-{#                </div>#}
-{#            </div>#}
-
         </section>
     {% else %}
         <p>No hay productos recomendados.</p>
