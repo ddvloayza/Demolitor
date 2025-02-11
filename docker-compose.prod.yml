@@ -1,14 +1,4 @@
 services:
-  db:
-    image: "postgres:13-alpine"
-    restart: unless-stopped
-    env_file:
-      - ./.env
-    ports:
-      - "5434:5432"
-    volumes:
-      - postgres_data:/var/lib/postgresql/data
-
   nginx-proxy:
     image: jwilder/nginx-proxy
     restart: always
@@ -61,8 +51,6 @@ services:
     env_file:
       - .env
     command: sh -c "gunicorn --env DJANGO_SETTINGS_MODULE=src.settings.prod src.wsgi -b 0.0.0.0:8080 && python manage.py collectstatic --noinput"
-    depends_on:
-      - db
     volumes:
       - ./src:/src
       - static:/www/static
@@ -70,8 +58,6 @@ services:
     ports:
       - "8080:8080"
 volumes:
-  postgres_data:
-    external: true
   media:
   static:
   certs:
