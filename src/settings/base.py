@@ -31,6 +31,7 @@ DJANGO_APPS = [
     "django.contrib.staticfiles",
     "ubigeos",
     "graphene_django",
+    "storages",
 
 ]
 

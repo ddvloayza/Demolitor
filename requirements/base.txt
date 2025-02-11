@@ -13,3 +13,5 @@ django-ubigeo-peru==0.5.0
 python-slugify==4.0.1
 graphene-django
 reportlab
+django-storages
+boto3
