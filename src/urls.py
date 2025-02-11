@@ -38,6 +38,10 @@ urlpatterns = [
 ]
 
 handler404 = Error404View.as_view()
+print("settings.STATIC_URL", settings.STATIC_URL)
+print("settings.STATIC_ROOT", settings.STATIC_ROOT)
+print("settings.MEDIA_URL", settings.MEDIA_URL)
+print("settings.MEDIA_ROOT", settings.MEDIA_ROOT)
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
