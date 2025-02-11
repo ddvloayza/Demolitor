@@ -5,18 +5,34 @@ import os
 from .base import *  # noqa: F403
 
 DEBUG = os.getenv("DEBUG", False)
-PREPEND_WWW = False
+APPEND_SLASH = True
 
+# SECURE_CONTENT_TYPE_NOSNIFF = True
+# SECURE_BROWSER_XSS_FILTER = True
+# SECURE_HSTS_SECONDS = 31536000  # 1 año
+# SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+# SECURE_SSL_REDIRECT = True
 
 # DIRS
+AWS_ACCESS_KEY_ID = os.environ.setdefault("AWS_ACCESS_KEY_ID", "")
+AWS_SECRET_ACCESS_KEY = os.environ.setdefault("AWS_SECRET_ACCESS_KEY", "")
+AWS_STORAGE_BUCKET_NAME = os.environ.setdefault("AWS_STORAGE_BUCKET_NAME", "")
+AWS_S3_REGION_NAME = os.environ.setdefault("AWS_S3_REGION_NAME", "")
+AWS_S3_CUSTOM_DOMAIN = f"{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com"
 
+
+STATIC_URL = f"https://{AWS_S3_CUSTOM_DOMAIN}/static/"
+STATICFILES_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
+STATICFILES_LOCATION = "static"
+
+MEDIA_URL = f"https://{AWS_S3_CUSTOM_DOMAIN}/media/"
+DEFAULT_FILE_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
+MEDIAFILES_LOCATION = "media"
 MEDIA_ROOT = os.path.join(PROJECT_ROOT, "media")
-MEDIA_URL = os.environ.setdefault("MEDIA_URL", "/media/")
-ALLOWED_HOSTS = ["*"]
 STATIC_ROOT = os.path.join(PROJECT_ROOT, "static")
-STATIC_URL = os.environ.setdefault("STATIC_URL", "/static/")
 
 
+# SESSIONS
 
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 
@@ -24,13 +40,6 @@ SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 JQUERY_URL = False
 
 # CACHE
-CACHES = {
-    "default": {
-        "BACKEND": "django.core.cache.backends.db.DatabaseCache",
-        "LOCATION": "cache_table",
-        "TIMEOUT": "300",
-    }
-}
 
 
 TEMPLATES = [

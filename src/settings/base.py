@@ -1,7 +1,7 @@
 import os
 from datetime import timedelta
 
-SITE_URL = "https://demo.demolitorprotein.com"
+SITE_URL = "https://demolitorprotein.com"
 PROJECT_NAME = "Demolitor"
 PROJECT_ROOT = os.path.dirname(
     os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
