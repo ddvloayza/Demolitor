@@ -31,7 +31,7 @@ MEDIAFILES_LOCATION = "media"
 MEDIA_ROOT = os.path.join(PROJECT_ROOT, "media")
 STATIC_ROOT = os.path.join(PROJECT_ROOT, "static")
 
-
+print("STATIC_URL", STATIC_URL)
 # SESSIONS
 
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True
