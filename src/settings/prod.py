@@ -33,7 +33,14 @@ STATIC_ROOT = os.path.join(PROJECT_ROOT, "static")
 
 print("STATIC_URL", STATIC_URL)
 # SESSIONS
-
+STORAGES = {
+    "default": {
+        "BACKEND": "storages.backends.s3boto3.S3Boto3Storage",
+    },
+    "staticfiles": {
+        "BACKEND": "storages.backends.s3boto3.S3Boto3Storage",
+    },
+}
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 
 # SMART SELECT

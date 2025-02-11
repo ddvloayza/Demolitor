@@ -3435,3 +3435,15 @@ INFO [2025-02-07 03:57:09,694] basehttp "GET /static/img/nosotros/bg-productos.p
 INFO [2025-02-07 03:58:05,636] basehttp "GET /nosotros/ HTTP/1.1" 200 22403
 INFO [2025-02-07 03:58:24,192] basehttp "GET /nosotros/ HTTP/1.1" 200 22403
 INFO [2025-02-07 03:58:25,649] basehttp "GET /nosotros/ HTTP/1.1" 200 22403
+INFO [2025-02-11 20:09:58,908] autoreload Watching for file changes with StatReloader
+INFO [2025-02-11 20:14:05,482] autoreload Watching for file changes with StatReloader
+INFO [2025-02-11 20:14:10,078] basehttp "GET / HTTP/1.1" 200 67553
+INFO [2025-02-11 20:14:57,397] basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO [2025-02-11 20:14:57,448] basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4493
+INFO [2025-02-11 20:15:49,881] basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4493
+INFO [2025-02-11 20:15:51,612] basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4493
+INFO [2025-02-11 20:17:02,775] autoreload /www/src/settings/prod.py changed, reloading.
+INFO [2025-02-11 20:17:03,633] autoreload Watching for file changes with StatReloader
+INFO [2025-02-11 20:18:57,097] autoreload Watching for file changes with StatReloader
+INFO [2025-02-11 20:20:06,775] basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4444
+INFO [2025-02-11 20:31:37,488] basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4444
