@@ -4,7 +4,7 @@ from uuid import uuid4
 from django.utils.text import slugify
 
 IMAGE_TYPES_ALLOWED = [".png", ".jpg", ".jpeg"]
-IMAGE_PREFIX_TEST = "finniu/images"
+IMAGE_PREFIX_TEST = "demolitor/images"
 IMAGE_PREFIX = "images" if not IMAGE_PREFIX_TEST else IMAGE_PREFIX_TEST
 
 
