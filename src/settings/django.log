@@ -3447,3 +3447,161 @@ INFO [2025-02-11 20:17:03,633] autoreload Watching for file changes with StatRel
 INFO [2025-02-11 20:18:57,097] autoreload Watching for file changes with StatReloader
 INFO [2025-02-11 20:20:06,775] basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4444
 INFO [2025-02-11 20:31:37,488] basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4444
+INFO [2025-02-12 13:10:15,101] autoreload Watching for file changes with StatReloader
+INFO [2025-02-12 13:10:26,352] basehttp "GET / HTTP/1.1" 200 67281
+INFO [2025-02-12 13:10:31,774] basehttp "GET / HTTP/1.1" 200 67407
+WARNING [2025-02-12 13:10:32,218] log Not Found: /static/img/partners/inkafarma.png
+WARNING [2025-02-12 13:10:32,219] log Not Found: /static/img/partners/mifarma.png
+WARNING [2025-02-12 13:10:32,223] log Not Found: /static/img/partners/falabella.png
+WARNING [2025-02-12 13:10:32,224] basehttp "GET /static/img/partners/inkafarma.png HTTP/1.1" 404 4954
+WARNING [2025-02-12 13:10:32,224] basehttp "GET /static/img/partners/mifarma.png HTTP/1.1" 404 4948
+WARNING [2025-02-12 13:10:32,226] basehttp "GET /static/img/partners/falabella.png HTTP/1.1" 404 4954
+INFO [2025-02-12 13:10:40,414] basehttp "GET / HTTP/1.1" 200 67347
+WARNING [2025-02-12 13:10:40,472] log Not Found: /static/img/partners/inkafarma.png
+WARNING [2025-02-12 13:10:40,480] basehttp "GET /static/img/partners/inkafarma.png HTTP/1.1" 404 4954
+WARNING [2025-02-12 13:10:40,479] log Not Found: /static/img/partners/mifarma.png
+WARNING [2025-02-12 13:10:40,476] log Not Found: /static/img/partners/falabella.png
+WARNING [2025-02-12 13:10:40,483] basehttp "GET /static/img/partners/falabella.png HTTP/1.1" 404 4954
+WARNING [2025-02-12 13:10:40,482] basehttp "GET /static/img/partners/mifarma.png HTTP/1.1" 404 4948
+INFO [2025-02-12 13:11:12,360] basehttp "GET /products/ HTTP/1.1" 200 25029
+WARNING [2025-02-12 13:11:12,466] log Not Found: /static/img/partners/falabella.png
+WARNING [2025-02-12 13:11:12,467] basehttp "GET /static/img/partners/falabella.png HTTP/1.1" 404 4954
+WARNING [2025-02-12 13:11:12,487] log Not Found: /static/img/partners/mifarma.png
+WARNING [2025-02-12 13:11:12,487] basehttp "GET /static/img/partners/mifarma.png HTTP/1.1" 404 4948
+WARNING [2025-02-12 13:11:12,493] log Not Found: /static/img/partners/inkafarma.png
+WARNING [2025-02-12 13:11:12,493] basehttp "GET /static/img/partners/inkafarma.png HTTP/1.1" 404 4954
+INFO [2025-02-12 13:11:12,717] basehttp "POST /api/v1/graph/demolitor HTTP/1.1" 200 23013
+INFO [2025-02-12 13:25:20,594] autoreload Watching for file changes with StatReloader
+INFO [2025-02-12 13:30:26,770] basehttp "GET /products/ HTTP/1.1" 200 24790
+INFO [2025-02-12 13:30:26,867] basehttp "GET /static/js/product/product.js HTTP/1.1" 304 0
+INFO [2025-02-12 13:30:26,867] basehttp "GET /static/js/swiper.js HTTP/1.1" 304 0
+INFO [2025-02-12 13:30:26,869] basehttp "GET /static/css/style.css HTTP/1.1" 200 25597
+INFO [2025-02-12 13:30:26,930] basehttp "GET /static/img/partners/inkafarma.png HTTP/1.1" 200 7786
+INFO [2025-02-12 13:30:26,931] basehttp "GET /static/img/partners/falabella.png HTTP/1.1" 200 3202
+INFO [2025-02-12 13:30:26,932] basehttp "GET /static/img/partners/mifarma.png HTTP/1.1" 200 4643
+INFO [2025-02-12 13:30:26,945] basehttp "GET /static/img/book-claim-icon.png HTTP/1.1" 304 0
+INFO [2025-02-12 13:30:26,978] basehttp "GET /static/fonts/AvenirLTStd-Book.otf HTTP/1.1" 200 27444
+INFO [2025-02-12 13:30:26,984] basehttp "GET /static/fonts/AvenirLTStd-Heavy.otf HTTP/1.1" 200 27640
+INFO [2025-02-12 13:30:26,985] basehttp "GET /static/fonts/AvenirLTStd-Medium.otf HTTP/1.1" 200 27264
+INFO [2025-02-12 13:30:26,987] basehttp "GET /static/fonts/ArupalaGrotesk-Bold.otf HTTP/1.1" 200 99900
+INFO [2025-02-12 13:30:27,043] basehttp "POST /api/v1/graph/demolitor HTTP/1.1" 200 22661
+INFO [2025-02-12 13:30:27,210] basehttp "GET /media/finniu/images/product/182144a0/krak-330g-quemador-de-grasa.png HTTP/1.1" 200 506993
+INFO [2025-02-12 13:30:27,212] basehttp "GET /media/finniu/images/product/52b55bfb/krak-sport-quemador-de-grasa-en-capsulas.png HTTP/1.1" 200 459756
+INFO [2025-02-12 13:30:27,213] basehttp "GET /media/finniu/images/product/8e630e52/creatina-sport.png HTTP/1.1" 200 430134
+INFO [2025-02-12 13:30:27,216] basehttp "GET /media/finniu/images/product/c31f92b0/black-maca-sport-en-capsulas.png HTTP/1.1" 200 445914
+INFO [2025-02-12 13:30:27,220] basehttp "GET /media/finniu/images/product/1b683430/black-maca.png HTTP/1.1" 200 501509
+INFO [2025-02-12 13:30:27,230] basehttp "GET /media/finniu/images/product/747d2057/svelt-protein.png HTTP/1.1" 200 893144
+INFO [2025-02-12 13:30:27,311] basehttp "GET /media/finniu/images/product/8e6be2f9/creatina-300g.png HTTP/1.1" 200 516194
+INFO [2025-02-12 13:30:27,318] basehttp "GET /media/finniu/images/product/2dd6505c/proteina-iso-4-lb-sabor-vainilla.png HTTP/1.1" 200 826887
+INFO [2025-02-12 13:30:27,328] basehttp "GET /media/finniu/images/product/be98b2c9/proteina-iso-176-lb-sabor-vainilla.png HTTP/1.1" 200 719694
+INFO [2025-02-12 13:30:27,334] basehttp "GET /media/finniu/images/product/a5c38111/proteina-whey-233-lb-sabor-vainilla.png HTTP/1.1" 200 703699
+INFO [2025-02-12 13:30:27,336] basehttp "GET /media/finniu/images/product/70ac195c/proteina-whey-5-lb-sabor-vainilla.png HTTP/1.1" 200 820590
+INFO [2025-02-12 13:30:27,337] basehttp "GET /media/finniu/images/product/e881f2fc/peptido-de-colageno-sabor-frutos-del-bosque.png HTTP/1.1" 200 728342
+INFO [2025-02-12 13:30:27,419] basehttp "GET /media/finniu/images/product/370da7d1/proteina-whey-233-lb-sabor-chocolate.png HTTP/1.1" 200 692735
+INFO [2025-02-12 13:30:27,419] basehttp "GET /media/finniu/images/product/f132891a/peptido-de-colageno-sabor-maracuya.png HTTP/1.1" 200 722755
+INFO [2025-02-12 13:30:27,428] basehttp "GET /media/finniu/images/product/b5ef2d6f/creatina-500g.png HTTP/1.1" 200 700550
+INFO [2025-02-12 13:30:27,428] basehttp "GET /media/finniu/images/product/46fb38a4/proteina-iso-176-lb-sabor-chocolate.png HTTP/1.1" 200 703286
+INFO [2025-02-12 13:30:27,438] basehttp "GET /media/finniu/images/product/241f3074/proteina-iso-4-lb-sabor-chocolate.png HTTP/1.1" 200 837927
+INFO [2025-02-12 13:30:27,438] basehttp "GET /media/finniu/images/product/ac93d06e/pack-2-peptidos-de-colageno.png HTTP/1.1" 200 1032886
+INFO [2025-02-12 13:30:27,502] basehttp "GET /media/finniu/images/product/d89197ba/pack-creatina-300g-krak-330-g.png HTTP/1.1" 200 621956
+INFO [2025-02-12 13:30:27,503] basehttp "GET /media/finniu/images/product/e390e4ef/peptido-de-colageno-sin-sabor.png HTTP/1.1" 200 711317
+INFO [2025-02-12 13:30:27,511] basehttp "GET /media/finniu/images/product/2ed8ca8c/proteina-5-lb-whey-creatina-de-300-g.png HTTP/1.1" 200 729737
+INFO [2025-02-12 13:30:27,512] basehttp "GET /media/finniu/images/product/0a1e8e53/proteina-whey-5-lb-sabor-chocolate.png HTTP/1.1" 200 834297
+WARNING [2025-02-12 13:30:27,561] basehttp "GET /static/images/favicon.ico HTTP/1.1" 404 1979
+INFO [2025-02-12 13:30:30,263] basehttp "GET /products/ HTTP/1.1" 200 24790
+INFO [2025-02-12 13:30:30,381] basehttp "POST /api/v1/graph/demolitor HTTP/1.1" 200 22661
+WARNING [2025-02-12 13:30:31,397] log Not Found: /product/fab33146-f363-4924-bb29-96f99b2644fa/
+WARNING [2025-02-12 13:30:31,398] basehttp "GET /product/fab33146-f363-4924-bb29-96f99b2644fa/ HTTP/1.1" 404 3295
+WARNING [2025-02-12 13:30:31,509] log Not Found: /favicon.ico
+WARNING [2025-02-12 13:30:31,510] basehttp "GET /favicon.ico HTTP/1.1" 404 5229
+INFO [2025-02-12 13:30:33,495] basehttp "POST /api/v1/graph/demolitor HTTP/1.1" 200 22661
+INFO [2025-02-12 13:30:34,087] basehttp "GET / HTTP/1.1" 200 65856
+INFO [2025-02-12 13:30:34,167] basehttp "GET /media/banner/bamnercito_presentciones_1.webp HTTP/1.1" 200 406706
+INFO [2025-02-12 13:30:34,213] basehttp "GET /static/img/demolitor-fitness.png HTTP/1.1" 200 107760
+INFO [2025-02-12 13:30:34,215] basehttp "GET /media/banner-responsive/banner_movil_1.webp HTTP/1.1" 200 338156
+INFO [2025-02-12 13:30:34,215] basehttp "GET /static/img/demolitor-musculo.png HTTP/1.1" 200 105131
+INFO [2025-02-12 13:30:34,245] basehttp "GET /static/img/demolitor-sport.png HTTP/1.1" 200 110063
+INFO [2025-02-12 13:30:34,247] basehttp "GET /static/img/demolitor-salud.png HTTP/1.1" 200 107181
+INFO [2025-02-12 13:30:34,249] basehttp "GET /media/banner/group_220.webp HTTP/1.1" 200 86516
+INFO [2025-02-12 13:30:34,252] basehttp "GET /static/fonts/AvenirLTStd-Roman.otf HTTP/1.1" 200 27176
+INFO [2025-02-12 13:30:34,255] basehttp "GET /static/fonts/ArupalaGrotesk-Regular.otf HTTP/1.1" 200 101860
+INFO [2025-02-12 13:30:34,267] basehttp "GET /static/img/banner/background2.png HTTP/1.1" 200 1358304
+WARNING [2025-02-12 13:30:37,336] log Not Found: /product/6c133c8c-d562-4e4e-b418-d69823d9e310/
+WARNING [2025-02-12 13:30:37,337] basehttp "GET /product/6c133c8c-d562-4e4e-b418-d69823d9e310/ HTTP/1.1" 404 3295
+INFO [2025-02-12 13:30:44,832] basehttp "GET /products/ HTTP/1.1" 200 24790
+INFO [2025-02-12 13:30:44,969] basehttp "POST /api/v1/graph/demolitor HTTP/1.1" 200 22661
+WARNING [2025-02-12 13:30:45,765] log Not Found: /product/ca8ed0ef-3d50-44f3-84e2-8184531cbf4a/
+WARNING [2025-02-12 13:30:45,765] basehttp "GET /product/ca8ed0ef-3d50-44f3-84e2-8184531cbf4a/ HTTP/1.1" 404 3295
+INFO [2025-02-12 13:30:47,781] basehttp "POST /api/v1/graph/demolitor HTTP/1.1" 200 22661
+INFO [2025-02-12 13:37:13,716] autoreload /www/src/apps/product/schema/types/product.py changed, reloading.
+INFO [2025-02-12 13:37:14,757] autoreload Watching for file changes with StatReloader
+INFO [2025-02-12 13:37:24,418] basehttp "GET /products/ HTTP/1.1" 200 24790
+INFO [2025-02-12 13:37:24,597] basehttp "POST /api/v1/graph/demolitor HTTP/1.1" 200 22497
+INFO [2025-02-12 13:37:25,767] basehttp "GET /products/ HTTP/1.1" 200 24790
+INFO [2025-02-12 13:37:25,841] basehttp "GET /static/css/style.css HTTP/1.1" 200 25597
+INFO [2025-02-12 13:37:25,862] basehttp "GET /media/finniu/images/company/c0a381a7/4a281285.png HTTP/1.1" 200 7698
+INFO [2025-02-12 13:37:25,863] basehttp "GET /static/js/product/utils.js HTTP/1.1" 200 1426
+INFO [2025-02-12 13:37:25,863] basehttp "GET /static/js/product/product.js HTTP/1.1" 200 9781
+INFO [2025-02-12 13:37:25,867] basehttp "GET /static/js/swiper.js HTTP/1.1" 200 550
+INFO [2025-02-12 13:37:25,915] basehttp "GET /static/img/partners/falabella.png HTTP/1.1" 200 3202
+INFO [2025-02-12 13:37:25,919] basehttp "GET /static/img/partners/mifarma.png HTTP/1.1" 200 4643
+INFO [2025-02-12 13:37:25,925] basehttp "GET /static/img/partners/inkafarma.png HTTP/1.1" 200 7786
+INFO [2025-02-12 13:37:25,929] basehttp "GET /static/img/book-claim-icon.png HTTP/1.1" 200 20120
+INFO [2025-02-12 13:37:26,041] basehttp "GET /static/fonts/AvenirLTStd-Book.otf HTTP/1.1" 200 27444
+INFO [2025-02-12 13:37:26,043] basehttp "GET /static/fonts/ArupalaGrotesk-Bold.otf HTTP/1.1" 200 99900
+INFO [2025-02-12 13:37:26,061] basehttp "GET /static/fonts/AvenirLTStd-Medium.otf HTTP/1.1" 200 27264
+INFO [2025-02-12 13:37:26,062] basehttp "GET /static/fonts/AvenirLTStd-Heavy.otf HTTP/1.1" 200 27640
+INFO [2025-02-12 13:37:26,074] basehttp "POST /api/v1/graph/demolitor HTTP/1.1" 200 22497
+INFO [2025-02-12 13:37:26,138] basehttp "GET /media/finniu/images/product/8e630e52/creatina-sport.png HTTP/1.1" 200 430134
+INFO [2025-02-12 13:37:26,139] basehttp "GET /media/finniu/images/product/182144a0/krak-330g-quemador-de-grasa.png HTTP/1.1" 200 506993
+INFO [2025-02-12 13:37:26,145] basehttp "GET /media/finniu/images/product/52b55bfb/krak-sport-quemador-de-grasa-en-capsulas.png HTTP/1.1" 200 459756
+INFO [2025-02-12 13:37:26,147] basehttp "GET /media/finniu/images/product/1b683430/black-maca.png HTTP/1.1" 200 501509
+INFO [2025-02-12 13:37:26,148] basehttp "GET /media/finniu/images/product/747d2057/svelt-protein.png HTTP/1.1" 200 893144
+INFO [2025-02-12 13:37:26,148] basehttp "GET /media/finniu/images/product/c31f92b0/black-maca-sport-en-capsulas.png HTTP/1.1" 200 445914
+INFO [2025-02-12 13:37:26,229] basehttp "GET /media/finniu/images/product/be98b2c9/proteina-iso-176-lb-sabor-vainilla.png HTTP/1.1" 200 719694
+INFO [2025-02-12 13:37:26,231] basehttp "GET /media/finniu/images/product/a5c38111/proteina-whey-233-lb-sabor-vainilla.png HTTP/1.1" 200 703699
+INFO [2025-02-12 13:37:26,231] basehttp "GET /media/finniu/images/product/8e6be2f9/creatina-300g.png HTTP/1.1" 200 516194
+INFO [2025-02-12 13:37:26,235] basehttp "GET /media/finniu/images/product/e881f2fc/peptido-de-colageno-sabor-frutos-del-bosque.png HTTP/1.1" 200 728342
+INFO [2025-02-12 13:37:26,240] basehttp "GET /media/finniu/images/product/70ac195c/proteina-whey-5-lb-sabor-vainilla.png HTTP/1.1" 200 820590
+INFO [2025-02-12 13:37:26,243] basehttp "GET /media/finniu/images/product/2dd6505c/proteina-iso-4-lb-sabor-vainilla.png HTTP/1.1" 200 826887
+INFO [2025-02-12 13:37:26,351] basehttp "GET /media/finniu/images/product/370da7d1/proteina-whey-233-lb-sabor-chocolate.png HTTP/1.1" 200 692735
+INFO [2025-02-12 13:37:26,369] basehttp "GET /media/finniu/images/product/241f3074/proteina-iso-4-lb-sabor-chocolate.png HTTP/1.1" 200 837927
+INFO [2025-02-12 13:37:26,374] basehttp "GET /media/finniu/images/product/46fb38a4/proteina-iso-176-lb-sabor-chocolate.png HTTP/1.1" 200 703286
+INFO [2025-02-12 13:37:26,376] basehttp "GET /media/finniu/images/product/f132891a/peptido-de-colageno-sabor-maracuya.png HTTP/1.1" 200 722755
+INFO [2025-02-12 13:37:26,377] basehttp "GET /media/finniu/images/product/b5ef2d6f/creatina-500g.png HTTP/1.1" 200 700550
+INFO [2025-02-12 13:37:26,381] basehttp "GET /media/finniu/images/product/ac93d06e/pack-2-peptidos-de-colageno.png HTTP/1.1" 200 1032886
+INFO [2025-02-12 13:37:26,433] basehttp "GET /media/finniu/images/product/d89197ba/pack-creatina-300g-krak-330-g.png HTTP/1.1" 200 621956
+INFO [2025-02-12 13:37:26,443] basehttp "GET /media/finniu/images/product/0a1e8e53/proteina-whey-5-lb-sabor-chocolate.png HTTP/1.1" 200 834297
+INFO [2025-02-12 13:37:26,443] basehttp "GET /media/finniu/images/product/e390e4ef/peptido-de-colageno-sin-sabor.png HTTP/1.1" 200 711317
+INFO [2025-02-12 13:37:26,445] basehttp "GET /media/finniu/images/product/2ed8ca8c/proteina-5-lb-whey-creatina-de-300-g.png HTTP/1.1" 200 729737
+INFO [2025-02-12 13:37:26,801] basehttp "GET /product/black-maca-sport-en-capsulas/ HTTP/1.1" 200 47672
+INFO [2025-02-12 13:37:26,892] basehttp "GET /media/finniu/images/product/9cd322b2/e6449fee.png HTTP/1.1" 200 445914
+INFO [2025-02-12 13:37:26,925] basehttp "GET /media/finniu/images/product/5abe0057/c8c8c144.webp HTTP/1.1" 200 47682
+INFO [2025-02-12 13:37:26,950] basehttp "GET /static/fonts/ArupalaGrotesk-Ultra.otf HTTP/1.1" 200 94344
+INFO [2025-02-12 13:37:26,955] basehttp "GET /static/fonts/AvenirLTStd-Black.otf HTTP/1.1" 200 27912
+INFO [2025-02-12 13:37:26,957] basehttp "GET /static/fonts/ArupalaGrotesk-SemiBold.otf HTTP/1.1" 200 102028
+WARNING [2025-02-12 13:37:27,779] basehttp "GET /static/images/favicon.ico HTTP/1.1" 404 1979
+INFO [2025-02-12 13:37:28,971] basehttp "GET / HTTP/1.1" 200 65790
+INFO [2025-02-12 13:37:29,111] basehttp "GET /static/fonts/ArupalaGrotesk-Regular.otf HTTP/1.1" 200 101860
+INFO [2025-02-12 13:37:29,111] basehttp "GET /static/fonts/AvenirLTStd-Roman.otf HTTP/1.1" 200 27176
+WARNING [2025-02-12 13:37:32,055] log Not Found: /product/a30236d6-193b-4fbb-9ce7-f98857d00f1d/
+WARNING [2025-02-12 13:37:32,056] basehttp "GET /product/a30236d6-193b-4fbb-9ce7-f98857d00f1d/ HTTP/1.1" 404 3295
+WARNING [2025-02-12 13:37:32,178] log Not Found: /favicon.ico
+WARNING [2025-02-12 13:37:32,179] basehttp "GET /favicon.ico HTTP/1.1" 404 5229
+WARNING [2025-02-12 13:37:40,719] log Not Found: /product/e09b0494-be7c-4ceb-a5de-59e482390bf7/
+WARNING [2025-02-12 13:37:40,723] basehttp "GET /product/e09b0494-be7c-4ceb-a5de-59e482390bf7/ HTTP/1.1" 404 3295
+INFO [2025-02-12 13:41:50,169] basehttp "GET / HTTP/1.1" 200 65652
+INFO [2025-02-12 13:41:51,534] basehttp "GET /product/creatina-sport/ HTTP/1.1" 200 49118
+INFO [2025-02-12 13:41:51,624] basehttp "GET /media/finniu/images/product/a633b064/fdeabce9.png HTTP/1.1" 200 430134
+INFO [2025-02-12 13:41:51,663] basehttp "GET /media/finniu/images/product/b785c5a6/d5b97fb8.webp HTTP/1.1" 200 45236
+INFO [2025-02-12 13:41:51,685] basehttp "GET /media/finniu/images/product/373cd6d4/f2641950.webp HTTP/1.1" 200 58116
+INFO [2025-02-12 13:41:54,535] basehttp "GET /static/fonts/ArupalaGrotesk-Medium.otf HTTP/1.1" 200 100536
+INFO [2025-02-12 13:41:56,001] basehttp "GET /product/proteina-iso-4-lb-sabor-chocolate/ HTTP/1.1" 200 50641
+INFO [2025-02-12 13:41:56,073] basehttp "GET /media/finniu/images/product/8579c6ba/3af23e8a.png HTTP/1.1" 200 837927
+INFO [2025-02-12 13:41:56,108] basehttp "GET /media/finniu/images/product/48b4fdcd/1193c9bd.png HTTP/1.1" 200 136610
+INFO [2025-02-12 13:41:56,108] basehttp "GET /media/finniu/images/product/11964399/85cf2451.png HTTP/1.1" 200 162233
+INFO [2025-02-12 13:41:59,109] basehttp "GET /product/pack-creatina-300g-krak-330-g/ HTTP/1.1" 200 47690
+INFO [2025-02-12 13:41:59,187] basehttp "GET /media/finniu/images/product/943f992c/904d5191.png HTTP/1.1" 200 621956
+INFO [2025-02-12 13:41:59,231] basehttp "GET /media/finniu/images/product/ac361c0c/3f45eb13.png HTTP/1.1" 200 2497572
+INFO [2025-02-12 13:42:42,930] basehttp "GET /products/?objective=HEALTH HTTP/1.1" 200 24790
+INFO [2025-02-12 13:42:43,053] basehttp "POST /api/v1/graph/demolitor HTTP/1.1" 200 5238

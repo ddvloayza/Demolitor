@@ -33,7 +33,7 @@
                         <p class="text-white text-2xl price">S/. {{ product_oferta.price|floatformat:2 }}</p>
                     </div>
                 {% endif %}
-                <a href="{% url 'core:product_detail' product_oferta.uuid %}">
+                <a href="{% url 'core:product_detail' product_oferta.slug %}">
                   <button class="mt-4 text-white bg-[#DE3704] px-8 py-3 rounded-lg hover:bg-red-700 transition-colors duration-300">
                       Ver más
                   </button>
@@ -64,7 +64,7 @@
                                         </div>
                                     {% endif %}
                                 </div>
-                                <a href="{% url 'core:product_detail' product_oferta.uuid %}">
+                                <a href="{% url 'core:product_detail' product_oferta.slug %}">
                                     <button class="mt-4 text-white bg-[rgb(222,55,5)] px-8 py-3 rounded-lg hover:bg-red-700 transition-colors duration-300">
                                         Ver más
                                     </button>
@@ -112,7 +112,7 @@
                             <p class="text-white text-2xl price">S/. {{ product_novedad.price|floatformat:2 }}</p>
                         </div>
                     {% endif %}
-                    <a href="{% url 'core:product_detail' product_novedad.uuid %}">
+                    <a href="{% url 'core:product_detail' product_novedad.slug %}">
                       <button class="mt-4 text-white bg-[#DE3704] px-8 py-3 rounded-lg hover:bg-red-700 transition-colors duration-300">
                           Ver más
                       </button>
@@ -144,7 +144,7 @@
                                         </div>
                                     {% endif %}
                                 </div>
-                                <a href="{% url 'core:product_detail' product_novedad.uuid %}">
+                                <a href="{% url 'core:product_detail' product_novedad.slug %}">
                                     <button class="mt-4 text-white bg-[rgb(222,55,5)] px-8 py-3 rounded-lg hover:bg-red-700 transition-colors duration-300">
                                         Ver más
                                     </button>
@@ -191,7 +191,7 @@
                         <p class="text-white text-2xl price">S/. {{ product_packs.price|floatformat:2 }}</p>
                     </div>
                 {% endif %}
-                <a href="{% url 'core:product_detail' product_packs.uuid %}">
+                <a href="{% url 'core:product_detail' product_packs.slug %}">
                   <button class="mt-4 text-white bg-[#DE3704] px-8 py-3 rounded-lg hover:bg-red-700 transition-colors duration-300">
                       Ver más
                   </button>
@@ -222,7 +222,7 @@
                                         </div>
                                     {% endif %}
                                 </div>
-                                <a href="{% url 'core:product_detail' product_packs.uuid %}">
+                                <a href="{% url 'core:product_detail' product_packs.slug %}">
                                     <button class="mt-4 text-white bg-[rgb(222,55,5)] px-8 py-3 rounded-lg hover:bg-red-700 transition-colors duration-300">
                                         Ver más
                                     </button>

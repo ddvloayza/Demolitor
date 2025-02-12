@@ -65,11 +65,13 @@ class ProductDetailView(DetailView):
     model = Product
     template_name = 'products/product_detail.html'
     context_object_name = 'product'
+    slug_field = 'slug'  # Indicar que usaremos 'slug' en vez de 'pk'
+    slug_url_kwarg = 'slug'  # Nombre del parámetro en la URL
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         # Obtener todos los productos excepto el actual
-        other_products = list(Product.objects.exclude(pk=self.object.pk))
+        other_products = list(Product.objects.exclude(slug=self.object.slug))
         # Seleccionar hasta 3 productos aleatorios (ajusta el número según tus necesidades)
         random_products = random.sample(other_products, min(len(other_products), 3))
         # Agregar al contexto

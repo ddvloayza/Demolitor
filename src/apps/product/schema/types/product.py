@@ -49,7 +49,7 @@ class ProductType(graphene.ObjectType):
             request = info.context
 
             # Usar reverse para generar la URL relativa
-            relative_url = reverse('core:product_detail', args=[str(root.uuid)])
+            relative_url = reverse('core:product_detail', args=[str(root.slug)])
 
             # Usar build_absolute_uri para generar la URL completa
             absolute_url = request.build_absolute_uri(relative_url)
