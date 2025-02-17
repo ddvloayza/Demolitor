@@ -3605,3 +3605,9 @@ INFO [2025-02-12 13:41:59,187] basehttp "GET /media/finniu/images/product/943f99
 INFO [2025-02-12 13:41:59,231] basehttp "GET /media/finniu/images/product/ac361c0c/3f45eb13.png HTTP/1.1" 200 2497572
 INFO [2025-02-12 13:42:42,930] basehttp "GET /products/?objective=HEALTH HTTP/1.1" 200 24790
 INFO [2025-02-12 13:42:43,053] basehttp "POST /api/v1/graph/demolitor HTTP/1.1" 200 5238
+INFO [2025-02-12 23:07:53,826] basehttp "GET /admin/investment/preinvestment/18774f2b-250e-4fd7-8059-51255a0cd8a5/change/?_changelist_filters=q%3Dddvloayza%26status__exact%3Dactive HTTP/1.1" 302 0
+INFO [2025-02-12 23:07:54,005] basehttp "GET /admin/login/?next=/admin/investment/preinvestment/18774f2b-250e-4fd7-8059-51255a0cd8a5/change/%3F_changelist_filters%3Dq%253Dddvloayza%2526status__exact%253Dactive HTTP/1.1" 200 4472
+INFO [2025-02-12 23:07:54,031] basehttp "GET /static/admin/css/base.css HTTP/1.1" 200 22092
+INFO [2025-02-12 23:07:54,032] basehttp "GET /static/admin/css/responsive.css HTTP/1.1" 200 17972
+WARNING [2025-02-12 23:07:54,505] log Not Found: /favicon.ico
+WARNING [2025-02-12 23:07:54,505] basehttp "GET /favicon.ico HTTP/1.1" 404 5229
