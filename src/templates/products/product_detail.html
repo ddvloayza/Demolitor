@@ -1,13 +1,36 @@
 {% extends "web/base.html" %}
 {% load static %}
 {% block social_facebook %}
-  <meta property="og:url"           content="{{ request.build_absolute_uri }}" />
-  <meta property="og:type"          content="product" />
-  <meta property="og:title"         content="{{ product.seo_title }}" />
-  <meta property="og:description"   content="{{ product.seo_description }}" />
-  <meta property="og:image"         content="{{ product.image.url }}" />
-  <meta property="keywords"         content="{{ product.seo_keywords }}"/>
-
+    <meta property="og:url"           content="{{ request.build_absolute_uri }} - Disponible en Demolitor" />
+    <meta property="og:type"          content="product" />
+    <meta property="og:title"         content="{{ product.seo_title }}" />
+    <meta property="og:description"   content="{{ product.seo_description }}" />
+    <meta property="og:image"         content="{{ product.image.url }}" />
+    <meta property="keywords"         content="{{ product.seo_keywords }}"/>
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="robots" content="index, follow">
+    <!-- Datos estructurados para Google (Schema.org) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org/",
+        "@type": "Product",
+        "name": "{{ product.seo_title }}",
+        "image": "{{ product.image.url }}",
+        "description": "{{ product.seo_description }}",
+        "brand": {
+            "@type": "Brand",
+            "name": "Demolitor"
+        },
+        "offers": {
+            "@type": "Offer",
+            "price": "{% if product.price_discount %}{{ product.price_discount }}{% else %}{{ product.price }}{% endif %}",
+            "priceCurrency": "PEN",
+            "availability": "https://schema.org/InStock",
+            "url": "{{ request.build_absolute_uri }}"
+        }
+    }
+    </script>
 {% endblock social_facebook %}
 {% block css %}
 <style>
