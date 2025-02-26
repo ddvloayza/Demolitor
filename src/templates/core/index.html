@@ -1,17 +1,45 @@
 {% extends "web/base.html" %}
 {% load static %}
 {% block social_facebook %}
-  <meta property="og:url"           content="" />
-  <meta property="og:type"          content="article" />
-  <meta property="og:title"         content="" />
-  <meta property="og:description"   content="" />
-  <meta property="og:image"         content="" />
+  <meta property="og:url"           content="{{ request.build_absolute_uri }}" />
+  <meta property="og:type"          content="website" />
+  <meta property="og:title"         content="Demolitor Protein" />
+  <meta property="og:description"   content="Demolitor®️ | Suplementación deportiva de alta calidad, certificada por la FDA. Potencia tu rendimiento con fórmulas avanzadas y lo mejor de los insumos naturales." />
+  <meta property="og:image"         content="https://demolitor-bucket.s3.amazonaws.com/banner/banner-krak-demolitor.png" />
   <meta property="og:image:width"   content="1920"/>
   <meta property="og:image:height"   content="1079" />
 
 {% endblock social_facebook %}
 
 {% block css %}
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Demolitor",
+    "url": "https://demolitorprotein.com/",
+    "logo": "https://demolitor.com/static/images/logo.png",
+    "description": "Demolitor es la mejor tienda de suplementos deportivos y nutrición en Perú.",
+    "sameAs": [
+        "https://www.facebook.com/demolitor",
+        "https://www.instagram.com/demolitor",
+        "https://twitter.com/demolitor"
+    ],
+    "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+51 999 999 999",
+        "contactType": "customer service",
+        "areaServed": "PE",
+        "availableLanguage": ["Spanish", "English"]
+    },
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Av. Principal 123",
+        "addressLocality": "Lima",
+        "addressCountry": "PE"
+    }
+}
+</script>
 <style>
 
 
